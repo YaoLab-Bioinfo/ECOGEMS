@@ -32,19 +32,19 @@ install.packages("shinyBS")
 install.packages("shinythemes")  
 install.packages("LDheatmap")  
 install.packages("plotly")  
-install.packages("chopsticks")  
 install.packages("foreach")  
 install.packages("ape")  
 install.packages("pegas")  
 install.packages("dplyr")  
 install.packages("ggmap")  
 install.packages("tidyr")  
-install.packages("ggtree")  
 install.packages("gridExtra")  
 # try http:// if https:// URLs are not supported   
 source("https://bioconductor.org/biocLite.R")  
 biocLite("IRanges")
 biocLite("snpStats")
+biocLite("chopsticks")  
+biocLite("ggtree")  
 ```
 
 **Step 3: Start the app**  
@@ -89,19 +89,19 @@ install.packages("shinyBS")
 install.packages("shinythemes")  
 install.packages("LDheatmap")  
 install.packages("plotly")  
-install.packages("chopsticks")  
 install.packages("foreach")  
 install.packages("ape")  
 install.packages("pegas")  
 install.packages("dplyr")  
 install.packages("ggmap")  
 install.packages("tidyr")  
-install.packages("ggtree")  
 install.packages("gridExtra")  
 # try http:// if https:// URLs are not supported   
 source("https://bioconductor.org/biocLite.R")  
 biocLite("IRanges")
 biocLite("snpStats")
+biocLite("chopsticks")  
+biocLite("ggtree")  
 ```
 
 For more information, please check the following pages:  
