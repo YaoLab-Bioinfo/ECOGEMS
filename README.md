@@ -67,7 +67,7 @@ Then start an R session using RStudio and run these lines:
 ```
 library(shiny)  
 runApp("E:/apps/ECOGEMS", launch.browser = TRUE)  
-# The first parameter of `runApp` should be the directory that contains the scripts `server.R` and `ui.R` of ECOGEMS.  
+# The first parameter of runApp should be the directory that contains the scripts server.R and ui.R of ECOGEMS.  
 ```
 
 Your web browser will open the app.
