@@ -58,7 +58,7 @@ This command would take some time as it will download the ECOGEMS database from 
 Alternatively, you can download the ECOGEMS database from GitHub (https://github.com/venyao/ECOGEMS) to a directory (for example "E:/apps/") of your local computer using the web browser or other tools.   
 
 <br>
-![](ECOGEMS.png)  
+![ECOGEMS](ECOGEMS.png)  
 <br>
 
 Then start an R session using RStudio and run these lines:  
