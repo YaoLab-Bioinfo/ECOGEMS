@@ -1,0 +1,2059 @@
+ID	Species	Name	area	Latitude	Longitude	Ecotype
+C001	O. sativa	Sadu-cho	Korea	37.35	127.03	IndI
+C002	O. sativa	Dom Sufid	Iran	35.45	51.3	VI
+C003	O. sativa	Gerdeh	Iran	35.45	51.3	Jap_Int
+C004	O. sativa	Li-Jiang-Xin-Tuan-Hei-Gu	China	25.04	102.41	TeJ
+C005	O. sativa	AZUCENA	Philippines	14.6	121	TrJ
+C006	O. sativa	Shan-Huang Zhan-2-1	China	23.08	113.15	Ind_Int
+C007	O. sativa	Shan-Huang Zhan-2-2	China	23.08	113.15	Ind_Int
+C008	O. sativa	Swarna	India	28.6	77.2	IndII
+C009	O. sativa	MOROBEREKAN	Guinea	3.78	8.98	Ind_Int
+C010	O. sativa	CYPRESS	United States	38.54	-77.02	TrJ
+C011	O. sativa	MILYANG 23	Korea	37.35	127.03	IndII
+C012	O. sativa	Tainong67	"Taiwan, China"	25.03	121.31	TeJ
+C013	O. sativa	N 22	India	28.6	77.2	Aus
+C014	O. sativa	M202	United States	38.54	-77.02	Jap_Int
+C015	O. sativa	Dular	India	28.6	77.2	Aus
+C016	O. sativa	Laoguangtou83	China	45.45	126.41	TeJ
+C017	O. sativa	AnnongwangengB-1	China	37.51	117.18	TeJ
+C018	O. sativa	AnnongwangengB-2	China	30.14	120.09	TeJ
+C019	O. sativa	Aijiaonante	China	23.08	113.15	IndI
+C020	O. sativa	Guangluai-4-1	China	28.11	113	IndI
+C021	O. sativa	xiangaizao10	China	28.11	113	IndI
+C022	O. sativa	JinnanteB	China	28.11	113	IndI
+C023	O. sativa	Funingzipi	China	38.02	114.28	TeJ
+C024	O. sativa	zhenshan97B-1	China	28.41	115.52	IndI
+C025	O. sativa	Qingsiai16B	China	23.08	113.15	IndII
+C026	O. sativa	Weiguo	China	41.5	123.24	TeJ
+C027	O. sativa	Dianrui409B	China	25.04	102.41	Ind_Int
+C028	O. sativa	Liaogeng287	China	41.5	123.24	TeJ
+C029	O. sativa	Huhui628	China	NA	NA	Jap_Int
+C030	O. sativa	88B-1	China	32.02	118.5	Ind_Int
+C031	O. sativa	88B-2	China	32.02	118.5	Ind_Int
+C032	O. sativa	Longhuamaohu	China	38.02	114.28	TeJ
+C033	O. sativa	Lucaihao	China	26.05	119.18	IndI
+C034	O. sativa	Zhonglouyihao1	China	37.52	112.34	TeJ
+C035	O. sativa	Yelicanghua	China	38.02	114.28	TeJ
+C036	O. sativa	Shufeng101	China	30.39	104.05	IndI
+C037	O. sativa	Chengduai3hao	China	30.39	104.05	IndI
+C038	O. sativa	Sankecui	China	28.11	113	Ind_Int
+C039	O. sativa	Gongju73	China	25.04	102.41	IndI
+C040	O. sativa	Jiabala	China	29.41	91.1	IndI
+C041	O. sativa	Taishannuo	China	23.08	113.15	IndI
+C042	O. sativa	Guichao2hao	China	23.08	113.15	Ind_Int
+C043	O. sativa	Huke3hao	China	31.14	121.29	Ind_Int
+C044	O. sativa	Teqingxuanhui	China	NA	NA	IndII
+C045	O. sativa	Huangsiguizhan	China	23.08	113.15	IndII
+C046	O. sativa	Xiangwanxian3hao	China	28.11	113	Ind_Int
+C047	O. sativa	Hanmadao-2	China	34.48	113.42	IndI
+C048	O. sativa	Zaoshunonghu6	China	28.11	113	TeJ
+C049	O. sativa	Jinyou1hao	China	26.05	119.18	IndII
+C050	O. sativa	Chengnongshuijing	China	30.39	104.05	IndII
+C051	O. sativa	PeiC122	China	NA	NA	Int
+C052	O. sativa	Guihuahuang	China	32.02	118.5	TeJ
+C053	O. sativa	Momi	China	22.48	108.2	Ind_Int
+C054	O. sativa	Xiushui115	China	30.14	120.09	TeJ
+C055	O. sativa	Sanbaili	China	28.11	113	IndI
+C056	O. sativa	Jindao1hao	China	37.52	112.34	TeJ
+C057	O. sativa	Dandongludao	China	41.5	123.24	Jap_Int
+C058	O. sativa	Liusha1hao	China	22.48	108.2	IndI
+C059	O. sativa	Bawangbian1	China	30	114	IndI
+C060	O. sativa	Dongtingwanxian	China	28.11	113	IndI
+C061	O. sativa	Yangdao2hao	China	32.02	118.5	IndII
+C062	O. sativa	WH62	China	NA	NA	IndI
+C063	O. sativa	Geng87-304	China	28.11	113	TeJ
+C064	O. sativa	Sugeng2hao	China	32.02	118.5	TeJ
+C065	O. sativa	Hongwan1hao	China	26.05	119.18	Ind_Int
+C066	O. sativa	Liushizao	China	30.39	104.05	IndI
+C067	O. sativa	Muxiqiu	China	32.02	118.5	TeJ
+C068	O. sativa	Taizhongxianxuan2	"Taiwan, China"	25.03	121.31	IndII
+C069	O. sativa	Dangyu5hao	China	37.51	117.18	IndII
+C070	O. sativa	Youmangzaogeng	China	32.02	118.5	TeJ
+C071	O. sativa	Laohuzhong	China	30.4	120.5	TeJ
+C072	O. sativa	Nantehao	China	28.41	115.52	IndI
+C073	O. sativa	Esiniu	China	23.08	113.15	IndI
+C074	O. sativa	cunsanli	China	32.02	118.5	TeJ
+C075	O. sativa	Huangkezaonian	China	32.02	118.5	TeJ
+C076	O. sativa	Benbanggu-1	China	30.39	104.05	IndI
+C077	O. sativa	Benbanggu-2	China	30.39	104.05	IndI
+C078	O. sativa	Qitoubaigu	China	25.04	102.41	IndI
+C079	O. sativa	Muguanuo-1	China	28.11	113	TeJ
+C080	O. sativa	Hanmadao-1	China	34.48	113.42	IndI
+C081	O. sativa	Heidu4	China	23.08	113.15	IndI
+C082	O. sativa	Gaoyangdiandao	China	38.02	114.28	TeJ
+C083	O. sativa	chikenuo	China	26.05	119.18	TeJ
+C084	O. sativa	Haobuka	China	25.04	102.41	Jap_Int
+C085	O. sativa	Shanjiugu	China	30.39	104.05	Jap_Int
+C086	O. sativa	Fanhaopi	China	25.04	102.41	Aus
+C087	O. sativa	Lixingeng	China	30.39	104.05	TeJ
+C088	O. sativa	Nangaogu-2	China	25.04	102.41	IndI
+C089	O. sativa	Tieganwu	China	30.14	120.09	TeJ
+C090	O. sativa	Sanlicun	China	34.16	108.54	IndII
+C091	O. sativa	Meihuanuo-1	China	30.39	104.05	IndI
+C092	O. sativa	Meihuanuo-2	China	30.39	104.05	IndI
+C093	O. sativa	Xiangnuo-2	China	26.35	106.42	TeJ
+C094	O. sativa	Menjiagao1	China	20.2	110.3	Ind_Int
+C095	O. sativa	Xiaohonggu	China	25.04	102.41	IndI
+C096	O. sativa	Jinxibai-1	China	28.41	115.52	Ind_Int
+C097	O. sativa	Jinbaoyin	China	26.05	119.18	Ind_Int
+C098	O. sativa	Hongainuo	China	22.48	108.2	Ind_Int
+C099	O. sativa	WH099	China	NA	NA	Ind_Int
+C100	O. sativa	WH100	China	NA	NA	Ind_Int
+C101	O. sativa	Babaili	China	25.04	102.41	TeJ
+C102	O. sativa	Qiyuexian	China	22.48	108.2	Ind_Int
+C103	O. sativa	Yuyannuo-1	China	25.04	102.41	TeJ
+C104	O. sativa	Mamagu-1	China	30.39	104.05	IndI
+C105	O. sativa	WH105	China	NA	NA	Ind_Int
+C106	O. sativa	Hongkezhenuo	China	26.35	106.42	TeJ
+C107	O. sativa	Mowanggunei-2	China	25.04	102.41	Ind_Int
+C108	O. sativa	Mamagu-2	China	30.39	104.05	IndI
+C109	O. sativa	WH109	China	NA	NA	IndI
+C110	O. sativa	Xianggu	China	25.04	102.41	IndI
+C111	O. sativa	Ximaxian	China	25.04	102.41	TeJ
+C112	O. sativa	Jinnante43B	China	28.11	113	IndI
+C113	O. sativa	Xiangzaoxian7hao	China	28.11	113	Ind_Int
+C114	O. sativa	80B	China	28.11	113	Ind_Int
+C115	O. sativa	WH115	China	NA	NA	IndII
+C116	O. sativa	LimingB	China	41.5	123.24	TeJ
+C117	O. sativa	Jiangnongzao1hao	China	28.41	115.52	Ind_Int
+C118	O. sativa	Gu154	China	NA	NA	IndII
+C119	O. sativa	Ninghui21	China	NA	NA	TeJ
+C120	O. sativa	Shuiyuan300li	China	39.09	117.11	TeJ
+C121	O. sativa	XiangaiB	China	28.41	115.52	Ind_Int
+C122	O. sativa	Aituogu151	China	30.39	104.05	IndI
+C123	O. sativa	Taidongludao	"Taiwan, China"	25.03	121.31	TrJ
+C124	O. sativa	menjiading2	China	20.2	110.3	Ind_Int
+C125	O. sativa	Jiefangxian	China	28.41	115.52	IndI
+C127	O. sativa	Baikehualuo	China	23.08	113.15	IndI
+C128	O. sativa	Liuyezhan	China	30	114	IndI
+C129	O. sativa	Aihechi	China	28.41	115.52	Ind_Int
+C130	O. sativa	Xiangnuo-1	China	26.35	106.42	TeJ
+C131	O. sativa	Xuanenchangtan	China	30	114	IndI
+C132	O. sativa	Jinzhinuo	China	25.04	102.41	Ind_Int
+C133	O. sativa	Muguanuo-2	China	28.11	113	TeJ
+C134	O. sativa	Wuzidui	China	25.04	102.41	TeJ
+C135	O. sativa	Xibaizhan	China	30.39	104.05	IndI
+C136	O. sativa	Zegu	China	26.35	106.42	IndI
+C137	O. sativa	Cungunuo	China	26.35	106.42	TeJ
+C138	O. sativa	Lengshuigu	China	25.04	102.41	TeJ
+C139	O. sativa	WH139	China	NA	NA	IndI
+C140	O. sativa	Wuzuhonggu	China	25.04	102.41	IndI
+C141	O. sativa	Nangaogu-1	China	25.04	102.41	IndI
+C142	O. sativa	Mowanggunei-1	China	25.04	102.41	Ind_Int
+C143	O. sativa	Qitougu	China	25.04	102.41	IndI
+C144	O. sativa	Huangpinuo	China	25.04	102.41	TeJ
+C145	O. sativa	Zhenshan97B	China	30.14	120.09	IndI
+C146	O. sativa	Nipponbare	Japan	35.7	139.8	TeJ
+C147	O. sativa	Minghui63	China	26.05	119.18	IndII
+C148	O. sativa	9311	China	28.11	113	IndII
+C149	O. sativa	Zhonghua11	China	39.54	116.28	TeJ
+C150	O. sativa	Balilla	Italy	41.52	12.37	TeJ
+C151	O. sativa	Nanjing11	China	32.02	118.5	IndI
+C152	O. sativa	02428	China	32.02	118.5	TeJ
+C153	O. sativa	IRAT109	Unknown	NA	NA	TrJ
+C154	O. sativa	Heigeng2hao	China	45.45	126.41	TeJ
+C155	O. sativa	Erjiunan1hao	China	30.14	120.09	IndI
+C156	O. sativa	ChaoyangyihaoB	China	28.11	113	IndI
+C157	O. sativa	L301B	China	28.11	113	IndI
+C158	O. sativa	Guangluai15	China	22.48	108.2	IndI
+C159	O. sativa	ZhuzhenB	China	28.11	113	IndI
+C160	O. sativa	Baoxie-7B	China	28.11	113	Ind_Int
+C161	O. sativa	Gzhenshan97B	China	30.14	120.09	IndI
+C162	O. sativa	Nanxiongzaoyou	China	23.08	113.15	Ind_Int
+C163	O. sativa	Zaoshuxianghei	China	22.48	108.2	IndII
+C164	O. sativa	IR661-1	China	NA	NA	IndII
+C165	O. sativa	Nanjing11-2	China	32.02	118.5	IndI
+C166	O. sativa	Gui630	China	NA	NA	Ind_Int
+C167	O. sativa	76--1	China	NA	NA	Ind_Int
+C168	O. sativa	Xugunuo	China	28.11	113	Ind_Int
+C169	O. sativa	Taizhongzailai1	"Taiwan, China"	25.03	121.31	Ind_Int
+C170	O. sativa	Xiangwanxian1hao	China	28.11	113	IndI
+C171	O. sativa	Xingguo	China	40.5	121.5	TeJ
+C172	O. sativa	Zhonghua8hao	China	39.54	116.28	TeJ
+C173	O. sativa	Aimakang	China	30.39	104.05	IndI
+C174	O. sativa	JWR221	China	NA	NA	IndII
+C175	O. sativa	Zhengxian232	China	32.02	118.5	Ind_Int
+C176	O. sativa	Chenwan3hao	China	28.11	113	Ind_Int
+C177	O. sativa	Maguzi	China	34.16	108.54	TeJ
+C178	O. sativa	Aimi	China	28.41	115.52	IndI
+C179	O. sativa	Haobayong1	China	25.04	102.41	Jap_Int
+C180	O. sativa	Wanlixian	China	28.11	113	IndI
+C181	O. sativa	Feidongtangdao	China	37.51	117.18	TeJ
+C182	O. sativa	Hengxianliangchun	China	22.48	108.2	IndI
+C183	O. sativa	Leihuozhan	China	37.51	117.18	IndI
+C184	O. sativa	Baikezaohe	China	28.11	113	IndI
+C185	O. sativa	Haomake(K)	China	25.04	102.41	Jap_Int
+C186	O. sativa	Sanbangqishiluo	China	25.04	102.41	TrJ
+C187	O. sativa	Niankenuo	China	26.35	106.42	TeJ
+C188	O. sativa	Yangkenuo	China	26.35	106.42	TeJ
+C189	O. sativa	Putaohuang	China	39.09	117.11	TeJ
+C190	O. sativa	Xiangdao	China	28.11	113	IndI
+C191	O. sativa	Younian	China	26.35	106.42	IndI
+C192	O. sativa	Wukezhan	China	26.05	119.18	Ind_Int
+C193	O. sativa	Zhongnong4hao	China	30.39	104.05	IndI
+C194	O. sativa	Minbeiwanxian	China	26.05	119.18	Ind_Int
+C195	O. sativa	Hongmisandan	China	28.41	115.52	TeJ
+C196	O. sativa	Yuyannuo-2	China	25.04	102.41	TeJ
+C197	O. sativa	Maweinian	China	26.35	106.42	IndI
+C198	O. sativa	Zinuo	China	25.04	102.41	IndI
+C199	O. sativa	Beizinuo	China	25.04	102.41	IndI
+C200	O. sativa	Biwusheng	China	25.04	102.41	IndI
+C201	O. sativa	Yizhixiang	China	26.05	119.18	Ind_Int
+C202	O. sativa	Xiaobaimi	China	26.35	106.42	IndI
+C203	O. sativa	Zaoxian240	China	37.51	117.18	IndI
+GP1	O. sativa	Rata 31-2 (Acc.29388)	Bengal	NA	NA	Int
+GP10	O. sativa	IR29	IRRI	NA	NA	IndII
+GP100	O. sativa	IR 11297-139-2-2	IRRI	NA	NA	IndII
+GP101	O. sativa	IR 11297-158-1-1	IRRI	NA	NA	IndII
+GP102	O. sativa	IR 13240-10-1	IRRI	NA	NA	IndII
+GP103	O. sativa	H 5	Sri Lanka	NA	NA	IndII
+GP104	O. sativa	DV 110	Bengal	NA	NA	Aus
+GP105	O. sativa	IR 13543-66	IRRI	NA	NA	IndII
+GP106	O. sativa	IR 44	IRRI	NA	NA	IndII
+GP107	O. sativa	K 159	Uganda	NA	NA	IndII
+GP108	O. sativa	MRC 603-303	Philippine	NA	NA	IndII
+GP109	O. sativa	Madagascar	Madagascar	NA	NA	Int
+GP11	O. sativa	IR30	IRRI	NA	NA	IndII
+GP110	O. sativa	Hoshi kalmi	Philippine	NA	NA	Aus
+GP111	O. sativa	IR 2006-P12-12-2-R	IRRI	NA	NA	IndII
+GP112	O. sativa	R 67	Gambian	NA	NA	TrJ
+GP113	O. sativa	NA	IRRI	NA	NA	indica
+GP114	O. sativa	NA	Philippine	NA	NA	indica
+GP115	O. sativa	Lebonot	US	NA	NA	Ind_Int
+GP116	O. sativa	IR 54	IRRI	NA	NA	IndII
+GP117	O. sativa	Vista	US	NA	NA	TrJ
+GP118	O. sativa	B1896-29-4-3-1	Indonesia	NA	NA	IndII
+GP119	O. sativa	IR 1416-131-5	IRRI	NA	NA	IndII
+GP12	O. sativa	IR 39	IRRI	NA	NA	IndII
+GP120	O. sativa	77-061	Philippine	NA	NA	IndII
+GP121	O. sativa	IR 9129-136-2	IRRI	NA	NA	IndII
+GP122	O. sativa	RG 401-1	Sri Lanka	NA	NA	IndII
+GP123	O. sativa	IR 9828-94-3	IRRI	NA	NA	IndII
+GP124	O. sativa	DNJ 126	Bengal	NA	NA	Aus
+GP125	O. sativa	Cs 2	Ivory Coast	NA	NA	Ind_Int
+GP126	O. sativa	K 332	Uganda	NA	NA	TeJ
+GP127	O. sativa	IR 21929-12-3-3	IRRI	NA	NA	IndII
+GP128	O. sativa	RNR 74802	India	NA	NA	IndII
+GP129	O. sativa	IR 11248-23-3-2	IRRI	NA	NA	IndII
+GP13	O. sativa	IR661	IRRI	NA	NA	IndII
+GP130	O. sativa	IR 17494-32-3-1-1-3	IRRI	NA	NA	IndII
+GP131	O. sativa	BG 367-4	Sri Lanka	NA	NA	IndII
+GP132	O. sativa	IR 9752-71-3-2	IRRI	NA	NA	IndII
+GP133	O. sativa	NA	IRRI	NA	NA	indica
+GP134	O. sativa	Miyang-23	North Korea	NA	NA	IndII
+GP135	O. sativa	Suweon 287	North Korea	NA	NA	IndII
+GP136	O. sativa	IR 15529-256-1	IRRI	NA	NA	IndII
+GP137	O. sativa	Suweon 290	North Korea	NA	NA	IndII
+GP138	O. sativa	IR 15685-2-2-2-3	IRRI	NA	NA	IndII
+GP139	O. sativa	IR25588-7-3-1	IRRI	NA	NA	IndII
+GP14	O. sativa	IR 789-98-2-3-2-2	IRRI	NA	NA	IndII
+GP140	O. sativa	IR25924-51-2-3	IRRI	NA	NA	IndII
+GP141	O. sativa	Mollika (sel)	Nepal	NA	NA	IndII
+GP142	O. sativa	UPR 231-28-1-2	India	NA	NA	IndII
+GP143	O. sativa	C 1252-9	Philippine	NA	NA	IndII
+GP144	O. sativa	Suweon 294	North Korea	NA	NA	IndII
+GP15	O. sativa	IR 1561-228-3-3	IRRI	NA	NA	IndII
+GP16	O. sativa	IR 1702-74-3-2	IRRI	NA	NA	IndII
+GP17	O. sativa	IR 2061-464-2-4-5	IRRI	NA	NA	IndII
+GP18	O. sativa	IR 2061-628-1-6-4-3	IRRI	NA	NA	IndII
+GP19	O. sativa	IR 2070-796-1-4-3	IRRI	NA	NA	IndII
+GP2	O. sativa	Rata 710 (Acc.29397)	Bengal	NA	NA	Int
+GP20	O. sativa	IR 2071-124-6-4	IRRI	NA	NA	IndII
+GP21	O. sativa	IR 2307-84-2-1-2	IRRI	NA	NA	IndII
+GP22	O. sativa	IR 2797-115-3	IRRI	NA	NA	IndII
+GP23	O. sativa	IR 3456-21-1-1	IRRI	NA	NA	IndII
+GP24	O. sativa	IR 3941-25-1	IRRI	NA	NA	IndII
+GP25	O. sativa	IR 4215-409-2-3	IRRI	NA	NA	IndII
+GP26	O. sativa	IR 4227-24-3-1	IRRI	NA	NA	Int
+GP260	O. sativa	NA	India	NA	NA	indica
+GP27	O. sativa	IR 4409-65-3	IRRI	NA	NA	IndII
+GP28	O. sativa	IR 4422-164-3-6	IRRI	NA	NA	IndII
+GP284	O. sativa	NA	Pakistan	NA	NA	VI
+GP285	O. sativa	NA	Pakistan	NA	NA	Aus
+GP29	O. sativa	IR 4427-253-5-1	IRRI	NA	NA	IndII
+GP294	O. sativa	NA	Pakistan	NA	NA	VI
+GP295	O. sativa	NA	Pakistan	NA	NA	VI
+GP296	O. sativa	NA	Pakistan	NA	NA	VI
+GP297	O. sativa	NA	Pakistan	NA	NA	VI
+GP3	O. sativa	Secano do Brazil	Brazil	NA	NA	IndII
+GP30	O. sativa	IR 4432-84-3-1	IRRI	NA	NA	IndII
+GP31	O. sativa	IR 5311-46-3	IRRI	NA	NA	IndII
+GP32	O. sativa	C	Philippine	NA	NA	IndII
+GP33	O. sativa	C 3	Philippine	NA	NA	IndII
+GP34	O. sativa	Colombo	India	NA	NA	Aus
+GP35	O. sativa	DoDo	Philippine	NA	NA	IndI
+GP36	O. sativa	DV 86	Bengal	NA	NA	Aus
+GP37	O. sativa	Hr 33	Philippine	NA	NA	Ind_Int
+GP38	O. sativa	N 22	India	NA	NA	Aus
+GP39	O. sativa	IAC 25	Brazil	NA	NA	TrJ
+GP4	O. sativa	C 1064-13	Philippine	NA	NA	IndII
+GP40	O. sativa	BG90-2	Sri Lanka	NA	NA	IndII
+GP41	O. sativa	Te-tep	Vietnam	NA	NA	Ind_Int
+GP42	O. sativa	Malaixizidao	Malaysia	NA	NA	IndI
+GP43	O. sativa	Bo Assam	India	NA	NA	IndI
+GP44	O. sativa	Eei-eciet	India	NA	NA	Ind_Int
+GP45	O. sativa	Jeh San Ned	India	NA	NA	IndI
+GP46	O. sativa	Paddy Musk Healnaoi	India	NA	NA	IndI
+GP47	O. sativa	Dular	India	NA	NA	Aus
+GP48	O. sativa	R-9-27	Cuba	NA	NA	IndII
+GP49	O. sativa	T 480-9	Cuba	NA	NA	IndII
+GP497	O. sativa	Lunonglinnuo-36	Japan	NA	NA	TeJ
+GP498	O. sativa	Precosus F-A	Japan	NA	NA	Jap_Int
+GP499	O. sativa	Aoyu-312	Japan	NA	NA	TeJ
+GP5	O. sativa	Vary Lava 10	Madagascar	NA	NA	TrJ
+GP50	O. sativa	T 480-4	Cuba	NA	NA	IndII
+GP500	O. sativa	Xingxiechangyuehuang	Japan	NA	NA	TeJ
+GP501	O. sativa	81Y4-5	Japan	NA	NA	TeJ
+GP502	O. sativa	Bashuonuo	Japan	NA	NA	TrJ
+GP503	O. sativa	Arborio	Italy	NA	NA	TrJ
+GP504	O. sativa	Lunonglinnuo-1	Japan	NA	NA	TrJ
+GP505	O. sativa	Lunonglinnuo-12	Japan	NA	NA	TrJ
+GP506	O. sativa	Juannou	Japan	NA	NA	TrJ
+GP507	O. sativa	70X-46	Japan	NA	NA	TeJ
+GP508	O. sativa	BL1	Japan	NA	NA	TeJ
+GP509	O. sativa	Chimao	Japan	NA	NA	TeJ
+GP51	O. sativa	T 480-34	Cuba	NA	NA	IndII
+GP510	O. sativa	Arpe Thaly	Portugal	NA	NA	TeJ
+GP511	O. sativa	Uzbekskiyz	Russia	NA	NA	TeJ
+GP512	O. sativa	DJ 10	Bengal	NA	NA	Aus
+GP513	O. sativa	NA	Philippine	NA	NA	TrJ
+GP514	O. sativa	Libu	Philippine	NA	NA	TrJ
+GP515	O. sativa	Sipde-k	Philippine	NA	NA	TrJ
+GP516	O. sativa	Meranay	Philippine	NA	NA	TrJ
+GP517	O. sativa	Yanayanan (3)	Philippine	NA	NA	TrJ
+GP518	O. sativa	Payakan	Philippine	NA	NA	TrJ
+GP519	O. sativa	Mack Khoune	Laos	NA	NA	Jap_Int
+GP52	O. sativa	T 480-67	Cuba	NA	NA	IndII
+GP520	O. sativa	KH.Komedanv	Laos	NA	NA	TrJ
+GP521	O. sativa	Manik	Indonesia	NA	NA	TrJ
+GP522	O. sativa	Radi Pagalou	Malaysia	NA	NA	TrJ
+GP523	O. sativa	San Domenico	Solomon Islands	NA	NA	TeJ
+GP524	O. sativa	Buyagaw	Philippine	NA	NA	Ind_Int
+GP525	O. sativa	Mah Nam pui	Thailand	NA	NA	Jap_Int
+GP526	O. sativa	Unnamed	Thailand	NA	NA	Ind_Int
+GP527	O. sativa	Khao Dou	Laos	NA	NA	Jap_Int
+GP528	O. sativa	Kenteng	Laos	NA	NA	TrJ
+GP529	O. sativa	Lepsang	Laos	NA	NA	TrJ
+GP53	O. sativa	2/53	Cuba	NA	NA	IndII
+GP530	O. sativa	Bena Jhupi	India	NA	NA	Aus
+GP531	O. sativa	Panchpai	Bengal	NA	NA	Aus
+GP532	O. sativa	Catatao	Brazil	NA	NA	TrJ
+GP533	O. sativa	Jabonl	Bengal	NA	NA	Aus
+GP534	O. sativa	Padi Lasat	Malaysia	NA	NA	TrJ
+GP535	O. sativa	Macax Pina	Philippine	NA	NA	TrJ
+GP536	O. sativa	Minanok (glut)	Philippine	NA	NA	TrJ
+GP537	O. sativa	Sa-igorot	Philippine	NA	NA	TrJ
+GP538	O. sativa	Bate Aus	India	NA	NA	Aus
+GP539	O. sativa	Mudo	India	NA	NA	Int
+GP54	O. sativa	9/53	Cuba	NA	NA	IndII
+GP540	O. sativa	Kbarai Ganja	Pakistan	NA	NA	Int
+GP541	O. sativa	Kasinkan	Philippine	NA	NA	TrJ
+GP542	O. sativa	BJ1	Philippine	NA	NA	Aus
+GP543	O. sativa	S.Panlo	US	NA	NA	Int
+GP544	O. sativa	Blue Belle CI9544	US	NA	NA	TrJ
+GP545	O. sativa	Giza 172	Egypt	NA	NA	TeJ
+GP546	O. sativa	Nonglin-16	Japan	NA	NA	TeJ
+GP547	O. sativa	Nonglin-72	Japan	NA	NA	TeJ
+GP548	O. sativa	Nonglin-100	Japan	NA	NA	TeJ
+GP549	O. sativa	Nonglin-106	Japan	NA	NA	TeJ
+GP55	O. sativa	63-83(Acc.14725)	Ivory Coast	NA	NA	TrJ
+GP550	O. sativa	Nonglin-130	Japan	NA	NA	TeJ
+GP551	O. sativa	Nonglinnuo-144	Japan	NA	NA	TeJ
+GP552	O. sativa	Nonglin-154	Japan	NA	NA	TeJ
+GP553	O. sativa	Nonglinnuo-184	Japan	NA	NA	Ind_Int
+GP554	O. sativa	Nonglin-108	Japan	NA	NA	TeJ
+GP555	O. sativa	Nonglin-217	Japan	NA	NA	TeJ
+GP556	O. sativa	Fuguo	Japan	NA	NA	TeJ
+GP557	O. sativa	Yuenian	Japan	NA	NA	TeJ
+GP558	O. sativa	Guangdong-51	Japan	NA	NA	TeJ
+GP559	O. sativa	Xingyuerchongnuo	Japan	NA	NA	TeJ
+GP56	O. sativa	Baogala	Uganda	NA	NA	Int
+GP560	O. sativa	Pingbei-189	North Korea	NA	NA	TeJ
+GP561	O. sativa	Shijie-1	Japan	NA	NA	TrJ
+GP562	O. sativa	Sesia	Albania	NA	NA	Int
+GP563	O. sativa	Rialto	Albania	NA	NA	Jap_Int
+GP564	O. sativa	Wuziluost	Russia	NA	NA	TeJ
+GP565	O. sativa	Delta	France	NA	NA	TeJ
+GP566	O. sativa	Panuoxiameika	Argentina	NA	NA	TeJ
+GP567	O. sativa	Pama	IRRI	NA	NA	TeJ
+GP568	O. sativa	Roma	Italy	NA	NA	TeJ
+GP569	O. sativa	Agami M1	Philippine	NA	NA	Jap_Int
+GP57	O. sativa	Mambo-SaSa 342	Madagascar	NA	NA	Int
+GP570	O. sativa	Kn-Ih-361-1-8-6	Philippine	NA	NA	TeJ
+GP571	O. sativa	Nonglin-238	Japan	NA	NA	TeJ
+GP572	O. sativa	IRAT 10	Ivory Coast	NA	NA	IndII
+GP573	O. sativa	IAC 435	Brazil	NA	NA	Ind_Int
+GP574	O. sativa	Salumoikit	Philippine	NA	NA	Ind_Int
+GP575	O. sativa	K 333	Uganda	NA	NA	TeJ
+GP576	O. sativa	DNT 157	Pakistan	NA	NA	Aus
+GP577	O. sativa	NA	Brazil	NA	NA	Int
+GP578	O. sativa	Mengieig	Philippine	NA	NA	TrJ
+GP579	O. sativa	Desin	Philippine	NA	NA	Jap_Int
+GP58	O. sativa	ASD7	India	NA	NA	Ind_Int
+GP580	O. sativa	Khao Youak	Laos	NA	NA	TeJ
+GP581	O. sativa	Mira	Bulgaria	NA	NA	Jap_Int
+GP582	O. sativa	Khao Khane	Laos	NA	NA	Jap_Int
+GP583	O. sativa	Khamu	Thailand	NA	NA	Jap_Int
+GP584	O. sativa	North Rose	US	NA	NA	Jap_Int
+GP585	O. sativa	Hugaiyi-87	North Korea	NA	NA	TeJ
+GP587	O. sativa	Rizhongyouhao-3	Japan	NA	NA	IndII
+GP588	O. sativa	Euribe	Italy	NA	NA	Jap_Int
+GP589	O. sativa	CR 584-11-1-6	Egypt	NA	NA	Ind_Int
+GP59	O. sativa	Bogor 8	Philippine	NA	NA	Jap_Int
+GP590	O. sativa	K 438	India	NA	NA	TeJ
+GP591	O. sativa	System-400	North Korea	NA	NA	TeJ
+GP592	O. sativa	Nonglin-242	Japan	NA	NA	TeJ
+GP593	O. sativa	IRI 352	North Korea	NA	NA	IndII
+GP594	O. sativa	Japonesito des Meses F.A	Argentina	NA	NA	Jap_Int
+GP595	O. sativa	Linian	Japan	NA	NA	Jap_Int
+GP596	O. sativa	Shuifunuo	Japan	NA	NA	Jap_Int
+GP597	O. sativa	BAEK CHOL BYEO	South Korea	NA	NA	TeJ
+GP598	O. sativa	ZIOK DO	South Korea	NA	NA	TeJ
+GP599	O. sativa	SALBIO 87	South Korea	NA	NA	TeJ
+GP6	O. sativa	NA	Thailand	NA	NA	indica
+GP60	O. sativa	ARC 7286	India	NA	NA	IndI
+GP601	O. sativa	A GA BYEO	North Korea	NA	NA	TeJ
+GP602	O. sativa	A GU DO	North Korea	NA	NA	TeJ
+GP603	O. sativa	YONG CHUN	South Korea	NA	NA	TeJ
+GP605	O. sativa	MU AN DO	South Korea	NA	NA	TeJ
+GP606	O. sativa	TAE GU NA	South Korea	NA	NA	TeJ
+GP607	O. sativa	Runnuo	Japan	NA	NA	TeJ
+GP608	O. sativa	Qingfeng	Japan	NA	NA	TeJ
+GP609	O. sativa	Zhaohuangjing	Japan	NA	NA	TeJ
+GP61	O. sativa	ARC 6565	India	NA	NA	Aus
+GP610	O. sativa	KWAN SAN SAEK	South Korea	NA	NA	TeJ
+GP611	O. sativa	Baru	Australia	NA	NA	Jap_Int
+GP612	O. sativa	Calmochi-202	US	NA	NA	TeJ
+GP613	O. sativa	L201	US	NA	NA	TrJ
+GP614	O. sativa	Mars	US	NA	NA	TrJ
+GP615	O. sativa	Newrex	US	NA	NA	Int
+GP616	O. sativa	Leah	US	NA	NA	TrJ
+GP617	O. sativa	Nato CI8998	US	NA	NA	Jap_Int
+GP619	O. sativa	Jiaheguang	Japan	NA	NA	TeJ
+GP62	O. sativa	ARC 7043	India	NA	NA	Aus
+GP620	O. sativa	Jinheng	IRRI	NA	NA	TeJ
+GP621	O. sativa	Shigang-9	Japan	NA	NA	TeJ
+GP622	O. sativa	Tatsumi	IRRI	NA	NA	Ind_Int
+GP623	O. sativa	Zhaoming	Japan	NA	NA	TeJ
+GP624	O. sativa	JIRASAR 280	Hungary	NA	NA	Ind_Int
+GP625	O. sativa	Basu Mathed	India	NA	NA	Aus
+GP626	O. sativa	Berong	Indonesia	NA	NA	TrJ
+GP627	O. sativa	Baladewa	Indonesia	NA	NA	Int
+GP628	O. sativa	Abang Busur	Indonesia	NA	NA	Ind_Int
+GP629	O. sativa	Aen Petu	Indonesia	NA	NA	TrJ
+GP63	O. sativa	ARC 7013	India	NA	NA	Aus
+GP630	O. sativa	Nonglin-247	Japan	NA	NA	TeJ
+GP631	O. sativa	Nonglin-263	Japan	NA	NA	IndII
+GP632	O. sativa	Luhuangjing	Japan	NA	NA	TeJ
+GP633	O. sativa	Balsamo	Philippine	NA	NA	Ind_Int
+GP634	O. sativa	MILYANG63	North Korea	NA	NA	TeJ
+GP635	O. sativa	milyamg 67	North Korea	NA	NA	Int
+GP636	O. sativa	Suweon 92	North Korea	NA	NA	TeJ
+GP637	O. sativa	Suweon 289	North Korea	NA	NA	IndII
+GP638	O. sativa	Suweon 303	North Korea	NA	NA	TeJ
+GP639	O. sativa	Suweon 320	North Korea	NA	NA	IndII
+GP64	O. sativa	X69-56-12-10-6-3	Burma	NA	NA	IndII
+GP640	O. sativa	Tebonnet	US	NA	NA	TrJ
+GP641	O. sativa	Starbonnet CI9584	US	NA	NA	TrJ
+GP642	O. sativa	Sky bonnet	US	NA	NA	TrJ
+GP643	O. sativa	IRAT 112	Ivory Coast	NA	NA	TrJ
+GP644	O. sativa	IRAT 170	Ivory Coast	NA	NA	TrJ
+GP645	O. sativa	Rathu Heenati	Sri Lanka	NA	NA	IndII
+GP646	O. sativa	xx-5	Thailand	NA	NA	TeJ
+GP647	O. sativa	Sunbonnet	US	NA	NA	TrJ
+GP648	O. sativa	Nonglin-181	Japan	NA	NA	TeJ
+GP649	O. sativa	Wuchanghuangjing	Japan	NA	NA	TeJ
+GP65	O. sativa	IR 4227-109-1-3	IRRI	NA	NA	IndII
+GP650	O. sativa	Qiutian-31	Japan	NA	NA	TeJ
+GP651	O. sativa	milyamg 64	North Korea	NA	NA	TeJ
+GP652	O. sativa	Suweon 295	North Korea	NA	NA	IndII
+GP653	O. sativa	Rezhisangnuo	Japan	NA	NA	TeJ
+GP654	O. sativa	Arborio	Italy	NA	NA	TeJ
+GP655	O. sativa	Baizaoseng	Japan	NA	NA	TeJ
+GP656	O. sativa	Nonglin-182	Japan	NA	NA	TeJ
+GP657	O. sativa	Neplun	Vietnam	NA	NA	TeJ
+GP658	O. sativa	IAC 150/76	Brazil	NA	NA	Int
+GP659	O. sativa	CNA 762069	Brazil	NA	NA	TrJ
+GP66	O. sativa	C 41(xuan)	Vietnam	NA	NA	IndI
+GP660	O. sativa	Jiaping	Japan	NA	NA	TrJ
+GP661	O. sativa	Rosa Marchetti	Italy	NA	NA	TeJ
+GP662	O. sativa	Teng-747	Japan	NA	NA	TeJ
+GP663	O. sativa	Teng-832	Japan	NA	NA	TeJ
+GP664	O. sativa	Teng-841	Japan	NA	NA	TeJ
+GP665	O. sativa	Tengnuo-852	Japan	NA	NA	TeJ
+GP666	O. sativa	Teng-877	Japan	NA	NA	TeJ
+GP667	O. sativa	Teng-883	Japan	NA	NA	TeJ
+GP668	O. sativa	Teng-123	Japan	NA	NA	TeJ
+GP669	O. sativa	Teng-870	Japan	NA	NA	TeJ
+GP67	O. sativa	JC 70	India	NA	NA	Aus
+GP670	O. sativa	Teng-132	Japan	NA	NA	TeJ
+GP671	O. sativa	Teng-139	Japan	NA	NA	TeJ
+GP672	O. sativa	Tengnuo-133	Japan	NA	NA	TeJ
+GP673	O. sativa	Teng-136	Japan	NA	NA	TeJ
+GP674	O. sativa	Teng-871	Japan	NA	NA	TeJ
+GP675	O. sativa	Teng-872	Japan	NA	NA	TeJ
+GP676	O. sativa	Aoyu-314	Japan	NA	NA	IndI
+GP677	O. sativa	MILYANG84	North Korea	NA	NA	TeJ
+GP678	O. sativa	Niandangzhong	South Korea	NA	NA	TeJ
+GP679	O. sativa	B5517A-15-4-9-1	Indonesia	NA	NA	TrJ
+GP68	O. sativa	IR 5533-PP856-1	IRRI	NA	NA	IndII
+GP680	O. sativa	J229	Cuba	NA	NA	Jap_Int
+GP681	O. sativa	J519	Cuba	NA	NA	Jap_Int
+GP682	O. sativa	DAMAGUM	Indonesia	NA	NA	TeJ
+GP683	O. sativa	KETAN GONDOPURO	Indonesia	NA	NA	TrJ
+GP684	O. sativa	ITALPATNA 640	Italy	NA	NA	TrJ
+GP685	O. sativa	NOVELLI GIGANTE	Italy	NA	NA	Jap_Int
+GP686	O. sativa	H32	Hungary	NA	NA	TrJ
+GP687	O. sativa	KETAN DUNI	Indonesia	NA	NA	TrJ
+GP688	O. sativa	GAJO	Indonesia	NA	NA	TrJ
+GP689	O. sativa	Bonjo	Indonesia	NA	NA	TrJ
+GP69	O. sativa	IR 7149-5-2-1-1	IRRI	NA	NA	IndII
+GP690	O. sativa	R.S	Indonesia	NA	NA	TrJ
+GP691	O. sativa	HURI 386	Hungary	NA	NA	TeJ
+GP692	O. sativa	HU 73	Hungary	NA	NA	TeJ
+GP693	O. sativa	NA	Colombia	NA	NA	Int
+GP694	O. sativa	NA	South Korea	NA	NA	TeJ
+GP695	O. sativa	NA	Brazil	NA	NA	TrJ
+GP696	O. sativa	NA	Brazil	NA	NA	TrJ
+GP697	O. sativa	NA	Ivory Coast	NA	NA	TrJ
+GP698	O. sativa	NA	Ivory Coast	NA	NA	TrJ
+GP699	O. sativa	NA	Ivory Coast	NA	NA	TrJ
+GP7	O. sativa	Pate Blanc S3	Ivory Coast	NA	NA	TrJ
+GP70	O. sativa	IR 7149-23-2-3-1	IRRI	NA	NA	IndII
+GP700	O. sativa	NA	Ivory Coast	NA	NA	TrJ
+GP701	O. sativa	NA	Ivory Coast	NA	NA	TrJ
+GP702	O. sativa	NA	South Korea	NA	NA	TeJ
+GP703	O. sativa	NA	South Korea	NA	NA	TeJ
+GP704	O. sativa	NA	Ivory Coast	NA	NA	TrJ
+GP705	O. sativa	NA	Ivory Coast	NA	NA	TrJ
+GP706	O. sativa	NA	Ivory Coast	NA	NA	TrJ
+GP707	O. sativa	NA	South Korea	NA	NA	TeJ
+GP708	O. sativa	NA	South Korea	NA	NA	TeJ
+GP709	O. sativa	NA	South Korea	NA	NA	TeJ
+GP71	O. sativa	IR 9095-258-2	IRRI	NA	NA	IndII
+GP710	O. sativa	NA	South Korea	NA	NA	TeJ
+GP711	O. sativa	NA	Indonesia	NA	NA	TrJ
+GP712	O. sativa	NA	Malaysia	NA	NA	TrJ
+GP713	O. sativa	NA	Bengal	NA	NA	Aus
+GP714	O. sativa	NA	Indonesia	NA	NA	TrJ
+GP715	O. sativa	NA	Bengal	NA	NA	Aus
+GP716	O. sativa	NA	North Korea	NA	NA	indica
+GP717	O. sativa	NA	Brazil	NA	NA	TeJ
+GP718	O. sativa	NA	India	NA	NA	TrJ
+GP719	O. sativa	NA	US	NA	NA	Int
+GP72	O. sativa	IR 9209-26-2	IRRI	NA	NA	IndII
+GP720	O. sativa	NA	Brazil	NA	NA	Int
+GP721	O. sativa	NA	Ivory Coast	NA	NA	TrJ
+GP722	O. sativa	NA	Ivory Coast	NA	NA	indica
+GP723	O. sativa	NA	Ivory Coast	NA	NA	TrJ
+GP724	O. sativa	NA	Ivory Coast	NA	NA	TrJ
+GP725	O. sativa	NA	Ivory Coast	NA	NA	TrJ
+GP726	O. sativa	NA	Ivory Coast	NA	NA	TrJ
+GP727	O. sativa	NA	Ivory Coast	NA	NA	TrJ
+GP728	O. sativa	NA	Ivory Coast	NA	NA	TrJ
+GP729	O. sativa	NA	Ivory Coast	NA	NA	TrJ
+GP73	O. sativa	IR 4707-123-3	IRRI	NA	NA	IndII
+GP730	O. sativa	NA	Nigeria	NA	NA	TrJ
+GP731	O. sativa	NA	Nigeria	NA	NA	TrJ
+GP732	O. sativa	NA	Nigeria	NA	NA	TrJ
+GP733	O. sativa	NA	Nigeria	NA	NA	TrJ
+GP734	O. sativa	NA	Nigeria	NA	NA	TrJ
+GP735	O. sativa	NA	Nigeria	NA	NA	TrJ
+GP736	O. sativa	NA	Nigeria	NA	NA	Int
+GP737	O. sativa	NA	Nigeria	NA	NA	Int
+GP738	O. sativa	NA	South Korea	NA	NA	TeJ
+GP739	O. sativa	NA	Hungary	NA	NA	TeJ
+GP74	O. sativa	IR 533-1-89	IRRI	NA	NA	IndII
+GP740	O. sativa	NA	Hungary	NA	NA	TeJ
+GP741	O. sativa	NA	Japan	NA	NA	TeJ
+GP742	O. sativa	NA	South Korea	NA	NA	TeJ
+GP743	O. sativa	NA	South Korea	NA	NA	TeJ
+GP744	O. sativa	NA	Brazil	NA	NA	TrJ
+GP745	O. sativa	NA	Brazil	NA	NA	TrJ
+GP746	O. sativa	NA	South Korea	NA	NA	TeJ
+GP747	O. sativa	NA	South Korea	NA	NA	TeJ
+GP748	O. sativa	NA	South Korea	NA	NA	TeJ
+GP749	O. sativa	NA	South Korea	NA	NA	TeJ
+GP75	O. sativa	Kinandang Patong	Philippine	NA	NA	Int
+GP750	O. sativa	NA	Indonesia	NA	NA	TeJ
+GP751	O. sativa	NA	Brazil	NA	NA	TrJ
+GP752	O. sativa	NA	IRRI	NA	NA	Int
+GP753	O. sativa	NA	US	NA	NA	TrJ
+GP754	O. sativa	NA	North Korea	NA	NA	TeJ
+GP755	O. sativa	NA	North Korea	NA	NA	TeJ
+GP756	O. sativa	NA	North Korea	NA	NA	TeJ
+GP758	O. sativa	NA	US	NA	NA	TrJ
+GP759	O. sativa	NA	US	NA	NA	TeJ
+GP76	O. sativa	Rojfotsy 1285	Madagascar	NA	NA	IndII
+GP760	O. sativa	NA	Japan	NA	NA	TeJ
+GP761	O. sativa	NA	Indonesia	NA	NA	TrJ
+GP762	O. sativa	NA	Indonesia	NA	NA	Int
+GP764	O. sativa	NA	India	NA	NA	Aus
+GP765	O. sativa	NA	North Korea	NA	NA	TeJ
+GP766	O. sativa	NA	North Korea	NA	NA	TeJ
+GP767	O. sativa	NA	North Korea	NA	NA	indica
+GP768	O. sativa	NA	North Korea	NA	NA	TeJ
+GP769	O. sativa	NA	North Korea	NA	NA	TeJ
+GP77	O. sativa	IR 2071-88-8-10	IRRI	NA	NA	TrJ
+GP770	O. sativa	NA	North Korea	NA	NA	TeJ
+GP771	O. sativa	NA	North Korea	NA	NA	TeJ
+GP772	O. sativa	NA	North Korea	NA	NA	indica
+GP773	O. sativa	NA	North Korea	NA	NA	TeJ
+GP774	O. sativa	NA	North Korea	NA	NA	TeJ
+GP775	O. sativa	NA	North Korea	NA	NA	TeJ
+GP776	O. sativa	NA	South Korea	NA	NA	TeJ
+GP777	O. sativa	NA	South Korea	NA	NA	TeJ
+GP779	O. sativa	NA	Japan	NA	NA	TeJ
+GP78	O. sativa	IR 2451-9-4-3	IRRI	NA	NA	IndII
+GP780	O. sativa	NA	Japan	NA	NA	TeJ
+GP782	O. sativa	NA	South Korea	NA	NA	TeJ
+GP783	O. sativa	NA	Japan	NA	NA	TeJ
+GP784	O. sativa	NA	Japan	NA	NA	TeJ
+GP785	O. sativa	NA	Japan	NA	NA	indica
+GP786	O. sativa	NA	Japan	NA	NA	TeJ
+GP787	O. sativa	NA	Japan	NA	NA	TeJ
+GP788	O. sativa	NA	Japan	NA	NA	TeJ
+GP789	O. sativa	NA	Japan	NA	NA	TeJ
+GP79	O. sativa	IR 2003-P7-4-2	IRRI	NA	NA	IndII
+GP790	O. sativa	NA	Japan	NA	NA	TeJ
+GP791	O. sativa	NA	Japan	NA	NA	TeJ
+GP792	O. sativa	NA	Japan	NA	NA	TeJ
+GP793	O. sativa	NA	Japan	NA	NA	TeJ
+GP794	O. sativa	NA	Japan	NA	NA	TeJ
+GP795	O. sativa	NA	Japan	NA	NA	TeJ
+GP796	O. sativa	NA	Japan	NA	NA	TeJ
+GP797	O. sativa	NA	Japan	NA	NA	TeJ
+GP798	O. sativa	NA	Japan	NA	NA	TeJ
+GP799	O. sativa	NA	Japan	NA	NA	TeJ
+GP8	O. sativa	Bhat Mukhu	Bengal	NA	NA	Aus
+GP80	O. sativa	IR 4422-98-3-6-1	IRRI	NA	NA	IndII
+GP800	O. sativa	NA	Japan	NA	NA	TeJ
+GP801	O. sativa	NA	Japan	NA	NA	TeJ
+GP802	O. sativa	NA	Japan	NA	NA	TeJ
+GP803	O. sativa	NA	Japan	NA	NA	TeJ
+GP804	O. sativa	NA	Japan	NA	NA	TeJ
+GP805	O. sativa	NA	Japan	NA	NA	TeJ
+GP806	O. sativa	NA	Japan	NA	NA	TeJ
+GP807	O. sativa	NA	Japan	NA	NA	TeJ
+GP808	O. sativa	NA	Japan	NA	NA	TeJ
+GP809	O. sativa	NA	Japan	NA	NA	TeJ
+GP81	O. sativa	IR 4567-69-1-3	IRRI	NA	NA	IndII
+GP810	O. sativa	NA	Japan	NA	NA	TeJ
+GP811	O. sativa	NA	Japan	NA	NA	TeJ
+GP812	O. sativa	NA	Japan	NA	NA	TeJ
+GP813	O. sativa	NA	Japan	NA	NA	TeJ
+GP814	O. sativa	NA	Japan	NA	NA	TeJ
+GP815	O. sativa	NA	Japan	NA	NA	indica
+GP82	O. sativa	IR 5657-33-2	IRRI	NA	NA	IndII
+GP83	O. sativa	IEF 2911	India	NA	NA	IndII
+GP84	O. sativa	IR 4563-52-1-3-6	IRRI	NA	NA	IndII
+GP85	O. sativa	RD4	Thailand	NA	NA	IndI
+GP86	O. sativa	Saturn CI9540	US	NA	NA	TrJ
+GP87	O. sativa	Jaya	India	NA	NA	IndII
+GP88	O. sativa	Giza 159	Egypt	NA	NA	TeJ
+GP89	O. sativa	Dharial	Bengal	NA	NA	Aus
+GP9	O. sativa	IR 24	IRRI	NA	NA	IndII
+GP90	O. sativa	IR 9397-221-1-1	IRRI	NA	NA	IndII
+GP91	O. sativa	IR 9758-150-3	IRRI	NA	NA	IndII
+GP92	O. sativa	IR 10154-20-3-3	IRRI	NA	NA	Ind_Int
+GP93	O. sativa	IR 10181-58-3-1	IRRI	NA	NA	IndII
+GP94	O. sativa	IR 8608-189-2-2-1-3	IRRI	NA	NA	IndII
+GP95	O. sativa	IR 9115-40-1-3	IRRI	NA	NA	IndII
+GP96	O. sativa	IR 9742-17-1	IRRI	NA	NA	IndII
+GP97	O. sativa	IR 8608-253-5-3-2	IRRI	NA	NA	IndII
+GP98	O. sativa	IR 9093-195-1	IRRI	NA	NA	IndII
+GP99	O. sativa	IR 9209-186-2-2-3-1	IRRI	NA	NA	IndII
+HP1	O. sativa	Dadongnuo	China	27.57	119.7	TeJ
+HP10	O. sativa	Tainanxuan-370	China	25.03	121.3	TeJ
+HP100	O. sativa	Baizhidao	China	36.12	110.65	TeJ
+HP101	O. sativa	Jiuniandao	China	43.87	126.57	TeJ
+HP102	O. sativa	Jinggoudan	China	47.35	123.18	TeJ
+HP103	O. sativa	Binxianludao	China	45.75	127.48	TeJ
+HP104	O. sativa	Boshun-2	China	26.35	106.42	Jap_Int
+HP105	O. sativa	Xingrenxiaobaiwanggu	China	25.44	105.18	TeJ
+HP106	O. sativa	Shikui	China	36.4	117	TeJ
+HP107	O. sativa	Baibanghuinuo-2	China	26.14	106.66	TeJ
+HP108	O. sativa	Hanghe	China	26.25	105.92	TeJ
+HP109	O. sativa	Maomaonuo	China	25.1	104.91	TeJ
+HP11	O. sativa	Wuzhunuo	China	26.46	116	TeJ
+HP110	O. sativa	Duandingmongbaimi	China	36.4	117	TeJ
+HP111	O. sativa	Lengshuixian	China	22.68	103.67	TeJ
+HP112	O. sativa	Baikehandao	China	31.22	121.48	TeJ
+HP113	O. sativa	Laohuanggu	China	27.16	105.61	TeJ
+HP114	O. sativa	Yanzhigu	China	27.13	104.71	TeJ
+HP115	O. sativa	Hongbeizigu	China	26.87	104.28	TeJ
+HP116	O. sativa	Baidadu	China	42	122.83	TeJ
+HP117	O. sativa	Youmangzhandao	China	31.59	120.29	TeJ
+HP119	O. sativa	Huakemangnuo	China	19.05	109.83	IndI
+HP12	O. sativa	Zunhuawenzizui	China	40.2	117.97	TeJ
+HP120	O. sativa	Shanglanxiannuo-19	China	18.25	109.5	IndI
+HP121	O. sativa	Zhuxuenuo	China	23.08	113.14	Ind_Int
+HP122	O. sativa	Fenglinghuangmaozi	China	35.17	107.94	TeJ
+HP123	O. sativa	Tangxianxiaonaoguan	China	38.75	114.97	TeJ
+HP124	O. sativa	Xingtaidaozi	China	37.05	114.48	TeJ
+HP125	O. sativa	Xiatiandai-5	China	45.27	131.04	TeJ
+HP127	O. sativa	Wuyishuidao	China	44.93	127.17	TeJ
+HP128	O. sativa	Xiaohouerbei	China	32.13	114.08	TeJ
+HP129	O. sativa	Zhuyiedao	China	31.62	114.83	TeJ
+HP13	O. sativa	Fengrunhandaozi	China	39.82	118.13	TeJ
+HP130	O. sativa	Huangchuanhuihangdao	China	32.13	115.04	TeJ
+HP131	O. sativa	Longhuamaohulu	China	41.32	117.7	TeJ
+HP132	O. sativa	Qiangdaohuo	China	31.4	121.24	TeJ
+HP133	O. sativa	Niushizijing	China	31.16	120.63	TeJ
+HP134	O. sativa	Jijiaonuo	China	31.16	120.63	TeJ
+HP135	O. sativa	Yangnuodao	China	31.32	120.62	TeJ
+HP136	O. sativa	Yueziguang	China	31.59	120.29	TeJ
+HP137	O. sativa	Huanggennuo	China	31.59	120.29	TeJ
+HP138	O. sativa	Xianggennuo	China	31.36	119.82	TeJ
+HP139	O. sativa	Niulangmiaogen	China	31.78	119.95	TeJ
+HP14	O. sativa	Qiananshuinuo	China	31.64	104.41	TeJ
+HP140	O. sativa	Youmangxiaobaiwang	China	31.89	121.15	TeJ
+HP141	O. sativa	Hongnuo	China	32.39	120.56	TeJ
+HP142	O. sativa	Zhareke	China	33.38	120.13	TeJ
+HP143	O. sativa	Langxihongken	China	31.14	119.17	IndI
+HP144	O. sativa	Xianghenuo	China	28.16	113.63	IndI
+HP145	O. sativa	Xiaominian	China	27.92	110.57	TeJ
+HP146	O. sativa	Shangpiannian	China	30.4	104.04	TeJ
+HP147	O. sativa	Dahonggu	China	33.16	106.68	TeJ
+HP148	O. sativa	Hongminuo	China	26.49	113.77	TeJ
+HP149	O. sativa	Guanglong-1	China	26.05	119.18	IndI
+HP15	O. sativa	Changmaodao-1-1	China	37.54	112.33	TeJ
+HP150	O. sativa	Muxinuo	China	26.65	118.16	TeJ
+HP151	O. sativa	Honggen	China	25.12	117.01	TeJ
+HP152	O. sativa	Baigen	China	24.59	112.07	TeJ
+HP153	O. sativa	Mengjama-2	China	20.02	110.2	Jap_Int
+HP154	O. sativa	Lipinghangnuo	China	25.17	106.09	TeJ
+HP155	O. sativa	Heinuo-2	China	26.14	106.66	Jap_Int
+HP156	O. sativa	Dahuanggu	China	26.35	106.42	TeJ
+HP157	O. sativa	Changmaonian	China	25.17	106.09	Jap_Int
+HP158	O. sativa	Makenian	China	30.35	114.17	TeJ
+HP159	O. sativa	Jialigen-1	China	30.4	104.04	TeJ
+HP16	O. sativa	Handao-3-1	China	37.54	112.33	TeJ
+HP160	O. sativa	Ernianbai	China	32.62	114.38	TeJ
+HP161	O. sativa	Jiyuanhandao	China	35.08	112.57	TeJ
+HP162	O. sativa	Mahuangkejingnuo	China	26.35	106.42	TeJ
+HP163	O. sativa	Heinuo	China	26.56	106.46	TeJ
+HP164	O. sativa	Huihuinuo	China	28.57	108.48	Ind_Int
+HP165	O. sativa	Zhaoshixiang	China	26.21	107.79	TeJ
+HP166	O. sativa	Xuxuwangmi	China	26.35	106.42	TeJ
+HP167	O. sativa	Nuozhagu	China	26.35	106.42	IndI
+HP168	O. sativa	Dalinian	China	26.35	106.42	Jap_Int
+HP169	O. sativa	Hanggu	China	26.84	106.59	Jap_Int
+HP17	O. sativa	Wulongbei-3	China	40.13	124.37	TeJ
+HP170	O. sativa	Zhaoshuhupihuangmangdao	China	43.45	87.36	TeJ
+HP171	O. sativa	Hupiwumangnuo	China	43.45	87.36	TeJ
+HP172	O. sativa	Magunuo	China	26	107.86	TeJ
+HP173	O. sativa	Zhuniaonuo	China	25.04	102.42	TeJ
+HP174	O. sativa	Hangxiandahezi	China	25.85	114.02	Ind_Int
+HP175	O. sativa	Songping	China	18.64	109.7	Jap_Int
+HP176	O. sativa	Shanlinwan	China	27.57	119.7	IndII
+HP177	O. sativa	Ningdexian	China	27.57	119.7	Ind_Int
+HP178	O. sativa	Hongxian	China	30.16	120.1	TrJ
+HP179	O. sativa	Yanjing	China	27.68	120.55	Ind_Int
+HP18	O. sativa	Dandongludao	China	40.13	124.37	Jap_Int
+HP180	O. sativa	Yizhuai	China	27.08	120.08	IndII
+HP181	O. sativa	Baiyinqiu	China	27.08	120.08	Ind_Int
+HP182	O. sativa	Honggu-2	China	26.84	116.32	Ind_Int
+HP183	O. sativa	Xiangxian	China	28.14	120.94	Ind_Int
+HP184	O. sativa	Banshanxian	China	30.16	120.1	IndI
+HP185	O. sativa	Xiyeqing	China	28.8	121.13	IndI
+HP186	O. sativa	Dayeqing	China	28.92	120.02	IndI
+HP187	O. sativa	Bayuenuo	China	22.36	106.84	IndI
+HP188	O. sativa	Wusuobi	China	29.15	118.39	IndI
+HP189	O. sativa	Huazaobai	China	29.15	118.39	IndI
+HP19	O. sativa	Handaozi	China	40.13	124.37	TeJ
+HP190	O. sativa	Maweixian	China	29.61	119.05	IndI
+HP191	O. sativa	Taiwannuo	China	29.61	119.05	IndI
+HP192	O. sativa	Handao	China	30.04	121.16	Ind_Int
+HP193	O. sativa	Panyeqing	China	30.01	119.91	IndI
+HP194	O. sativa	Sanlicun-6	China	30.16	120.1	IndI
+HP195	O. sativa	Dayeliu	China	30.16	120.1	IndI
+HP196	O. sativa	Heigudadao	China	30.16	120.1	IndI
+HP197	O. sativa	Hongdounuo	China	26.73	117.45	IndI
+HP198	O. sativa	Jiankenuo	China	27.34	117.48	IndI
+HP199	O. sativa	Shipishu	China	25.07	118.18	Ind_Int
+HP2	O. sativa	Yezhuwan	China	30.68	119.68	TeJ
+HP20	O. sativa	Bufujin	China	40.3	123.25	Jap_Int
+HP200	O. sativa	Shaozhimanzhong	China	24.38	117.3	IndI
+HP201	O. sativa	Huazhan	China	25	117.53	Ind_Int
+HP202	O. sativa	Haiwu	China	23.73	117.16	Ind_Int
+HP203	O. sativa	Mazinuo	China	25.72	116.75	IndI
+HP204	O. sativa	Lengshuibai	China	28.47	117.97	IndI
+HP205	O. sativa	Dingzhounuo	China	26.92	117.15	Ind_Int
+HP206	O. sativa	Erdonghe-1	China	27.05	118.32	IndI
+HP207	O. sativa	Mazimang	China	27.76	118.02	Ind_Int
+HP208	O. sativa	Jinbaoyin-3	China	26.8	117.8	Ind_Int
+HP209	O. sativa	baimizai	China	26.2	119.53	Ind_Int
+HP21	O. sativa	Luweidao	China	43.54	125.19	TeJ
+HP210	O. sativa	Wukejian	China	26.2	119.53	Ind_Int
+HP211	O. sativa	Pingnanbai	China	27.47	119.5	IndI
+HP212	O. sativa	Yizhixiangshu	China	25.07	118.18	Ind_Int
+HP213	O. sativa	Leigongman	China	25	117.53	Ind_Int
+HP214	O. sativa	Huaihe	China	25.72	116.75	Ind_Int
+HP215	O. sativa	Hongmiguyoumang	China	26.85	116.82	Ind_Int
+HP216	O. sativa	Xianshuichi	China	23.73	117.16	Ind_Int
+HP217	O. sativa	Erzhi	China	22.74	108.49	IndI
+HP218	O. sativa	Liuzhuzhan	China	22.87	110.53	Ind_Int
+HP219	O. sativa	Anqinggu	China	24.49	109.74	IndI
+HP22	O. sativa	Zhandaozi	China	34.79	116.57	TeJ
+HP220	O. sativa	Zaomabao	China	23.7	113.01	Ind_Int
+HP221	O. sativa	Dabaizao	China	26.92	118.98	Ind_Int
+HP222	O. sativa	Qimei-1	China	23.08	113.14	Ind_Int
+HP223	O. sativa	Shuangliushangu	China	25.03	121.3	Jap_Int
+HP224	O. sativa	Dayaozhan	China	25.03	121.3	Ind_Int
+HP225	O. sativa	Taidongwuzhan	China	25.03	121.3	IndI
+HP226	O. sativa	Zaodaxian	China	25.03	121.3	IndI
+HP227	O. sativa	Jianongxianyu-36	China	25.03	121.3	IndII
+HP228	O. sativa	Jianongxianyu-40	China	25.03	121.3	IndII
+HP229	O. sativa	Zaohechi	China	28.4	115.55	IndI
+HP23	O. sativa	Baizhandao	China	41.49	125.92	TeJ
+HP230	O. sativa	Qihe	China	22.69	109.2	Ind_Int
+HP231	O. sativa	Jiangzhan	China	22.36	106.84	Ind_Int
+HP232	O. sativa	Changweizhan	China	27.22	115.14	IndII
+HP233	O. sativa	Heigu	China	23.35	102.42	Ind_Int
+HP234	O. sativa	Wanjinxian	China	31.32	120.62	IndI
+HP235	O. sativa	Pangqiunuo	China	30.93	117.82	Ind_Int
+HP236	O. sativa	Dayezao	China	31.7	117.15	IndI
+HP237	O. sativa	Yahezhong	China	26.32	115.33	Ind_Int
+HP238	O. sativa	Simaobai	China	27.44	115.82	Ind_Int
+HP239	O. sativa	Datiezao	China	27.12	119.36	Ind_Int
+HP24	O. sativa	Huoshaodahe	China	26.34	116.32	TeJ
+HP240	O. sativa	Yanshuichi	China	23.99	117.34	Ind_Int
+HP241	O. sativa	Dachangmanghandao	China	35.05	118.35	TeJ
+HP242	O. sativa	Shanlan-19	China	19.23	109.44	Ind_Int
+HP243	O. sativa	Handao	China	24.77	112.4	IndII
+HP244	O. sativa	Luotianzaonuo	China	30.35	114.17	IndI
+HP245	O. sativa	Tongzinuo	China	29.23	113.8	IndI
+HP246	O. sativa	Nantianzhan	China	29.54	114.04	Ind_Int
+HP247	O. sativa	Wufenglengshuizhan	China	30.35	114.17	IndI
+HP248	O. sativa	Xiaohonggu	China	30.35	114.17	IndI
+HP249	O. sativa	Guizhounuo	China	29.64	109.42	IndII
+HP25	O. sativa	Dalizhan	China	36.06	113.81	TeJ
+HP250	O. sativa	Changainuo	China	27.92	110.57	IndI
+HP251	O. sativa	Zhenzhunuo	China	26.41	111.28	IndI
+HP252	O. sativa	Huohandao	China	31.81	115.42	IndI
+HP253	O. sativa	Yelicang	China	33.55	109.91	IndI
+HP254	O. sativa	Jibiezi	China	32.72	113.31	IndI
+HP255	O. sativa	Likehandao	China	29.37	112.39	IndI
+HP256	O. sativa	Mifengdao	China	33.15	113.98	TeJ
+HP257	O. sativa	Gedadao	China	34.75	101.62	IndI
+HP258	O. sativa	Honggudao	China	34.75	101.62	TeJ
+HP259	O. sativa	Caomaodan	China	34.75	101.62	IndI
+HP26	O. sativa	Huangdao	China	31.22	121.48	IndI
+HP260	O. sativa	Hongjiaowen	China	30.88	104.32	IndI
+HP261	O. sativa	Dayemaozhan	China	31.13	104.16	IndI
+HP262	O. sativa	Makezao	China	31.8	104.7	IndI
+HP263	O. sativa	Ruanzhanjiugu	China	28.96	105.46	IndI
+HP264	O. sativa	Changruangu	China	25.67	104.24	IndI
+HP265	O. sativa	Xiaoshaogu	China	24.06	101.98	IndI
+HP266	O. sativa	Dahangu-2	China	25.1	104.91	IndI
+HP267	O. sativa	Dabaihangu	China	25.1	104.91	IndI
+HP268	O. sativa	Luanjiaohuangzhan	China	25.1	104.91	IndI
+HP269	O. sativa	Shiyanggu	China	25.1	104.91	IndI
+HP27	O. sativa	Youmanghandao	China	31.64	120.74	Int
+HP270	O. sativa	Wangu	China	25.1	104.91	IndI
+HP271	O. sativa	Baikeshangu	China	26.25	105.92	Jap_Int
+HP272	O. sativa	Zhankenuo-2	China	26.84	106.59	TeJ
+HP273	O. sativa	Fennuo	China	26.35	106.42	IndI
+HP274	O. sativa	Bairizao-4	China	27.73	109.21	IndI
+HP275	O. sativa	Longyangnuo	China	27.73	109.21	TeJ
+HP276	O. sativa	Hanhe-2	China	28.27	108.13	Ind_Int
+HP277	O. sativa	Maonuo-2	China	26.7	107.51	IndI
+HP278	O. sativa	Heiyaonuo	China	25.83	107.55	TeJ
+HP279	O. sativa	Zaonuo-2	China	26.68	108.32	IndI
+HP28	O. sativa	Zaodao	China	31.36	119.82	TeJ
+HP280	O. sativa	Sankecun	China	30.35	114.17	TeJ
+HP281	O. sativa	Yangkenuo	China	27.03	108.11	IndI
+HP282	O. sativa	Dayegu	China	26.25	105.92	Jap_Int
+HP283	O. sativa	Chuanbaizao	China	33	106.93	TeJ
+HP284	O. sativa	Sanlicun-2	China	33	106.93	TeJ
+HP285	O. sativa	Zaodaogu	China	33.74	112.88	IndI
+HP287	O. sativa	Hongjiaozhan	China	28.96	105.46	Ind_Int
+HP288	O. sativa	Xiangzhan-1	China	27.4	102.15	Ind_Int
+HP289	O. sativa	Jiuyuenuogu	China	22.58	101.88	Ind_Int
+HP29	O. sativa	Qiangdao	China	34.54	118.75	TeJ
+HP290	O. sativa	Hongshannuo	China	23.62	105.6	Ind_Int
+HP291	O. sativa	Aizinuo	China	25.44	105.18	IndI
+HP292	O. sativa	Guangkehongmixianzhan	China	25.11	105.49	IndI
+HP293	O. sativa	Sanlicun-5	China	30.35	114.17	Int
+HP294	O. sativa	Laolaihong	China	27.4	102.15	Int
+HP295	O. sativa	503	China	29.88	118.44	IndI
+HP296	O. sativa	Makehong	China	27.56	116.62	Ind_Int
+HP297	O. sativa	Baiguxiang	China	24.59	112.07	Ind_Int
+HP298	O. sativa	Hanhe	China	28.12	112.59	IndI
+HP299	O. sativa	Gouyingdu	China	32.72	113.31	IndI
+HP3	O. sativa	Jiangbeilizhihong	China	30.77	120.76	TeJ
+HP30	O. sativa	Feidongtangdao	China	31.89	117.47	TeJ
+HP300	O. sativa	Xihuzao	China	25.89	116.02	IndI
+HP301	O. sativa	Tieshannuo	China	27.12	114.97	IndI
+HP302	O. sativa	Benguzhong	China	22.69	109.2	Ind_Int
+HP303	O. sativa	Xibengu	China	24.67	109.24	Ind_Int
+HP304	O. sativa	Hanzhangu	China	24.8	105.34	Ind_Int
+HP305	O. sativa	Honghandao-2	China	23.15	106.41	Ind_Int
+HP306	O. sativa	Zhenfanzi	China	28.16	113.63	Ind_Int
+HP307	O. sativa	Xiaojiugu	China	28.08	104.28	IndI
+HP308	O. sativa	Hangu-5	China	26.35	106.42	Jap_Int
+HP309	O. sativa	Haipuxiaohongzhan	China	25.81	104.64	Jap_Int
+HP31	O. sativa	Changmangnuo-2	China	26.73	117.45	TeJ
+HP310	O. sativa	Yayou	China	23.36	110.9	IndI
+HP311	O. sativa	Dahonggu	China	34.79	116.57	IndI
+HP312	O. sativa	Yanzhanzhong	China	21.39	110.24	IndI
+HP313	O. sativa	Wangjiaxiangxiaohuangzhan	China	25.44	105.18	IndI
+HP314	O. sativa	Lengshuizhan	China	26.49	107.58	TeJ
+HP315	O. sativa	Hangunuo	China	25.84	107.54	TeJ
+HP316	O. sativa	Tuanzhuzao	China	28.4	115.55	IndI
+HP317	O. sativa	Yihongzui	China	31.95	118.83	IndI
+HP318	O. sativa	Huanghuaxian	China	32.43	119.55	IndI
+HP319	O. sativa	Honghandao-1	China	32.03	118.46	IndI
+HP32	O. sativa	Heikejiangmi	China	36.4	117	TeJ
+HP320	O. sativa	Hongkexian	China	32.93	119.82	IndI
+HP321	O. sativa	Hongkedao	China	30.07	118.57	IndI
+HP322	O. sativa	Dayezao	China	30.64	117.84	IndI
+HP323	O. sativa	Jinjizao	China	31.52	117.17	IndI
+HP324	O. sativa	Makezhan-2	China	31.04	116.94	IndI
+HP325	O. sativa	Daosiji	China	31.04	116.94	IndI
+HP326	O. sativa	Yintiaoxian	China	31.64	104.41	IndI
+HP327	O. sativa	Maguhongmi	China	23.4	113.19	Ind_Int
+HP328	O. sativa	Hongbaizhanhangu	China	23.75	106.9	Ind_Int
+HP329	O. sativa	Xiangdao	China	32.62	114.38	IndI
+HP33	O. sativa	Gaoliangdao	China	31.25	113.69	TeJ
+HP330	O. sativa	Baimihuangzhan	China	25.39	105.63	Jap_Int
+HP331	O. sativa	Sanlicun-3	China	28.6	112.33	TeJ
+HP332	O. sativa	Hongmimozhan	China	28.37	112.8	IndI
+HP333	O. sativa	Yangmianzao	China	28.16	113.63	IndI
+HP334	O. sativa	Tuanguzao	China	29.71	113.56	IndI
+HP335	O. sativa	Erfuzao	China	29.71	113.56	IndI
+HP336	O. sativa	Nanxiangzao	China	29.41	112.16	IndI
+HP337	O. sativa	Qitouhuang	China	29.41	111.09	IndI
+HP338	O. sativa	Liuyuegu	China	28.12	112.59	IndI
+HP339	O. sativa	Bodao	China	19.52	109.57	IndI
+HP34	O. sativa	Zhejiangnuo	China	29.23	113.8	TeJ
+HP340	O. sativa	Ribengu	China	19.91	109.69	IndI
+HP341	O. sativa	Huangdaozhan	China	19.91	109.69	Ind_Int
+HP342	O. sativa	Wenchangzhan	China	19.91	109.69	Ind_Int
+HP343	O. sativa	Jiuyuezai	China	19.98	110.33	Ind_Int
+HP344	O. sativa	Qizhan	China	19.61	110.72	Ind_Int
+HP345	O. sativa	Xiangmi	China	23.08	113.14	TeJ
+HP346	O. sativa	Baihuazhan	China	21.43	110.78	Ind_Int
+HP347	O. sativa	Qiwei	China	21.52	110.99	Ind_Int
+HP348	O. sativa	Suixihongxu	China	21.39	110.24	Ind_Int
+HP349	O. sativa	Heinuo	China	22.16	111.78	Ind_Int
+HP35	O. sativa	Huanghong	China	31.17	112.58	TeJ
+HP350	O. sativa	Gouzaizhan	China	21.71	112.76	Ind_Int
+HP351	O. sativa	Dahuayao	China	23.45	111.48	IndI
+HP352	O. sativa	Youzhannuo	China	23.18	114.28	Ind_Int
+HP353	O. sativa	Aijiaozhong	China	23.07	116.29	Ind_Int
+HP354	O. sativa	Xiangguzhong	China	22.95	117.64	Ind_Int
+HP355	O. sativa	Haoganduo	China	21.95	100.5	Ind_Int
+HP356	O. sativa	Jijiaonuo	China	23.56	99.41	IndI
+HP357	O. sativa	Dajinggu	China	23.7	113.01	Ind_Int
+HP358	O. sativa	Cungu	China	33.23	107.56	Jap_Int
+HP359	O. sativa	Baihonggu	China	33.16	106.68	IndI
+HP36	O. sativa	Baishanuo	China	28.3	109.71	TeJ
+HP360	O. sativa	Qingganzhan	China	33	106.93	IndI
+HP361	O. sativa	Xilanzhan	China	33	106.93	IndI
+HP362	O. sativa	Bangbanggu	China	32.82	106.25	IndI
+HP363	O. sativa	Xishanbai	China	33.65	106.95	TeJ
+HP364	O. sativa	Hanzhonghongdao	China	32.83	109.35	IndI
+HP365	O. sativa	Bairizao	China	29.86	117.7	IndI
+HP366	O. sativa	Wugongzao	China	29.37	112.39	IndI
+HP367	O. sativa	Xiaobaidao	China	33	106.93	IndI
+HP368	O. sativa	Xuelihongfandao	China	29.37	112.39	IndI
+HP369	O. sativa	Yunyanghuang	China	31.64	104.41	IndI
+HP37	O. sativa	Hongkenuoxuan	China	29.64	109.42	TeJ
+HP370	O. sativa	Sanyuandao	China	34.62	108.94	TeJ
+HP371	O. sativa	Gaojiaohuang	China	35.6	109.27	TeJ
+HP372	O. sativa	Taohuami	China	34.65	107.13	TeJ
+HP373	O. sativa	Baijiugu	China	32.7	109.02	IndI
+HP374	O. sativa	Yunnanbai	China	33.16	107.32	IndI
+HP375	O. sativa	Shenxiangu	China	32.3	108.89	TeJ
+HP376	O. sativa	Jinguzi	China	32.83	109.35	TeJ
+HP377	O. sativa	Baimaguzi	China	32.83	109.35	IndI
+HP378	O. sativa	Sanlicun-4	China	32.41	109.37	Jap_Int
+HP379	O. sativa	Hongguzi	China	33.34	108.33	IndI
+HP38	O. sativa	Dabainuo	China	27.37	109.16	TeJ
+HP380	O. sativa	Gaicaohuang-2	China	34.17	108.57	IndI
+HP381	O. sativa	Zhuoxianxiaobaidao	China	39.48	115.98	Int
+HP382	O. sativa	Huludao	China	36.4	117	TeJ
+HP383	O. sativa	Guihuanuo	China	32.13	114.08	IndI
+HP384	O. sativa	Xiaobaimang	China	32.83	114.02	TeJ
+HP385	O. sativa	Gaolihandao	China	34.79	114.35	TeJ
+HP386	O. sativa	Jizhuaxian	China	34.75	101.62	IndI
+HP387	O. sativa	Shaowubai	China	25.69	117.83	IndI
+HP388	O. sativa	Mazhan	China	25.58	115.79	TeJ
+HP389	O. sativa	Sanlicun-1	China	25.58	115.79	TeJ
+HP39	O. sativa	Rongbai	China	25.52	111.57	TeJ
+HP390	O. sativa	Dongying-8	China	23.08	113.14	TeJ
+HP391	O. sativa	Guanyincao	China	30.24	115.3	TeJ
+HP392	O. sativa	Yanong-1	China	27.7	106.9	IndI
+HP393	O. sativa	Qingshandao	China	30.35	114.17	IndI
+HP394	O. sativa	Dengbaoqi	China	30.35	114.17	IndI
+HP395	O. sativa	Jinkounuo	China	30.35	114.17	Ind_Int
+HP396	O. sativa	Sizhan	China	28.16	113.63	IndI
+HP397	O. sativa	Magu-3	China	28.38	111.2	IndI
+HP398	O. sativa	Honggunuo	China	28.38	111.2	TeJ
+HP399	O. sativa	Shuibaizhan	China	27.73	111.29	IndI
+HP4	O. sativa	Yanghuozhong	China	30.77	120.76	TeJ
+HP40	O. sativa	Wuyahe	China	26.37	110.3	TeJ
+HP400	O. sativa	Tazhan	China	27.73	111.29	IndI
+HP401	O. sativa	Guizinuo	China	27.44	112.18	TeJ
+HP402	O. sativa	Laotaigu	China	28.12	112.59	TeJ
+HP403	O. sativa	Maweizhan	China	26.46	106.98	TeJ
+HP404	O. sativa	Heinuomi	China	26.49	107.58	TeJ
+HP405	O. sativa	Yunnanzao-2	China	27.03	106.04	IndI
+HP406	O. sativa	Wuzhenuo	China	26.35	106.42	TeJ
+HP407	O. sativa	Aigansazhima	China	26.49	107.58	IndI
+HP408	O. sativa	Hebaogu	China	27.06	108.41	IndI
+HP409	O. sativa	Xuxumagu	China	27.03	108.11	IndI
+HP41	O. sativa	Xuanhuangnuo	China	26.37	110.3	Int
+HP410	O. sativa	Gaicao	China	26.24	109.14	IndI
+HP411	O. sativa	Jianan-9	China	25.03	121.3	Ind_Int
+HP412	O. sativa	Hongzuigu	China	22.69	109.2	Ind_Int
+HP413	O. sativa	Dazhangu	China	23.08	107.12	IndI
+HP414	O. sativa	Gaochahe	China	23.18	107.68	IndI
+HP415	O. sativa	Baipigu	China	22.85	107.21	IndI
+HP416	O. sativa	Qiyulenghe	China	22.85	107.21	Ind_Int
+HP417	O. sativa	Dashuihe	China	22.64	110.14	Ind_Int
+HP418	O. sativa	Hongkebao	China	25.78	110.02	IndI
+HP419	O. sativa	Huanggu	China	25.1	104.91	IndI
+HP42	O. sativa	Danuo	China	23.35	102.42	IndI
+HP420	O. sativa	Dabaiwangu	China	25.44	105.18	IndI
+HP421	O. sativa	Huangsinuo	China	25.12	117.01	TeJ
+HP422	O. sativa	Haonuoliang	China	21.95	100.5	Ind_Int
+HP423	O. sativa	Haogailan	China	25.04	102.42	Ind_Int
+HP424	O. sativa	Feigenuo	China	25.17	106.09	IndI
+HP425	O. sativa	Haotao	China	26.35	106.42	Jap_Int
+HP426	O. sativa	Huangganxian	China	31.22	121.48	TeJ
+HP427	O. sativa	Huangyadao	China	31.13	104.37	IndI
+HP428	O. sativa	Nandazhan	China	30.35	114.17	IndI
+HP429	O. sativa	Shapinghongjiaoqi	China	30.35	114.17	IndI
+HP43	O. sativa	Huajienuo-1	China	25.44	105.18	TeJ
+HP430	O. sativa	Jiegunuo	China	30.35	114.17	IndI
+HP431	O. sativa	Bendiwan	China	30.24	115.3	Ind_Int
+HP432	O. sativa	Baixianzi	China	30.88	104.32	IndI
+HP433	O. sativa	Wushaogu	China	30.2	103.29	IndI
+HP434	O. sativa	Baihuazhan	China	31.32	104.19	IndI
+HP435	O. sativa	Fengxiangzao	China	26.67	102.21	IndI
+HP436	O. sativa	Lengshuixiaobaigu	China	27.07	102.76	TeJ
+HP437	O. sativa	Gaicaohuang	China	29.24	104.97	IndI
+HP438	O. sativa	Datouhuang	China	31.86	117.27	IndI
+HP439	O. sativa	Xiaodongdao	China	31.62	117.87	TeJ
+HP44	O. sativa	Honggu-1	China	24.69	99.15	TeJ
+HP440	O. sativa	Liutiaozi	China	26.46	116	Ind_Int
+HP441	O. sativa	Dongzhouliu	China	27.67	113.5	IndI
+HP442	O. sativa	Suanguzao	China	29.71	113.56	IndI
+HP443	O. sativa	Tonghezao	China	27.13	111.04	IndI
+HP444	O. sativa	Baimiyahzouzao	China	27.44	112.18	IndI
+HP445	O. sativa	Honghanzhangu	China	25.44	105.18	Ind_Int
+HP446	O. sativa	Damagu-2	China	27.08	107.48	IndI
+HP447	O. sativa	Banbiannuo-2	China	26.72	107.53	IndI
+HP448	O. sativa	Wushizao	China	28.4	115.55	IndI
+HP449	O. sativa	Hongbendao	China	32.72	113.31	IndI
+HP45	O. sativa	Changlijingzhan	China	25.11	105.49	Jap_Int
+HP450	O. sativa	Zhuxizao	China	27.76	118.02	Ind_Int
+HP451	O. sativa	Heiqunzhan	China	21.68	110.88	IndI
+HP452	O. sativa	Chuanda-1	China	30.99	104.25	IndI
+HP453	O. sativa	Liushizao	China	27.73	109.21	IndI
+HP454	O. sativa	Baikezhan-1	China	18.64	109.7	Jap_Int
+HP455	O. sativa	Ershiyihao	China	18.64	109.7	Ind_Int
+HP456	O. sativa	Longyazhan-16	China	23.08	113.14	IndI
+HP457	O. sativa	Youzhan	China	24.59	112.07	Ind_Int
+HP458	O. sativa	Zaogu-E	China	23.08	113.14	IndI
+HP459	O. sativa	Sanzibai	China	31.62	114.83	IndI
+HP46	O. sativa	Bowangnuo	China	26.89	109.2	TeJ
+HP460	O. sativa	Gaicaozhan	China	31.62	114.83	IndI
+HP461	O. sativa	Makedao	China	31.81	115.42	IndI
+HP462	O. sativa	Hongmangdaliuyezi	China	31.81	115.42	TeJ
+HP463	O. sativa	Wanyedao	China	31.39	120.95	IndI
+HP464	O. sativa	Xiaozhong	China	31.95	118.83	IndI
+HP465	O. sativa	Sanshizi	China	32.43	119.55	IndI
+HP466	O. sativa	Laohonggu-1	China	29.88	118.44	TeJ
+HP467	O. sativa	Laohonggu-3	China	31.52	117.17	IndI
+HP468	O. sativa	Muzibai	China	30.84	116.36	TeJ
+HP469	O. sativa	Mandahongzao	China	30.62	116.53	IndI
+HP47	O. sativa	Baijingzhan	China	26.35	106.42	Jap_Int
+HP470	O. sativa	Damake	China	31.52	117.17	IndI
+HP471	O. sativa	Baiguomaweizhan	China	30.35	114.17	IndI
+HP472	O. sativa	Xintangerpozao-2	China	30.35	114.17	IndI
+HP473	O. sativa	Makeai	China	30.35	114.17	IndI
+HP474	O. sativa	Hongmiqinghezhan	China	30.35	114.17	IndI
+HP475	O. sativa	Makezhan-1	China	30.24	115.3	IndI
+HP476	O. sativa	Jiangxiwan	China	24.55	116.1	Ind_Int
+HP477	O. sativa	Qiuzhan	China	29.87	114.28	IndI
+HP478	O. sativa	Qianjinzao	China	29.54	114.04	IndI
+HP479	O. sativa	Paoliuzhan	China	30.7	111.3	IndI
+HP48	O. sativa	Hongmangnuo	China	29.37	112.39	TeJ
+HP480	O. sativa	Baizaogu	China	30.35	114.17	IndI
+HP481	O. sativa	Baimidongzhan	China	27.67	113.5	Ind_Int
+HP482	O. sativa	Xuanzhan	China	29.71	113.56	IndI
+HP483	O. sativa	Xiangzhou-4	China	28.3	109.71	IndI
+HP484	O. sativa	Hainandao	China	29	109.84	IndI
+HP485	O. sativa	Anhuihe	China	27.92	109.43	IndI
+HP486	O. sativa	Jinzhan	China	27.92	109.43	IndI
+HP487	O. sativa	Mazhan	China	28.02	110.18	IndI
+HP488	O. sativa	Guiyangnuo	China	27.73	111.29	IndI
+HP489	O. sativa	Maoxiangzhan	China	26.44	110.84	IndI
+HP49	O. sativa	Maguzhi	China	33.55	109.91	TeJ
+HP490	O. sativa	Quanzhounuo	China	26.44	110.84	IndI
+HP491	O. sativa	Hongmimagu	China	25.59	110.14	IndI
+HP492	O. sativa	Shuihegu	China	25.79	113	IndI
+HP493	O. sativa	Guangxuhe	China	25.08	113.91	IndI
+HP494	O. sativa	Maweizhan	China	25.08	113.91	Ind_Int
+HP495	O. sativa	Zaowangzainuo	China	25.08	113.91	IndI
+HP496	O. sativa	Jiangxinuo	China	25.79	113	IndI
+HP497	O. sativa	Hunuo	China	25.95	113.39	IndI
+HP498	O. sativa	Chongyangnuo	China	26.22	111.63	IndI
+HP499	O. sativa	Maweinuo	China	24.97	111.79	IndII
+HP5	O. sativa	Chiwudao	China	38.47	111.22	TeJ
+HP50	O. sativa	Honggeda(Houbeiwa)	China	31.64	104.41	TeJ
+HP500	O. sativa	Zaonuo-1	China	28.12	112.59	IndI
+HP501	O. sativa	Jiangxizhan	China	26.49	113.77	IndI
+HP502	O. sativa	Xiangzhan	China	26.49	113.77	IndI
+HP503	O. sativa	Hongmidongzhan	China	26.41	117.77	Ind_Int
+HP504	O. sativa	77-2087	China	28.6	112.33	IndI
+HP505	O. sativa	Nantehao	China	25.04	102.42	IndI
+HP506	O. sativa	Yumidao	China	29.05	111.69	IndI
+HP507	O. sativa	Jiandaoqi	China	29.41	111.09	IndI
+HP508	O. sativa	Xiaomagu	China	30.57	104.94	IndI
+HP509	O. sativa	Babaili	China	26.49	113.77	IndI
+HP51	O. sativa	Dahuangdao	China	36.29	109.37	TeJ
+HP510	O. sativa	Mamahuang	China	30.82	104.13	IndI
+HP511	O. sativa	Miandianjiugu	China	30.82	104.13	TeJ
+HP512	O. sativa	Qiaonong-1	China	27.92	102.29	TeJ
+HP513	O. sativa	Banjiuyan	China	27.92	102.29	IndI
+HP514	O. sativa	Tuogu	China	29.24	104.97	IndI
+HP515	O. sativa	Shaweizi	China	28.71	105.06	IndI
+HP516	O. sativa	Heijielan	China	29.75	105.71	IndI
+HP517	O. sativa	Dishuigu	China	29.7	107.36	IndI
+HP518	O. sativa	Baikezao	China	27.4	102.15	IndI
+HP519	O. sativa	Heizaogu	China	26.74	102.55	Int
+HP52	O. sativa	Ruandaozi	China	35.6	109.27	TeJ
+HP520	O. sativa	Niutouwu	China	25.07	118.18	Ind_Int
+HP521	O. sativa	Zaokengji	China	25.07	118.18	Ind_Int
+HP522	O. sativa	Hongmizhong	China	24.51	117.35	IndI
+HP523	O. sativa	Yizhixiang	China	24.51	117.35	Ind_Int
+HP524	O. sativa	Changjingchi	China	25.12	117.01	IndI
+HP525	O. sativa	Fanzhan	China	24.68	113.58	TeJ
+HP526	O. sativa	Hualuozhan	China	23.08	113.14	IndI
+HP527	O. sativa	Laobaijing	China	19.05	109.83	Ind_Int
+HP528	O. sativa	Ximazagu	China	23.17	102.81	Ind_Int
+HP529	O. sativa	Haoanxiu	China	21.95	100.5	Ind_Int
+HP53	O. sativa	Changmangnuo-1	China	29.37	112.39	TeJ
+HP530	O. sativa	Hongxinnuo	China	24.82	99.61	Ind_Int
+HP531	O. sativa	Wubaili	China	27.08	107.48	IndI
+HP532	O. sativa	Daodounuo	China	26.14	106.66	TeJ
+HP533	O. sativa	Daguangmazhan	China	25.83	107.55	IndI
+HP534	O. sativa	Magu-1	China	30.99	103.94	IndI
+HP535	O. sativa	Yangguzi	China	30.8	103.86	IndI
+HP536	O. sativa	Datiegan	China	30.63	103.69	IndI
+HP537	O. sativa	Guazizhan	China	30.4	104.04	IndI
+HP538	O. sativa	Baishazhan	China	29	109.84	IndI
+HP539	O. sativa	Xiaohongjiaoxuan	China	27.37	109.16	IndI
+HP54	O. sativa	Heimangdao	China	37.51	105.18	TeJ
+HP540	O. sativa	Xuzhan	China	25.08	113.91	IndI
+HP541	O. sativa	Shuihongmi	China	25.08	113.91	IndI
+HP542	O. sativa	Baimiwujuzhan	China	25.08	113.91	IndI
+HP543	O. sativa	Zaoxuanzhan	China	28.6	112.33	IndI
+HP544	O. sativa	Keliuzao	China	29.05	111.69	Ind_Int
+HP545	O. sativa	Changmaozhan	China	26.58	107.22	IndI
+HP546	O. sativa	Xiaomanggu	China	25.44	105.18	IndI
+HP547	O. sativa	Jiaozhan	China	23.38	110.07	Ind_Int
+HP548	O. sativa	Chima	China	29.93	117.92	IndI
+HP549	O. sativa	Chuangnuo-2	China	27.08	107.48	IndI
+HP55	O. sativa	Youmangxiaohongbandao	China	35.17	107.94	TeJ
+HP550	O. sativa	Maogu	China	27.21	108.72	IndI
+HP551	O. sativa	Shunhaixiaomagu	China	26.57	106.71	IndI
+HP552	O. sativa	Huangkemazhan	China	27.7	106.9	IndI
+HP553	O. sativa	Dahongjiao-2	China	25.44	105.18	IndI
+HP554	O. sativa	Huangkexianzhan-1	China	25.11	105.49	Jap_Int
+HP555	O. sativa	Lengshuizi(Yehe)	China	26.46	116	Ind_Int
+HP556	O. sativa	Baiganzhan	China	27.12	114.97	IndI
+HP557	O. sativa	Bayuehzhong	China	30.67	104.06	IndI
+HP558	O. sativa	Ermaoxiang	China	30.67	104.06	IndI
+HP559	O. sativa	Shuibaitiao	China	30.67	104.06	IndI
+HP56	O. sativa	Danuodao	China	35.17	107.94	TeJ
+HP560	O. sativa	Hongminuo	China	24.91	114.79	IndI
+HP561	O. sativa	Lengshuima	China	26.33	114.5	IndI
+HP562	O. sativa	Baiduluo	China	26.33	114.5	IndI
+HP563	O. sativa	Changsuihe	China	28.4	115.55	IndI
+HP564	O. sativa	Laohonggu-2	China	30.35	114.17	TeJ
+HP565	O. sativa	Erpozao	China	30.35	114.17	IndII
+HP566	O. sativa	Jinuo	China	33.93	106.51	IndI
+HP567	O. sativa	Makenuo	China	30.35	114.17	IndI
+HP568	O. sativa	Hongkenuo	China	30.35	114.17	TeJ
+HP569	O. sativa	Magu-2	China	25.01	107.16	IndI
+HP57	O. sativa	Xiaozhanjiangmidao	China	29.64	111.87	TeJ
+HP570	O. sativa	Hongmigu	China	30.4	104.04	IndI
+HP571	O. sativa	Hongmimagu-2	China	27.92	102.29	IndI
+HP572	O. sativa	Yangguzi-2	China	29.92	102.25	IndI
+HP573	O. sativa	Jinbaoyin-2	China	31.52	117.17	IndI
+HP574	O. sativa	Banbiannuo-1	China	27.06	106.95	TeJ
+HP575	O. sativa	Nuoganzi	China	26.41	117.77	IndI
+HP576	O. sativa	Shuilanzhanhongmi	China	26.25	105.92	IndI
+HP577	O. sativa	Yanzhan	China	26.42	106.26	IndI
+HP578	O. sativa	Qingganzhan	China	26.42	106.26	IndI
+HP579	O. sativa	Zaobaigu	China	25.94	105.62	IndI
+HP58	O. sativa	Hangdao	China	26.35	106.42	TeJ
+HP580	O. sativa	Mazhan-3	China	25.94	105.62	IndI
+HP581	O. sativa	Xiaohongzhan	China	26.84	106.59	IndI
+HP582	O. sativa	Fengleng	China	27.73	109.21	IndI
+HP583	O. sativa	Damagu	China	26.59	107.97	IndI
+HP584	O. sativa	Hongjiaoguang	China	26.49	107.58	IndI
+HP585	O. sativa	Mahuangnuo	China	27.73	109.21	TeJ
+HP586	O. sativa	Banlikenuo	China	26	107.86	TeJ
+HP587	O. sativa	Guangximi-2	China	26.03	106.45	TeJ
+HP588	O. sativa	Heinuomi-2	China	26.49	107.58	TeJ
+HP589	O. sativa	Yezhugu	China	27.03	108.11	IndI
+HP59	O. sativa	Nuziliwa	China	25.03	121.3	Jap_Int
+HP590	O. sativa	Dahongjiao-1	China	26.89	109.2	IndI
+HP591	O. sativa	Hongmazhan	China	26.57	106.71	IndI
+HP592	O. sativa	Maweibaimizhan	China	25.1	104.91	IndI
+HP593	O. sativa	Guiyangzhan	China	25.11	105.49	Ind_Int
+HP594	O. sativa	Haoxiang	China	26.35	106.42	Int
+HP595	O. sativa	Xiaohongmi	China	26.08	105.75	Ind_Int
+HP596	O. sativa	Heinuo	China	26.08	105.75	TeJ
+HP597	O. sativa	Dahongjiao-3	China	24.44	100.12	IndI
+HP598	O. sativa	Zaodao	China	27.21	108.72	IndI
+HP599	O. sativa	ronghe-3	China	26.24	109.14	Jap_Int
+HP6	O. sativa	Fandao	China	38.47	111.22	TeJ
+HP60	O. sativa	Tumangdao	China	45.53	131.85	TeJ
+HP600	O. sativa	Jinbaoyin	China	33.25	112.98	IndI
+HP601	O. sativa	Nuodao	China	33.05	111.83	IndI
+HP602	O. sativa	Heiguzi	China	30.4	104.04	TeJ
+HP603	O. sativa	Salamagu-1	China	26	107.86	IndI
+HP604	O. sativa	Xiaobaigu	China	22.68	103.67	Ind_Int
+HP605	O. sativa	Luonuo	China	22.58	101.88	Jap_Int
+HP606	O. sativa	Ganhangunuo	China	26.66	105.76	IndI
+HP607	O. sativa	Haonuobi	China	21.95	100.5	Ind_Int
+HP608	O. sativa	Haonuobixian	China	24.69	97.93	Ind_Int
+HP609	O. sativa	Wuke-4	China	19.05	109.83	Ind_Int
+HP61	O. sativa	Erzaogu	China	25.04	102.42	IndI
+HP610	O. sativa	Qinglannuo	China	18.48	110.02	Ind_Int
+HP611	O. sativa	Guanghongba	China	18.48	110.02	Ind_Int
+HP612	O. sativa	Chongfubao	China	19.25	110.46	Ind_Int
+HP613	O. sativa	Nantexuan	China	19.36	110.1	Ind_Int
+HP614	O. sativa	Podao	China	19.52	109.57	Int
+HP62	O. sativa	Xianggu	China	22.77	103.24	Jap_Int
+HP63	O. sativa	Zhongjiaohuangmang	China	25.51	103.79	Int
+HP64	O. sativa	Baikeainuo	China	25.39	105.63	TeJ
+HP65	O. sativa	Baiguonuo-1	China	25.79	104.96	TeJ
+HP66	O. sativa	Jizhuazi(Jing)	China	33	106.93	TeJ
+HP67	O. sativa	Maomaogu	China	26.67	102.21	TeJ
+HP68	O. sativa	Heizhandaosong	China	43.5	124.82	TeJ
+HP69	O. sativa	Hongnuo	China	25.94	105.62	IndI
+HP7	O. sativa	Wukedao	China	30.84	120.92	TeJ
+HP70	O. sativa	Hangu-2	China	41.55	121.22	Jap_Int
+HP71	O. sativa	Heixiaonuo	China	22.12	107.08	Ind_Int
+HP72	O. sativa	Koumalang	China	23.91	106.62	TeJ
+HP73	O. sativa	Bendishuidao	China	37.54	112.33	TeJ
+HP74	O. sativa	Shanlan-36	China	19.23	109.44	Jap_Int
+HP75	O. sativa	Chengduhonggu	China	28.4	115.55	IndI
+HP76	O. sativa	Huangkejin	China	28.4	115.55	IndI
+HP77	O. sativa	Liaoyang-5	China	41.28	123.17	TeJ
+HP78	O. sativa	Lengshuidao	China	30.84	116.36	TeJ
+HP79	O. sativa	Wenziju	China	40.05	117.4	TeJ
+HP8	O. sativa	Wanjingbaimangdao	China	30.16	120.1	TeJ
+HP80	O. sativa	Wenjiaojing	China	23.08	113.14	TeJ
+HP81	O. sativa	Xiaohongguzi	China	33	106.93	TeJ
+HP82	O. sativa	Leinuo	China	33	106.93	TeJ
+HP83	O. sativa	Hongguzi	China	34.17	108.57	TeJ
+HP84	O. sativa	Hongkenuo(Jinkuazi)	China	32.83	109.35	TeJ
+HP85	O. sativa	Gaoganbai	China	33.88	109.96	TeJ
+HP86	O. sativa	Hongdao(Jingualao)	China	33.55	109.91	TeJ
+HP87	O. sativa	Huangjinnuojiugu	China	32.41	109.37	TeJ
+HP88	O. sativa	Xiaowujiaozhan	China	33.34	108.33	TeJ
+HP89	O. sativa	Heiguzi	China	32.82	106.25	TeJ
+HP9	O. sativa	Lizhidao	China	19.05	109.83	Jap_Int
+HP90	O. sativa	Wangduhangjingzi	China	38.71	115.14	TeJ
+HP91	O. sativa	Changmadao-3	China	36.84	115.18	TeJ
+HP92	O. sativa	Hangdao-1	China	37.03	111.88	TeJ
+HP93	O. sativa	Wumangshuidao-2	China	36.15	112.2	TeJ
+HP94	O. sativa	Youmangshuidao-1	China	37.54	112.33	TeJ
+HP95	O. sativa	Hongjian	China	42.52	129	TeJ
+HP96	O. sativa	Erjiedao	China	43.32	129.75	TeJ
+HP97	O. sativa	Jinggou	China	34.79	116.57	TeJ
+HP98	O. sativa	Luyu132-1	China	31.64	104.41	TeJ
+HP99	O. sativa	Zhilishui	China	42.33	127.27	TeJ
+HP990	O. sativa	Zhonghua11	China	NA	NA	TeJ
+HP991	O. sativa	Nanjing-6	China	NA	NA	IndI
+HP992	O. sativa	Chunjian-6	China	NA	NA	TeJ
+HP993	O. sativa	Zhefu-802	China	NA	NA	IndI
+HP994	O. sativa	Tainan-1	China	NA	NA	IndI
+HP995	O. sativa	Xiushui-11	China	NA	NA	TeJ
+HP996	O. sativa	Nongken-58	Japan	NA	NA	TeJ
+HP997	O. sativa	Nipponbare	Japan	NA	NA	TeJ
+HP999	O. sativa	Guangluai-4	China	NA	NA	IndI
+W001	O. sativa	Mayang Khang	Indonesia	-6.08	106.45	IndI
+W002	O. sativa	E B Gopher	United States	38.54	-77.02	TrJ
+W003	O. sativa	C 5560	Thailand	13.5	100.29	TrJ
+W004	O. sativa	Quinimpol	Philippines	14.6	121	TrJ
+W005	O. sativa	TAICHU MOCHI 59	"Taiwan, China"	25.02	121.38	TrJ
+W006	O. sativa	WC 2811	Micronesia	6.55	158.1	TrJ
+W007	O. sativa	Criollo Chivacoa 2	Venezuela	10.3	-66.58	TrJ
+W008	O. sativa	Secano do Brazil	El Salvador	13.7	-89.19	TrJ
+W009	O. sativa	BERLIN	Costa Rica	10	-84	Ind_Int
+W010	O. sativa	Sel. No. 388	Uruguay	-34.53	-56.09	Jap_Int
+W0101	O. rufipogon	NA	India	20.48	85.85	Or-I
+W0102	O. rufipogon	NA	India	20.48	85.85	Or-I
+W0103	O. rufipogon	NA	India	20.48	85.85	Or-I
+W0106	O. rufipogon	NA	India	20.46	85.88	Or-I
+W0107	O. rufipogon	NA	India	20.95	85.1	Or-I
+W0108	O. rufipogon	NA	India	20.46	85.88	Or-II
+W011	O. sativa	SHIMIZU MOCHI	Japan	35.7	139.8	TeJ
+W012	O. sativa	KRASNODARSKIJ 424	Russian Federation	55.45	37.37	TeJ
+W0120	O. rufipogon	NA	India	20.46	85.88	Or-II
+W0121	O. rufipogon	NA	India	20.46	85.88	Or-I
+W0123	O. rufipogon	NA	India	20.46	85.93	Or-I
+W0124	O. rufipogon	NA	India	21	85.1	Or-I
+W0125	O. rufipogon	NA	India	21	85.1	Or-III
+W0126	O. rufipogon	NA	India	21	85.1	Or-III
+W0128	O. rufipogon	NA	India	21	85.1	Or-I
+W013	O. sativa	Pergonil 15	Portugal	38.42	-9.05	TeJ
+W0130	O. rufipogon	NA	India	21	85.1	Or-I
+W0132	O. rufipogon	NA	India	17.05	82.18	Or-II
+W0133	O. rufipogon	NA	India	17.05	82.18	Or-III
+W0134	O. rufipogon	NA	India	16.93	81.88	Or-III
+W0135	O. rufipogon	NA	India	16.93	81.88	Or-III
+W0136	O. rufipogon	NA	India	16.91	81.82	Or-III
+W0137	O. rufipogon	NA	India	16.91	81.82	Or-III
+W0138	O. rufipogon	NA	India	10.51	76.65	Or-III
+W014	O. sativa	Red Khosha Cerma	Afghanistan	34.5	69	VI
+W0141	O. rufipogon	NA	India	10.37	76.37	Or-III
+W0143	O. rufipogon	NA	Sri Lanka	7.21	80.2	Or-II
+W0144	O. rufipogon	NA	Sri Lanka	7.07	80.3	Or-I
+W0145	O. rufipogon	NA	Thailand	13.72	100.48	Or-II
+W0147	O. rufipogon	NA	India	20.48	85.85	Or-I
+W0148	O. rufipogon	NA	India	20.48	85.85	Or-I
+W0149	O. rufipogon	NA	India	23.48	81.1	Or-III
+W015	O. sativa	Safut Khosha	Afghanistan	34.5	69	Aus
+W0151	O. rufipogon	NA	India	23.48	81.1	Or-I
+W0152	O. rufipogon	NA	India	22.9	88.25	Or-I
+W0153	O. rufipogon	NA	India	22.4	88.66	Or-III
+W0157	O. rufipogon	NA	India	26.59	94.19	Or-II
+W016	O. sativa	NORIN 11	Japan	35.7	139.8	TeJ
+W0163	O. rufipogon	NA	Thailand	18.81	98.66	Or-II
+W0164	O. rufipogon	NA	Thailand	18.81	98.66	Or-II
+W0165	O. rufipogon	NA	Thailand	18.81	98.66	Or-II
+W0166	O. rufipogon	NA	Thailand	18.81	98.66	Or-II
+W0168	O. rufipogon	NA	Thailand	15.22	102.5	Or-I
+W0169	O. rufipogon	NA	Thailand	15.87	100.99	Or-II
+W017	O. sativa	R 75	Senegal	14.38	-17.27	TrJ
+W0170	O. rufipogon	NA	Thailand	15.87	100.99	Or-I
+W0171	O. rufipogon	NA	Thailand	15.87	100.99	Or-II
+W0172	O. rufipogon	NA	Thailand	15.87	100.99	Or-III
+W0173	O. rufipogon	NA	Thailand	15.87	100.99	Or-I
+W0174	O. rufipogon	NA	Thailand	18.08	103.27	Or-II
+W0175	O. rufipogon	NA	Thailand	18.08	103.27	Or-II
+W0176	O. rufipogon	NA	Thailand	18.08	103.27	Or-I
+W0178	O. rufipogon	NA	Thailand	14.33	100.53	Or-I
+W0179	O. rufipogon	NA	Thailand	17.42	102.78	Or-I
+W018	O. sativa	UZ ROSZ M38	Uzbekistan	41.16	69.13	TeJ
+W0180	O. rufipogon	NA	Thailand	18.77	99.97	Or-II
+W019	O. sativa	H57-3-1	Argentina	-34.62	-54.84	Jap_Int
+W020	O. sativa	IARI 6626	India	28.6	77.2	Aus
+W021	O. sativa	Khao Luang	Laos	17.96	102.61	Jap_Int
+W022	O. sativa	C 8429	Papua New Guinea	-9.5	147.2	TrJ
+W023	O. sativa	Warrangal Culture 1252	India	28.6	77.2	Ind_Int
+W0234	O. rufipogon	NA	Thailand	18.08	103.27	Or-II
+W024	O. sativa	Padi Pohon Batu	Malaysia	3.2	101.7	TrJ
+W025	O. sativa	NC 1/536	Pakistan	33.4	73.08	Aus
+W026	O. sativa	Won Son Zo No. 11	Korea	37.6	127	IndI
+W027	O. sativa	Chacareiro Uruguay	Uruguay	-34.53	-56.09	TeJ
+W028	O. sativa	Doble Carolina	Uruguay	-34.53	-56.09	Aus
+W029	O. sativa	Ai Chueh Ta Pai Ku	"Taiwan, China"	25.02	121.38	IndI
+W030	O. sativa	Thang 10	Vietnam	21.03	105.85	Ind_Int
+W031	O. sativa	Sipirasikkam	Indonesia	-6.08	106.45	IndI
+W032	O. sativa	TJ	Guyana	6.46	-58.1	IndI
+W033	O. sativa	PD 46	Sri Lanka	6.55	79.52	IndI
+W034	O. sativa	PATNAI 6	Myanmar	16.8	96.15	Aus
+W035	O. sativa	K8C-263-3	Suriname	5.52	-55.14	Ind_Int
+W036	O. sativa	Chun 118-33	China	39.9	116.4	IndI
+W037	O. sativa	Manga Kely 694	Madagascar	-19	48	Int
+W038	O. sativa	BLUE STICK	Fiji	-18.08	178.25	TeJ
+W039	O. sativa	Nam Dawk Mai	Thailand	13.8	100.5	IndI
+W040	O. sativa	INIAP 7	Ecuador	-0.54	-89.36	IndII
+W041	O. sativa	Onu B	Zaire	-4.18	15.18	TrJ
+W042	O. sativa	Red	Pakistan	33.4	73.08	Int
+W043	O. sativa	Dichroa Alef Uslkij	Kazakhstan	48	68	IndII
+W044	O. sativa	BKN 6987-68-14	Thailand	13.5	100.29	IndII
+W045	O. sativa	KUBANETS 508	Russian Federation	55.45	37.37	TeJ
+W046	O. sativa	IR 9660-48-1-1-2	Philippines	14.6	121	IndII
+W047	O. sativa	Jumli dhan	Nepal	27.7	85.3	Jap_Int
+W048	O. sativa	N-2703	Nepal	27.7	85.3	Aus
+W049	O. sativa	PHUDUGEY	Bhutan	27.5	89.7	Aus
+W050	O. sativa	Ak Tokhum	Azerbaijan	40.22	49.53	VI
+W051	O. sativa	RP2151-173-1-8	India	28.6	77.2	IndII
+W052	O. sativa	HB-6-2	Hungary	47.26	19.15	TeJ
+W053	O. sativa	GPNO 1106	Guatemala	14.38	-90.22	TrJ
+W054	O. sativa	Toga	India	28.6	77.2	Ind_Int
+W0549	O. rufipogon	NA	India	13	77.6	Or-III
+W055	O. sativa	Ragasu	"Taiwan, China"	25.02	121.38	Int
+W056	O. sativa	Tamanishiki	Japan	35.7	139.8	TeJ
+W057	O. sativa	Grassy	Haiti	18.32	-72.2	TrJ
+W0573	O. rufipogon	NA	Malaya	3.1	101.5	Or-III
+W0574	O. rufipogon	NA	Malaya	3.1	101.5	Or-I
+W0576	O. rufipogon	NA	Malaya	5.8	102.38	Or-II
+W058	O. sativa	Kao Chio Lin Chou	"Taiwan, China"	25	121.7	IndI
+W0587	O. rufipogon	NA	Malaya	5.7	102.53	Or-II
+W0589	O. rufipogon	NA	Malaya	5.7	102.53	Or-I
+W059	O. sativa	Niwahutaw Mochi	Japan	35.7	139.8	TeJ
+W0590	O. rufipogon	NA	Malaya	5.7	102.53	Or-I
+W0593	O. rufipogon	NA	Malaya	3.14	101.69	Or-III
+W0594	O. rufipogon	NA	Malaya	3.14	101.69	Or-II
+W0596	O. rufipogon	NA	Malaya	3.14	101.69	Or-II
+W060	O. sativa	Somewake	Japan	35.7	139.8	TeJ
+W0600	O. rufipogon	NA	Malaya	5.14	102.81	Or-II
+W0605	O. rufipogon	NA	Malaya	5.8	102.39	Or-I
+W0606	O. rufipogon	NA	Malaya	6	102.25	Or-II
+W061	O. sativa	Ardito	Italy	41.52	12.37	Jap_Int
+W0610	O. rufipogon	NA	Burma	16.8	96.15	Or-I
+W062	O. sativa	NANTON NO. 131	"Taiwan, China"	25.02	121.38	TrJ
+W0621	O. rufipogon	NA	Burma	17.33	96.5	Or-III
+W0623	O. rufipogon	NA	Burma	17.55	96.62	Or-III
+W0624	O. rufipogon	NA	Burma	19.77	96.11	Or-II
+W0625	O. rufipogon	NA	Burma	19.77	96.11	Or-III
+W0626	O. rufipogon	NA	Burma	19.77	96.11	Or-I
+W0627	O. rufipogon	NA	Burma	19.77	96.11	Or-I
+W0628	O. rufipogon	NA	Burma	20.4	92.85	Or-II
+W0629	O. rufipogon	NA	Burma	20.4	92.85	Or-III
+W063	O. sativa	Vary Tarva Osla	Portugal	38.42	-9.05	Jap_Int
+W0630	O. rufipogon	NA	Burma	20.46	94.56	Or-I
+W0631	O. rufipogon	NA	Burma	18.82	95.22	Or-I
+W0632	O. rufipogon	NA	Burma	18.82	95.22	Or-I
+W0633	O. rufipogon	NA	Burma	18.82	95.22	Or-I
+W0634	O. rufipogon	NA	Burma	25.38	97.39	Or-II
+W0635	O. rufipogon	NA	Burma	19.77	96.11	Or-II
+W0637	O. rufipogon	NA	Burma	14.08	98.2	Or-III
+W0638	O. rufipogon	NA	Burma	14.08	98.2	Or-I
+W0639	O. rufipogon	NA	Burma	19.77	96.11	Or-I
+W064	O. sativa	CSORNUJ	Hungary	47.26	19.15	TeJ
+W065	O. sativa	R 67	Senegal	14.38	-17.27	TrJ
+W066	O. sativa	IR 238	Philippines	14.6	121	IndII
+W067	O. sativa	Mitak	Indonesia	-6.08	106.45	TrJ
+W068	O. sativa	Gazan	Afghanistan	34.5	69	TeJ
+W069	O. sativa	99216	India	28.6	77.2	Aus
+W070	O. sativa	Shui Ya Jien	Hong Kong	22.17	114.08	Ind_Int
+W071	O. sativa	AKP 4	India	28.6	77.2	Ind_Int
+W072	O. sativa	SORNAVARI	Mali	12.4	-7.59	Aus
+W073	O. sativa	IR 2061-214-2-3	Philippines	14.6	121	IndII
+W074	O. sativa	TAINUNG 45	"Taiwan, China"	25.02	121.38	Ind_Int
+W075	O. sativa	Sapundali Local	India	28.6	77.2	Ind_Int
+W076	O. sativa	Tauli	Nepal	27.7	85.3	Aus
+W077	O. sativa	79	Guyana	6.46	-58.1	VI
+W078	O. sativa	B805D-MR-16-8-3	Indonesia	-6.08	106.45	IndII
+W079	O. sativa	A 152	Bangladesh	23.51	90.24	Int
+W080	O. sativa	UZ ROS 59	Uzbekistan	41.16	69.13	IndI
+W081	O. sativa	Gasym Hany	Azerbaijan	40.22	49.53	VI
+W082	O. sativa	Celiaj	Azerbaijan	40.22	49.53	TeJ
+W083	O. sativa	CNTLR80076-44-1-1-1	Thailand	13.5	100.29	IndII
+W084	O. sativa	IR 58614-B-B-8-2	Philippines	14.6	121	IndII
+W085	O. sativa	KECHENGNUO NO. 4	China	39.9	116.4	Ind_Int
+W086	O. sativa	4484	China	39.9	116.4	IndII
+W087	O. sativa	YOU-I B	China	39.9	116.4	IndI
+W088	O. sativa	CHUNJIANGZAO NO. 1	China	39.9	116.4	TeJ
+W089	O. sativa	Egyptian Wild Type	Turkey	40.02	32.54	Ind_Int
+W090	O. sativa	C.B. II	Japan	35.7	139.8	Aus
+W091	O. sativa	Gallawa	Sri Lanka	6.55	79.52	Aus
+W092	O. sativa	Karayal	Sri Lanka	6.55	79.52	Aus
+W093	O. sativa	Srav Prapay	Cambodia	11.35	104.55	Ind_Int
+W094	O. sativa	Nang Bang Bentre	Vietnam	21.03	105.85	Aus
+W095	O. sativa	DJ 24	Bangladesh	23.51	90.24	Aus
+W096	O. sativa	DJ 102	Bangladesh	23.51	90.24	Aus
+W097	O. sativa	Santhi 990	Pakistan	33.4	73.08	Int
+W098	O. sativa	UZ ROS 7-13	Uzbekistan	41.16	69.13	Aus
+W099	O. sativa	SL 22-620	Sierra Leone	8.48	-13.22	Aus
+W100	O. sativa	Spin Mere	Afghanistan	34.5	69	Aus
+W101	O. sativa	AMANE	Sri Lanka	6.55	79.52	Ind_Int
+W102	O. sativa	Padi Tarab Arab	Malaysia	3.2	101.7	TrJ
+W103	O. sativa	P 35	India	28.6	77.2	Aus
+W104	O. sativa	CAROLINO 164	Chad	12.1	15.04	Aus
+W105	O. sativa	HKG 98	Mali	12.4	-7.59	Aus
+W106	O. sativa	Daudzai Field Mix	Pakistan	33.4	73.08	Aus
+W107	O. sativa	JP 5	Pakistan	33.4	73.08	Int
+W108	O. sativa	Hi Muke	Kazakhstan	51.1	-71.3	Aus
+W1080	O. rufipogon	NA	India	27	88.4	Or-I
+W1082	O. rufipogon	NA	India	27	88.4	Or-I
+W1083	O. rufipogon	NA	India	27	88.4	Or-I
+W1084	O. rufipogon	NA	India	27	88.4	Or-I
+W1086	O. rufipogon	NA	India	27	88.4	Or-I
+W1087	O. rufipogon	NA	India	26.15	91.74	Or-II
+W109	O. sativa	WIR 911	Russian Federation	55.45	37.37	TeJ
+W1090	O. rufipogon	NA	India	26.15	91.74	Or-I
+W1092	O. rufipogon	NA	India	26.15	91.74	Or-I
+W1093	O. rufipogon	NA	India	26.15	91.74	Or-II
+W1096	O. rufipogon	NA	India	26.2	92.94	Or-II
+W110	O. sativa	Lua Chua Chan	Vietnam	21.03	105.85	TrJ
+W1102	O. rufipogon	NA	India	26.2	92.94	Or-III
+W1105	O. rufipogon	NA	India	26.82	94.17	Or-I
+W1107	O. rufipogon	NA	India	26.82	94.17	Or-I
+W111	O. sativa	Sereno	Jamaica	17.58	-76.48	Ind_Int
+W1111	O. rufipogon	NA	India	26.82	94.17	Or-I
+W1112	O. rufipogon	NA	India	26.82	94.17	Or-I
+W1114	O. rufipogon	NA	India	26.82	94.17	Or-III
+W1117	O. rufipogon	NA	India	26.82	94.17	Or-I
+W1119	O. rufipogon	NA	India	26.82	94.17	Or-III
+W112	O. sativa	ARC 10633	India	28.6	77.2	Ind_Int
+W1121	O. rufipogon	NA	India	26.82	94.17	Or-I
+W1122	O. rufipogon	NA	India	26.82	94.17	Or-II
+W1124	O. rufipogon	NA	India	26.59	94.2	Or-II
+W1126	O. rufipogon	NA	India	24.86	92.36	Or-II
+W113	O. sativa	Simpor	Brunei	4.52	114.55	TrJ
+W114	O. sativa	Heo Trang	Vietnam	21.03	105.85	Ind_Int
+W1142	O. rufipogon	NA	India	20.46	85.93	Or-I
+W1143	O. rufipogon	NA	India	20.46	85.93	Or-I
+W115	O. sativa	THAVALU	Sri Lanka	6.55	79.52	Aus
+W116	O. sativa	WC 10253	Unknown	NA	NA	TrJ
+W1161	O. rufipogon	NA	Sri Lanka	6.55	80.1	Or-III
+W117	O. sativa	KRASNODARSKIJ 3352	Russian Federation	55.45	37.37	TeJ
+W118	O. sativa	EMBRAPA 1200	Brazil	-15.45	-47.57	TrJ
+W119	O. sativa	WAB462-10-3-1	Cote D'Ivoire	6.81	-5.28	TrJ
+W120	O. sativa	Bombilla	Spain	40.26	-3.42	TeJ
+W121	O. sativa	TCHAMPA	Iran	35.45	51.3	Aus
+W1214	O. rufipogon	NA	Philippines	7.86	124.86	Or-III
+W122	O. sativa	BHIM DHAN	Nepal	27.42	85.19	Jap_Int
+W123	O. sativa	WC 3532	Peru	-12.06	-76.55	TrJ
+W1230	O. rufipogon	NA	Dutch New Guinea	-4.63	138.93	Or-I
+W1236	O. rufipogon	NA	Australian New Guinea	-5.31	141.61	Or-II
+W1238	O. rufipogon	NA	Neth. New Guinea	-4.63	138.93	Or-III
+W124	O. sativa	Kin Shan Zim	China	39.9	116.4	IndI
+W1244	O. rufipogon	NA	Nepal	27.7	85.32	Or-III
+W125	O. sativa	Yong Chal Byo	"Korea, South"	39	125.47	Int
+W126	O. sativa	Pan Ju	China	39.9	116.4	IndI
+W127	O. sativa	Buphopa	Myanmar	16.8	96.15	Jap_Int
+W128	O. sativa	TAINO 38	"Taiwan, China"	25.02	121.38	Int
+W129	O. sativa	2	Afghanistan	34.5	69	VI
+W1292	O. rufipogon	NA	Indonesia	3.29	117	Or-II
+W1294	O. rufipogon	NA	Philippines	7.86	124.86	Or-III
+W1295	O. rufipogon	NA	Cambodia	12.82	102.67	Or-I
+W130	O. sativa	LUSITANO	Portugal	38.42	-9.05	TeJ
+W131	O. sativa	IARI 6621	India	28.6	77.2	Aus
+W132	O. sativa	Hsin Hsing Pai Ku	"Taiwan, China"	25.02	121.38	IndI
+W133	O. sativa	TD 70	Thailand	13.8	100.5	Ind_Int
+W134	O. sativa	Dara	Indonesia	-6.08	106.45	Aus
+W135	O. sativa	Shimla Early	Iraq	33.14	44.22	Int
+W136	O. sativa	LA PLATA GENA F.A.	Argentina	-34.62	-54.84	VI
+W137	O. sativa	"CM1, HAIPONG"	Vietnam	21.03	105.85	Ind_Int
+W138	O. sativa	4595	China	39.9	116.4	IndI
+W139	O. sativa	A 5	Japan	35.7	139.8	TeJ
+W140	O. sativa	Ittikulama	Sri Lanka	6.55	79.52	Aus
+W141	O. sativa	DNJ 179	Bangladesh	23.51	90.24	Aus
+W142	O. sativa	DNJ 121	Bangladesh	23.51	90.24	Aus
+W143	O. sativa	Jyanak	Bhutan	27.5	89.7	Jap_Int
+W144	O. sativa	Ao Chiu 2 Hao	China	39.9	116.4	IndI
+W145	O. sativa	GUYANE 1	Chad	12.1	15.04	Ind_Int
+W146	O. sativa	10340	Italy	41.52	12.37	IndI
+W147	O. sativa	BR11	Bangladesh	23.51	90.24	Ind_Int
+W148	O. sativa	BR24	India	28.6	77.2	Ind_Int
+W149	O. sativa	93072	China	39.9	116.4	IndII
+W150	O. sativa	108S	Unknown	NA	NA	IndII
+W151	O. sativa	C418	China	39.9	116.4	IndII
+W152	O. sativa	CDR22	China	39.9	116.4	IndII
+W153	O. sativa	Chenghui448	China	30.39	104.05	IndII
+W1532	O. rufipogon	NA	India	20.46	85.88	Or-I
+W1533	O. rufipogon	NA	India	20.46	85.88	Or-I
+W1534	O. rufipogon	NA	India	28.64	77.23	Or-III
+W1536	O. rufipogon	NA	Sri Lanka	8.03	79.84	Or-III
+W154	O. sativa	Fengaizhan	China	23.08	113.15	IndII
+W1542	O. rufipogon	NA	Malaya	3.14	101.69	Or-III
+W1546	O. rufipogon	NA	Thailand	14.5	100.89	Or-I
+W1547	O. rufipogon	NA	Thailand	14.5	100.89	Or-I
+W155	O. sativa	Gang46B	China	39.9	116.4	Ind_Int
+W1550	O. rufipogon	NA	Thailand	18.8	98.66	Or-II
+W1551	O. rufipogon	NA	Thailand	14.5	100.89	Or-I
+W1552	O. rufipogon	NA	Thailand	14.33	100.52	Or-II
+W1553	O. rufipogon	NA	Thailand	14.6	103.1	Or-II
+W1554	O. rufipogon	NA	Thailand	15.09	99.99	Or-II
+W1555	O. rufipogon	NA	Thailand	15	100	Or-II
+W1556	O. rufipogon	NA	Thailand	14.54	99.99	Or-II
+W1557	O. rufipogon	NA	Thailand	14.54	99.99	Or-II
+W1558	O. rufipogon	NA	Thailand	15.2	104.9	Or-II
+W1559	O. rufipogon	NA	Thailand	15	100	Or-I
+W156	O. sativa	Gumei2hao	China	30.39	104.05	Ind_Int
+W1560	O. rufipogon	NA	Thailand	14.03	100.37	Or-III
+W157	O. sativa	Huajingxian74	China	23.08	113.15	Ind_Int
+W158	O. sativa	M3122	China	39.9	116.4	Int
+W159	O. sativa	R644	China	39.9	116.4	IndII
+W160	O. sativa	Shennong265	China	41.5	123.24	TeJ
+W161	O. sativa	Y134	China	39.9	116.4	IndII
+W1619	O. rufipogon	NA	Thailand	14.5	100.89	Or-I
+W162	O. sativa	Yuanjing7	China	39.9	116.4	TeJ
+W163	O. sativa	Yuexiangzhan	China	23.08	113.15	Ind_Int
+W164	O. sativa	Zaoxian14	China	NA	NA	Ind_Int
+W165	O. sativa	Zhong413	China	30.14	120.09	Ind_Int
+W166	O. sativa	Zhongyouzao81	China	30.14	120.09	Ind_Int
+W1666	O. rufipogon	NA	India	26.34	89.03	Or-I
+W1668	O. rufipogon	NA	India	18.52	82.46	Or-III
+W1669	O. rufipogon	NA	India	19.08	82.45	Or-III
+W167	O. sativa	Zihui100	China	37.51	117.18	Ind_Int
+W1675	O. rufipogon	NA	India	20.29	86.01	Or-I
+W1676	O. rufipogon	NA	India	20.29	86.01	Or-I
+W1677	O. rufipogon	NA	India	20.29	86.01	Or-I
+W1679	O. rufipogon	NA	India	20.29	86.01	Or-I
+W168	O. sativa	Bg90-2	Brazil	-15.45	-47.57	IndII
+W1681	O. rufipogon	NA	India	20.09	84.45	Or-I
+W1683	O. rufipogon	NA	India	20.1	84.48	Or-II
+W1685	O. rufipogon	NA	India	20.14	85.47	Or-I
+W1687	O. rufipogon	NA	India	23.04	88.17	Or-II
+W169	O. sativa	IR72	Philippines	14.6	121	IndII
+W1690	O. rufipogon	NA	Thailand	19.41	99.34	Or-I
+W1695	O. rufipogon	NA	Thailand	19.45	99.44	Or-I
+W1696	O. rufipogon	NA	Thailand	19.45	99.44	Or-I
+W1698	O. rufipogon	NA	Thailand	14.34	100.59	Or-I
+W170	O. sativa	PR106	Pakistan	33.4	73.08	IndII
+W1700	O. rufipogon	NA	Thailand	14.3	100.55	Or-I
+W171	O. sativa	TKM9	Philippines	14.6	121	IndII
+W1715	O. rufipogon	NA	China	NA	NA	Or-II
+W1716	O. rufipogon	NA	China	NA	NA	Or-III
+W1718	O. rufipogon	NA	China	NA	NA	Or-II
+W1719	O. rufipogon	NA	China	NA	NA	Or-I
+W172	O. sativa	Amo13 (Sana)	Unknown	NA	NA	IndII
+W1721	O. rufipogon	NA	China	NA	NA	Or-I
+W1723	O. rufipogon	NA	China	NA	NA	Or-I
+W1724	O. rufipogon	NA	China	NA	NA	Or-III
+W1725	O. rufipogon	NA	Thailand	15	100	Or-III
+W1726	O. rufipogon	NA	Thailand	15	100	Or-I
+W1727	O. rufipogon	NA	Thailand	15	100	Or-I
+W173	O. sativa	Khazar	Iran	35.45	51.3	TrJ
+W1731	O. rufipogon	NA	India	20.46	85.88	Or-I
+W1732	O. rufipogon	NA	India	19.5	84.81	Or-III
+W1735	O. rufipogon	NA	India	26.92	75.82	Or-I
+W1736	O. rufipogon	NA	India	26.92	75.82	Or-II
+W1737	O. rufipogon	NA	India	26.92	75.82	Or-I
+W1738	O. rufipogon	NA	India	26.92	75.82	Or-I
+W1739	O. rufipogon	NA	India	26.92	75.82	Or-III
+W174	O. sativa	Gayabyeo	Korea	37.35	127.03	IndII
+W1740	O. rufipogon	NA	India	26.92	75.82	Or-I
+W1741	O. rufipogon	NA	India	26.92	75.82	Or-I
+W1742	O. rufipogon	NA	India	26.92	75.82	Or-II
+W1743	O. rufipogon	NA	India	26.92	75.82	Or-I
+W1746	O. rufipogon	NA	India	26.92	75.82	Or-III
+W1747	O. rufipogon	NA	India	26.92	75.82	Or-I
+W1748	O. rufipogon	NA	India	26.92	75.82	Or-III
+W1749	O. rufipogon	NA	India	18.4	81.68	Or-I
+W175	O. sativa	Iksan438	Korea	37.35	127.03	Int
+W1750	O. rufipogon	NA	India	18.4	81.68	Or-I
+W1751	O. rufipogon	NA	India	18.4	81.68	Or-I
+W1753	O. rufipogon	NA	India	18.4	81.68	Or-I
+W1754	O. rufipogon	NA	India	20.27	81.5	Or-I
+W1756	O. rufipogon	NA	India	20.27	81.5	Or-I
+W1757	O. rufipogon	NA	India	20.27	81.5	Or-I
+W1759	O. rufipogon	NA	India	20.27	81.5	Or-III
+W176	O. sativa	Milyang23	Korea	37.35	127.03	IndII
+W1761	O. rufipogon	NA	India	21.25	81.63	Or-I
+W1762	O. rufipogon	NA	India	21.25	81.63	Or-I
+W1766	O. rufipogon	NA	India	21.25	81.63	Or-III
+W177	O. sativa	MR185	Malaysia	3.2	101.7	IndII
+W1770	O. rufipogon	NA	India	21.18	81.36	Or-I
+W1777	O. rufipogon	NA	India	19.95	79.3	Or-III
+W178	O. sativa	Manawthukha	Philippines	14.6	121	IndII
+W1780	O. rufipogon	NA	India	17	81.8	Or-II
+W1782	O. rufipogon	NA	India	12.31	76.64	Or-III
+W1783	O. rufipogon	NA	India	12.36	76.63	Or-III
+W1784	O. rufipogon	NA	India	12.31	76.66	Or-III
+W1787	O. rufipogon	NA	Thailand	15	100	Or-I
+W1788	O. rufipogon	NA	Thailand	15	100	Or-I
+W179	O. sativa	Shwe Thwe Yin Hyv	Myanmar	16.8	96.15	IndII
+W1790	O. rufipogon	NA	Thailand	15	100	Or-II
+W1792	O. rufipogon	NA	Thailand	15	100	Or-I
+W1794	O. rufipogon	NA	Thailand	15	100	Or-I
+W1795	O. rufipogon	NA	Thailand	15	100	Or-I
+W1798	O. rufipogon	NA	Thailand	15	100	Or-II
+W180	O. sativa	Bg300	Sri Lanka	6.55	79.52	IndII
+W1802	O. rufipogon	NA	Bangladesh	23.71	90.41	Or-I
+W1803	O. rufipogon	NA	Sri Lanka	6.93	79.95	Or-III
+W1804	O. rufipogon	NA	Sri Lanka	6.93	79.95	Or-II
+W1806	O. rufipogon	NA	Sri Lanka	6.93	79.95	Or-I
+W1807	O. rufipogon	NA	Sri Lanka	6.93	79.95	Or-III
+W1809	O. rufipogon	NA	Sri Lanka	6.93	79.95	Or-III
+W181	O. sativa	Bg94-1	Sri Lanka	6.55	79.52	IndII
+W1810	O. rufipogon	NA	Sri Lanka	6.93	79.95	Or-II
+W1811	O. rufipogon	NA	Sri Lanka	6.93	79.95	Or-III
+W1813	O. rufipogon	NA	Sri Lanka	6.93	79.95	Or-III
+W1818	O. rufipogon	NA	Bangladesh	23.71	90.41	Or-I
+W1819	O. rufipogon	NA	Bangladesh	23.71	90.41	Or-I
+W182	O. sativa	CR203	Viet Nam	21.03	105.85	IndII
+W1820	O. rufipogon	NA	Bangladesh	23.71	90.41	Or-I
+W1821	O. rufipogon	NA	Bangladesh	23.71	90.41	Or-I
+W1822	O. rufipogon	NA	Bangladesh	23.71	90.41	Or-I
+W1823	O. rufipogon	NA	Bangladesh	23.71	90.41	Or-I
+W1824	O. rufipogon	NA	Bangladesh	23.71	90.41	Or-I
+W1825	O. rufipogon	NA	Bangladesh	23.71	90.41	Or-I
+W183	O. sativa	OM997	VietNam	21.03	105.85	IndII
+W1832	O. rufipogon	NA	Thailand	13.92	100.59	Or-I
+W1839	O. rufipogon	NA	China	NA	NA	Or-I
+W184	O. sativa	PSB RC 28	Philippines	14.6	121	IndII
+W1844	O. rufipogon	NA	China	NA	NA	Or-III
+W1849	O. rufipogon	NA	Thailand	19.56	99.7	Or-II
+W185	O. sativa	PSB RC 66	Philippines	14.6	121	IndII
+W1850	O. rufipogon	NA	Thailand	19.56	99.7	Or-II
+W1852	O. rufipogon	NA	Thailand	20.28	100.09	Or-I
+W1853	O. rufipogon	NA	Thailand	19.75	99.73	Or-I
+W1854	O. rufipogon	NA	Thailand	19.64	99.52	Or-II
+W1857	O. rufipogon	NA	Thailand	18.35	99.53	Or-II
+W1858	O. rufipogon	NA	Thailand	17.53	100.12	Or-II
+W1859	O. rufipogon	NA	Thailand	17.52	100.12	Or-II
+W186	O. sativa	TEQING	China	14.6	121	Ind_Int
+W1862	O. rufipogon	NA	Thailand	16.82	100.34	Or-II
+W1865	O. rufipogon	NA	Thailand	14.56	100.98	Or-I
+W1866	O. rufipogon	NA	Thailand	14.57	100.99	Or-I
+W187	O. sativa	IR68552-55-3-2	Philippines	14.6	121	Ind_Int
+W1870	O. rufipogon	NA	Thailand	15.23	102.5	Or-II
+W1873	O. rufipogon	NA	Thailand	16.35	102.86	Or-II
+W1879	O. rufipogon	NA	Thailand	17.03	102.91	Or-I
+W188	O. sativa	IR66897B	Philippines	14.6	121	IndII
+W1880	O. rufipogon	NA	Thailand	17.03	102.91	Or-II
+W1881	O. rufipogon	NA	Thailand	17.03	102.91	Or-I
+W1882	O. rufipogon	NA	Thailand	17.03	102.91	Or-II
+W1884	O. rufipogon	NA	Thailand	17.03	102.91	Or-II
+W189	O. sativa	IR58025B	Philippines	14.6	121	IndII
+W1890	O. rufipogon	NA	Thailand	17.85	102.75	Or-II
+W1891	O. rufipogon	NA	Thailand	17.85	102.75	Or-II
+W1893	O. rufipogon	NA	Thailand	17.35	102.89	Or-I
+W1895	O. rufipogon	NA	Thailand	17.25	104.18	Or-II
+W1896	O. rufipogon	NA	Thailand	17.25	104.18	Or-II
+W190	O. sativa	Dhan4	India	28.6	77.2	IndII
+W191	O. sativa	Pusa (Basmatil)	India	39.9	116.4	Int
+W1912	O. rufipogon	NA	Thailand	15.05	104.1	Or-I
+W1914	O. rufipogon	NA	Thailand	14.95	103.75	Or-I
+W1916	O. rufipogon	NA	Thailand	14.92	103.51	Or-II
+W1919	O. rufipogon	NA	Thailand	14.73	102.19	Or-II
+W192	O. sativa	ASD16	India	28.6	77.2	Int
+W1921	O. rufipogon	NA	Thailand	14.44	100.9	Or-I
+W1925	O. rufipogon	NA	Thailand	15.55	100.12	Or-I
+W1927	O. rufipogon	NA	Thailand	15.46	100.13	Or-II
+W1928	O. rufipogon	NA	Thailand	15.29	100.18	Or-I
+W193	O. sativa	Dianjing	China	NA	NA	TeJ
+W1935	O. rufipogon	NA	Thailand	6.89	100.53	Or-I
+W1939	O. rufipogon	NA	Thailand	8.54	99.73	Or-II
+W194	O. sativa	F6	Japan	35.7	139.8	IndII
+W1940	O. rufipogon	NA	Thailand	14.92	103.51	Or-II
+W1943	O. rufipogon	NA	China	NA	NA	Or-III
+W1945	O. rufipogon	NA	China	NA	NA	Or-III
+W195	O. sativa	452	Unknown	NA	NA	IndII
+W1952	O. rufipogon	NA	China	NA	NA	Or-III
+W1957	O. rufipogon	NA	China	NA	NA	Or-III
+W1958	O. rufipogon	NA	China	NA	NA	Or-III
+W1959	O. rufipogon	NA	China	NA	NA	Or-I
+W1963	O. rufipogon	NA	China	NA	NA	Or-III
+W197	O. sativa	Ai-Zi-DAO	China	39.9	116.4	IndII
+W1970	O. rufipogon	NA	Indonesia	-6.4	106.82	Or-I
+W1971	O. rufipogon	NA	Indonesia	-6.4	106.82	Or-II
+W1972	O. rufipogon	NA	Indonesia	-6.4	106.82	Or-II
+W1973	O. rufipogon	NA	Indonesia	-6.4	106.82	Or-III
+W1974	O. rufipogon	NA	Indonesia	-2.99	104.76	Or-II
+W1975	O. rufipogon	NA	Indonesia	-2.99	104.76	Or-II
+W1976	O. rufipogon	NA	Indonesia	-6.4	106.82	Or-II
+W1977	O. rufipogon	NA	Indonesia	-6.4	106.82	Or-II
+W1978	O. rufipogon	NA	Indonesia	-6.4	106.82	Or-II
+W1979	O. rufipogon	NA	Indonesia	-6.4	106.82	Or-II
+W198	O. sativa	Babaomi	China	39.9	116.4	IndI
+W1981	O. rufipogon	NA	Indonesia	-2.99	104.76	Or-II
+W1983	O. rufipogon	NA	India	18.5	73.15	Or-I
+W1989	O. rufipogon	NA	India	20.3	73	Or-III
+W199	O. sativa	Diantun502	China	25.04	102.41	Ind_Int
+W1990	O. rufipogon	NA	India	23.1	72.45	Or-III
+W1991	O. rufipogon	NA	India	22.3	71.05	Or-III
+W1993	O. rufipogon	NA	India	24.6	72.8	Or-III
+W1995	O. rufipogon	NA	India	22.42	73	Or-III
+W1998	O. rufipogon	NA	India	22.2	73.2	Or-III
+W200	O. sativa	Heiheaihui	China	45.45	126.41	IndII
+W2003	O. rufipogon	NA	India	15.3	73.5	Or-III
+W2005	O. rufipogon	NA	India	15.35	74.2	Or-III
+W2007	O. rufipogon	NA	India	16	74.3	Or-III
+W2008	O. rufipogon	NA	India	16.2	74.2	Or-III
+W201	O. sativa	Jiangxisimiao	China	28.41	115.52	IndII
+W2010	O. rufipogon	NA	India	19	73.06	Or-III
+W2012	O. rufipogon	NA	India	19.8	72.55	Or-III
+W2014	O. rufipogon	NA	India	20.18	72.55	Or-III
+W2017	O. rufipogon	NA	Indonesia	-7.6	110.7	Or-II
+W202	O. sativa	Laohudao	China	30.14	120.09	IndII
+W2021	O. rufipogon	NA	Indonesia	3.29	117	Or-II
+W2022	O. rufipogon	NA	Indonesia	3.29	117	Or-II
+W2024	O. rufipogon	NA	Indonesia	3.29	117	Or-II
+W2025	O. rufipogon	NA	Indonesia	3.29	117	Or-II
+W203	O. sativa	Linjintangdao	China	NA	NA	Ind_Int
+W2030	O. rufipogon	NA	Indonesia	-3	105	Or-II
+W2036	O. rufipogon	NA	Burma	17.33	96.5	Or-III
+W204	O. sativa	Mengguandamagu	China	NA	NA	IndI
+W205	O. sativa	Pengshantieganzhan	China	NA	NA	IndI
+W2050	O. rufipogon	NA	Bangladesh	23.71	90.41	Or-II
+W2051	O. rufipogon	NA	Bangladesh	23.71	90.41	Or-II
+W2052	O. rufipogon	NA	Bangladesh	23.71	90.41	Or-II
+W2053	O. rufipogon	NA	Bangladesh	23.71	90.41	Or-I
+W2055	O. rufipogon	NA	Bangladesh	24.48	91.78	Or-II
+W2056	O. rufipogon	NA	Bangladesh	24.48	91.78	Or-II
+W2057	O. rufipogon	NA	Bangladesh	24.48	91.78	Or-III
+W206	O. sativa	Wumanggaonuo	China	NA	NA	Ind_Int
+W2060	O. rufipogon	NA	Bangladesh	24.25	89.92	Or-I
+W2061	O. rufipogon	NA	Bangladesh	24.25	89.92	Or-I
+W2063	O. rufipogon	NA	Bangladesh	22.82	89.55	Or-I
+W2064	O. rufipogon	NA	Bangladesh	22.82	89.55	Or-I
+W2066	O. rufipogon	NA	Nepal	28.6	81.6	Or-III
+W207	O. sativa	Yunguang8hao	China	25.04	102.41	TeJ
+W2078	O. rufipogon	NA	Australia	-14.3	132.4	Or-III
+W208	O. sativa	Zhongchao123	China	30.14	120.09	TeJ
+W209	O. sativa	Gizal159	Unknown	NA	NA	TeJ
+W2099	O. rufipogon	NA	Australia	-13.07	142.07	Or-III
+W210	O. sativa	Khao Daeng	Philippines	14.6	121	IndI
+W2108	O. rufipogon	NA	Australia	-13.07	142.07	Or-III
+W211	O. sativa	Basmati370	Pakistan	14.6	121	IndII
+W212	O. sativa	Bhavani	India	28.6	77.2	Ind_Int
+W213	O. sativa	IR50	Philippines	28.6	77.2	IndII
+W214	O. sativa	Jhona349	Pakistan	33.4	73.08	Aus
+W215	O. sativa	Karnal Local	India	28.6	77.2	Aus
+W216	O. sativa	Type3	India	28.6	77.2	IndII
+W217	O. sativa	IRAT352	Indonesia	-6.08	106.45	IndII
+W218	O. sativa	TB154E-TB-2	Unknown	NA	NA	IndII
+W219	O. sativa	Domsiah	Netherlands	52.12	4.52	VI
+W2193	O. rufipogon	NA	India	24.83	93.93	Or-I
+W2197	O. rufipogon	NA	Indonesia	3.29	117	Or-II
+W2198	O. rufipogon	NA	China	NA	NA	Or-III
+W220	O. sativa	Tarommolai1	Unknown	NA	NA	VI
+W221	O. sativa	MR77 (seberang)	Philippines	14.6	121	IndII
+W222	O. sativa	ir6	Philippines	33.4	73.08	IndII
+W223	O. sativa	At354	Sri Lanka	6.55	79.52	IndII
+W224	O. sativa	BG304	Sri Lanka	6.55	79.52	IndII
+W225	O. sativa	Lemont	United States	38.54	-77.02	TrJ
+W226	O. sativa	M401	Philippines	14.6	121	Jap_Int
+W2263	O. rufipogon	NA	Cambodia	11.33	104.5	Or-I
+W2264	O. rufipogon	NA	Vietnam	10.2	105.47	Or-II
+W2265	O. rufipogon	NA	Laos	14.5	105.49	Or-I
+W2266	O. rufipogon	NA	Laos	18.01	102.39	Or-II
+W2267	O. rufipogon	NA	Laos	18.14	102.42	Or-III
+W2268	O. rufipogon	NA	Thailand	14.35	101	Or-I
+W2269	O. rufipogon	NA	Thailand	17.42	102.46	Or-I
+W227	O. sativa	OM1706	Viet Nam	21.03	105.85	IndII
+W2271	O. rufipogon	NA	Thailand	16.57	102.55	Or-I
+W2272	O. rufipogon	NA	Thailand	16.21	102.48	Or-II
+W2275	O. rufipogon	NA	Thailand	16.09	100.37	Or-I
+W2276	O. rufipogon	NA	Thailand	16.49	100.21	Or-II
+W2277	O. rufipogon	NA	Thailand	15.13	100.12	Or-I
+W2278	O. rufipogon	NA	Thailand	14.3	100.31	Or-I
+W228	O. sativa	OM1723	Viet Nam	21.03	105.85	IndII
+W2282	O. rufipogon	NA	Thailand	16.49	99.47	Or-II
+W2283	O. rufipogon	NA	Thailand	16.49	99.47	Or-II
+W2284	O. rufipogon	NA	Thailand	16.49	99.47	Or-II
+W2288	O. rufipogon	NA	Cambodia	11.04	106.09	Or-II
+W229	O. sativa	X21	Viet Nam	21.03	105.85	IndII
+W2296	O. rufipogon	NA	Cambodia	11.32	104.5	Or-I
+W2298	O. rufipogon	NA	Laos	15.09	105.46	Or-I
+W2299	O. rufipogon	NA	Laos	15.09	105.46	Or-I
+W230	O. sativa	X22	Viet Nam	21.03	105.85	IndII
+W2301	O. rufipogon	NA	Laos	15.12	105.43	Or-I
+W2302	O. rufipogon	NA	Laos	15.12	105.43	Or-I
+W2303	O. rufipogon	NA	Laos	15.06	105.49	Or-I
+W2304	O. rufipogon	NA	Laos	15.03	105.54	Or-I
+W2305	O. rufipogon	NA	Laos	14.5	105.5	Or-I
+W2306	O. rufipogon	NA	Laos	14.5	105.5	Or-I
+W2307	O. rufipogon	NA	Laos	14.52	105.52	Or-I
+W2308	O. rufipogon	NA	Laos	17.57	102.38	Or-II
+W231	O. sativa	X23	Viet Nam	21.03	105.85	IndII
+W2310	O. rufipogon	NA	Laos	17.51	102.36	Or-II
+W2311	O. rufipogon	NA	Laos	17.52	102.36	Or-II
+W2316	O. rufipogon	NA	Vietnam	10.39	107.02	Or-I
+W2318	O. rufipogon	NA	Vietnam	10.24	106.06	Or-II
+W2319	O. rufipogon	NA	Vietnam	10.33	106.25	Or-I
+W2320	O. rufipogon	NA	Vietnam	10.42	105.36	Or-II
+W2321	O. rufipogon	NA	Vietnam	10.44	105.37	Or-II
+W2322	O. rufipogon	NA	Vietnam	10.45	105.32	Or-II
+W2327	O. rufipogon	NA	Vietnam	10	105.45	Or-II
+W233	O. sativa	C70	Viet Nam	21.03	105.85	Ind_Int
+W2331	O. rufipogon	NA	Vietnam	21.03	105.85	Or-I
+W2332	O. rufipogon	NA	Vietnam	21.03	105.85	Or-I
+W234	O. sativa	Q5	Viet Nam	21.03	105.85	Ind_Int
+W235	O. sativa	Suiyangnian	China	26.35	106.42	IndI
+W236	O. sativa	Pokhreli	Philippines	14.6	121	IndII
+W237	O. sativa	Govnd	Unknown	NA	NA	IndII
+W238	O. sativa	UPR191-66	India	28.6	77.2	IndII
+W239	O. sativa	ASD18	India	28.6	77.2	IndII
+W240	O. sativa	TGMS29	India	28.6	77.2	Ind_Int
+W241	O. sativa	Phalguna	India	28.6	77.2	IndII
+W242	O. sativa	Ajaya	India	28.6	77.2	IndII
+W243	O. sativa	Dodda	Unknown	NA	NA	IndII
+W244	O. sativa	Palung 2	Philippines	14.6	121	IndII
+W245	O. sativa	TKM6	India	28.6	77.2	IndII
+W246	O. sativa	RUSTYLATE/Zhong 413	Unknown	NA	NA	Ind_Int
+W247	O. sativa	Yenfangghu	China	NA	NA	IndI
+W248	O. sativa	Heimichut	China	NA	NA	IndI
+W249	O. sativa	Teksichut	Philippines	14.6	121	TeJ
+W250	O. sativa	Eiko	Japan	35.7	139.8	TeJ
+W251	O. sativa	RUBIO	Philippines	14.6	121	TrJ
+W252	O. sativa	SADRI RICE 1	Iran	35.45	51.3	VI
+W253	O. sativa	Sereendan Kuning	Malaysia	3.2	101.7	TrJ
+W254	O. sativa	SAI-BUI-BAO	Viet Nam	21.03	105.85	TrJ
+W255	O. sativa	ZIRI	India	28.6	77.2	VI
+W256	O. sativa	Dacca6	United States	38.54	-77.02	VI
+W257	O. sativa	Latisai1	Unknown	NA	NA	TrJ
+W258	O. sativa	Amareles	Portugal	38.42	-9.05	VI
+W259	O. sativa	Up15	Japan	35.7	139.8	IndII
+W260	O. sativa	Uz-Rosz 275	Philippines	14.6	121	TrJ
+W261	O. sativa	Ginga	Japan	35.7	139.8	Int
+W262	O. sativa	Bintapan	Philippines	14.6	121	IndI
+W263	O. sativa	SADAJIRA-19-303	Unknown	NA	NA	IndII
+W264	O. sativa	CHOROFA	Philippines	14.6	121	Ind_Int
+W265	O. sativa	La110	United States	38.54	-77.02	IndII
+W266	O. sativa	Yunjiang35	China	NA	NA	IndII
+W267	O. sativa	Yunhui72	China	39.9	116.4	Ind_Int
+W268	O. sativa	Wudadaozhong	"Korea, South"	39	125.47	Ind_Int
+W269	O. sativa	IR65600-27-1-2-2	Philippines	14.6	121	Ind_Int
+W270	O. sativa	Yetuozai	China	NA	NA	Ind_Int
+W271	O. sativa	P59279	Unknown	NA	NA	Ind_Int
+W272	O. sativa	Tsao wan ching	China	39.9	116.4	Ind_Int
+W273	O. sativa	Anambae ndanggalasi	Indonesia	-6.08	106.45	TrJ
+W274	O. sativa	Er chiu ching	China	39.9	116.4	IndI
+W275	O. sativa	Heen goda wee	Sri Lanka	6.55	79.52	TrJ
+W276	O. sativa	Pathma wee	Sri Lanka	6.55	79.52	Ind_Int
+W277	O. sativa	Lakkhi kajal	Bangladesh	23.51	90.24	Aus
+W278	O. sativa	Moisdol	Bangladesh	23.51	90.24	Aus
+W279	O. sativa	Jabor sail	Bangladesh	23.51	90.24	Aus
+W280	O. sativa	Sada solay	Pakistan	33.4	73.08	Aus
+W281	O. sativa	Sholay	Pakistan	33.4	73.08	TeJ
+W282	O. sativa	Ma ba you zhan	China	39.9	116.4	Ind_Int
+W283	O. sativa	Daegujo	"Korea, Republic of"	37.35	127.03	TeJ
+W284	O. sativa	Paikasa	Malaysia	3.2	101.7	TrJ
+W285	O. sativa	Uwi	Indonesia	-6.08	106.45	TrJ
+W286	O. sativa	Garia	Bangladesh	23.51	90.24	Aus
+W287	O. sativa	AUS 449	Bangladesh	23.51	90.24	Aus
+W288	O. sativa	Dourado Precoce	Brazil	-15.45	-47.57	TrJ
+W289	O. sativa	IR 661-1-140-3-117	Philippines	14.6	121	IndII
+W290	O. sativa	Aichi Asahi	Japan	35.7	139.8	TeJ
+W291	O. sativa	IR 2071-625-1-252	Philippines	14.6	121	IndII
+W292	O. sativa	Khoia boro	Bangladesh	23.51	90.24	Aus
+W293	O. sativa	IR 8	Philippines	14.6	121	IndII
+W294	O. sativa	LABELLE	United States	38.54	-77.02	Int
+W295	O. sativa	LEBONNET	United States	38.54	-77.02	IndII
+W296	O. sativa	AUS 371	Bangladesh	23.51	90.24	Aus
+W297	O. sativa	AUS 373	Bangladesh	23.51	90.24	Aus
+W298	O. sativa	IR 36	Philippines	14.6	121	IndII
+W299	O. sativa	JAYA	India	28.6	77.2	Ind_Int
+W300	O. sativa	NEW BONNET	United States	38.54	-77.02	TrJ
+W3000	O. rufipogon	NA	China	21.38	110.25	Or-III
+W3001	O. rufipogon	NA	China	21.38	110.25	Or-III
+W3002	O. rufipogon	NA	China	22.19	112.31	Or-III
+W3003	O. rufipogon	NA	China	22.19	112.31	Or-II
+W3004	O. rufipogon	NA	China	22.25	112.79	Or-III
+W3005	O. rufipogon	NA	China	22.25	112.79	Or-III
+W3006	O. rufipogon	NA	China	22.38	112.69	Or-III
+W3007	O. rufipogon	NA	China	22.38	112.69	Or-III
+W3008	O. rufipogon	NA	China	22.53	113.04	Or-III
+W3009	O. rufipogon	NA	China	22.89	112.85	Or-III
+W301	O. sativa	IR 64	Philippines	14.6	121	IndII
+W3010	O. rufipogon	NA	China	23.17	112.89	Or-III
+W3011	O. rufipogon	NA	China	23.17	112.89	Or-III
+W3012	O. rufipogon	NA	China	23.12	113.26	Or-III
+W3013	O. rufipogon	NA	China	23.12	113.26	Or-III
+W3014	O. rufipogon	NA	China	23.29	113.83	Or-III
+W3015	O. rufipogon	NA	China	23.29	113.83	Or-III
+W3016	O. rufipogon	NA	China	23.05	113.75	Or-III
+W3017	O. rufipogon	NA	China	23.05	113.75	Or-III
+W3018	O. rufipogon	NA	China	22.8	114.46	Or-III
+W3019	O. rufipogon	NA	China	22.8	114.46	Or-III
+W302	O. sativa	KUNTLAN	Indonesia	-6.08	106.45	TrJ
+W3020	O. rufipogon	NA	China	23.17	112.89	Or-III
+W3021	O. rufipogon	NA	China	23.87	113.53	Or-III
+W3022	O. rufipogon	NA	China	23.72	113.02	Or-III
+W3023	O. rufipogon	NA	China	23.72	113.02	Or-III
+W3024	O. rufipogon	NA	China	23.87	113.53	Or-III
+W3025	O. rufipogon	NA	China	23.72	113.02	Or-III
+W3026	O. rufipogon	NA	China	23.64	115.17	Or-III
+W3027	O. rufipogon	NA	China	21.95	108.61	Or-III
+W3028	O. rufipogon	NA	China	21.95	108.61	Or-III
+W3029	O. rufipogon	NA	China	21.8	109.19	Or-III
+W303	O. sativa	British Honduras Creole	Belize	17.25	-88.46	TrJ
+W3030	O. rufipogon	NA	China	21.8	109.19	Or-III
+W3031	O. rufipogon	NA	China	21.77	108.36	Or-III
+W3032	O. rufipogon	NA	China	21.77	108.36	Or-III
+W3033	O. rufipogon	NA	China	22.28	109.97	Or-III
+W3034	O. rufipogon	NA	China	22.28	109.97	Or-III
+W3035	O. rufipogon	NA	China	22.63	110.14	Or-III
+W3036	O. rufipogon	NA	China	22.63	110.14	Or-III
+W3037	O. rufipogon	NA	China	23.07	109.36	Or-III
+W3038	O. rufipogon	NA	China	23.07	109.36	Or-III
+W3039	O. rufipogon	NA	China	23.39	110.07	Or-III
+W304	O. sativa	CPSLO 17	United States	38.54	-77.02	Int
+W3040	O. rufipogon	NA	China	23.39	110.07	Or-III
+W3041	O. rufipogon	NA	China	22.75	108.49	Or-III
+W3042	O. rufipogon	NA	China	22.75	108.49	Or-III
+W3043	O. rufipogon	NA	China	23.17	108.28	Or-III
+W3044	O. rufipogon	NA	China	23.17	108.28	Or-III
+W3045	O. rufipogon	NA	China	22.69	109.27	Or-III
+W3046	O. rufipogon	NA	China	22.69	109.27	Or-III
+W3047	O. rufipogon	NA	China	23.73	106.91	Or-III
+W3048	O. rufipogon	NA	China	23.9	106.61	Or-III
+W3049	O. rufipogon	NA	China	23.9	106.61	Or-III
+W305	O. sativa	AKITAKOMACHI	Japan	35.7	139.8	TeJ
+W3050	O. rufipogon	NA	China	23.9	106.61	Or-III
+W3051	O. rufipogon	NA	China	23.9	106.61	Or-III
+W3052	O. rufipogon	NA	China	23.73	106.91	Or-III
+W3053	O. rufipogon	NA	China	19.1	110.35	Or-III
+W3054	O. rufipogon	NA	China	19.1	110.35	Or-III
+W3055	O. rufipogon	NA	China	19.1	110.35	Or-III
+W3056	O. rufipogon	NA	China	19.5	109.5	Or-III
+W3057	O. rufipogon	NA	China	19.5	109.5	Or-III
+W3058	O. rufipogon	NA	China	19.1	109	Or-III
+W3059	O. rufipogon	NA	China	19.1	109	Or-III
+W306	O. sativa	BASMATI 385	Pakistan	33.4	73.08	VI
+W3060	O. rufipogon	NA	China	18.75	109.17	Or-III
+W3061	O. rufipogon	NA	China	18.75	109.17	Or-III
+W3062	O. rufipogon	NA	China	19.1	109	Or-III
+W3063	O. rufipogon	NA	China	19.1	109	Or-III
+W3064	O. rufipogon	NA	China	19.25	110.46	Or-III
+W3065	O. rufipogon	NA	China	19.25	110.46	Or-III
+W3066	O. rufipogon	NA	China	18.75	109.17	Or-III
+W3067	O. rufipogon	NA	China	18.65	109.8	Or-II
+W3068	O. rufipogon	NA	China	18.65	109.8	Or-II
+W3069	O. rufipogon	NA	China	18.65	109.8	Or-III
+W307	O. sativa	AGNO (PSBRC28)	Philippines	14.6	121	IndII
+W3070	O. rufipogon	NA	China	18.65	109.8	Or-III
+W3071	O. rufipogon	NA	China	19.62	110.7	Or-III
+W3072	O. rufipogon	NA	China	19.62	110.7	Or-II
+W3073	O. rufipogon	NA	China	19.62	110.7	Or-III
+W3074	O. rufipogon	NA	China	19.62	110.7	Or-III
+W3075	O. rufipogon	NA	China	28.23	116.61	Or-III
+W3076	O. rufipogon	NA	China	28.23	116.61	Or-III
+W3077	O. rufipogon	NA	China	28.23	116.61	Or-III
+W3078	O. rufipogon	NA	China	28.23	116.61	Or-III
+W3079	O. rufipogon	NA	China	28.23	116.61	Or-III
+W308	O. sativa	PSBRC82	Philippines	14.6	121	IndII
+W3080	O. rufipogon	NA	China	28.23	116.61	Or-III
+W3081	O. rufipogon	NA	China	28.23	116.61	Or-III
+W3082	O. rufipogon	NA	China	28.23	116.61	Or-III
+W3083	O. rufipogon	NA	China	22.1	100.79	Or-III
+W3084	O. rufipogon	NA	China	22.1	100.79	Or-II
+W3085	O. rufipogon	NA	China	23.6	102.01	Or-III
+W3086	O. rufipogon	NA	China	23.6	102.01	Or-III
+W3087	O. rufipogon	NA	China	23.6	102.01	Or-III
+W3088	O. rufipogon	NA	China	23.6	102.01	Or-III
+W3089	O. rufipogon	NA	China	22.1	100.79	Or-II
+W309	O. sativa	NSICRC122	Philippines	14.6	121	IndII
+W3090	O. rufipogon	NA	China	22.1	100.79	Or-II
+W3091	O. rufipogon	NA	China	26.8	113.55	Or-II
+W3092	O. rufipogon	NA	China	26.8	113.55	Or-III
+W3093	O. rufipogon	NA	China	25.28	111.34	Or-III
+W3094	O. rufipogon	NA	China	25.28	111.34	Or-III
+W3095	O. rufipogon	NA	China	25.28	111.34	Or-III
+W3096	O. rufipogon	NA	China	25.28	111.34	Or-III
+W3097	O. rufipogon	NA	China	25.28	111.34	Or-II
+W3098	O. rufipogon	NA	China	25.28	111.34	Or-II
+W310	O. sativa	BRRI DHAN 29	Bangladesh	23.51	90.24	IndII
+W3105	O. rufipogon	NA	India	NA	NA	Or-I
+W311	O. sativa	PR 116	Punjab	NA	NA	IndII
+W312	O. sativa	CIGEULIS	Indonesia	-6.08	106.45	IndII
+W313	O. sativa	OM 2517	Viet Nam	21.03	105.85	IndII
+W314	O. sativa	BRRI DHAN 28	Bangladesh	23.51	90.24	IndII
+W315	O. sativa	CIBOGO	Indonesia	-6.08	106.45	IndII
+W316	O. sativa	NEDA	"Iran, Islamic Republic of"	35.45	51.3	IndII
+W317	O. sativa	CIHERANG	Indonesia	-6.08	106.45	IndII
+W318	O. sativa	Qiuqianbai	China	37.51	117.18	IndI
+W319	O. sativa	Guangkexiangnuo	China	22.48	108.2	TeJ
+W320	O. sativa	Wenxiangnuo	China	25.04	102.41	Ind_Int
+W321	O. sativa	Laozaogu	China	25.04	102.41	Ind_Int
+W322	O. sativa	Lengshuinuo	China	25.04	102.41	Ind_Int
+W323	O. sativa	Feienuo2	China	26.35	106.42	Jap_Int
+W324	O. sativa	Zimangfeie	China	26.35	106.42	Jap_Int
+W325	O. sativa	Guantuibaihe	China	26.35	106.42	TeJ
+W326	O. sativa	Haolvguangnian	China	26.35	106.42	Jap_Int
+W327	O. sativa	JinghuB	China	37.51	117.18	TeJ
+W328	O. sativa	Sibeitichao6	China	39.9	116.4	Int
+W329	O. sativa	GPNO 5055	United States	38.54	-77.02	TrJ
+W330	O. sativa	ASWINA 330	Bangladesh	23.51	90.24	Aus
