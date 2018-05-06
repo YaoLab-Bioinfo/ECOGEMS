@@ -30,7 +30,6 @@ Start an R session using RStudio and run these lines:
 install.packages("shiny")  
 install.packages("shinyBS")  
 install.packages("shinythemes")  
-install.packages("LDheatmap")  
 install.packages("plotly")  
 install.packages("foreach")  
 install.packages("ape")  
@@ -45,6 +44,8 @@ biocLite("IRanges")
 biocLite("snpStats")
 biocLite("chopsticks")  
 biocLite("ggtree")  
+# try an http CRAN mirror if https CRAN mirror doesn't work  
+install.packages("LDheatmap")  
 ```
 
 **Step 3: Start the app**  
@@ -88,7 +89,6 @@ Start an R session and run these lines in R:
 install.packages("shiny")  
 install.packages("shinyBS")  
 install.packages("shinythemes")  
-install.packages("LDheatmap")  
 install.packages("plotly")  
 install.packages("foreach")  
 install.packages("ape")  
@@ -103,6 +103,8 @@ biocLite("IRanges")
 biocLite("snpStats")
 biocLite("chopsticks")  
 biocLite("ggtree")  
+# try an http CRAN mirror if https CRAN mirror doesn't work  
+install.packages("LDheatmap")  
 ```
 
 For more information, please check the following pages:  
@@ -131,7 +133,7 @@ server {
   # Use port 3838  
   listen 3838;  
   # Define the location available at the base URL  
-  location /ECOGEMS {  
+  location /ecogems {  
     # Directory containing the code and data of ECOGEMS  
     app_dir /srv/shiny-server/ECOGEMS;  
     # Directory to store the log files  
