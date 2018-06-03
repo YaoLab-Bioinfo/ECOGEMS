@@ -58,7 +58,7 @@ runGitHub("ECOGEMS", "venyao", launch.browser = TRUE)
 This command would take some time as it will download the ECOGEMS database from GitHub to the disk of your local computer (check the directory path using the function `getwd()` in R).   
 
 <br>
-Alternatively, you can download the ECOGEMS database from GitHub (https://github.com/venyao/ECOGEMS) to a directory (for example "E:/apps/") of your local computer using the web browser or other tools.   
+Alternatively, you can download the ECOGEMS database from Jianguoyun (https://www.jianguoyun.com/p/DXP-bAQQzqnhBRiu8Vg) or GitHub (https://github.com/venyao/ECOGEMS) to a directory (for example "E:/apps/") of your local computer using the web browser or other tools.   
 
 <br>
 <img src="ECOGEMS.png" width="890"/>  
