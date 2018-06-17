@@ -644,6 +644,13 @@ shinyServer(function(input, output, session) {
 	    dev.off()
 	  }, contentType = 'image/svg')
 	
+	## Download TXT file of diversity
+	output$downloadDiv.txt <- downloadHandler(
+	  filename <- function() { paste('diversity.txt') },
+	  content <- function(file) {
+	    write.table(diVTxt, file, sep="\t", quote=F, row.names = F)
+	  }, contentType = 'text/plain')
+	
 	
 	# phylogenetics
 	observe({
@@ -697,6 +704,13 @@ shinyServer(function(input, output, session) {
 	    print(figurecp)
 	    dev.off()
 	  }, contentType = 'application/pdf')
+	
+	## Download NWK file of phylogenetics
+	output$downloadPhylo.nwk <- downloadHandler(
+	  filename <- function() { paste('phylogenetics.nwk') },
+	  content <- function(file) {
+	    write.tree(treNwk, file)
+	  }, contentType = 'text/plain')
   
 	# accession information
 	output$acc.info.txt <- downloadHandler(

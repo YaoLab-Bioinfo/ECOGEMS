@@ -36,6 +36,10 @@ nucDiv <- function(chr="chr07", nuc.start=2800000, nuc.end=2900000, step=10,
   nuc.pos <- dat.pos[seq(1, ncol(dat.mat), by=step)][1:nrow(div.group.df)]
   div.group.df$pos <- nuc.pos
   
+  diVTxt <<- div.group.df
+  diVTxt <<- diVTxt[, c(ncol(diVTxt), 1:(ncol(diVTxt)-1))]
+  names(diVTxt)[1] <<- "position"
+  
   div.group.df.1 <- div.group.df[, c("pos", groups)]
   div.group.df.2 <- div.group.df[, c("pos", numerator, denominator)]
   

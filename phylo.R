@@ -92,6 +92,7 @@ phylo <- function(chr="chr09", start=37800, end=46400, accession=NULL, mutType=N
                       values=c("blue", "red", "black", 
                                "purple", "gold", "cyan"))
   figurecp <<- p
+  treNwk <<- tre
   return(p)
 }
 

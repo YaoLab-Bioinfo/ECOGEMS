@@ -474,6 +474,7 @@ shinyUI(
       mainPanel(
         downloadButton("downloadDiv.pdf", "Download pdf-file"),
         downloadButton("downloadDiv.svg", "Download svg-file"),
+        downloadButton("downloadDiv.txt", "Download TXT-file"),
         plotOutput("diversity", height = '100%', width = '100%')
       )
       
@@ -560,6 +561,7 @@ bsPopover("qp2", "A text file with SNP IDs (one ID per row) could be uploaded to
       
       mainPanel(
         downloadButton("downloadPhylo.pdf", "Download pdf-file"),
+        downloadButton("downloadPhylo.nwk", "Download Newick-file"),
         plotOutput("phylo", height = '100%', width = '100%')
         
       )
