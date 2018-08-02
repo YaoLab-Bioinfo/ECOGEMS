@@ -920,7 +920,7 @@ shinyServer(function(input, output, session) {
 	          load("./data/gff.msu.v7.RData")
 	          
 	          gene.info <- gff[gff$chr==myPos$chr & gff$start>=myPos$start & gff$end<=myPos$end, ]
-	          write.table(gene.info, file, sep="\t", quote=F)
+	          write.table(gene.info, file, sep="\t", quote=F, row.names=F)
 	        })
 	      
 	      output$mytable2 = renderDataTable({
@@ -957,7 +957,7 @@ shinyServer(function(input, output, session) {
 	            load("./data/gff.msu.v7.RData")
 	            
 	            gene.info <- gff[gff$chr==myPos$chr & gff$start>=myPos$start & gff$end<=myPos$end, ]
-	            write.table(gene.info, file, sep="\t", quote=F)
+	            write.table(gene.info, file, sep="\t", quote=F, row.names=F)
 	          })
 	        
 	        output$mytable2 = renderDataTable({
