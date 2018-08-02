@@ -111,7 +111,7 @@ geneStru <- function(chr="chr09", start=37800, end=46400){
     return(dat.tail)
   })
   plot.tail <- do.call(rbind, plot.tail.lst)
-  p1 <- p1 + geom_polygon(aes(x=xx, y=yy, text=anno), color="grey30", fill="grey30", 
+  p1 <- p1 + geom_polygon(aes(x=xx, y=yy, group=pare), color="grey30", fill="grey30", 
                           data=plot.tail)
   
   snp.pos.df <- data.frame(x=snp.code.pos, ymin=1.23, ymax=1.25, stringsAsFactors = FALSE)
