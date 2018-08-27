@@ -9,10 +9,9 @@ shinyServer(function(input, output, session) {
       isolate({
         myPos <- anaReg(input$regB)
         
-        if (myPos$chr %in% paste0("chr", sprintf("%02d", 1:12)) && !is.na(myPos$start) && 
-            !is.na(myPos$end) && myPos$start>=1 && myPos$end>myPos$start && (myPos$end-myPos$start)<=2e6 ) {
+        if (validReg(myPos)) {
         } else {
-          js_string <- 'alert("Please input genomic region in appropriate format!");'
+          js_string <- 'alert("Please input genomic region or gene model in appropriate format!");'
           session$sendCustomMessage(type='jsCode', list(value = js_string))
           #myPos <- anaReg("chr07:29611303-29669223")
           myPos <- NULL
@@ -82,10 +81,9 @@ shinyServer(function(input, output, session) {
         ld.width <<- input$ldWidth
         myPos <- anaReg(input$regL)
         
-        if (myPos$chr %in% paste0("chr", sprintf("%02d", 1:12)) && !is.na(myPos$start) && 
-            !is.na(myPos$end) && myPos$start>=1 && myPos$end>myPos$start && (myPos$end-myPos$start)<=2e6 ) {
+        if (validReg(myPos)) {
         } else {
-          js_string <- 'alert("Please input genomic region in appropriate format!");'
+          js_string <- 'alert("Please input genomic region or gene model in appropriate format!");'
           session$sendCustomMessage(type='jsCode', list(value = js_string))
           myPos <- NULL
         }
@@ -287,10 +285,9 @@ shinyServer(function(input, output, session) {
 	      
 	      myPos <- anaReg(input$regH)
 	      
-	      if (myPos$chr %in% paste0("chr", sprintf("%02d", 1:12)) && !is.na(myPos$start) && 
-	          !is.na(myPos$end) && myPos$start>=1 && myPos$end>myPos$start && (myPos$end-myPos$start)<=2e6 ) {
+	      if (validReg(myPos)) {
 	      } else {
-	        js_string <- 'alert("Please input genomic region in appropriate format!");'
+	        js_string <- 'alert("Please input genomic region or gene model in appropriate format!");'
 	        session$sendCustomMessage(type='jsCode', list(value = js_string))
 	        myPos <- NULL
 	      }
@@ -552,10 +549,9 @@ shinyServer(function(input, output, session) {
 	      
 	      myPos <- anaReg(input$regD)
 	      
-	      if (myPos$chr %in% paste0("chr", sprintf("%02d", 1:12)) && !is.na(myPos$start) && 
-	          !is.na(myPos$end) && myPos$start>=1 && myPos$end>myPos$start && (myPos$end-myPos$start)<=2e6 ) {
+	      if (validReg(myPos)) {
 	      } else {
-	        js_string <- 'alert("Please input genomic region in appropriate format!");'
+	        js_string <- 'alert("Please input genomic region or gene model in appropriate format!");'
 	        session$sendCustomMessage(type='jsCode', list(value = js_string))
 	        myPos <- NULL
 	      }
@@ -663,10 +659,9 @@ shinyServer(function(input, output, session) {
 	      
 	      myPos <- anaReg(input$regP)
 	      
-	      if (myPos$chr %in% paste0("chr", sprintf("%02d", 1:12)) && !is.na(myPos$start) && 
-	          !is.na(myPos$end) && myPos$start>=1 && myPos$end>myPos$start && (myPos$end-myPos$start)<=2e6 ) {
+	      if (validReg(myPos)) {
 	      } else {
-	        js_string <- 'alert("Please input genomic region in appropriate format!");'
+	        js_string <- 'alert("Please input genomic region or gene model in appropriate format!");'
 	        session$sendCustomMessage(type='jsCode', list(value = js_string))
 	        myPos <- NULL
 	      }
@@ -888,10 +883,9 @@ shinyServer(function(input, output, session) {
 	    isolate({
 	      myPos <- anaReg(input$regBB)
 	      
-	      if (myPos$chr %in% paste0("chr", sprintf("%02d", 1:12)) && !is.na(myPos$start) && 
-	          !is.na(myPos$end) && myPos$start>=1 && myPos$end>myPos$start && (myPos$end-myPos$start)<=2e6 ) {
+	      if (validReg(myPos)) {
 	      } else {
-	        js_string <- 'alert("Please input genomic region in appropriate format!");'
+	        js_string <- 'alert("Please input genomic region or gene model in appropriate format!");'
 	        session$sendCustomMessage(type='jsCode', list(value = js_string))
 	        myPos <- NULL
 	      }

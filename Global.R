@@ -30,6 +30,7 @@ source("geneStru.R")
 source("GBrowserStatic.R")
 source("hapGeoStatic.R")
 source("snpInfo.R")
+source("validReg.R")
 
 acc.info <- read.table("./data/all.acc.txt", head=T, as.is=T, sep="\t", quote="")  
 load("./data/gff.msu.v7.RData")
