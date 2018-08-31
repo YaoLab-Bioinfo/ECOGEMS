@@ -990,9 +990,6 @@ shinyServer(function(input, output, session) {
 	      output$bulkdownloadsnp.txt <- downloadHandler(
 	        filename = function() { "down.snp.geno.txt" },
 	        content = function(file) {
-	          print(myPos)
-	          print(input$down_mut_group)
-	          writeLines(input$mychooserD$selected, "E:/t1.txt")
 	          snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start, end=myPos$end, 
 	                              accession = input$mychooserD$selected, mutType = input$down_mut_group)
 	          print(dim(snp.reg[[1]]))
