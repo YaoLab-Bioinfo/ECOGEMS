@@ -5,7 +5,7 @@ snpInfo <- function(chr="chr07", start=29616705, end=29629223, accession=NULL, m
   
   eff.Rdata <- paste0("./data/", chr, ".snpeff.RData")
   load(eff.Rdata)
-  snpeff.info <- snpeff[snpeff[,1] %in% rownames(snp.info[[1]]),]
+  snpeff.info <- snpeff[snpeff[,1] %in% rownames(snp.info[[1]]), , drop=FALSE]
   
   snpeff.info[,"eff"] <- gsub("IT", "Intergenic", snpeff.info[,"eff"])
   snpeff.info[,"eff"] <- gsub("IR", "Intron", snpeff.info[,"eff"])
@@ -47,8 +47,8 @@ snpInfo <- function(chr="chr07", start=29616705, end=29629223, accession=NULL, m
     snpeff.info[,"eff"][grepl("Synonymous_stop", snpeff.info[,"effect"])] <- "Synonymous_stop"
     snpeff.info[,"eff"][grepl("Intergenic", snpeff.info[,"effect"])] <- "Intergenic"
     
-    snpeff.info <- snpeff.info[snpeff.info[, "eff"] %in% mutType, ]
-    snpeff.info <- snpeff.info[, c("snpID", "reference", "alternative", "effect")]
+    snpeff.info <- snpeff.info[snpeff.info[, "eff"] %in% mutType, , drop=FALSE]
+    snpeff.info <- snpeff.info[, c("snpID", "reference", "alternative", "effect"), drop=FALSE]
   }
   
   snp.allele <- as.data.frame(snp.info[[2]], stringsAsFactors=FALSE)

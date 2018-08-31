@@ -15,18 +15,18 @@ ld.heatmap <- function(chr="chr09", start=37800, end=46400, snp.pos=c(1),
     return(snp.data.inter.Matrix)
   })
   snp.data <- do.call(rbind, snp.data.lst)
-  snp.data <- snp.data[order(as.numeric(rownames(snp.data))), ]
+  snp.data <- snp.data[order(as.numeric(rownames(snp.data))), , drop=FALSE]
   snp.allele.lst <- lapply(snp.fls, function(x){
     load(x)
     return(snp.data.allele)
   })
   snp.allele <- do.call(rbind, snp.allele.lst)
-  snp.allele <- snp.allele[order(as.numeric(rownames(snp.allele))), ]
+  snp.allele <- snp.allele[order(as.numeric(rownames(snp.allele))), , drop=FALSE]
   
   start.c <- as.numeric(paste0(substr(chr, 4, 5), sprintf("%08d", start)))
   end.c <- as.numeric(paste0(substr(chr, 4, 5), sprintf("%08d", end)))
   
-  dat <- snp.data[as.numeric(rownames(snp.data))>=start.c & as.numeric(rownames(snp.data))<=end.c, ]
+  dat <- snp.data[as.numeric(rownames(snp.data))>=start.c & as.numeric(rownames(snp.data))<=end.c, , drop=FALSE]
   
   accession <- gsub(",.+", "", accession)
   accession <- sapply(accession, function(x){
@@ -40,13 +40,13 @@ ld.heatmap <- function(chr="chr09", start=37800, end=46400, snp.pos=c(1),
   accession <- unique(unlist(accession))
   
   if (!is.null(accession) && length(accession)>=2) {
-    dat <- dat[, colnames(dat) %in% accession]
+    dat <- dat[, colnames(dat) %in% accession, drop=FALSE]
   }
   
   dat.row.c <- apply(dat, 1, function(x){
     length(unique(x[!is.na(x)]))
   })
-  dat <- dat[dat.row.c>1, ]
+  dat <- dat[dat.row.c>1, , drop=FALSE]
   
   if (!is.null(mutType) && length(mutType)>=1) {
     eff.Rdata <- paste0("./data/", chr, ".snpeff.RData")
@@ -71,16 +71,16 @@ ld.heatmap <- function(chr="chr09", start=37800, end=46400, snp.pos=c(1),
     snpeff.info[,"eff"][grepl("SS", snpeff.info[,"eff"])] <- "Synonymous_stop"
     snpeff.info[,"eff"][grepl("IA", snpeff.info[,"eff"])] <- "Intergenic"
     
-    snpeff.info <- snpeff.info[snpeff.info[, "eff"] %in% mutType, ]
+    snpeff.info <- snpeff.info[snpeff.info[, "eff"] %in% mutType, , drop=FALSE]
     
-    dat <- dat[rownames(dat) %in% snpeff.info[, "id"], ]
+    dat <- dat[rownames(dat) %in% snpeff.info[, "id"], , drop=FALSE]
   }
   
   if (!is.null(snpSites) && length(snpSites)>=1) {
-    dat <- dat[rownames(dat) %in% snpSites, ]
+    dat <- dat[rownames(dat) %in% snpSites, , drop=FALSE]
   }
   
-  snp.code <- snp.allele[rownames(dat), ]
+  snp.code <- snp.allele[rownames(dat), , drop=FALSE]
   snp.code.pos <- as.numeric(substr(rownames(snp.code), 3, 10))
   
   dat <- as.matrix(dat)

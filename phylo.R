@@ -18,7 +18,7 @@ phylo <- function(chr="chr09", start=37800, end=46400, accession=NULL, mutType=N
   start <- as.numeric(paste0(substr(chr, 4, 5), sprintf("%08d", start)))
   end <- as.numeric(paste0(substr(chr, 4, 5), sprintf("%08d", end)))
   
-  dat.res <- snp.data[as.numeric(rownames(snp.data))>=start & as.numeric(rownames(snp.data))<=end, ]
+  dat.res <- snp.data[as.numeric(rownames(snp.data))>=start & as.numeric(rownames(snp.data))<=end, , drop=FALSE]
   dat.res <- as.matrix(dat.res)
   
   accession <- gsub(",.+", "", accession)
@@ -33,13 +33,13 @@ phylo <- function(chr="chr09", start=37800, end=46400, accession=NULL, mutType=N
   accession <- unique(unlist(accession))
   
   if (!is.null(accession) && length(accession)>=2) {
-    dat.res <- dat.res[, colnames(dat.res) %in% accession]
+    dat.res <- dat.res[, colnames(dat.res) %in% accession, drop=FALSE]
   }
   
   dat.res.row.c <- apply(dat.res, 1, function(x){
     length(unique(x[!is.na(x)]))
   })
-  dat.res <- dat.res[dat.res.row.c>1, ]
+  dat.res <- dat.res[dat.res.row.c>1, , drop=FALSE]
   
   if (!is.null(mutType) && length(mutType)>=1) {
     eff.Rdata <- paste0("./data/", chr, ".snpeff.RData")
@@ -64,13 +64,13 @@ phylo <- function(chr="chr09", start=37800, end=46400, accession=NULL, mutType=N
     snpeff.info[,"eff"][grepl("SS", snpeff.info[,"eff"])] <- "Synonymous_stop"
     snpeff.info[,"eff"][grepl("IA", snpeff.info[,"eff"])] <- "Intergenic"
     
-    snpeff.info <- snpeff.info[snpeff.info[, "eff"] %in% mutType, ]
+    snpeff.info <- snpeff.info[snpeff.info[, "eff"] %in% mutType, , drop=FALSE]
     
-    dat.res <- dat.res[rownames(dat.res) %in% snpeff.info[, "id"], ]
+    dat.res <- dat.res[rownames(dat.res) %in% snpeff.info[, "id"], , drop=FALSE]
   }
   
   if (!is.null(snpSites) && length(snpSites)>=1) {
-    dat.res <- dat.res[rownames(dat.res) %in% snpSites, ]
+    dat.res <- dat.res[rownames(dat.res) %in% snpSites, , drop=FALSE]
   }
   
   #### calculate distance matrix

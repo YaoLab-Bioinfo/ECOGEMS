@@ -18,10 +18,11 @@ GBrowser <- function(chr="chr07", start=29616705, end=29629223, accession=NULL, 
   accession <- unique(unlist(accession))
   
   snp.reg <- fetchSnp(chr=chr, start=start, end=end, accession = accession)[[1]]
+  
   eff.Rdata <- paste0("./data/", chr, ".snpeff.RData")
   load(eff.Rdata)
   
-  snpeff.reg <- snpeff[snpeff[,1] %in% rownames(snp.reg),]
+  snpeff.reg <- snpeff[snpeff[,1] %in% rownames(snp.reg), , drop=FALSE]
   snpeff.reg <- as.data.frame(snpeff.reg, stringsAsFactors = FALSE)
   snpeff.reg$chr <- paste0("chr", substr(snpeff.reg$id, 1, 2))
   snpeff.reg$pos <- as.numeric(substr(snpeff.reg$id, 3, 10))
@@ -75,16 +76,16 @@ GBrowser <- function(chr="chr07", start=29616705, end=29629223, accession=NULL, 
   snpeff.reg.3$tag <- eff.tags[snpeff.reg.3$tag]
   
   if (!is.null(mutType)) {
-    snpeff.reg.3 <- snpeff.reg.3[snpeff.reg.3$tag %in% mutType, ]
+    snpeff.reg.3 <- snpeff.reg.3[snpeff.reg.3$tag %in% mutType, , drop=FALSE]
   }
   
   p1 <- ggplot(data=snpeff.reg.3) + geom_point(aes(x=pos, y=yr, color=tag, text=info), size=0.8, pch=25)
   
   
   gff$id <- gsub(":.+", "", gff$id)
-  gff.mrna <- gff[gff$type == "mRNA", ]
-  gff.reg.mrna <- gff.mrna[gff.mrna$chr==chr & gff.mrna$start>=start & gff.mrna$end<=end, ]
-  gff.reg <- gff[gff$id %in% gff.reg.mrna$id, ]
+  gff.mrna <- gff[gff$type == "mRNA", , drop=FALSE]
+  gff.reg.mrna <- gff.mrna[gff.mrna$chr==chr & gff.mrna$start>=start & gff.mrna$end<=end, , drop=FALSE]
+  gff.reg <- gff[gff$id %in% gff.reg.mrna$id, , drop=FALSE]
   
   gff.reg$info <- paste(gff.reg$id, gff.reg$anno, sep=" <br> ")
   
@@ -99,15 +100,15 @@ GBrowser <- function(chr="chr07", start=29616705, end=29629223, accession=NULL, 
   gff.reg$y <- gff.reg$y * 0.2 + 1
   
   plot.nm.lst <- lapply(unique(gff.reg$id), function(i){
-    dat <- gff.reg[gff.reg$id == i, ]
+    dat <- gff.reg[gff.reg$id == i, , drop=FALSE]
     i.strand <- dat$strand[1]
     
     if (i.strand == "-") {
       dat$y <- -dat$y
     }
     
-    dat.nm <- dat[dat$type!="mRNA", ]
-    dat.nm <- dat.nm[-nrow(dat.nm), ]
+    dat.nm <- dat[dat$type!="mRNA", , drop=FALSE]
+    dat.nm <- dat.nm[-nrow(dat.nm), , drop=FALSE]
     
     if (nrow(dat.nm)>0) {
       dat.nm$ymin <- dat.nm$y+0.1
@@ -118,35 +119,37 @@ GBrowser <- function(chr="chr07", start=29616705, end=29629223, accession=NULL, 
     return(dat.nm)
   })
   plot.nm <- do.call(rbind, plot.nm.lst)
-  if (nrow(plot.nm)>0) {
+  if (!is.null(plot.nm) && nrow(plot.nm)>0) {
     p1 <- p1 + geom_rect(aes(xmin=start, xmax=end, ymin=ymin, ymax=ymax), 
                          color="grey30", fill="grey30", data=plot.nm)
   }
   
   plot.mrna.lst <- lapply(unique(gff.reg$id), function(i){
-    dat <- gff.reg[gff.reg$id == i, ]
+    dat <- gff.reg[gff.reg$id == i, , drop=FALSE]
     i.strand <- dat$strand[1]
     
     if (i.strand == "-") {
       dat$y <- -dat$y
     }
     
-    dat.mrna <- dat[dat$type=="mRNA", ]
+    dat.mrna <- dat[dat$type=="mRNA", , drop=FALSE]
     return(dat.mrna)
   })
   plot.mrna <- do.call(rbind, plot.mrna.lst)
-  p1 <- p1 + geom_rect(aes(xmin=start, xmax=end, ymin=y+0.118, ymax=y+0.122), 
-                       color="grey30", fill="grey30", data=plot.mrna)
+  if (!is.null(plot.mrna) && nrow(plot.mrna)>0) {
+    p1 <- p1 + geom_rect(aes(xmin=start, xmax=end, ymin=y+0.118, ymax=y+0.122), 
+                         color="grey30", fill="grey30", data=plot.mrna)
+  }
   
   plot.tail.lst <- lapply(unique(gff.reg$id), function(i){
-    dat <- gff.reg[gff.reg$id == i, ]
+    dat <- gff.reg[gff.reg$id == i, , drop=FALSE]
     i.strand <- dat$strand[1]
     
     if (i.strand == "-") {
       dat$y <- -dat$y
     }
     
-    dat.nm <- dat[dat$type!="mRNA", ]
+    dat.nm <- dat[dat$type!="mRNA", , drop=FALSE]
     
     i.info <- dat$info[1]
     i.id <- dat.nm$pare[1]
@@ -158,7 +161,7 @@ GBrowser <- function(chr="chr07", start=29616705, end=29629223, accession=NULL, 
                            stringsAsFactors = FALSE)
     if (i.strand == "-") {
       dat.tail$yy <- c(0.12, 0.12, 0.1, 0.14, 0.1, 0.14) + dat$y[1]
-      dat.tail <- dat.tail[c(1,3,5,6,4,2), ]
+      dat.tail <- dat.tail[c(1,3,5,6,4,2), , drop=FALSE]
       dat.tail$pare <- i.id
       dat.tail$info <- i.info
       if (tail.type=="CDS") {
@@ -167,7 +170,7 @@ GBrowser <- function(chr="chr07", start=29616705, end=29629223, accession=NULL, 
       }
     } else {
       dat.tail$yy <- c(0.1, 0.14, 0.1, 0.14, 0.12, 0.12) + dat$y[1]
-      dat.tail <- dat.tail[c(1,3,5,6,4,2), ]
+      dat.tail <- dat.tail[c(1,3,5,6,4,2), , drop=FALSE]
       dat.tail$pare <- i.id
       dat.tail$info <- i.info
       if (tail.type=="CDS") {
@@ -179,8 +182,10 @@ GBrowser <- function(chr="chr07", start=29616705, end=29629223, accession=NULL, 
     return(dat.tail)
   })
   plot.tail <- do.call(rbind, plot.tail.lst)
-  p1 <- p1 + geom_polygon(aes(x=xx, y=yy, group=pare), color="grey30", fill="grey30", 
-                          data=plot.tail)
+  if (!is.null(plot.tail) && nrow(plot.tail)>0) {
+    p1 <- p1 + geom_polygon(aes(x=xx, y=yy, group=pare), color="grey30", fill="grey30", 
+                            data=plot.tail)
+  }
   
   
   p1 <- p1 + scale_y_continuous("", breaks=NULL)

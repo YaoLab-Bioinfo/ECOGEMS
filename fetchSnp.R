@@ -32,9 +32,9 @@ fetchSnp <- function(chr="chr07", start=29616705, end=29629223, accession=NULL, 
     start <- as.numeric(paste0(substr(chr, 4, 5), sprintf("%08d", start)))
     end <- as.numeric(paste0(substr(chr, 4, 5), sprintf("%08d", end)))
     
-    dat.res <- snp.data[as.numeric(rownames(snp.data))>=start & as.numeric(rownames(snp.data))<=end, ]
+    dat.res <- snp.data[as.numeric(rownames(snp.data))>=start & as.numeric(rownames(snp.data))<=end, , drop=FALSE]
     snp.code <- as.vector(t(snp.allele[rownames(dat.res), ]))
-    allele.res <- snp.allele[rownames(dat.res), ]
+    allele.res <- snp.allele[rownames(dat.res), , drop=FALSE]
     
     dat.res.n <- seq_len(nrow(dat.res)) - 1
     dat.res.n <- rep(dat.res.n, each=ncol(dat.res))
@@ -58,20 +58,20 @@ fetchSnp <- function(chr="chr07", start=29616705, end=29629223, accession=NULL, 
     accession <- unique(unlist(accession))
     
     if (!is.null(accession) && length(accession)>=2) {
-      dat.res.mat <- dat.res.mat[, colnames(dat.res.mat) %in% accession]
+      dat.res.mat <- dat.res.mat[, colnames(dat.res.mat) %in% accession, drop=FALSE]
     }
     
     dat.res.mat.row.c <- apply(dat.res.mat, 1, function(x){
       length(unique(x[!is.na(x)]))
     })
     
-    dat.res.mat <- dat.res.mat[dat.res.mat.row.c>1, ]
-    allele.res <- allele.res[dat.res.mat.row.c>1, ]
+    dat.res.mat <- dat.res.mat[dat.res.mat.row.c>1, , drop=FALSE]
+    allele.res <- allele.res[dat.res.mat.row.c>1, , drop=FALSE]
     
     if (!is.null(mutType) && length(mutType)>=1) {
       eff.Rdata <- paste0("./data/", chr, ".snpeff.RData")
       load(eff.Rdata)
-      snpeff.info <- snpeff[snpeff[, 1] %in% rownames(dat.res.mat),]
+      snpeff.info <- snpeff[snpeff[, 1] %in% rownames(dat.res.mat), , drop=FALSE]
       
       snpeff.info[,"eff"][grepl("IT", snpeff.info[,"eff"])] <- "Intergenic"
       snpeff.info[,"eff"][grepl("IR", snpeff.info[,"eff"])] <- "Intron"
@@ -91,10 +91,10 @@ fetchSnp <- function(chr="chr07", start=29616705, end=29629223, accession=NULL, 
       snpeff.info[,"eff"][grepl("SS", snpeff.info[,"eff"])] <- "Synonymous_stop"
       snpeff.info[,"eff"][grepl("IA", snpeff.info[,"eff"])] <- "Intergenic"
       
-      snpeff.info <- snpeff.info[snpeff.info[, "eff"] %in% mutType, ]
+      snpeff.info <- snpeff.info[snpeff.info[, "eff"] %in% mutType, , drop=FALSE]
       
-      dat.res.mat <- dat.res.mat[rownames(dat.res.mat) %in% snpeff.info[, "id"], ]
-      allele.res <- allele.res[rownames(allele.res) %in% snpeff.info[, "id"], ]
+      dat.res.mat <- dat.res.mat[rownames(dat.res.mat) %in% snpeff.info[, "id"], , drop=FALSE]
+      allele.res <- allele.res[rownames(allele.res) %in% snpeff.info[, "id"], , drop=FALSE]
     }
     
     return(list(dat.res.mat, allele.res))

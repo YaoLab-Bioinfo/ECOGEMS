@@ -6,7 +6,7 @@ nucDiv <- function(chr="chr07", nuc.start=2800000, nuc.end=2900000, step=10,
   data <- fetchSnp(chr=chr, start=nuc.start, end=nuc.end, mutType = mutType)[[1]]
   
   if (!is.null(snpSites) && length(snpSites)>=1) {
-    data <- data[rownames(data) %in% snpSites, ]
+    data <- data[rownames(data) %in% snpSites, , drop=FALSE]
   }
   
   dat.mat <- t(data)

@@ -17,12 +17,21 @@ shinyServer(function(input, output, session) {
           myPos <- NULL
         }
         
-        output$gbrowser <- renderPlotly({
-          GBrowser(chr=myPos$chr, start=myPos$start - input$GBUP, 
-                   end=myPos$end + input$GBDOWN,
-                   accession = input$mychooserB$selected,
-                   mutType = input$GB_mut_group)
-        })
+        snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start - input$GBUP, 
+                            end=myPos$end + input$GBDOWN, accession = input$mychooserB$selected,
+                            mutType = input$GB_mut_group)[[1]]
+        if (nrow(snp.reg) < 1) {
+          js_string <- 'alert("No SNPs in specified genomic region!");'
+          session$sendCustomMessage(type='jsCode', list(value = js_string))
+        } else {
+          output$gbrowser <- renderPlotly({
+            GBrowser(chr=myPos$chr, start=myPos$start - input$GBUP, 
+                     end=myPos$end + input$GBDOWN,
+                     accession = input$mychooserB$selected,
+                     mutType = input$GB_mut_group)
+          })
+        }
+        
       })
     } else {
       if (input$regB == "chr07:29611303-29669223") {
@@ -43,14 +52,23 @@ shinyServer(function(input, output, session) {
   output$downloadGB.pdf <- downloadHandler(
     filename <- function() { paste('GBrowser.pdf') },
     content <- function(file) {
-      pdf(file, width = 900/72, height = 300/72)
       myPos <- anaReg(input$regB)
-      grid.draw(GBrowserStatic(chr=myPos$chr, start=myPos$start - input$GBUP, 
-                               end=myPos$end + input$GBDOWN,
-                               accession = input$mychooserB$selected,
-                               mutType = input$GB_mut_group))
       
-      dev.off()
+      snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start - input$GBUP, 
+                          end=myPos$end + input$GBDOWN, accession = input$mychooserB$selected,
+                          mutType = input$GB_mut_group)[[1]]
+      if (nrow(snp.reg) < 1) {
+        js_string <- 'alert("Please input genomic region or gene model in appropriate format!");'
+        session$sendCustomMessage(type='jsCode', list(value = js_string))
+      } else {
+        pdf(file, width = 900/72, height = 300/72)
+        grid.draw(GBrowserStatic(chr=myPos$chr, start=myPos$start - input$GBUP, 
+                                 end=myPos$end + input$GBDOWN,
+                                 accession = input$mychooserB$selected,
+                                 mutType = input$GB_mut_group))
+        dev.off()
+      }
+      
     }, contentType = 'application/pdf')
   
   # Download genotypes of seleceted SNPs
@@ -58,7 +76,7 @@ shinyServer(function(input, output, session) {
     filename = function() { "snp.geno.txt" },
     content = function(file) {
       myPos <- anaReg(input$regB)
-      snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start, end=myPos$end, 
+      snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start - input$GBUP, end=myPos$end + input$GBDOWN, 
                           accession = input$mychooserB$selected, mutType = input$GB_mut_group)
       write.table(snp.reg[[1]], file, sep="\t", quote=F)
     })
@@ -68,7 +86,7 @@ shinyServer(function(input, output, session) {
     filename = function() { "snp.info.txt" },
     content = function(file) {
       myPos <- anaReg(input$regB)
-      snp.info <- snpInfo(chr=myPos$chr, start=myPos$start, end=myPos$end, 
+      snp.info <- snpInfo(chr=myPos$chr, start=myPos$start - input$GBUP, end=myPos$end + input$GBDOWN, 
                           accession = input$mychooserB$selected, mutType = input$GB_mut_group)
       write.table(snp.info, file, sep="\t", quote=F, row.names=F)
     })
@@ -88,42 +106,51 @@ shinyServer(function(input, output, session) {
           myPos <- NULL
         }
         
-        snp.pos <- as.numeric(unlist(strsplit(input$ldpos, split=",")))
-        
-        if (input$uploadLD == 1) {
-          ld.snp.site <- NULL
+        snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start - input$ldUp * 1000, 
+                            end=myPos$end + input$ldDown * 1000, accession = input$mychooserLD$selected,
+                            mutType = input$ld_mut_group)[[1]]
+        if (nrow(snp.reg) < 5) {
+          js_string <- 'alert("Too few SNPs in specified genomic region!");'
+          session$sendCustomMessage(type='jsCode', list(value = js_string))
         } else {
-          if (!is.null(input$LD.snpsite)) {
-            ld.snp.site <- readLines(input$LD.snpsite$datapath)
-          } else {
+          snp.pos <- as.numeric(unlist(strsplit(input$ldpos, split=",")))
+          
+          if (input$uploadLD == 1) {
             ld.snp.site <- NULL
-          }
-        }
-        
-        output$ldheatmap <- renderPlot({
-          if (input$flip == "0") {
-            ld.heatmap(chr=myPos$chr, start=myPos$start - input$ldUp * 1000, end=myPos$end + input$ldDown * 1000, text=c(FALSE, TRUE)[as.numeric(input$showText)+1],
-                       snp.pos=snp.pos, gene=FALSE, flip=c(FALSE, TRUE)[as.numeric(input$flip)+1],
-                       col=list(grey.colors(20), heat.colors(20))[[as.numeric(input$ldcol)]],
-                       mutType = input$ld_mut_group, accession = input$mychooserLD$selected, 
-                       snpSites = ld.snp.site)
-          } else if (input$flip == "1") {
-            if (input$LDshowGene) {
-              ld.heatmap(chr=myPos$chr, start=myPos$start - input$ldUp * 1000, end=myPos$end + input$ldDown * 1000, text=FALSE,
-                         snp.pos=snp.pos, ld.y=input$ldY/100, ld.w=input$ldW/100, gene=TRUE, 
-                         col=list(grey.colors(20), heat.colors(20))[[as.numeric(input$ldcol)]],
-                         mutType = input$ld_mut_group, accession = input$mychooserLD$selected, 
-                         snpSites = ld.snp.site)
+          } else {
+            if (!is.null(input$LD.snpsite)) {
+              ld.snp.site <- readLines(input$LD.snpsite$datapath)
             } else {
-              ld.heatmap(chr=myPos$chr, start=myPos$start - input$ldUp * 1000, end=myPos$end + input$ldDown * 1000, text=FALSE,
-                         gene=FALSE, flip=c(FALSE, TRUE)[as.numeric(input$flip)+1],
-                         col=list(grey.colors(20), heat.colors(20))[[as.numeric(input$ldcol)]],
-                         mutType = input$ld_mut_group, accession = input$mychooserLD$selected, 
-                         snpSites = ld.snp.site)
+              ld.snp.site <- NULL
             }
           }
           
-        }, height = ld.height, width = ld.width)
+          output$ldheatmap <- renderPlot({
+            if (input$flip == "0") {
+              ld.heatmap(chr=myPos$chr, start=myPos$start - input$ldUp * 1000, end=myPos$end + input$ldDown * 1000, text=c(FALSE, TRUE)[as.numeric(input$showText)+1],
+                         snp.pos=snp.pos, gene=FALSE, flip=c(FALSE, TRUE)[as.numeric(input$flip)+1],
+                         col=list(grey.colors(20), heat.colors(20))[[as.numeric(input$ldcol)]],
+                         mutType = input$ld_mut_group, accession = input$mychooserLD$selected, 
+                         snpSites = ld.snp.site)
+            } else if (input$flip == "1") {
+              if (input$LDshowGene) {
+                ld.heatmap(chr=myPos$chr, start=myPos$start - input$ldUp * 1000, end=myPos$end + input$ldDown * 1000, text=FALSE,
+                           snp.pos=snp.pos, ld.y=input$ldY/100, ld.w=input$ldW/100, gene=TRUE, 
+                           col=list(grey.colors(20), heat.colors(20))[[as.numeric(input$ldcol)]],
+                           mutType = input$ld_mut_group, accession = input$mychooserLD$selected, 
+                           snpSites = ld.snp.site)
+              } else {
+                ld.heatmap(chr=myPos$chr, start=myPos$start - input$ldUp * 1000, end=myPos$end + input$ldDown * 1000, text=FALSE,
+                           gene=FALSE, flip=c(FALSE, TRUE)[as.numeric(input$flip)+1],
+                           col=list(grey.colors(20), heat.colors(20))[[as.numeric(input$ldcol)]],
+                           mutType = input$ld_mut_group, accession = input$mychooserLD$selected, 
+                           snpSites = ld.snp.site)
+              }
+            }
+            
+          }, height = ld.height, width = ld.width)
+        }
+        
       })
     } else {
       ld.height <<- input$ldHeight
@@ -177,84 +204,104 @@ shinyServer(function(input, output, session) {
 	output$downloadLD.pdf <- downloadHandler(
 	  filename <- function() { paste('LDheatmap.pdf') },
 	  content <- function(file) {
-	    pdf(file, width = input$ldWidth/72, height = input$ldHeight/72)
 	    myPos <- anaReg(input$regL)
-	    snp.pos <- as.numeric(unlist(strsplit(input$ldpos, split=",")))
 	    
-	    if (input$uploadLD == 1) {
-	      ld.snp.site <- NULL
+	    snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start - input$ldUp * 1000, 
+	                        end=myPos$end + input$ldDown * 1000, accession = input$mychooserLD$selected,
+	                        mutType = input$ld_mut_group)[[1]]
+	    if (nrow(snp.reg) < 5) {
+	      js_string <- 'alert("Too few SNPs in specified genomic region!");'
+	      session$sendCustomMessage(type='jsCode', list(value = js_string))
 	    } else {
-	      if (!is.null(input$LD.snpsite)) {
-	        ld.snp.site <- readLines(input$LD.snpsite$datapath)
-	      } else {
+	      pdf(file, width = input$ldWidth/72, height = input$ldHeight/72)
+	      snp.pos <- as.numeric(unlist(strsplit(input$ldpos, split=",")))
+	      
+	      if (input$uploadLD == 1) {
 	        ld.snp.site <- NULL
+	      } else {
+	        if (!is.null(input$LD.snpsite)) {
+	          ld.snp.site <- readLines(input$LD.snpsite$datapath)
+	        } else {
+	          ld.snp.site <- NULL
+	        }
 	      }
+	      
+	      if (input$flip == "0") {
+	        ld.heatmap(chr=myPos$chr, start=myPos$start - input$ldUp * 1000, end=myPos$end + input$ldDown * 1000, text=c(FALSE, TRUE)[as.numeric(input$showText)+1],
+	                   snp.pos=snp.pos, gene=FALSE, flip=c(FALSE, TRUE)[as.numeric(input$flip)+1],
+	                   col=list(grey.colors(20), heat.colors(20))[[as.numeric(input$ldcol)]],
+	                   mutType = input$ld_mut_group, accession = input$mychooserLD$selected, 
+	                   snpSites = ld.snp.site)
+	      } else if (input$flip == "1") {
+	        if (input$LDshowGene) {
+	          ld.heatmap(chr=myPos$chr, start=myPos$start - input$ldUp * 1000, end=myPos$end + input$ldDown * 1000, text=FALSE,
+	                     snp.pos=snp.pos, ld.y=input$ldY/100, ld.w=input$ldW/100, gene=TRUE, 
+	                     col=list(grey.colors(20), heat.colors(20))[[as.numeric(input$ldcol)]],
+	                     mutType = input$ld_mut_group, accession = input$mychooserLD$selected, 
+	                     snpSites = ld.snp.site)
+	        } else {
+	          ld.heatmap(chr=myPos$chr, start=myPos$start - input$ldUp * 1000, end=myPos$end + input$ldDown * 1000, text=FALSE,
+	                     gene=FALSE, flip=c(FALSE, TRUE)[as.numeric(input$flip)+1],
+	                     col=list(grey.colors(20), heat.colors(20))[[as.numeric(input$ldcol)]],
+	                     mutType = input$ld_mut_group, accession = input$mychooserLD$selected, 
+	                     snpSites = ld.snp.site)
+	        }
+	      }
+	      dev.off()
 	    }
 	    
-	    if (input$flip == "0") {
-	      ld.heatmap(chr=myPos$chr, start=myPos$start - input$ldUp * 1000, end=myPos$end + input$ldDown * 1000, text=c(FALSE, TRUE)[as.numeric(input$showText)+1],
-	                 snp.pos=snp.pos, gene=FALSE, flip=c(FALSE, TRUE)[as.numeric(input$flip)+1],
-	                 col=list(grey.colors(20), heat.colors(20))[[as.numeric(input$ldcol)]],
-	                 mutType = input$ld_mut_group, accession = input$mychooserLD$selected, 
-	                 snpSites = ld.snp.site)
-	    } else if (input$flip == "1") {
-	      if (input$LDshowGene) {
-	        ld.heatmap(chr=myPos$chr, start=myPos$start - input$ldUp * 1000, end=myPos$end + input$ldDown * 1000, text=FALSE,
-	                   snp.pos=snp.pos, ld.y=input$ldY/100, ld.w=input$ldW/100, gene=TRUE, 
-	                   col=list(grey.colors(20), heat.colors(20))[[as.numeric(input$ldcol)]],
-	                   mutType = input$ld_mut_group, accession = input$mychooserLD$selected, 
-	                   snpSites = ld.snp.site)
-	      } else {
-	        ld.heatmap(chr=myPos$chr, start=myPos$start - input$ldUp * 1000, end=myPos$end + input$ldDown * 1000, text=FALSE,
-	                   gene=FALSE, flip=c(FALSE, TRUE)[as.numeric(input$flip)+1],
-	                   col=list(grey.colors(20), heat.colors(20))[[as.numeric(input$ldcol)]],
-	                   mutType = input$ld_mut_group, accession = input$mychooserLD$selected, 
-	                   snpSites = ld.snp.site)
-	      }
-	    }
-	    dev.off()
 	  }, contentType = 'application/pdf')
 	
 	## Download SVG file of LDheatmap
 	output$downloadLD.svg <- downloadHandler(
 	  filename <- function() { paste('LDheatmap.svg') },
 	  content <- function(file) {
-	    svg(file, width = input$ldWidth/72, height = input$ldHeight/72)
 	    myPos <- anaReg(input$regL)
-	    snp.pos <- as.numeric(unlist(strsplit(input$ldpos, split=",")))
 	    
-	    if (input$uploadLD == 1) {
-	      ld.snp.site <- NULL
+	    snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start - input$ldUp * 1000, 
+	                        end=myPos$end + input$ldDown * 1000, accession = input$mychooserLD$selected,
+	                        mutType = input$ld_mut_group)[[1]]
+	    if (nrow(snp.reg) < 5) {
+	      js_string <- 'alert("Too few SNPs in specified genomic region!");'
+	      session$sendCustomMessage(type='jsCode', list(value = js_string))
 	    } else {
-	      if (!is.null(input$LD.snpsite)) {
-	        ld.snp.site <- readLines(input$LD.snpsite$datapath)
-	      } else {
+	      svg(file, width = input$ldWidth/72, height = input$ldHeight/72)
+	      snp.pos <- as.numeric(unlist(strsplit(input$ldpos, split=",")))
+	      
+	      if (input$uploadLD == 1) {
 	        ld.snp.site <- NULL
+	      } else {
+	        if (!is.null(input$LD.snpsite)) {
+	          ld.snp.site <- readLines(input$LD.snpsite$datapath)
+	        } else {
+	          ld.snp.site <- NULL
+	        }
 	      }
+	      
+	      if (input$flip == "0") {
+	        ld.heatmap(chr=myPos$chr, start=myPos$start - input$ldUp * 1000, end=myPos$end + input$ldDown * 1000, text=c(FALSE, TRUE)[as.numeric(input$showText)+1],
+	                   snp.pos=snp.pos, gene=FALSE, flip=c(FALSE, TRUE)[as.numeric(input$flip)+1],
+	                   col=list(grey.colors(20), heat.colors(20))[[as.numeric(input$ldcol)]],
+	                   mutType = input$ld_mut_group, accession = input$mychooserLD$selected, 
+	                   snpSites = ld.snp.site)
+	      } else if (input$flip == "1") {
+	        if (input$LDshowGene) {
+	          ld.heatmap(chr=myPos$chr, start=myPos$start - input$ldUp * 1000, end=myPos$end + input$ldDown * 1000, text=FALSE,
+	                     snp.pos=snp.pos, ld.y=input$ldY/100, ld.w=input$ldW/100, gene=TRUE, 
+	                     col=list(grey.colors(20), heat.colors(20))[[as.numeric(input$ldcol)]],
+	                     mutType = input$ld_mut_group, accession = input$mychooserLD$selected, 
+	                     snpSites = ld.snp.site)
+	        } else {
+	          ld.heatmap(chr=myPos$chr, start=myPos$start - input$ldUp * 1000, end=myPos$end + input$ldDown * 1000, text=FALSE,
+	                     gene=FALSE, flip=c(FALSE, TRUE)[as.numeric(input$flip)+1],
+	                     col=list(grey.colors(20), heat.colors(20))[[as.numeric(input$ldcol)]],
+	                     mutType = input$ld_mut_group, accession = input$mychooserLD$selected, 
+	                     snpSites = ld.snp.site)
+	        }
+	      }
+	      dev.off()
 	    }
 	    
-	    if (input$flip == "0") {
-	      ld.heatmap(chr=myPos$chr, start=myPos$start - input$ldUp * 1000, end=myPos$end + input$ldDown * 1000, text=c(FALSE, TRUE)[as.numeric(input$showText)+1],
-	                 snp.pos=snp.pos, gene=FALSE, flip=c(FALSE, TRUE)[as.numeric(input$flip)+1],
-	                 col=list(grey.colors(20), heat.colors(20))[[as.numeric(input$ldcol)]],
-	                 mutType = input$ld_mut_group, accession = input$mychooserLD$selected, 
-	                 snpSites = ld.snp.site)
-	    } else if (input$flip == "1") {
-	      if (input$LDshowGene) {
-	        ld.heatmap(chr=myPos$chr, start=myPos$start - input$ldUp * 1000, end=myPos$end + input$ldDown * 1000, text=FALSE,
-	                   snp.pos=snp.pos, ld.y=input$ldY/100, ld.w=input$ldW/100, gene=TRUE, 
-	                   col=list(grey.colors(20), heat.colors(20))[[as.numeric(input$ldcol)]],
-	                   mutType = input$ld_mut_group, accession = input$mychooserLD$selected, 
-	                   snpSites = ld.snp.site)
-	      } else {
-	        ld.heatmap(chr=myPos$chr, start=myPos$start - input$ldUp * 1000, end=myPos$end + input$ldDown * 1000, text=FALSE,
-	                   gene=FALSE, flip=c(FALSE, TRUE)[as.numeric(input$flip)+1],
-	                   col=list(grey.colors(20), heat.colors(20))[[as.numeric(input$ldcol)]],
-	                   mutType = input$ld_mut_group, accession = input$mychooserLD$selected, 
-	                   snpSites = ld.snp.site)
-	      }
-	    }
-	    dev.off()
 	  }, contentType = 'image/svg')
 	
 	# Haplotype
@@ -294,21 +341,27 @@ shinyServer(function(input, output, session) {
 	      
 	      snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start - hap.up, end=myPos$end + hap.down, mutType=hap.mut.grp)[[1]]
 	      
-	      if (input$uploadHAP == 1) {
-	        hap.snp.site <- NULL
+	      if (nrow(snp.reg) < 5) {
+	        js_string <- 'alert("Too few SNPs in specified genomic region!");'
+	        session$sendCustomMessage(type='jsCode', list(value = js_string))
 	      } else {
-	        if (!is.null(input$HAP.snpsite)) {
-	          hap.snp.site <- readLines(input$HAP.snpsite$datapath)
-	        } else {
+	        if (input$uploadHAP == 1) {
 	          hap.snp.site <- NULL
+	        } else {
+	          if (!is.null(input$HAP.snpsite)) {
+	            hap.snp.site <- readLines(input$HAP.snpsite$datapath)
+	          } else {
+	            hap.snp.site <- NULL
+	          }
 	        }
+	        
+	        output$haplotype <- renderPlot({
+	          hapNet(data = snp.reg, legend.x=hap.leg.x, legend.y=hap.leg.y, pop.list=hap.pop,
+	                 labels=hap.lab, show.mutation=hap.mut, scale.ratio=hap.scale,
+	                 min.freq=hap.min, max.freq=hap.max, lwd=link.wd, col.link=link.col, snpSites = hap.snp.site)
+	        }, height = 550, width = 750)
 	      }
-	      
-	      output$haplotype <- renderPlot({
-	        hapNet(data = snp.reg, legend.x=hap.leg.x, legend.y=hap.leg.y, pop.list=hap.pop,
-	               labels=hap.lab, show.mutation=hap.mut, scale.ratio=hap.scale,
-	               min.freq=hap.min, max.freq=hap.max, lwd=link.wd, col.link=link.col, snpSites = hap.snp.site)
-	      }, height = 550, width = 750)
+	     
 	    })
 	  } else {
 	    isolate({
@@ -438,24 +491,33 @@ shinyServer(function(input, output, session) {
 	      hap.pop <- as.numeric(input$hapPop)
 	      hap.min <- input$hapMin
 	      hap.max <- input$hapMax
-	      output$hapGeo <- renderPlotly({
-	        snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start - input$hapUp * 1000, end=myPos$end + input$hapDown * 1000,
-	                            mutType=input$hap_mut_group)[[1]]
-	        
-	        if (input$uploadHAP == 1) {
-	          hap.snp.site <- NULL
-	        } else {
-	          if (!is.null(input$HAP.snpsite)) {
-	            hap.snp.site <- readLines(input$HAP.snpsite$datapath)
-	          } else {
+	      
+	      snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start - input$hapUp * 1000, end=myPos$end + input$hapDown * 1000,
+	                          mutType=input$hap_mut_group)[[1]]
+	      
+	      if (nrow(snp.reg) < 5) {
+	        js_string <- 'alert("Too few SNPs in specified genomic region!");'
+	        session$sendCustomMessage(type='jsCode', list(value = js_string))
+	      } else {
+	        output$hapGeo <- renderPlotly({
+	          
+	          
+	          if (input$uploadHAP == 1) {
 	            hap.snp.site <- NULL
+	          } else {
+	            if (!is.null(input$HAP.snpsite)) {
+	              hap.snp.site <- readLines(input$HAP.snpsite$datapath)
+	            } else {
+	              hap.snp.site <- NULL
+	            }
 	          }
-	        }
-	        
-	        hapGeo(haplotype = hapConten(data = snp.reg, min.freq=hap.min, 
-	                                     max.freq=hap.max, 
-	                                     pop.list=hap.pop, snpSites = hap.snp.site))
-	      })
+	          
+	          hapGeo(haplotype = hapConten(data = snp.reg, min.freq=hap.min, 
+	                                       max.freq=hap.max, 
+	                                       pop.list=hap.pop, snpSites = hap.snp.site))
+	        })
+	      }
+	      
 	    })
 	  } else {
 	    isolate({
@@ -574,14 +636,22 @@ shinyServer(function(input, output, session) {
 	        }
 	      }
 	      
-	      output$diversity <- renderPlot({
-	        withProgress(message='Making plots',value = 0, detail = 'This may take a while...', {
-	          nucDiv(chr=myPos$chr, nuc.start=myPos$start - div.up, nuc.end=myPos$end + div.down, 
-	               groups = div.group, step = div.step,
-	               numerator = div.numerator, denominator = div.denominator, 
-	               mutType = div.mut.group, snpSites = div.snp.site)
-	        })
-	      }, height = div.height, width = div.width)
+	      snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start - div.up, end=myPos$end + div.down,
+	                          mutType=input$hap_mut_group)[[1]]
+	      
+	      if (nrow(snp.reg) < 10) {
+	        js_string <- 'alert("Too few SNPs in specified genomic region!");'
+	        session$sendCustomMessage(type='jsCode', list(value = js_string))
+	      } else {
+	        output$diversity <- renderPlot({
+	          withProgress(message='Making plots',value = 0, detail = 'This may take a while...', {
+	            nucDiv(chr=myPos$chr, nuc.start=myPos$start - div.up, nuc.end=myPos$end + div.down, 
+	                   groups = div.group, step = div.step,
+	                   numerator = div.numerator, denominator = div.denominator, 
+	                   mutType = div.mut.group, snpSites = div.snp.site)
+	          })
+	        }, height = div.height, width = div.width)
+	      }
 	      
 	    })
 	  } else {
@@ -594,50 +664,68 @@ shinyServer(function(input, output, session) {
 	output$downloadDiv.pdf <- downloadHandler(
 	  filename <- function() { paste('diversity.pdf') },
 	  content <- function(file) {
-	    pdf(file, width = input$divWidth/72, height = input$divHeight/72)
 	    myPos <- anaReg(input$regD)
 	    
-	    if (input$uploadDIV == 1) {
-	      div.snp.site <- NULL
+	    snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start - input$divUp * 1000, end=myPos$end + input$divDown * 1000,
+	                        mutType=input$hap_mut_group)[[1]]
+	    
+	    if (nrow(snp.reg) < 10) {
+	      js_string <- 'alert("Too few SNPs in specified genomic region!");'
+	      session$sendCustomMessage(type='jsCode', list(value = js_string))
 	    } else {
-	      if (!is.null(input$DIV.snpsite)) {
-	        div.snp.site <- readLines(input$DIV.snpsite$datapath)
-	      } else {
+	      if (input$uploadDIV == 1) {
 	        div.snp.site <- NULL
+	      } else {
+	        if (!is.null(input$DIV.snpsite)) {
+	          div.snp.site <- readLines(input$DIV.snpsite$datapath)
+	        } else {
+	          div.snp.site <- NULL
+	        }
 	      }
+	      
+	      pdf(file, width = input$divWidth/72, height = input$divHeight/72)
+	      nucDiv(chr=myPos$chr, nuc.start=myPos$start - input$divUp * 1000, nuc.end=myPos$end + input$divDown * 1000, 
+	             groups = input$div_acc_group, step = input$snpnumD,
+	             numerator = input$nuc_numerator, denominator = input$nuc_denominator,
+	             mutType = input$div_mut_group, snpSites = div.snp.site)
+	      
+	      dev.off()
 	    }
 	    
-	    nucDiv(chr=myPos$chr, nuc.start=myPos$start - input$divUp * 1000, nuc.end=myPos$end + input$divDown * 1000, 
-	                             groups = input$div_acc_group, step = input$snpnumD,
-	           numerator = input$nuc_numerator, denominator = input$nuc_denominator,
-	           mutType = input$div_mut_group, snpSites = div.snp.site)
-	    
-	    dev.off()
 	  }, contentType = 'application/pdf')
 	
 	## Download SVG file of Diversity
 	output$downloadDiv.svg <- downloadHandler(
 	  filename <- function() { paste('diversity.svg') },
 	  content <- function(file) {
-	    svg(file, width = input$divWidth/72, height = input$divHeight/72)
 	    myPos <- anaReg(input$regD)
 	    
-	    if (input$uploadDIV == 1) {
-	      div.snp.site <- NULL
+	    snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start - input$divUp * 1000, end=myPos$end + input$divDown * 1000,
+	                        mutType=input$hap_mut_group)[[1]]
+	    
+	    if (nrow(snp.reg) < 10) {
+	      js_string <- 'alert("Too few SNPs in specified genomic region!");'
+	      session$sendCustomMessage(type='jsCode', list(value = js_string))
 	    } else {
-	      if (!is.null(input$DIV.snpsite)) {
-	        div.snp.site <- readLines(input$DIV.snpsite$datapath)
-	      } else {
+	      if (input$uploadDIV == 1) {
 	        div.snp.site <- NULL
+	      } else {
+	        if (!is.null(input$DIV.snpsite)) {
+	          div.snp.site <- readLines(input$DIV.snpsite$datapath)
+	        } else {
+	          div.snp.site <- NULL
+	        }
 	      }
+	      
+	      svg(file, width = input$divWidth/72, height = input$divHeight/72)
+	      nucDiv(chr=myPos$chr, nuc.start=myPos$start - input$divUp * 1000, nuc.end=myPos$end + input$divDown * 1000, 
+	             groups = input$div_acc_group, step = input$snpnumD,
+	             numerator = input$nuc_numerator, denominator = input$nuc_denominator,
+	             mutType = input$div_mut_group, snpSites = div.snp.site)
+	      
+	      dev.off()
 	    }
 	    
-	    nucDiv(chr=myPos$chr, nuc.start=myPos$start - input$divUp * 1000, nuc.end=myPos$end + input$divDown * 1000, 
-	           groups = input$div_acc_group, step = input$snpnumD,
-	           numerator = input$nuc_numerator, denominator = input$nuc_denominator,
-	           mutType = input$div_mut_group, snpSites = div.snp.site)
-	    
-	    dev.off()
 	  }, contentType = 'image/svg')
 	
 	## Download TXT file of diversity
@@ -679,12 +767,21 @@ shinyServer(function(input, output, session) {
 	        }
 	      }
 	      
-	      output$phylo <- renderPlot({
-	        withProgress(message='Making plots',value = 0, detail = 'This may take a while...', {
-	          phylo(chr=myPos$chr, start=myPos$start-phy.up, end=myPos$end+phy.down,
-	                accession=phy.acc, mutType=phy.mut.group, snpSites = phy.snp.site)
-	        })
-	      }, height = phy.height, width = phy.width)
+	      snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start - phy.up, end=myPos$end + phy.down,
+	                          accession=phy.acc, mutType=phy.mut.group)[[1]]
+	      
+	      if (nrow(snp.reg) < 10) {
+	        js_string <- 'alert("Too few SNPs in specified genomic region!");'
+	        session$sendCustomMessage(type='jsCode', list(value = js_string))
+	      } else {
+	        output$phylo <- renderPlot({
+	          withProgress(message='Making plots',value = 0, detail = 'This may take a while...', {
+	            phylo(chr=myPos$chr, start=myPos$start - phy.up, end=myPos$end + phy.down,
+	                  accession=phy.acc, mutType=phy.mut.group, snpSites = phy.snp.site)
+	          })
+	        }, height = phy.height, width = phy.width)
+	      }
+	      
 	    })
 	  } else {
 	    NULL
@@ -893,8 +990,12 @@ shinyServer(function(input, output, session) {
 	      output$bulkdownloadsnp.txt <- downloadHandler(
 	        filename = function() { "down.snp.geno.txt" },
 	        content = function(file) {
+	          print(myPos)
+	          print(input$down_mut_group)
+	          writeLines(input$mychooserD$selected, "E:/t1.txt")
 	          snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start, end=myPos$end, 
 	                              accession = input$mychooserD$selected, mutType = input$down_mut_group)
+	          print(dim(snp.reg[[1]]))
 	          write.table(snp.reg[[1]], file, sep="\t", quote=F)
 	        })
 	      
