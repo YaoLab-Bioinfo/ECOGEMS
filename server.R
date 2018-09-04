@@ -577,7 +577,7 @@ shinyServer(function(input, output, session) {
 	output$downloadHapSta.svg <- downloadHandler(
 	  filename <- function() { paste('hapGeoDis.svg') },
 	  content <- function(file) {
-	    pdf(file, width = input$divWidth/72, height = input$divHeight/72)
+	    svg(file, width = input$divWidth/72, height = input$divHeight/72)
 	    
 	    myPos <- anaReg(input$regH)
 	    snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start - input$hapUp * 1000, end=myPos$end + input$hapDown * 1000,
@@ -803,6 +803,84 @@ shinyServer(function(input, output, session) {
 	  content <- function(file) {
 	    write.tree(treNwk, file)
 	  }, contentType = 'text/plain')
+	
+	# allele frequency
+	observe({
+	  if (input$submitaf1>0) {
+	    isolate({
+	      in.snpid <- unlist(strsplit(input$af_snp_site, split="\\n"))
+	      in.snpid <- gsub("^\\s+", "", in.snpid)
+	      in.snpid <- gsub("\\s+$", "", in.snpid)
+	      in.snpid <- in.snpid[in.snpid!=""]
+	      
+	      af.group <- input$af_acc_group
+	      in.af.col <- unlist(strsplit(input$afCol, split=","))
+	      in.af.col <- gsub("^\\s+", "", in.af.col)
+	      in.af.col <- gsub("\\s+$", "", in.af.col)
+	      
+	      af.height <<- input$afHeight
+	      af.width <<- input$afWidth
+	      
+	      output$alleleFreq <- renderPlot({
+	        alleleFreq(
+	          snpSite = in.snpid,
+	          accGroup = af.group,
+	          pieCols = in.af.col
+	        )
+	      }, height = af.height, width = af.width)
+	    })
+	  } else {
+	    NULL
+	  }
+	})
+	
+	## Download PDF file of allele frequency
+	output$downloadAlleleFreq.pdf <- downloadHandler(
+	  filename <- function() { paste('alleleFreq.pdf') },
+	  content <- function(file) {
+	    pdf(file, width = input$afWidth/72, height = input$afHeight/72)
+	    
+	    in.snpid <- unlist(strsplit(input$af_snp_site, split="\\n"))
+	    in.snpid <- gsub("^\\s+", "", in.snpid)
+	    in.snpid <- gsub("\\s+$", "", in.snpid)
+	    in.snpid <- in.snpid[in.snpid!=""]
+	    
+	    af.group <- input$af_acc_group
+	    in.af.col <- unlist(strsplit(input$afCol, split=","))
+	    in.af.col <- gsub("^\\s+", "", in.af.col)
+	    in.af.col <- gsub("\\s+$", "", in.af.col)
+	    alleleFreq(
+	      snpSite = in.snpid,
+	      accGroup = af.group,
+	      pieCols = in.af.col
+	    )
+	    
+	    dev.off()
+	  }, contentType = 'application/pdf')
+	
+	## Download SVG file of allele frequency
+	output$downloadAlleleFreq.svg <- downloadHandler(
+	  filename <- function() { paste('alleleFreq.svg') },
+	  content <- function(file) {
+	    svg(file, width = input$afWidth/72, height = input$afHeight/72)
+	    
+	    in.snpid <- unlist(strsplit(input$af_snp_site, split="\\n"))
+	    in.snpid <- gsub("^\\s+", "", in.snpid)
+	    in.snpid <- gsub("\\s+$", "", in.snpid)
+	    in.snpid <- in.snpid[in.snpid!=""]
+	    
+	    af.group <- input$af_acc_group
+	    in.af.col <- unlist(strsplit(input$afCol, split=","))
+	    in.af.col <- gsub("^\\s+", "", in.af.col)
+	    in.af.col <- gsub("\\s+$", "", in.af.col)
+	    alleleFreq(
+	      snpSite = in.snpid,
+	      accGroup = af.group,
+	      pieCols = in.af.col
+	    )
+	    
+	    dev.off()
+	  }, contentType = 'image/svg')
   
 	# accession information
 	output$acc.info.txt <- downloadHandler(
@@ -923,7 +1001,7 @@ shinyServer(function(input, output, session) {
 	output$downloadAccDis.svg <- downloadHandler(
 	  filename <- function() { paste('accDis.svg') },
 	  content <- function(file) {
-	    pdf(file, width = input$divWidth/72, height = input$divHeight/72)
+	    svg(file, width = input$divWidth/72, height = input$divHeight/72)
 	    
 	    acc.info <- acc.info[!is.na(acc.info$Latitude), ]
 	    accession <- input$mychooserA$selected

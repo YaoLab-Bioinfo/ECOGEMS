@@ -568,6 +568,42 @@ bsPopover("qp2", "A text file with SNP IDs (one ID per row) could be uploaded to
       
     ),
     
+    # Allele frequency
+    tabPanel(
+      "AlleleFreq",
+  
+      sidebarPanel(
+        textAreaInput("af_snp_site", HTML("<span style='white-space: nowrap'><h4>SNP sites to calculate allele frequency: </h4></span>
+	                                          "), width="250px", resize="both", height="150px", 
+                      placeholder = "One SNP site in one row", 
+                      value = "0602942293\n0138383182\n0329584501\n0316733111"
+                      ),
+        tags$div(align = 'left',
+                 class = 'multicol', style = "width: 100%",
+                 checkboxGroupInput("af_acc_group", "Ecotypes to calculate allele frequency:",
+                                    choices = c("Wild", "Cultivar", "Aus", "Indica", "IndicaI", "IndicaII",
+                                                "Japonica", "TrJ", "TeJ", "Or-I", "Or-II", "Or-III"),
+                                    selected = c("Aus", "Indica", "TeJ", "TrJ", "Wild")) 
+        ),
+        textInput("afCol", "allele colors:", value = "cornflowerblue, forestgreen"),
+        
+        numericInput("afHeight", "Plot height:", value = 550),
+        numericInput("afWidth", "Plot width:", value = 700),
+        
+        actionButton("submitaf1", strong("Go!",
+                                       bsButton("qaf1", label="", icon=icon("question"), style="info", size="small")
+        )),
+        bsPopover("qaf1", "Whenever the SNP sites or any option is updated, please click Go!",
+                  trigger = "focus")
+      ),
+  
+      mainPanel(
+        downloadButton("downloadAlleleFreq.pdf", "Download pdf-file"),
+        downloadButton("downloadAlleleFreq.svg", "Download svg-file"),
+        plotOutput("alleleFreq", height = "550px", width = "700px")
+      )
+    ),
+
     # Accession
     tabPanel(
       "Accession",
