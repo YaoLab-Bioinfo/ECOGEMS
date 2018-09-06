@@ -573,11 +573,16 @@ bsPopover("qp2", "A text file with SNP IDs (one ID per row) could be uploaded to
       "AlleleFreq",
   
       sidebarPanel(
-        textAreaInput("af_snp_site", HTML("<span style='white-space: nowrap'><h4>SNP sites to calculate allele frequency: </h4></span>
-	                                          "), width="250px", resize="both", height="150px", 
+        textAreaInput("af_snp_site", h4("SNP sites to calculate allele frequency:",
+                                        bsButton("qaf3", label="", icon=icon("question"), style="info", size="small")
+                                        ), 
+                      width="250px", resize="both", height="150px", 
                       placeholder = "One SNP site in one row", 
                       value = "0602942293\n0138383182\n0329584501\n0316733111"
                       ),
+        bsPopover("qaf3", "Each SNP site should be a 10-digits integer and the first two digits represent the chromosome ID while the rest eight digits represent the genomic position of each SNP site. Each SNP site should take only one row!",
+                  trigger = "focus"),
+        
         tags$div(align = 'left',
                  class = 'multicol', style = "width: 100%",
                  checkboxGroupInput("af_acc_group", "Ecotypes to calculate allele frequency:",
@@ -585,7 +590,11 @@ bsPopover("qp2", "A text file with SNP IDs (one ID per row) could be uploaded to
                                                 "Japonica", "TrJ", "TeJ", "Or-I", "Or-II", "Or-III"),
                                     selected = c("Aus", "Indica", "TeJ", "TrJ", "Wild")) 
         ),
-        textInput("afCol", "allele colors:", value = "cornflowerblue, forestgreen"),
+        textInput("afCol", h5("Allele colors:",
+                              bsButton("qaf2", label="", icon=icon("question"), style="info", size="small")
+                              ), value = "cornflowerblue, forestgreen"),
+        bsPopover("qaf2", "Colors for the major and minor allele in the pie chart respectively!",
+                  trigger = "focus"),
         
         numericInput("afHeight", "Plot height:", value = 550),
         numericInput("afWidth", "Plot width:", value = 700),
