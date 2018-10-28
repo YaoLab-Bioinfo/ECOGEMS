@@ -52,7 +52,8 @@ shinyServer(function(input, output, session) {
   output$downloadGB.pdf <- downloadHandler(
     filename <- function() { paste('GBrowser.pdf') },
     content <- function(file) {
-      myPos <- anaReg(input$regB)
+      withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
+        myPos <- anaReg(input$regB)
       
       snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start - input$GBUP, 
                           end=myPos$end + input$GBDOWN, accession = input$mychooserB$selected,
@@ -68,6 +69,8 @@ shinyServer(function(input, output, session) {
                                  mutType = input$GB_mut_group))
         dev.off()
       }
+        
+      })
       
     }, contentType = 'application/pdf')
   
@@ -75,20 +78,28 @@ shinyServer(function(input, output, session) {
   output$downloadsnp.txt <- downloadHandler(
     filename = function() { "snp.geno.txt" },
     content = function(file) {
-      myPos <- anaReg(input$regB)
+      withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
+        myPos <- anaReg(input$regB)
       snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start - input$GBUP, end=myPos$end + input$GBDOWN, 
                           accession = input$mychooserB$selected, mutType = input$GB_mut_group)
       write.table(snp.reg[[1]], file, sep="\t", quote=F)
+        
+      })
+      
     })
   
   # Download information of SNPs
   output$downloadsnpInfo.txt <- downloadHandler(
     filename = function() { "snp.info.txt" },
     content = function(file) {
-      myPos <- anaReg(input$regB)
+      withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
+        myPos <- anaReg(input$regB)
       snp.info <- snpInfo(chr=myPos$chr, start=myPos$start - input$GBUP, end=myPos$end + input$GBDOWN, 
                           accession = input$mychooserB$selected, mutType = input$GB_mut_group)
       write.table(snp.info, file, sep="\t", quote=F, row.names=F)
+        
+      })
+      
     })
   
   # LDheatmap
@@ -204,7 +215,8 @@ shinyServer(function(input, output, session) {
 	output$downloadLD.pdf <- downloadHandler(
 	  filename <- function() { paste('LDheatmap.pdf') },
 	  content <- function(file) {
-	    myPos <- anaReg(input$regL)
+	    withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
+	      myPos <- anaReg(input$regL)
 	    
 	    snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start - input$ldUp * 1000, 
 	                        end=myPos$end + input$ldDown * 1000, accession = input$mychooserLD$selected,
@@ -249,6 +261,8 @@ shinyServer(function(input, output, session) {
 	      }
 	      dev.off()
 	    }
+	      
+	    })
 	    
 	  }, contentType = 'application/pdf')
 	
@@ -256,7 +270,8 @@ shinyServer(function(input, output, session) {
 	output$downloadLD.svg <- downloadHandler(
 	  filename <- function() { paste('LDheatmap.svg') },
 	  content <- function(file) {
-	    myPos <- anaReg(input$regL)
+	    withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
+	      myPos <- anaReg(input$regL)
 	    
 	    snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start - input$ldUp * 1000, 
 	                        end=myPos$end + input$ldDown * 1000, accession = input$mychooserLD$selected,
@@ -301,6 +316,8 @@ shinyServer(function(input, output, session) {
 	      }
 	      dev.off()
 	    }
+	      
+	    })
 	    
 	  }, contentType = 'image/svg')
 	
@@ -395,7 +412,8 @@ shinyServer(function(input, output, session) {
 	output$downloadHap.pdf <- downloadHandler(
 	  filename <- function() { paste('haplotype.pdf') },
 	  content <- function(file) {
-	    pdf(file, width = 750/72, height = 550/72)
+	    withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
+	      pdf(file, width = 750/72, height = 550/72)
 	    if (input$hapLenY == "NULL") {
 	      hap.leg.x <- input$hapLenX
 	      hap.leg.y <- NULL
@@ -424,13 +442,17 @@ shinyServer(function(input, output, session) {
 	           min.freq=input$hapMin, max.freq=input$hapMax, lwd=input$hapLinkWd,
 	           col.link=gsub("0x","#", input$hapLinkCol), pop.list=as.numeric(input$hapPop), snpSites = hap.snp.site)
 	    dev.off()
+	      
+	    })
+	    
 	  }, contentType = 'application/pdf')
 	
 	## Download SVG file of haplotype
 	output$downloadHap.svg <- downloadHandler(
 	  filename <- function() { paste('haplotype.svg') },
 	  content <- function(file) {
-	    svg(file, width = 750/72, height = 550/72)
+	    withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
+	      svg(file, width = 750/72, height = 550/72)
 	    if (input$hapLenY == "NULL") {
 	      hap.leg.x <- input$hapLenX
 	      hap.leg.y <- NULL
@@ -458,13 +480,17 @@ shinyServer(function(input, output, session) {
 	           min.freq=input$hapMin, max.freq=input$hapMax, lwd=input$hapLinkWd,
 	           col.link=gsub("0x","#", input$hapLinkCol), pop.list=as.numeric(input$hapPop), snpSites = hap.snp.site)
 	    dev.off()
+	      
+	    })
+	    
 	  }, contentType = 'image/svg')
 	
 	# Download haplotypes in NEXUS format
 	output$downloadHap.nex <- downloadHandler(
 	  filename = function() { "hap.res.nex" },
 	  content = function(file) {
-	    myPos <- anaReg(input$regH)
+	    withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
+	      myPos <- anaReg(input$regH)
 	    snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start - input$hapUp * 1000, end=myPos$end + input$hapDown * 1000,
 	                        mutType=input$hap_mut_group)[[1]]
 	    
@@ -481,6 +507,9 @@ shinyServer(function(input, output, session) {
 	    writeLines(writeHap(hapConten(data = snp.reg, min.freq=input$hapMin, 
 	                                  max.freq=input$hapMax, 
 	                                  pop.list=as.numeric(input$hapPop), snpSites = hap.snp.site)), file)
+	      
+	    })
+	    
 	  })
 	
 	# haplotype geo distribution
@@ -550,7 +579,8 @@ shinyServer(function(input, output, session) {
 	output$downloadHapSta.pdf <- downloadHandler(
 	  filename <- function() { paste('hapGeoDis.pdf') },
 	  content <- function(file) {
-	    pdf(file, width = input$divWidth/72, height = input$divHeight/72)
+	    withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
+	      pdf(file, width = input$divWidth/72, height = input$divHeight/72)
 	    
 	    myPos <- anaReg(input$regH)
 	    snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start - input$hapUp * 1000, end=myPos$end + input$hapDown * 1000,
@@ -571,13 +601,17 @@ shinyServer(function(input, output, session) {
 	                                           pop.list=as.numeric(input$hapPop), snpSites = hap.snp.site)))
 	    
 	    dev.off()
+	      
+	    })
+	    
 	  }, contentType = 'application/pdf')
 	
 	## Download SVG file of haplotype geo distribution
 	output$downloadHapSta.svg <- downloadHandler(
 	  filename <- function() { paste('hapGeoDis.svg') },
 	  content <- function(file) {
-	    svg(file, width = input$divWidth/72, height = input$divHeight/72)
+	    withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
+	      svg(file, width = input$divWidth/72, height = input$divHeight/72)
 	    
 	    myPos <- anaReg(input$regH)
 	    snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start - input$hapUp * 1000, end=myPos$end + input$hapDown * 1000,
@@ -598,6 +632,9 @@ shinyServer(function(input, output, session) {
 	                                                 pop.list=as.numeric(input$hapPop), snpSites = hap.snp.site)))
 	    
 	    dev.off()
+	      
+	    })
+	    
 	  }, contentType = 'image/svg')
 	
 	# Diversity
@@ -609,7 +646,8 @@ shinyServer(function(input, output, session) {
 	      div.height2 <<- input$divHeight2
 	      div.width2 <<- input$divWidth2
 	      
-	      myPos <- anaReg(input$regD)
+	      withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
+	        myPos <- anaReg(input$regD)
 	      
 	      if (validReg(myPos)) {
 	      } else {
@@ -644,14 +682,14 @@ shinyServer(function(input, output, session) {
 	        session$sendCustomMessage(type='jsCode', list(value = js_string))
 	      } else {
 	        output$diversity <- renderPlot({
-	          withProgress(message='Making plots',value = 0, detail = 'This may take a while...', {
 	            nucDiv(chr=myPos$chr, nuc.start=myPos$start - div.up, nuc.end=myPos$end + div.down, 
 	                   groups = div.group, step = div.step,
 	                   numerator = div.numerator, denominator = div.denominator, 
 	                   mutType = div.mut.group, snpSites = div.snp.site)
-	          })
 	        }, height = div.height, width = div.width)
 	      }
+	        
+	      })
 	      
 	    })
 	  } else {
@@ -664,33 +702,36 @@ shinyServer(function(input, output, session) {
 	output$downloadDiv.pdf <- downloadHandler(
 	  filename <- function() { paste('diversity.pdf') },
 	  content <- function(file) {
-	    myPos <- anaReg(input$regD)
 	    
-	    snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start - input$divUp * 1000, end=myPos$end + input$divDown * 1000,
-	                        mutType=input$hap_mut_group)[[1]]
-	    
-	    if (nrow(snp.reg) < 10) {
-	      js_string <- 'alert("Too few SNPs in specified genomic region!");'
-	      session$sendCustomMessage(type='jsCode', list(value = js_string))
-	    } else {
-	      if (input$uploadDIV == 1) {
-	        div.snp.site <- NULL
+	    withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
+	      myPos <- anaReg(input$regD)
+	      snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start - input$divUp * 1000, end=myPos$end + input$divDown * 1000,
+	                          mutType=input$hap_mut_group)[[1]]
+	      
+	      if (nrow(snp.reg) < 10) {
+	        js_string <- 'alert("Too few SNPs in specified genomic region!");'
+	        session$sendCustomMessage(type='jsCode', list(value = js_string))
 	      } else {
-	        if (!is.null(input$DIV.snpsite)) {
-	          div.snp.site <- readLines(input$DIV.snpsite$datapath)
-	        } else {
+	        if (input$uploadDIV == 1) {
 	          div.snp.site <- NULL
+	        } else {
+	          if (!is.null(input$DIV.snpsite)) {
+	            div.snp.site <- readLines(input$DIV.snpsite$datapath)
+	          } else {
+	            div.snp.site <- NULL
+	          }
 	        }
+	        
+	        pdf(file, width = input$divWidth/72, height = input$divHeight/72)
+	        nucDiv(chr=myPos$chr, nuc.start=myPos$start - input$divUp * 1000, nuc.end=myPos$end + input$divDown * 1000, 
+	               groups = input$div_acc_group, step = input$snpnumD,
+	               numerator = input$nuc_numerator, denominator = input$nuc_denominator,
+	               mutType = input$div_mut_group, snpSites = div.snp.site)
+	        
+	        dev.off()
 	      }
 	      
-	      pdf(file, width = input$divWidth/72, height = input$divHeight/72)
-	      nucDiv(chr=myPos$chr, nuc.start=myPos$start - input$divUp * 1000, nuc.end=myPos$end + input$divDown * 1000, 
-	             groups = input$div_acc_group, step = input$snpnumD,
-	             numerator = input$nuc_numerator, denominator = input$nuc_denominator,
-	             mutType = input$div_mut_group, snpSites = div.snp.site)
-	      
-	      dev.off()
-	    }
+	    })
 	    
 	  }, contentType = 'application/pdf')
 	
@@ -698,33 +739,36 @@ shinyServer(function(input, output, session) {
 	output$downloadDiv.svg <- downloadHandler(
 	  filename <- function() { paste('diversity.svg') },
 	  content <- function(file) {
-	    myPos <- anaReg(input$regD)
 	    
-	    snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start - input$divUp * 1000, end=myPos$end + input$divDown * 1000,
-	                        mutType=input$hap_mut_group)[[1]]
-	    
-	    if (nrow(snp.reg) < 10) {
-	      js_string <- 'alert("Too few SNPs in specified genomic region!");'
-	      session$sendCustomMessage(type='jsCode', list(value = js_string))
-	    } else {
-	      if (input$uploadDIV == 1) {
-	        div.snp.site <- NULL
+	    withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
+	      myPos <- anaReg(input$regD)
+	      snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start - input$divUp * 1000, end=myPos$end + input$divDown * 1000,
+	                          mutType=input$hap_mut_group)[[1]]
+	      
+	      if (nrow(snp.reg) < 10) {
+	        js_string <- 'alert("Too few SNPs in specified genomic region!");'
+	        session$sendCustomMessage(type='jsCode', list(value = js_string))
 	      } else {
-	        if (!is.null(input$DIV.snpsite)) {
-	          div.snp.site <- readLines(input$DIV.snpsite$datapath)
-	        } else {
+	        if (input$uploadDIV == 1) {
 	          div.snp.site <- NULL
+	        } else {
+	          if (!is.null(input$DIV.snpsite)) {
+	            div.snp.site <- readLines(input$DIV.snpsite$datapath)
+	          } else {
+	            div.snp.site <- NULL
+	          }
 	        }
+	        
+	        svg(file, width = input$divWidth/72, height = input$divHeight/72)
+	        nucDiv(chr=myPos$chr, nuc.start=myPos$start - input$divUp * 1000, nuc.end=myPos$end + input$divDown * 1000, 
+	               groups = input$div_acc_group, step = input$snpnumD,
+	               numerator = input$nuc_numerator, denominator = input$nuc_denominator,
+	               mutType = input$div_mut_group, snpSites = div.snp.site)
+	        
+	        dev.off()
 	      }
 	      
-	      svg(file, width = input$divWidth/72, height = input$divHeight/72)
-	      nucDiv(chr=myPos$chr, nuc.start=myPos$start - input$divUp * 1000, nuc.end=myPos$end + input$divDown * 1000, 
-	             groups = input$div_acc_group, step = input$snpnumD,
-	             numerator = input$nuc_numerator, denominator = input$nuc_denominator,
-	             mutType = input$div_mut_group, snpSites = div.snp.site)
-	      
-	      dev.off()
-	    }
+	    })
 	    
 	  }, contentType = 'image/svg')
 	
@@ -745,7 +789,8 @@ shinyServer(function(input, output, session) {
 	      phy.up <- input$phyUp * 1000
 	      phy.down <- input$phyDown * 1000
 	      
-	      myPos <- anaReg(input$regP)
+	      withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
+	        myPos <- anaReg(input$regP)
 	      
 	      if (validReg(myPos)) {
 	      } else {
@@ -775,12 +820,12 @@ shinyServer(function(input, output, session) {
 	        session$sendCustomMessage(type='jsCode', list(value = js_string))
 	      } else {
 	        output$phylo <- renderPlot({
-	          withProgress(message='Making plots',value = 0, detail = 'This may take a while...', {
 	            phylo(chr=myPos$chr, start=myPos$start - phy.up, end=myPos$end + phy.down,
 	                  accession=phy.acc, mutType=phy.mut.group, snpSites = phy.snp.site)
-	          })
 	        }, height = phy.height, width = phy.width)
 	      }
+	        
+	      })
 	      
 	    })
 	  } else {
@@ -808,7 +853,8 @@ shinyServer(function(input, output, session) {
 	observe({
 	  if (input$submitaf1>0) {
 	    isolate({
-	      in.snpid <- unlist(strsplit(input$af_snp_site, split="\\n"))
+	      withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
+	        in.snpid <- unlist(strsplit(input$af_snp_site, split="\\n"))
 	      in.snpid <- gsub("^\\s+", "", in.snpid)
 	      in.snpid <- gsub("\\s+$", "", in.snpid)
 	      in.snpid <- in.snpid[in.snpid!=""]
@@ -828,6 +874,9 @@ shinyServer(function(input, output, session) {
 	          pieCols = in.af.col
 	        )
 	      }, height = af.height, width = af.width)
+	        
+	      })
+	      
 	    })
 	  } else {
 	    NULL
@@ -840,7 +889,8 @@ shinyServer(function(input, output, session) {
 	  content <- function(file) {
 	    pdf(file, width = input$afWidth/72, height = input$afHeight/72)
 	    
-	    in.snpid <- unlist(strsplit(input$af_snp_site, split="\\n"))
+	    withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
+	      in.snpid <- unlist(strsplit(input$af_snp_site, split="\\n"))
 	    in.snpid <- gsub("^\\s+", "", in.snpid)
 	    in.snpid <- gsub("\\s+$", "", in.snpid)
 	    in.snpid <- in.snpid[in.snpid!=""]
@@ -854,6 +904,8 @@ shinyServer(function(input, output, session) {
 	      accGroup = af.group,
 	      pieCols = in.af.col
 	    )
+	      
+	    })
 	    
 	    dev.off()
 	  }, contentType = 'application/pdf')
@@ -864,7 +916,8 @@ shinyServer(function(input, output, session) {
 	  content <- function(file) {
 	    svg(file, width = input$afWidth/72, height = input$afHeight/72)
 	    
-	    in.snpid <- unlist(strsplit(input$af_snp_site, split="\\n"))
+	    withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
+	      in.snpid <- unlist(strsplit(input$af_snp_site, split="\\n"))
 	    in.snpid <- gsub("^\\s+", "", in.snpid)
 	    in.snpid <- gsub("\\s+$", "", in.snpid)
 	    in.snpid <- in.snpid[in.snpid!=""]
@@ -878,6 +931,8 @@ shinyServer(function(input, output, session) {
 	      accGroup = af.group,
 	      pieCols = in.af.col
 	    )
+	      
+	    })
 	    
 	    dev.off()
 	  }, contentType = 'image/svg')
@@ -963,7 +1018,8 @@ shinyServer(function(input, output, session) {
 	output$downloadAccDis.pdf <- downloadHandler(
 	  filename <- function() { paste('accDis.pdf') },
 	  content <- function(file) {
-	    pdf(file, width = input$divWidth/72, height = input$divHeight/72)
+	    withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
+	      pdf(file, width = input$divWidth/72, height = input$divHeight/72)
 	    
 	    acc.info <- acc.info[!is.na(acc.info$Latitude), ]
 	    accession <- input$mychooserA$selected
@@ -995,13 +1051,17 @@ shinyServer(function(input, output, session) {
 	    grid.draw(mp)
 	    
 	    dev.off()
+	      
+	    })
+	    
 	  }, contentType = 'application/pdf')
 	
 	## Download SVG file of accession distribution
 	output$downloadAccDis.svg <- downloadHandler(
 	  filename <- function() { paste('accDis.svg') },
 	  content <- function(file) {
-	    svg(file, width = input$divWidth/72, height = input$divHeight/72)
+	    withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
+	      svg(file, width = input$divWidth/72, height = input$divHeight/72)
 	    
 	    acc.info <- acc.info[!is.na(acc.info$Latitude), ]
 	    accession <- input$mychooserA$selected
@@ -1033,6 +1093,9 @@ shinyServer(function(input, output, session) {
 	    grid.draw(mp)
 	    
 	    dev.off()
+	      
+	    })
+	    
 	  }, contentType = 'application/svg')
 	
 	output$mytable1 = renderDataTable({
@@ -1068,29 +1131,40 @@ shinyServer(function(input, output, session) {
 	      output$bulkdownloadsnp.txt <- downloadHandler(
 	        filename = function() { "down.snp.geno.txt" },
 	        content = function(file) {
-	          snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start, end=myPos$end, 
+	          
+	          withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
+	            snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start, end=myPos$end, 
 	                              accession = input$mychooserD$selected, mutType = input$down_mut_group)
 	          print(dim(snp.reg[[1]]))
 	          write.table(snp.reg[[1]], file, sep="\t", quote=F)
+	          })
 	        })
 	      
 	      # Bulk download information of SNPs
 	      output$bulkdownloadsnpInfo.txt <- downloadHandler(
 	        filename = function() { "down.snp.info.txt" },
 	        content = function(file) {
-	          snp.info <- snpInfo(chr=myPos$chr, start=myPos$start, end=myPos$end, 
+	          withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
+	            snp.info <- snpInfo(chr=myPos$chr, start=myPos$start, end=myPos$end, 
 	                              accession = input$mychooserD$selected, mutType = input$down_mut_group)
 	          write.table(snp.info, file, sep="\t", quote=F, row.names=F)
+	            
+	          })
+	          
 	        })
 	      
 	      # Bulk download gene annotation
 	      output$bulkdownloadgene.txt <- downloadHandler(
 	        filename = function() { "down.gene.info.txt" },
 	        content = function(file) {
-	          load("./data/gff.msu.v7.RData")
+	          withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
+	            load("./data/gff.msu.v7.RData")
 	          
 	          gene.info <- gff[gff$chr==myPos$chr & gff$start>=myPos$start & gff$end<=myPos$end, ]
 	          write.table(gene.info, file, sep="\t", quote=F, row.names=F)
+	            
+	          })
+	          
 	        })
 	      
 	      output$mytable2 = renderDataTable({
@@ -1106,28 +1180,40 @@ shinyServer(function(input, output, session) {
 	        output$bulkdownloadsnp.txt <- downloadHandler(
 	          filename = function() { "down.snp.geno.txt" },
 	          content = function(file) {
-	            snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start, end=myPos$end, 
+	            withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
+	              snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start, end=myPos$end, 
 	                                accession = input$mychooserD$selected, mutType = input$down_mut_group)
 	            write.table(snp.reg[[1]], file, sep="\t", quote=F)
+	              
+	            })
+	            
 	          })
 	        
 	        # Bulk download information of SNPs
 	        output$bulkdownloadsnpInfo.txt <- downloadHandler(
 	          filename = function() { "down.snp.info.txt" },
 	          content = function(file) {
-	            snp.info <- snpInfo(chr=myPos$chr, start=myPos$start, end=myPos$end, 
+	            withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
+	              snp.info <- snpInfo(chr=myPos$chr, start=myPos$start, end=myPos$end, 
 	                                accession = input$mychooserD$selected, mutType = input$down_mut_group)
 	            write.table(snp.info, file, sep="\t", quote=F, row.names=F)
+	              
+	            })
+	            
 	          })
 	        
 	        # Bulk download gene annotation
 	        output$bulkdownloadgene.txt <- downloadHandler(
 	          filename = function() { "down.gene.info.txt" },
 	          content = function(file) {
-	            load("./data/gff.msu.v7.RData")
+	            withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
+	              load("./data/gff.msu.v7.RData")
 	            
 	            gene.info <- gff[gff$chr==myPos$chr & gff$start>=myPos$start & gff$end<=myPos$end, ]
 	            write.table(gene.info, file, sep="\t", quote=F, row.names=F)
+	              
+	            })
+	            
 	          })
 	        
 	        output$mytable2 = renderDataTable({

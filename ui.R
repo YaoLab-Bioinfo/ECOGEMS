@@ -67,7 +67,7 @@ shinyUI(
                                          div(class = "form-group shiny-input-container",
                                                actionButton("submit1", strong("Go!",
                                                                               bsButton("q7", label="", icon=icon("question"), style="info", size="small")
-                                                            ), width = "90%"),
+                                                            ), width = "90%", styleclass = "success"),
                                              bsPopover("q7", "Whenever the genomic region is updated, please click Go!",
                                                        trigger = "focus")
                                          )
@@ -82,7 +82,7 @@ shinyUI(
       downloadButton("downloadsnpInfo.txt", "Download SNPs information"),
       downloadButton("downloadGB.pdf", "Download pdf-file"),
       
-      plotlyOutput("gbrowser", height = '100%', width = '100%'),
+      withSpinner(plotlyOutput("gbrowser", height = '100%', width = '100%')),
       
       fluidRow(
         column(3,
@@ -153,7 +153,7 @@ shinyUI(
         
         actionButton("submit2", strong("Go!",
                                        bsButton("q8", label="", icon=icon("question"), style="info", size="small")
-        )),
+        ), styleclass = "success"),
         bsPopover("q8", "Whenever the genomic region is updated, please click Go!",
                   trigger = "focus"),
         
@@ -243,7 +243,7 @@ shinyUI(
       mainPanel(
         downloadButton("downloadLD.pdf", "Download pdf-file"),
         downloadButton("downloadLD.svg", "Download svg-file"),
-        plotOutput("ldheatmap", height = '100%', width = '100%')
+        withSpinner(plotOutput("ldheatmap", height = '100%', width = '100%'))
         
       )
     ),
@@ -349,7 +349,7 @@ shinyUI(
         
         actionButton("submit3", strong("Go!",
                                        bsButton("q9", label="", icon=icon("question"), style="info", size="small")
-        )),
+        ), styleclass = "success"),
         bsPopover("q9", "Whenever the genomic region or any option is updated, please click Go!",
                   trigger = "focus")
       ),
@@ -358,13 +358,13 @@ shinyUI(
         downloadButton("downloadHap.pdf", "Download pdf-file"),
         downloadButton("downloadHap.svg", "Download svg-file"),
         downloadButton("downloadHap.nex", "Download NEXUS-file"),
-        plotOutput("haplotype", height = '100%', width = '100%'),
+        withSpinner(plotOutput("haplotype", height = '100%', width = '100%')),
         
         br(),
         
         downloadButton("downloadHapSta.pdf", "Download pdf-file"),
         downloadButton("downloadHapSta.svg", "Download svg-file"),
-        plotlyOutput("hapGeo")
+        withSpinner(plotlyOutput("hapGeo"))
         
       )
     ),
@@ -463,9 +463,11 @@ shinyUI(
           numericInput("divWidth", "Plot width:", value = 750)
         ),
 
+        
         actionButton("submit4", strong("Go!",
                                bsButton("q10", label="", icon=icon("question"), style="info", size="small")
-        )),
+        ), styleclass = "success"),
+#        conditionalPanel(condition="input.submit4 != '0'", busyIndicator(HTML("<div style='color:red;font-size:30px;position;fixed;z-index:9999;'>Calculation In progress...</div>"), wait = 0)),
         bsPopover("q10", "Whenever the genomic region or any option is updated, please click Go!!",
           trigger = "focus")
         
@@ -554,7 +556,8 @@ bsPopover("qp2", "A text file with SNP IDs (one ID per row) could be uploaded to
 
         actionButton("submit5", strong("Go!",
                                        bsButton("q11", label="", icon=icon("question"), style="info", size="small")
-        )),
+        ), styleclass = "success"),
+#        conditionalPanel(condition="input.submit5 != '0'", busyIndicator(HTML("<p style='color:red;font-size:30px;'>Calculation In progress...</p>"), wait = 0)),
         bsPopover("q11", "Whenever the genomic region or any option is updated, please click Go!",
                   trigger = "focus")
       ),
@@ -601,7 +604,7 @@ bsPopover("qp2", "A text file with SNP IDs (one ID per row) could be uploaded to
         
         actionButton("submitaf1", strong("Go!",
                                        bsButton("qaf1", label="", icon=icon("question"), style="info", size="small")
-        )),
+        ), styleclass = "success"),
         bsPopover("qaf1", "Whenever the SNP sites or any option is updated, please click Go!",
                   trigger = "focus")
       ),
@@ -636,10 +639,10 @@ bsPopover("qp2", "A text file with SNP IDs (one ID per row) could be uploaded to
       mainPanel(
         downloadButton("downloadAccDis.pdf", "Download pdf-file"),
         downloadButton("downloadAccDis.svg", "Download svg-file"),
-        plotlyOutput("accDis"),
+        withSpinner(plotlyOutput("accDis")),
         
         h4("Information of selected rice accessions"),
-        dataTableOutput("mytable1")
+        withSpinner(dataTableOutput("mytable1"))
         )
       ),
     
@@ -666,7 +669,7 @@ bsPopover("qp2", "A text file with SNP IDs (one ID per row) could be uploaded to
                                              div(class = "form-group shiny-input-container",
                                                  actionButton("submit6", strong("Go!",
                                                                                 bsButton("q12", label="", icon=icon("question"), style="info", size="small")
-                                                 ), width = "90%"),
+                                                 ), width = "90%", styleclass = "success"),
                                                  bsPopover("q12", "Whenever the genomic region or any option is updated, please click Go!",
                                                            trigger = "focus")
                                              )
@@ -716,7 +719,7 @@ bsPopover("qp2", "A text file with SNP IDs (one ID per row) could be uploaded to
         downloadButton("bulkdownloadsnp.txt", "Download genotype data"),
         downloadButton("bulkdownloadgene.txt", "Download gene annotation"),
         h4("SNPs information in specified genomic region:"),
-        dataTableOutput("mytable2")
+        withSpinner(dataTableOutput("mytable2"))
         
       )
     ),
