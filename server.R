@@ -646,7 +646,7 @@ shinyServer(function(input, output, session) {
 	      div.height2 <<- input$divHeight2
 	      div.width2 <<- input$divWidth2
 	      
-	      withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
+#	      withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
 	        myPos <- anaReg(input$regD)
 	      
 	      if (validReg(myPos)) {
@@ -689,7 +689,7 @@ shinyServer(function(input, output, session) {
 	        }, height = div.height, width = div.width)
 	      }
 	        
-	      })
+#	      })
 	      
 	    })
 	  } else {
@@ -703,7 +703,7 @@ shinyServer(function(input, output, session) {
 	  filename <- function() { paste('diversity.pdf') },
 	  content <- function(file) {
 	    
-	    withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
+#	    withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
 	      myPos <- anaReg(input$regD)
 	      snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start - input$divUp * 1000, end=myPos$end + input$divDown * 1000,
 	                          mutType=input$hap_mut_group)[[1]]
@@ -731,7 +731,7 @@ shinyServer(function(input, output, session) {
 	        dev.off()
 	      }
 	      
-	    })
+#	    })
 	    
 	  }, contentType = 'application/pdf')
 	
@@ -740,7 +740,7 @@ shinyServer(function(input, output, session) {
 	  filename <- function() { paste('diversity.svg') },
 	  content <- function(file) {
 	    
-	    withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
+#	    withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
 	      myPos <- anaReg(input$regD)
 	      snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start - input$divUp * 1000, end=myPos$end + input$divDown * 1000,
 	                          mutType=input$hap_mut_group)[[1]]
@@ -768,7 +768,7 @@ shinyServer(function(input, output, session) {
 	        dev.off()
 	      }
 	      
-	    })
+#	    })
 	    
 	  }, contentType = 'image/svg')
 	
@@ -789,7 +789,7 @@ shinyServer(function(input, output, session) {
 	      phy.up <- input$phyUp * 1000
 	      phy.down <- input$phyDown * 1000
 	      
-	      withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
+#	      withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
 	        myPos <- anaReg(input$regP)
 	      
 	      if (validReg(myPos)) {
@@ -825,7 +825,7 @@ shinyServer(function(input, output, session) {
 	        }, height = phy.height, width = phy.width)
 	      }
 	        
-	      })
+#	      })
 	      
 	    })
 	  } else {
@@ -853,7 +853,7 @@ shinyServer(function(input, output, session) {
 	observe({
 	  if (input$submitaf1>0) {
 	    isolate({
-	      withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
+#	      withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
 	        in.snpid <- unlist(strsplit(input$af_snp_site, split="\\n"))
 	      in.snpid <- gsub("^\\s+", "", in.snpid)
 	      in.snpid <- gsub("\\s+$", "", in.snpid)
@@ -875,7 +875,7 @@ shinyServer(function(input, output, session) {
 	        )
 	      }, height = af.height, width = af.width)
 	        
-	      })
+#	      })
 	      
 	    })
 	  } else {
@@ -889,7 +889,7 @@ shinyServer(function(input, output, session) {
 	  content <- function(file) {
 	    pdf(file, width = input$afWidth/72, height = input$afHeight/72)
 	    
-	    withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
+#	    withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
 	      in.snpid <- unlist(strsplit(input$af_snp_site, split="\\n"))
 	    in.snpid <- gsub("^\\s+", "", in.snpid)
 	    in.snpid <- gsub("\\s+$", "", in.snpid)
@@ -905,7 +905,7 @@ shinyServer(function(input, output, session) {
 	      pieCols = in.af.col
 	    )
 	      
-	    })
+#	    })
 	    
 	    dev.off()
 	  }, contentType = 'application/pdf')
@@ -916,7 +916,7 @@ shinyServer(function(input, output, session) {
 	  content <- function(file) {
 	    svg(file, width = input$afWidth/72, height = input$afHeight/72)
 	    
-	    withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
+#	    withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
 	      in.snpid <- unlist(strsplit(input$af_snp_site, split="\\n"))
 	    in.snpid <- gsub("^\\s+", "", in.snpid)
 	    in.snpid <- gsub("\\s+$", "", in.snpid)
@@ -932,7 +932,7 @@ shinyServer(function(input, output, session) {
 	      pieCols = in.af.col
 	    )
 	      
-	    })
+#	    })
 	    
 	    dev.off()
 	  }, contentType = 'image/svg')

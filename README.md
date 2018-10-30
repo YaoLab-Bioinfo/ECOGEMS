@@ -48,6 +48,9 @@ biocLite("chopsticks")
 biocLite("ggtree")  
 # try an http CRAN mirror if https CRAN mirror doesn't work  
 install.packages("LDheatmap")  
+# install shinysky  
+if (require(devtools)) install.packages("devtools")  
+devtools::install_github("venyao/ShinySky")  
 ```
 
 **Step 3: Start the app**  
@@ -109,6 +112,9 @@ biocLite("chopsticks")
 biocLite("ggtree")  
 # try an http CRAN mirror if https CRAN mirror doesn't work  
 install.packages("LDheatmap")  
+# install shinysky  
+if (require(devtools)) install.packages("devtools")  
+devtools::install_github("venyao/ShinySky")  
 ```
 
 For more information, please check the following pages:  

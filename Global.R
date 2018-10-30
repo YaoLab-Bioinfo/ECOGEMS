@@ -18,7 +18,7 @@ library(grid)
 library(snpStats)
 
 library(shinycssloaders)
-# library(shinysky)
+library(shinysky)
 
 source("fetchSnp.R")
 source("ld.heatmap.R")

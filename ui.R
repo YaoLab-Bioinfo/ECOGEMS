@@ -467,7 +467,7 @@ shinyUI(
         actionButton("submit4", strong("Go!",
                                bsButton("q10", label="", icon=icon("question"), style="info", size="small")
         ), styleclass = "success"),
-#        conditionalPanel(condition="input.submit4 != '0'", busyIndicator(HTML("<div style='color:red;font-size:30px;position;fixed;z-index:9999;'>Calculation In progress...</div>"), wait = 0)),
+        conditionalPanel(condition="input.submit4 != '0'", busyIndicator(HTML("<div style='color:red;font-size:30px'>Calculation In progress...</div>"), wait = 0)),
         bsPopover("q10", "Whenever the genomic region or any option is updated, please click Go!!",
           trigger = "focus")
         
@@ -557,7 +557,7 @@ bsPopover("qp2", "A text file with SNP IDs (one ID per row) could be uploaded to
         actionButton("submit5", strong("Go!",
                                        bsButton("q11", label="", icon=icon("question"), style="info", size="small")
         ), styleclass = "success"),
-#        conditionalPanel(condition="input.submit5 != '0'", busyIndicator(HTML("<p style='color:red;font-size:30px;'>Calculation In progress...</p>"), wait = 0)),
+        conditionalPanel(condition="input.submit5 != '0'", busyIndicator(HTML("<p style='color:red;font-size:30px;'>Calculation In progress...</p>"), wait = 0)),
         bsPopover("q11", "Whenever the genomic region or any option is updated, please click Go!",
                   trigger = "focus")
       ),
@@ -605,6 +605,7 @@ bsPopover("qp2", "A text file with SNP IDs (one ID per row) could be uploaded to
         actionButton("submitaf1", strong("Go!",
                                        bsButton("qaf1", label="", icon=icon("question"), style="info", size="small")
         ), styleclass = "success"),
+        conditionalPanel(condition="input.submitaf1 != '0'", busyIndicator(HTML("<p style='color:red;font-size:30px;'>Calculation In progress...</p>"), wait = 0)),
         bsPopover("qaf1", "Whenever the SNP sites or any option is updated, please click Go!",
                   trigger = "focus")
       ),
