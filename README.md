@@ -7,7 +7,7 @@ The genotypes of 2058 rice accessions at 8,584,244 SNP sites are stored using Sp
 
 #	Use ECOGEMS online
 
-ECOGEMS is deployed at <a href="http://ECOGEMS.ncpgr.cn/" target="_blank">http://ECOGEMS.ncpgr.cn/</a> for online use.  
+ECOGEMS is deployed at <a href="http://ECOGEMS.ncpgr.cn/" target="_blank">http://ECOGEMS.ncpgr.cn/</a> and <a href="http://150.109.59.144:3838/ECOGEMS/" target="_blank">http://150.109.59.144:3838/ECOGEMS/</a> for online use.  
 ECOGEMS is idle until you activate it by accessing the URL. So it may take some time when you access this URL for the first time. Once it was activated, ECOGEMS could be used smoothly and easily.  
 
 *****
@@ -30,10 +30,12 @@ Start an R session using RStudio and run these lines:
 install.packages("shiny")  
 install.packages("shinyBS")  
 install.packages("shinythemes")  
+install.packages("shinycssloaders")
 install.packages("plotly")  
 install.packages("foreach")  
 install.packages("ape")  
 install.packages("pegas")  
+install.packages("plyr")  
 install.packages("dplyr")  
 install.packages("ggmap")  
 install.packages("tidyr")  
@@ -89,10 +91,12 @@ Start an R session and run these lines in R:
 install.packages("shiny")  
 install.packages("shinyBS")  
 install.packages("shinythemes")  
+install.packages("shinycssloaders")
 install.packages("plotly")  
 install.packages("foreach")  
 install.packages("ape")  
 install.packages("pegas")  
+install.packages("plyr")  
 install.packages("dplyr")  
 install.packages("ggmap")  
 install.packages("tidyr")  
