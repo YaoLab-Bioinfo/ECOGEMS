@@ -19,6 +19,7 @@ The genotypes of 2058 rice accessions at 8,584,244 SNP sites are stored using Sp
 15. Yu G, Smith D, Zhu H, Guan Y and Lam TT. <a href="https://bioconductor.org/packages/release/bioc/html/ggtree.html" target="_blank">ggtree</a>: an R package for visualization and annotation of phylogenetic trees with their covariates and other associated data. Methods in Ecology and Evolution, 8, pp. 28-36. R package version 1.10.5 (2016)  
 16. Winston Chang. <a href="https://cran.r-project.org/package=shinythemes" target="_blank">shinythemes</a>: Themes for Shiny. R package version 1.1.1 (2017)  
 17. Clayton D. <a href="http://www.bioconductor.org/packages/release/bioc/html/snpStats.html" target="_blank">snpStats</a>: SnpMatrix and XSnpMatrix classes and methods. R package version 1.28.0 (2015)  
+18. Hadley Wickham. <a href="https://cran.r-project.org/package=plyr" target="_blank">plyr</a>: Tools for Splitting, Applying and Combining Data. R package version 1.8.4 (2016)  
 
 ## Further references  
 This application was created by <a href="https://venyao.github.io/" target="_blank">Wen Yao</a>. Please send bugs and feature requests to Wen Yao (venyao at qq.com).  
