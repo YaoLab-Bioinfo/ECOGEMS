@@ -78,8 +78,9 @@ nucDiv <- function(chr="chr07", nuc.start=2800000, nuc.end=2900000, step=10,
   maxWidth = grid::unit.pmax(gp1$widths[2:5], gp2$widths[2:5])
   gp1$widths[2:5] <- as.list(maxWidth)
   gp2$widths[2:5] <- as.list(maxWidth)
-  grid.draw(
-    grid.arrange(gp1, gp2, ncol=1, heights=c(2.3, 1))
-  )
+  return(list(gp1, gp2))
+  # grid.draw(
+  #   grid.arrange(gp1, gp2, ncol=1, heights=c(2.3, 1))
+  # )
 }
 

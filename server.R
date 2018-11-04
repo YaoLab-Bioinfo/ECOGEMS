@@ -642,8 +642,7 @@ shinyServer(function(input, output, session) {
 	      div.height2 <<- input$divHeight2
 	      div.width2 <<- input$divWidth2
 	      
-#	      withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
-	        myPos <- anaReg(input$regD)
+	      myPos <- anaReg(input$regD)
 	      
 	      if (validReg(myPos)) {
 	      } else {
@@ -677,96 +676,42 @@ shinyServer(function(input, output, session) {
 	        js_string <- 'alert("Too few SNPs in specified genomic region!");'
 	        session$sendCustomMessage(type='jsCode', list(value = js_string))
 	      } else {
+	        nuc.div.plot <<- NULL
 	        output$diversity <- renderPlot({
-	            nucDiv(chr=myPos$chr, nuc.start=myPos$start - div.up, nuc.end=myPos$end + div.down, 
+	          nuc.div.plot <<- nucDiv(chr=myPos$chr, nuc.start=myPos$start - div.up, nuc.end=myPos$end + div.down, 
 	                   groups = div.group, step = div.step,
 	                   numerator = div.numerator, denominator = div.denominator, 
 	                   mutType = div.mut.group, snpSites = div.snp.site)
+	          grid.draw(grid.arrange(nuc.div.plot[[1]], nuc.div.plot[[2]], ncol=1, heights=c(2.3, 1)))
 	        }, height = div.height, width = div.width)
-	      }
 	        
-#	      })
-	      
+	        ## Download PDF file of Diversity
+	        output$downloadDiv.pdf <- downloadHandler(
+	          filename <- function() { paste('diversity.pdf') },
+	          content <- function(file) {
+	            pdf(file, width = input$divWidth/72, height = input$divHeight/72)
+	            grid.draw(grid.arrange(nuc.div.plot[[1]], nuc.div.plot[[2]], ncol=1, heights=c(2.3, 1)))
+	            
+	            dev.off()
+	          }, contentType = 'application/pdf')
+	        
+	        ## Download SVG file of Diversity
+	        output$downloadDiv.svg <- downloadHandler(
+	          filename <- function() { paste('diversity.svg') },
+	          content <- function(file) {
+	            svg(file, width = input$divWidth/72, height = input$divHeight/72)
+	            grid.draw(grid.arrange(nuc.div.plot[[1]], nuc.div.plot[[2]], ncol=1, heights=c(2.3, 1)))
+	            
+	            dev.off()
+	          }, contentType = 'image/svg')
+	        
+	      }
+
 	    })
 	  } else {
 	    NULL
 	  }
 	})
-	
-	
-	## Download PDF file of Diversity
-	output$downloadDiv.pdf <- downloadHandler(
-	  filename <- function() { paste('diversity.pdf') },
-	  content <- function(file) {
-	    
-#	    withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
-	      myPos <- anaReg(input$regD)
-	      snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start - input$divUp * 1000, end=myPos$end + input$divDown * 1000,
-	                          mutType=input$hap_mut_group)[[1]]
-	      
-	      if (nrow(snp.reg) < 10) {
-	        js_string <- 'alert("Too few SNPs in specified genomic region!");'
-	        session$sendCustomMessage(type='jsCode', list(value = js_string))
-	      } else {
-	        if (input$uploadDIV == 1) {
-	          div.snp.site <- NULL
-	        } else {
-	          if (!is.null(input$DIV.snpsite)) {
-	            div.snp.site <- readLines(input$DIV.snpsite$datapath)
-	          } else {
-	            div.snp.site <- NULL
-	          }
-	        }
-	        
-	        pdf(file, width = input$divWidth/72, height = input$divHeight/72)
-	        nucDiv(chr=myPos$chr, nuc.start=myPos$start - input$divUp * 1000, nuc.end=myPos$end + input$divDown * 1000, 
-	               groups = input$div_acc_group, step = input$snpnumD,
-	               numerator = input$nuc_numerator, denominator = input$nuc_denominator,
-	               mutType = input$div_mut_group, snpSites = div.snp.site)
-	        
-	        dev.off()
-	      }
-	      
-#	    })
-	    
-	  }, contentType = 'application/pdf')
-	
-	## Download SVG file of Diversity
-	output$downloadDiv.svg <- downloadHandler(
-	  filename <- function() { paste('diversity.svg') },
-	  content <- function(file) {
-	    
-#	    withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
-	      myPos <- anaReg(input$regD)
-	      snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start - input$divUp * 1000, end=myPos$end + input$divDown * 1000,
-	                          mutType=input$hap_mut_group)[[1]]
-	      
-	      if (nrow(snp.reg) < 10) {
-	        js_string <- 'alert("Too few SNPs in specified genomic region!");'
-	        session$sendCustomMessage(type='jsCode', list(value = js_string))
-	      } else {
-	        if (input$uploadDIV == 1) {
-	          div.snp.site <- NULL
-	        } else {
-	          if (!is.null(input$DIV.snpsite)) {
-	            div.snp.site <- readLines(input$DIV.snpsite$datapath)
-	          } else {
-	            div.snp.site <- NULL
-	          }
-	        }
-	        
-	        svg(file, width = input$divWidth/72, height = input$divHeight/72)
-	        nucDiv(chr=myPos$chr, nuc.start=myPos$start - input$divUp * 1000, nuc.end=myPos$end + input$divDown * 1000, 
-	               groups = input$div_acc_group, step = input$snpnumD,
-	               numerator = input$nuc_numerator, denominator = input$nuc_denominator,
-	               mutType = input$div_mut_group, snpSites = div.snp.site)
-	        
-	        dev.off()
-	      }
-	      
-#	    })
-	    
-	  }, contentType = 'image/svg')
 	
 	## Download TXT file of diversity
 	output$downloadDiv.txt <- downloadHandler(
