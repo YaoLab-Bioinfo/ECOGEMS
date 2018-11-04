@@ -221,7 +221,7 @@ shinyServer(function(input, output, session) {
 	      js_string <- 'alert("Too few SNPs in specified genomic region!");'
 	      session$sendCustomMessage(type='jsCode', list(value = js_string))
 	    } else {
-	      pdf(file, width = input$ldWidth/72, height = input$ldHeight/72)
+	      pdf(file, width = input$ldWidth/72, height = input$ldHeight/72, onefile = FALSE)
 	      snp.pos <- as.numeric(unlist(strsplit(input$ldpos, split=",")))
 	      
 	      if (input$uploadLD == 1) {
