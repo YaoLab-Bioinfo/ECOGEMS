@@ -56,6 +56,6 @@ snpInfo <- function(chr="chr07", start=29616705, end=29629223, accession=NULL, m
   rownames(snp.allele) <- NULL
   
   dat.res <- merge(snp.allele, snpeff.info, by="snpID")
-  return(dat.res)
+  return(list(snp.info, dat.res))
 }
 

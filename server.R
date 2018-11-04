@@ -83,9 +83,7 @@ shinyServer(function(input, output, session) {
       snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start - input$GBUP, end=myPos$end + input$GBDOWN, 
                           accession = input$mychooserB$selected, mutType = input$GB_mut_group)
       write.table(snp.reg[[1]], file, sep="\t", quote=F)
-        
       })
-      
     })
   
   # Download information of SNPs
@@ -96,10 +94,8 @@ shinyServer(function(input, output, session) {
         myPos <- anaReg(input$regB)
       snp.info <- snpInfo(chr=myPos$chr, start=myPos$start - input$GBUP, end=myPos$end + input$GBDOWN, 
                           accession = input$mychooserB$selected, mutType = input$GB_mut_group)
-      write.table(snp.info, file, sep="\t", quote=F, row.names=F)
-        
+      write.table(snp.info[[2]], file, sep="\t", quote=F, row.names=F)
       })
-      
     })
   
   # LDheatmap
@@ -1128,98 +1124,71 @@ shinyServer(function(input, output, session) {
 	        myPos <- NULL
 	      }
 	      
+	      snp.info.down <<- NULL
+	      
+	      output$mytable2 = renderDataTable({
+	        snp.info.down <<- snpInfo(chr=myPos$chr, start=myPos$start, end=myPos$end, 
+	                            accession = input$mychooserD$selected, mutType = input$down_mut_group)
+	        snp.info.down[[2]]
+	      }, options = list(lengthMenu = c(5, 8, 10), pageLength = 5, searching = TRUE, autoWidth = TRUE), escape = FALSE
+	      )
+	      
 	      output$bulkdownloadsnp.txt <- downloadHandler(
 	        filename = function() { "down.snp.geno.txt" },
 	        content = function(file) {
-	          
-	          withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
-	            snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start, end=myPos$end, 
-	                              accession = input$mychooserD$selected, mutType = input$down_mut_group)
-	          print(dim(snp.reg[[1]]))
-	          write.table(snp.reg[[1]], file, sep="\t", quote=F)
-	          })
+	            write.table(snp.info.down[[1]][[1]], file, sep="\t", quote=F)
 	        })
 	      
 	      # Bulk download information of SNPs
 	      output$bulkdownloadsnpInfo.txt <- downloadHandler(
 	        filename = function() { "down.snp.info.txt" },
 	        content = function(file) {
-	          withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
-	            snp.info <- snpInfo(chr=myPos$chr, start=myPos$start, end=myPos$end, 
-	                              accession = input$mychooserD$selected, mutType = input$down_mut_group)
-	          write.table(snp.info, file, sep="\t", quote=F, row.names=F)
-	            
-	          })
-	          
+	           write.table(snp.info.down[[2]], file, sep="\t", quote=F, row.names=F)
 	        })
 	      
 	      # Bulk download gene annotation
 	      output$bulkdownloadgene.txt <- downloadHandler(
 	        filename = function() { "down.gene.info.txt" },
 	        content = function(file) {
-	          withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
-	            load("./data/gff.msu.v7.RData")
-	          
-	          gene.info <- gff[gff$chr==myPos$chr & gff$start>=myPos$start & gff$end<=myPos$end, ]
-	          write.table(gene.info, file, sep="\t", quote=F, row.names=F)
-	            
-	          })
-	          
+	            gene.info <- gff[gff$chr==myPos$chr & gff$start>=myPos$start & gff$end<=myPos$end, ]
+	            write.table(gene.info, file, sep="\t", quote=F, row.names=F)
 	        })
 	      
-	      output$mytable2 = renderDataTable({
-	        snpInfo(chr=myPos$chr, start=myPos$start, end=myPos$end, 
-	                accession = input$mychooserD$selected, mutType = input$down_mut_group)
-	      }, options = list(lengthMenu = c(5, 8, 10), pageLength = 5, searching = TRUE, autoWidth = TRUE), escape = FALSE
-	      )
 	    })
 	  } else {
 	    if (input$regBB == "chr07:29611303-29669223") {
 	      isolate({
 	        myPos <- anaReg(input$regBB)
+	        
+	        snp.info.down <<- NULL
+	        
+	        output$mytable2 = renderDataTable({
+	          snp.info.down <<- snpInfo(chr=myPos$chr, start=myPos$start, end=myPos$end, 
+	                              accession = input$mychooserD$selected, mutType = input$down_mut_group)
+	          snp.info.down[[2]]
+	        }, options = list(lengthMenu = c(5, 8, 10), pageLength = 5, searching = TRUE, autoWidth = TRUE), escape = FALSE)
+	        
 	        output$bulkdownloadsnp.txt <- downloadHandler(
 	          filename = function() { "down.snp.geno.txt" },
 	          content = function(file) {
-	            withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
-	              snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start, end=myPos$end, 
-	                                accession = input$mychooserD$selected, mutType = input$down_mut_group)
-	            write.table(snp.reg[[1]], file, sep="\t", quote=F)
-	              
-	            })
-	            
+	              write.table(snp.info.down[[1]][[1]], file, sep="\t", quote=F)
 	          })
 	        
 	        # Bulk download information of SNPs
 	        output$bulkdownloadsnpInfo.txt <- downloadHandler(
 	          filename = function() { "down.snp.info.txt" },
 	          content = function(file) {
-	            withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
-	              snp.info <- snpInfo(chr=myPos$chr, start=myPos$start, end=myPos$end, 
-	                                accession = input$mychooserD$selected, mutType = input$down_mut_group)
-	            write.table(snp.info, file, sep="\t", quote=F, row.names=F)
-	              
-	            })
-	            
+	              write.table(snp.info.down[[2]], file, sep="\t", quote=F, row.names=F)
 	          })
 	        
 	        # Bulk download gene annotation
 	        output$bulkdownloadgene.txt <- downloadHandler(
 	          filename = function() { "down.gene.info.txt" },
 	          content = function(file) {
-	            withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
-	              load("./data/gff.msu.v7.RData")
-	            
-	            gene.info <- gff[gff$chr==myPos$chr & gff$start>=myPos$start & gff$end<=myPos$end, ]
-	            write.table(gene.info, file, sep="\t", quote=F, row.names=F)
-	              
-	            })
-	            
+	              gene.info <- gff[gff$chr==myPos$chr & gff$start>=myPos$start & gff$end<=myPos$end, ]
+	              write.table(gene.info, file, sep="\t", quote=F, row.names=F)
 	          })
 	        
-	        output$mytable2 = renderDataTable({
-	          snpInfo(chr=myPos$chr, start=myPos$start, end=myPos$end, 
-	                  accession = input$mychooserD$selected, mutType = input$down_mut_group)
-	        }, options = list(lengthMenu = c(5, 8, 10), pageLength = 5, searching = TRUE, autoWidth = TRUE), escape = FALSE)
 	      })
 	    } else {
 	      NULL
