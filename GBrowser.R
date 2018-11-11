@@ -17,7 +17,7 @@ GBrowser <- function(chr="chr07", start=29616705, end=29629223, accession=NULL, 
   })
   accession <- unique(unlist(accession))
   
-  snp.reg <- fetchSnp(chr=chr, start=start, end=end, accession = accession)[[1]]
+  snp.reg <- fetchSnp(chr=chr, start=start, end=end, accession=accession)[[1]]
   
   eff.Rdata <- paste0("./data/", chr, ".snpeff.RData")
   load(eff.Rdata)
@@ -79,7 +79,7 @@ GBrowser <- function(chr="chr07", start=29616705, end=29629223, accession=NULL, 
     snpeff.reg.3 <- snpeff.reg.3[snpeff.reg.3$tag %in% mutType, , drop=FALSE]
   }
   
-  p1 <- ggplot(data=snpeff.reg.3) + geom_point(aes(x=pos, y=yr, color=tag, text=info), size=0.8, pch=25)
+  p1 <- ggplot(data=snpeff.reg.3) + geom_point(aes(x=pos, y=yr, color=tag, text=info, fill=tag), size=0.8, pch=25)
   
   
   gff$id <- gsub(":.+", "", gff$id)
@@ -87,7 +87,7 @@ GBrowser <- function(chr="chr07", start=29616705, end=29629223, accession=NULL, 
   gff.reg.mrna <- gff.mrna[gff.mrna$chr==chr & gff.mrna$start>=start & gff.mrna$end<=end, , drop=FALSE]
   gff.reg <- gff[gff$id %in% gff.reg.mrna$id, , drop=FALSE]
   
-  gff.reg$info <- paste(gff.reg$id, gff.reg$anno, sep=" <br> ")
+  gff.reg$anno <- paste(gff.reg$id, gff.reg$anno, sep=" <br> ")
   
   gff.reg.mrna.ir <- IRanges(gff.reg.mrna$start, gff.reg.mrna$end)
   gff.reg.mrna.op <- findOverlaps(gff.reg.mrna.ir, reduce(gff.reg.mrna.ir))
@@ -151,7 +151,7 @@ GBrowser <- function(chr="chr07", start=29616705, end=29629223, accession=NULL, 
     
     dat.nm <- dat[dat$type!="mRNA", , drop=FALSE]
     
-    i.info <- dat$info[1]
+    i.anno <- dat$anno[1]
     i.id <- dat.nm$pare[1]
     
     tail.type <- dat.nm$type[nrow(dat.nm)]
@@ -163,7 +163,7 @@ GBrowser <- function(chr="chr07", start=29616705, end=29629223, accession=NULL, 
       dat.tail$yy <- c(0.12, 0.12, 0.1, 0.14, 0.1, 0.14) + dat$y[1]
       dat.tail <- dat.tail[c(1,3,5,6,4,2), , drop=FALSE]
       dat.tail$pare <- i.id
-      dat.tail$info <- i.info
+      dat.tail$anno <- i.anno
       if (tail.type=="CDS") {
         dat.tail$yy[2:3] <- dat.tail$yy[2:3] - 0.02
         dat.tail$yy[4:5] <- dat.tail$yy[4:5] + 0.02
@@ -172,7 +172,7 @@ GBrowser <- function(chr="chr07", start=29616705, end=29629223, accession=NULL, 
       dat.tail$yy <- c(0.1, 0.14, 0.1, 0.14, 0.12, 0.12) + dat$y[1]
       dat.tail <- dat.tail[c(1,3,5,6,4,2), , drop=FALSE]
       dat.tail$pare <- i.id
-      dat.tail$info <- i.info
+      dat.tail$anno <- i.anno
       if (tail.type=="CDS") {
         dat.tail$yy[1:2] <- dat.tail$yy[1:2] - 0.02
         dat.tail$yy[5:6] <- dat.tail$yy[5:6] + 0.02
@@ -193,11 +193,14 @@ GBrowser <- function(chr="chr07", start=29616705, end=29629223, accession=NULL, 
     theme(panel.background=element_rect(fill="white",colour="white"))
   p1 <- p1 + xlab("Chromosome position")
   p1 <- p1 + guides(color=guide_legend(title=NULL))
-  p1 <- p1 + theme(axis.ticks.y = element_blank(), axis.text.y = element_blank(),
-                   axis.line.y = element_blank())
-  p1 <- ggplotly(p1)
   
-  p1 <- p1 %>% layout(
+  p1 <- p1 + guides(fill=FALSE)
+  
+  p3 <- p1 + theme(axis.ticks.y = element_blank(), axis.text.y = element_blank(),
+                   axis.line.y = element_blank())
+  p3 <- ggplotly(p3, tooltip = c("pos", "info"))
+  
+  p3 <- p3 %>% layout(
     title = "",
     xaxis = list(
       rangeselector = list(),
@@ -208,6 +211,6 @@ GBrowser <- function(chr="chr07", start=29616705, end=29629223, accession=NULL, 
     yaxis = list(title = "")
   )
   
-  p1
+  return(list(p1, p3))
 }
 

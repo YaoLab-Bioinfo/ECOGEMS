@@ -23,12 +23,23 @@ shinyServer(function(input, output, session) {
           js_string <- 'alert("No SNPs in specified genomic region!");'
           session$sendCustomMessage(type='jsCode', list(value = js_string))
         } else {
+          GBplot <<- NULL
           output$gbrowser <- renderPlotly({
-            GBrowser(chr=myPos$chr, start=myPos$start - input$GBUP, 
-                     end=myPos$end + input$GBDOWN,
-                     accession = input$mychooserB$selected,
-                     mutType = input$GB_mut_group)
+            GBplot <<- GBrowser(chr=myPos$chr, start=myPos$start - input$GBUP, 
+                               end=myPos$end + input$GBDOWN,
+                               accession = input$mychooserB$selected,
+                               mutType = input$GB_mut_group)
+            GBplot[[2]]
           })
+          
+          ## Download PDF file of GBrowser
+          output$downloadGB.pdf <- downloadHandler(
+            filename <- function() { paste('GBrowser.pdf') },
+            content <- function(file) {
+              pdf(file, width = 900/72, height = 300/72)
+              grid.draw(GBplot[[1]])
+              dev.off()
+            }, contentType = 'application/pdf')
           
           # Download genotypes of seleceted SNPs
           output$downloadsnp.txt <- downloadHandler(
@@ -49,12 +60,24 @@ shinyServer(function(input, output, session) {
     } else {
       if (input$regB == "chr07:29611303-29669223") {
         myPos <- anaReg(input$regB)
+        
+        GBplot <<- NULL
         output$gbrowser <- renderPlotly({
-          GBrowser(chr=myPos$chr, start=myPos$start - input$GBUP, 
-                   end=myPos$end + input$GBDOWN,
-                   accession = input$mychooserB$selected,
-                   mutType = input$GB_mut_group)
+          GBplot <<- GBrowser(chr=myPos$chr, start=myPos$start - input$GBUP, 
+                             end=myPos$end + input$GBDOWN,
+                             accession = input$mychooserB$selected,
+                             mutType = input$GB_mut_group)
+          GBplot[[2]]
         })
+        
+        ## Download PDF file of GBrowser
+        output$downloadGB.pdf <- downloadHandler(
+          filename <- function() { paste('GBrowser.pdf') },
+          content <- function(file) {
+            pdf(file, width = 900/72, height = 300/72)
+            grid.draw(GBplot[[1]])
+            dev.off()
+          }, contentType = 'application/pdf')
         
         snp.info <- snpInfo(chr=myPos$chr, start=myPos$start - input$GBUP, end=myPos$end + input$GBDOWN, 
                             accession = input$mychooserB$selected, mutType = input$GB_mut_group)
@@ -79,31 +102,7 @@ shinyServer(function(input, output, session) {
     }
   })
   
-  ## Download PDF file of GBrowser
-  output$downloadGB.pdf <- downloadHandler(
-    filename <- function() { paste('GBrowser.pdf') },
-    content <- function(file) {
-      withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
-        myPos <- anaReg(input$regB)
-      
-      snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start - input$GBUP, 
-                          end=myPos$end + input$GBDOWN, accession = input$mychooserB$selected,
-                          mutType = input$GB_mut_group)[[1]]
-      if (nrow(snp.reg) < 1) {
-        js_string <- 'alert("Please input genomic region or gene model in appropriate format!");'
-        session$sendCustomMessage(type='jsCode', list(value = js_string))
-      } else {
-        pdf(file, width = 900/72, height = 300/72)
-        grid.draw(GBrowserStatic(chr=myPos$chr, start=myPos$start - input$GBUP, 
-                                 end=myPos$end + input$GBDOWN,
-                                 accession = input$mychooserB$selected,
-                                 mutType = input$GB_mut_group))
-        dev.off()
-      }
-        
-      })
-      
-    }, contentType = 'application/pdf')
+
   
   
   
