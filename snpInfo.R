@@ -1,7 +1,7 @@
 
 snpInfo <- function(chr="chr07", start=29616705, end=29629223, accession=NULL, mutType=NULL) {
   snp.info <- fetchSnp(chr=chr, start=start, end=end, 
-                       accession = accession)
+                       accession = accession, mutType = mutType)
   
   eff.Rdata <- paste0("./data/", chr, ".snpeff.RData")
   load(eff.Rdata)

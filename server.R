@@ -17,10 +17,9 @@ shinyServer(function(input, output, session) {
           myPos <- NULL
         }
         
-        snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start - input$GBUP, 
-                            end=myPos$end + input$GBDOWN, accession = input$mychooserB$selected,
-                            mutType = input$GB_mut_group)[[1]]
-        if (nrow(snp.reg) < 1) {
+        snp.info <- snpInfo(chr=myPos$chr, start=myPos$start - input$GBUP, end=myPos$end + input$GBDOWN, 
+                            accession = input$mychooserB$selected, mutType = input$GB_mut_group)
+        if (nrow(snp.info[[1]][[1]]) < 1) {
           js_string <- 'alert("No SNPs in specified genomic region!");'
           session$sendCustomMessage(type='jsCode', list(value = js_string))
         } else {
@@ -30,6 +29,20 @@ shinyServer(function(input, output, session) {
                      accession = input$mychooserB$selected,
                      mutType = input$GB_mut_group)
           })
+          
+          # Download genotypes of seleceted SNPs
+          output$downloadsnp.txt <- downloadHandler(
+            filename = function() { "snp.geno.txt" },
+            content = function(file) {
+                write.table(snp.info[[1]][[1]], file, sep="\t", quote=F)
+            })
+          
+          # Download information of SNPs
+          output$downloadsnpInfo.txt <- downloadHandler(
+            filename = function() { "snp.info.txt" },
+            content = function(file) {
+                write.table(snp.info[[2]], file, sep="\t", quote=F, row.names=F)
+            })
         }
         
       })
@@ -42,6 +55,24 @@ shinyServer(function(input, output, session) {
                    accession = input$mychooserB$selected,
                    mutType = input$GB_mut_group)
         })
+        
+        snp.info <- snpInfo(chr=myPos$chr, start=myPos$start - input$GBUP, end=myPos$end + input$GBDOWN, 
+                            accession = input$mychooserB$selected, mutType = input$GB_mut_group)
+        
+        # Download genotypes of seleceted SNPs
+        output$downloadsnp.txt <- downloadHandler(
+          filename = function() { "snp.geno.txt" },
+          content = function(file) {
+            write.table(snp.info[[1]][[1]], file, sep="\t", quote=F)
+          })
+        
+        # Download information of SNPs
+        output$downloadsnpInfo.txt <- downloadHandler(
+          filename = function() { "snp.info.txt" },
+          content = function(file) {
+            write.table(snp.info[[2]], file, sep="\t", quote=F, row.names=F)
+          })
+        
       } else {
         NULL
       }
@@ -74,29 +105,7 @@ shinyServer(function(input, output, session) {
       
     }, contentType = 'application/pdf')
   
-  # Download genotypes of seleceted SNPs
-  output$downloadsnp.txt <- downloadHandler(
-    filename = function() { "snp.geno.txt" },
-    content = function(file) {
-      withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
-        myPos <- anaReg(input$regB)
-      snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start - input$GBUP, end=myPos$end + input$GBDOWN, 
-                          accession = input$mychooserB$selected, mutType = input$GB_mut_group)
-      write.table(snp.reg[[1]], file, sep="\t", quote=F)
-      })
-    })
   
-  # Download information of SNPs
-  output$downloadsnpInfo.txt <- downloadHandler(
-    filename = function() { "snp.info.txt" },
-    content = function(file) {
-      withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
-        myPos <- anaReg(input$regB)
-      snp.info <- snpInfo(chr=myPos$chr, start=myPos$start - input$GBUP, end=myPos$end + input$GBDOWN, 
-                          accession = input$mychooserB$selected, mutType = input$GB_mut_group)
-      write.table(snp.info[[2]], file, sep="\t", quote=F, row.names=F)
-      })
-    })
   
   # LDheatmap
   observe({
