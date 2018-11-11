@@ -16,17 +16,14 @@ fetchSnp <- function(chr="chr07", start=29616705, end=29629223, accession=NULL, 
     snp.lst.gr <- IRanges(start=snp.lst.chr$start, end=snp.lst.chr$end)
     snp.fls <- snp.lst.chr$file[unique(queryHits(findOverlaps(snp.lst.gr, reg.gr)))]
     
-    snp.data.lst <- lapply(snp.fls, function(x){
+    snp.fls.lst <- lapply(snp.fls, function(x){
       load(x)
-      return(snp.data.inter.Matrix)
+      return(list(snp.data.inter.Matrix, snp.data.allele))
     })
-    snp.data <- do.call(rbind, snp.data.lst)
+    snp.fls.lst <- unlist(snp.fls.lst, recursive = FALSE)
+    snp.data <- do.call(rbind, snp.fls.lst[seq(1, length(snp.fls.lst), by=2)])
     snp.data <- snp.data[order(as.numeric(rownames(snp.data))), ]
-    snp.allele.lst <- lapply(snp.fls, function(x){
-      load(x)
-      return(snp.data.allele)
-    })
-    snp.allele <- do.call(rbind, snp.allele.lst)
+    snp.allele <- do.call(rbind, snp.fls.lst[seq(2, length(snp.fls.lst), by=2)])
     snp.allele <- snp.allele[order(as.numeric(rownames(snp.allele))), ]
     
     start <- as.numeric(paste0(substr(chr, 4, 5), sprintf("%08d", start)))
