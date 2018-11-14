@@ -966,7 +966,7 @@ shinyServer(function(input, output, session) {
 	  filename <- function() { paste('accDis.pdf') },
 	  content <- function(file) {
 	    withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
-	      pdf(file, width = 750/72, height = 750/72)
+	      pdf(file, width = 750/72, height = 550/72)
 	    
 	    acc.info <- acc.info[!is.na(acc.info$Latitude), ]
 	    accession <- input$mychooserA$selected
@@ -1008,7 +1008,7 @@ shinyServer(function(input, output, session) {
 	  filename <- function() { paste('accDis.svg') },
 	  content <- function(file) {
 	    withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
-	      svg(file, width = 750/72, height = 750/72)
+	      svg(file, width = 750/72, height = 550/72)
 	    
 	    acc.info <- acc.info[!is.na(acc.info$Latitude), ]
 	    accession <- input$mychooserA$selected
