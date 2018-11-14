@@ -584,7 +584,7 @@ shinyServer(function(input, output, session) {
 	  filename <- function() { paste('hapGeoDis.pdf') },
 	  content <- function(file) {
 	    withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
-	      pdf(file, width = input$divWidth/72, height = input$divHeight/72)
+	      pdf(file, width = 750/72, height = 550/72)
 	    
 	    myPos <- anaReg(input$regH)
 	    snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start - input$hapUp * 1000, end=myPos$end + input$hapDown * 1000,
@@ -615,7 +615,7 @@ shinyServer(function(input, output, session) {
 	  filename <- function() { paste('hapGeoDis.svg') },
 	  content <- function(file) {
 	    withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
-	      svg(file, width = input$divWidth/72, height = input$divHeight/72)
+	      svg(file, width = 750/72, height = 550/72)
 	    
 	    myPos <- anaReg(input$regH)
 	    snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start - input$hapUp * 1000, end=myPos$end + input$hapDown * 1000,
@@ -647,8 +647,6 @@ shinyServer(function(input, output, session) {
 	    isolate({
 	      div.height <<- input$divHeight
 	      div.width <<- input$divWidth
-	      div.height2 <<- input$divHeight2
-	      div.width2 <<- input$divWidth2
 	      
 	      myPos <- anaReg(input$regD)
 	      
@@ -678,7 +676,7 @@ shinyServer(function(input, output, session) {
 	      }
 	      
 	      snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start - div.up, end=myPos$end + div.down,
-	                          mutType=input$hap_mut_group)[[1]]
+	                          mutType=input$div_mut_group)[[1]]
 	      
 	      if (nrow(snp.reg) < 10) {
 	        js_string <- 'alert("Too few SNPs in specified genomic region!");'
@@ -968,7 +966,7 @@ shinyServer(function(input, output, session) {
 	  filename <- function() { paste('accDis.pdf') },
 	  content <- function(file) {
 	    withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
-	      pdf(file, width = input$divWidth/72, height = input$divHeight/72)
+	      pdf(file, width = 750/72, height = 750/72)
 	    
 	    acc.info <- acc.info[!is.na(acc.info$Latitude), ]
 	    accession <- input$mychooserA$selected
@@ -1010,7 +1008,7 @@ shinyServer(function(input, output, session) {
 	  filename <- function() { paste('accDis.svg') },
 	  content <- function(file) {
 	    withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
-	      svg(file, width = input$divWidth/72, height = input$divHeight/72)
+	      svg(file, width = 750/72, height = 750/72)
 	    
 	    acc.info <- acc.info[!is.na(acc.info$Latitude), ]
 	    accession <- input$mychooserA$selected
