@@ -27,7 +27,7 @@ snpInfo <- function(chr="chr07", start=29616705, end=29629223, accession=NULL, m
   
   colnames(snpeff.info) <- c("snpID", "reference", "alternative", "effect")
   
-  if (!is.null(mutType) && length(mutType)>=1) {
+  if (!is.null(mutType) && length(mutType)>=1 && length(mutType)!=16) {
     snpeff.info <- cbind(snpeff.info, eff="")
     snpeff.info[,"eff"][grepl("Intergenic", snpeff.info[,"effect"])] <- "Intergenic"
     snpeff.info[,"eff"][grepl("Intron", snpeff.info[,"effect"])] <- "Intron"

@@ -17,7 +17,7 @@ GBrowser <- function(chr="chr07", start=29616705, end=29629223, accession=NULL, 
   })
   accession <- unique(unlist(accession))
   
-  snp.reg <- fetchSnp(chr=chr, start=start, end=end, accession=accession)[[1]]
+  snp.reg <- fetchSnp(chr=chr, start=start, end=end, accession=accession, mutType=mutType)[[1]]
   
   eff.Rdata <- paste0("./data/", chr, ".snpeff.RData")
   load(eff.Rdata)

@@ -41,7 +41,7 @@ phylo <- function(chr="chr09", start=37800, end=46400, accession=NULL, mutType=N
   })
   dat.res <- dat.res[dat.res.row.c>1, , drop=FALSE]
   
-  if (!is.null(mutType) && length(mutType)>=1) {
+  if (!is.null(mutType) && length(mutType)>=1 && length(mutType)!=16) {
     eff.Rdata <- paste0("./data/", chr, ".snpeff.RData")
     load(eff.Rdata)
     snpeff.info <- snpeff[snpeff[, 1] %in% rownames(dat.res),]

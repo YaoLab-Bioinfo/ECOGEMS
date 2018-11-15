@@ -65,7 +65,7 @@ fetchSnp <- function(chr="chr07", start=29616705, end=29629223, accession=NULL, 
     dat.res.mat <- dat.res.mat[dat.res.mat.row.c>1, , drop=FALSE]
     allele.res <- allele.res[dat.res.mat.row.c>1, , drop=FALSE]
     
-    if (!is.null(mutType) && length(mutType)>=1) {
+    if (!is.null(mutType) && length(mutType)>=1 && length(mutType)!=16) {
       eff.Rdata <- paste0("./data/", chr, ".snpeff.RData")
       load(eff.Rdata)
       snpeff.info <- snpeff[snpeff[, 1] %in% rownames(dat.res.mat), , drop=FALSE]
