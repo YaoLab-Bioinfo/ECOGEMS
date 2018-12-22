@@ -60,10 +60,9 @@ Start an R session using RStudio and run these lines:
 library(shiny)  
 runGitHub("ECOGEMS", "venyao", launch.browser = TRUE)  
 ```
-This command would take some time as it will download the ECOGEMS database from GitHub to the disk of your local computer (check the directory path using the function `getwd()` in R).   
+This command will download the code of ECOGEMS from GitHub to a temporary directory of your computer and then launch the ECOGEMS app in the web browser. Once the web browser was closed, the downloaded code of ECOGEMS would be deleted from your computer. Next time when you run this command in RStudio, it will download the source code of ECOGEMS from GitHub to a temporary directory again. This process is frustrating since it takes some time to download the code of ECOGEMS from GitHub.  
 
-<br>
-Alternatively, you can download the ECOGEMS database from Jianguoyun (https://www.jianguoyun.com/p/DY5UBDIQzqnhBRjpzogB) or GitHub (https://github.com/venyao/ECOGEMS) to a directory (for example "E:/apps/") of your local computer using the web browser or other tools.   
+Users are suggested to download the source code of ECOGEMS from Jianguoyun (https://www.jianguoyun.com/p/DY5UBDIQzqnhBRjpzogB) or GitHub (https://github.com/venyao/ECOGEMS) to a fixed directory of your computer, such as “E:\apps” on Windows. Following the procedure illustrated in the following figure, a zip file named “ECOGEMS-master.zip” (GitHub) or ecogems.zip (Jianguoyun) would be downloaded to the disk of your computer. Move this file to “E:\apps” and unzip this file. Then a directory named “ECOGEMS-master” or ecogems would be generated in “E:\apps”. The scripts “server.R” and “ui.R” could be found in “E:\apps\ECOGEMS-master” or “E:\apps\ecogems”.    
 
 <br>
 <img src="ECOGEMS.png" width="890"/>  
@@ -72,7 +71,8 @@ Alternatively, you can download the ECOGEMS database from Jianguoyun (https://ww
 Then start an R session using RStudio and run these lines:  
 ```
 library(shiny)  
-runApp("E:/apps/ECOGEMS", launch.browser = TRUE)  
+runApp("E:/apps/ECOGEMS-master", launch.browser = TRUE)  # from GitHub
+runApp("E:/apps/ecogems", launch.browser = TRUE)   # from Jianguoyun
 # The first parameter of runApp should be the directory that contains the scripts server.R and ui.R of ECOGEMS.  
 ```
 
