@@ -62,8 +62,7 @@ runGitHub("ECOGEMS", "venyao", launch.browser = TRUE)
 ```
 This command will download the code of ECOGEMS from GitHub to a temporary directory of your computer and then launch the ECOGEMS app in the web browser. Once the web browser was closed, the downloaded code of ECOGEMS would be deleted from your computer. Next time when you run this command in RStudio, it will download the source code of ECOGEMS from GitHub to a temporary directory again. This process is frustrating since it takes some time to download the code of ECOGEMS from GitHub.  
 
-Users are suggested to download the source code of ECOGEMS from Jianguoyun (https://www.jianguoyun.com/p/DY5UBDIQzqnhBRjpzogB) or GitHub (https://github.com/venyao/ECOGEMS) to a fixed directory of your computer, such as “E:\apps” on Windows. Following the procedure illustrated in the following figure, a zip file named “ECOGEMS-master.zip” (GitHub) or “ecogems.zip” (Jianguoyun) would be downloaded to the disk of your computer. Move this file to “E:\apps” and unzip this file. Then a directory named “ECOGEMS-master” or “ecogems” would be generated in “E:\apps”. The scripts “server.R” and “ui.R” could be found in “E:\apps\ECOGEMS-master” or “E:\apps\ecogems”.    
-
+Users are suggested to download the source code of ECOGEMS from Jianguoyun (https://www.jianguoyun.com/p/DY5UBDIQzqnhBRjpzogB) or GitHub (https://github.com/venyao/ECOGEMS) to a fixed directory of your computer, such as “E:\apps” on Windows. Following the procedure illustrated in the following figure, a zip file named “ECOGEMS-master.zip” (GitHub) or “ecogems.zip” (Jianguoyun) would be downloaded to the disk of your computer. Move this file to “E:\apps” and unzip this file. Then a directory named “ECOGEMS-master” or “ecogems” would be generated in “E:\apps”. The scripts “server.R” and “ui.R” could be found in “E:\apps\ECOGEMS-master” or “E:\apps\ecogems”.  
 <br>
 <img src="ECOGEMS.png" width="890"/>  
 <br>
