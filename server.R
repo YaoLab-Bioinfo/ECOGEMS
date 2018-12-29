@@ -692,6 +692,11 @@ shinyServer(function(input, output, session) {
 	        }, height = div.height, width = div.width)
 	        
 	        ## Download PDF file of Diversity
+	        output$downloadDiv01 <- renderUI({
+	          req(input$submit4, nuc.div.plot)
+	          downloadButton("downloadDiv.pdf", "Download pdf-file")
+	        })
+	        
 	        output$downloadDiv.pdf <- downloadHandler(
 	          filename <- function() { paste('diversity.pdf') },
 	          content <- function(file) {
@@ -702,6 +707,11 @@ shinyServer(function(input, output, session) {
 	          }, contentType = 'application/pdf')
 	        
 	        ## Download SVG file of Diversity
+	        output$downloadDiv02 <- renderUI({
+	          req(input$submit4, nuc.div.plot)
+	          downloadButton("downloadDiv.svg", "Download svg-file")
+	        })
+	        
 	        output$downloadDiv.svg <- downloadHandler(
 	          filename <- function() { paste('diversity.svg') },
 	          content <- function(file) {
@@ -720,6 +730,11 @@ shinyServer(function(input, output, session) {
 	})
 	
 	## Download TXT file of diversity
+	output$downloadDiv03 <- renderUI({
+	  req(input$submit4)
+	  downloadButton("downloadDiv.txt", "Download TXT-file")
+	})
+	
 	output$downloadDiv.txt <- downloadHandler(
 	  filename <- function() { paste('diversity.txt') },
 	  content <- function(file) {

@@ -474,9 +474,15 @@ shinyUI(
       ),
       
       mainPanel(
-        downloadButton("downloadDiv.pdf", "Download pdf-file"),
-        downloadButton("downloadDiv.svg", "Download svg-file"),
-        downloadButton("downloadDiv.txt", "Download TXT-file"),
+        fluidRow(
+          column(3, uiOutput("downloadDiv01")),
+          column(3, uiOutput("downloadDiv02")),
+          column(3, uiOutput("downloadDiv03"))
+        ),
+        
+      #  downloadButton("downloadDiv.pdf", "Download pdf-file"),
+     #   downloadButton("downloadDiv.svg", "Download svg-file"),
+    #    downloadButton("downloadDiv.txt", "Download TXT-file"),
         plotOutput("diversity", height = '100%', width = '100%')
       )
       
