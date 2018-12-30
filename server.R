@@ -796,6 +796,11 @@ shinyServer(function(input, output, session) {
 	})
 	
 	## Download PDF file of phylogenetics
+	output$downloadPhy01 <- renderUI({
+	  req(input$submit5)
+	  downloadButton("downloadPhylo.pdf", "Download pdf-file")
+	})
+	
 	output$downloadPhylo.pdf <- downloadHandler(
 	  filename <- function() { paste('phylogenetics.pdf') },
 	  content <- function(file) {
@@ -805,6 +810,11 @@ shinyServer(function(input, output, session) {
 	  }, contentType = 'application/pdf')
 	
 	## Download NWK file of phylogenetics
+	output$downloadPhy02 <- renderUI({
+	  req(input$submit5)
+	  downloadButton("downloadPhylo.nwk", "Download Newick-file")
+	})
+	
 	output$downloadPhylo.nwk <- downloadHandler(
 	  filename <- function() { paste('phylogenetics.nwk') },
 	  content <- function(file) {
@@ -846,6 +856,11 @@ shinyServer(function(input, output, session) {
 	})
 	
 	## Download PDF file of allele frequency
+	output$downloadAfq01 <- renderUI({
+	  req(input$submitaf1)
+	  downloadButton("downloadAlleleFreq.pdf", "Download pdf-file")
+	})
+	
 	output$downloadAlleleFreq.pdf <- downloadHandler(
 	  filename <- function() { paste('alleleFreq.pdf') },
 	  content <- function(file) {
@@ -873,6 +888,11 @@ shinyServer(function(input, output, session) {
 	  }, contentType = 'application/pdf')
 	
 	## Download SVG file of allele frequency
+	output$downloadAfq02 <- renderUI({
+	  req(input$submitaf1)
+	  downloadButton("downloadAlleleFreq.svg", "Download svg-file")
+	})
+	
 	output$downloadAlleleFreq.svg <- downloadHandler(
 	  filename <- function() { paste('alleleFreq.svg') },
 	  content <- function(file) {

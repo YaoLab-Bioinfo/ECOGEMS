@@ -569,8 +569,13 @@ bsPopover("qp2", "A text file with SNP IDs (one ID per row) could be uploaded to
       ),
       
       mainPanel(
-        downloadButton("downloadPhylo.pdf", "Download pdf-file"),
-        downloadButton("downloadPhylo.nwk", "Download Newick-file"),
+        fluidRow(
+          column(5, uiOutput("downloadPhy01")),
+          column(5, uiOutput("downloadPhy02"))
+        ),
+        
+        # downloadButton("downloadPhylo.pdf", "Download pdf-file"),
+        # downloadButton("downloadPhylo.nwk", "Download Newick-file"),
         plotOutput("phylo", height = '100%', width = '100%')
         
       )
@@ -617,8 +622,13 @@ bsPopover("qp2", "A text file with SNP IDs (one ID per row) could be uploaded to
       ),
   
       mainPanel(
-        downloadButton("downloadAlleleFreq.pdf", "Download pdf-file"),
-        downloadButton("downloadAlleleFreq.svg", "Download svg-file"),
+        fluidRow(
+          column(4, uiOutput("downloadAfq01")),
+          column(4, uiOutput("downloadAfq02"))
+        ),
+        
+        # downloadButton("downloadAlleleFreq.pdf", "Download pdf-file"),
+        # downloadButton("downloadAlleleFreq.svg", "Download svg-file"),
         plotOutput("alleleFreq", height = "550px", width = "700px")
       )
     ),
