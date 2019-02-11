@@ -12,7 +12,7 @@ ECOGEMS is idle until you activate it by accessing the URL. So it may take some 
 
 *****
 
-#	<font color="red">Launch ECOGEMS directly from R and GitHub (preferred approach)</font>
+#	Launch ECOGEMS directly from R and GitHub
 
 User can choose to run ECOGEMS installed locally for a more preferable experience.
 
@@ -39,13 +39,12 @@ install.packages("plyr")
 install.packages("dplyr")  
 install.packages("ggmap")  
 install.packages("tidyr")  
-install.packages("gridExtra")  
-# try http:// if https:// URLs are not supported   
-source("https://bioconductor.org/biocLite.R")  
-biocLite("IRanges")
-biocLite("snpStats")
-biocLite("chopsticks")  
-biocLite("ggtree")  
+install.packages("gridExtra")   
+install.packages("BiocManager")  
+BiocManager::install("IRanges")
+BiocManager::install("snpStats")
+BiocManager::install("chopsticks")  
+BiocManager::install("ggtree")  
 # try an http CRAN mirror if https CRAN mirror doesn't work  
 install.packages("LDheatmap")  
 # install shinysky  
@@ -102,18 +101,17 @@ install.packages("plyr")
 install.packages("dplyr")  
 install.packages("ggmap")  
 install.packages("tidyr")  
-install.packages("gridExtra")  
-# try http:// if https:// URLs are not supported   
-source("https://bioconductor.org/biocLite.R")  
-biocLite("IRanges")
-biocLite("snpStats")
-biocLite("chopsticks")  
-biocLite("ggtree")  
+install.packages("gridExtra")   
+install.packages("BiocManager")  
+BiocManager::install("IRanges")
+BiocManager::install("snpStats")
+BiocManager::install("chopsticks")  
+BiocManager::install("ggtree")  
 # try an http CRAN mirror if https CRAN mirror doesn't work  
 install.packages("LDheatmap")  
 # install shinysky  
 install.packages("devtools")  
-devtools::install_github("venyao/ShinySky", force=TRUE)  
+devtools::install_github("venyao/ShinySky", force=TRUE)   
 ```
 
 For more information, please check the following pages:  
