@@ -1,4 +1,12 @@
 
+# A function to calculate nucleotide diversity for different ecotypes using SNP data in a specified genomic region.
+# Change to the directory of ECOGEMS using the setwd function of R.
+# Usage: type the next three lines in R Console without the leading #
+# source("Global.R")
+# nuc.div.plot <- nucDiv(chr="chr07", nuc.start=2839000, nuc.end=2840000, step=10, groups=c("Wild", "Cultivar"), numerator="Wild", denominator="Cultivar", mutType = NULL, snpSites = NULL)
+# grid.draw(grid.arrange(nuc.div.plot[[1]], nuc.div.plot[[2]], ncol=1, heights=c(2.3, 1)))
+# Then the nucleotide diversity in this region would be displayed in a plotting device.
+# For more info, please check the Diversity menu of the ECOGEMS database.
 
 nucDiv <- function(chr="chr07", nuc.start=2800000, nuc.end=2900000, step=10, 
                    groups=c("Wild", "Cultivar"), numerator="Wild", denominator="Cultivar",

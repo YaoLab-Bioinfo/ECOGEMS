@@ -1,4 +1,12 @@
 
+# A function to perform phylogenetic analysis using SNP data in a specified genomic region.
+# Change to the directory of ECOGEMS using the setwd function of R.
+# Usage: type the next three lines in R Console without the leading #
+# source("Global.R")
+# phy.plot <- phylo(chr="chr09", start=37800, end=46400, accession=NULL, mutType=NULL, snpSites = NULL)
+# print(phy.plot)
+# Then the NJ tree would be displayed in a plotting device.
+# For more info, please check the Phylogenetic menu of the ECOGEMS database.
 
 phylo <- function(chr="chr09", start=37800, end=46400, accession=NULL, mutType=NULL, snpSites = NULL) {
   start <- as.numeric(start)

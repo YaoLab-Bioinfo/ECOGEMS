@@ -1,4 +1,11 @@
 
+# A function to perform allele frequency analysis using SNP data in a specified genomic region.
+# Change to the directory of ECOGEMS using the setwd function of R.
+# Usage: type the next two lines in R Console without the leading #
+# source("Global.R")
+# allele.plot <- alleleFreq(snpSite = c("0602942293", "0138383182", "0329584501", "0316733111"), accGroup = c("Aus", "Indica", "TeJ", "TrJ", "Wild"), pieCols = c("cornflowerblue", "forestgreen"))
+# Then the result plot would be displayed in a plotting device.
+# For more info, please check the AlleleFreq menu of the ECOGEMS database.
 
 alleleFreq <- function(snpSite = c("0602942293", "0138383182", "0329584501", "0316733111"),
                        accGroup = c("Aus", "Indica", "TeJ", "TrJ", "Wild"),

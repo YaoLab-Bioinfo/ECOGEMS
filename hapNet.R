@@ -1,4 +1,12 @@
 
+# A function to perform haplotype network analysis using SNP data in a specified genomic region.
+# Change to the directory of ECOGEMS using the setwd function of R.
+# Usage: type the next three lines in R Console without the leading #
+# source("Global.R")
+# snp.data <- fetchSnp(chr="chr02", start=26550915, end=26552218, mutType=NULL)
+# hapnet.plot <- hapNet(data=snp.data[[1]], legend.x="bottomleft", legend.y=NULL, min.freq=20, max.freq=3000, pop.list=1, snpSites = NULL, scale.ratio=500)
+# Then the result plot would be displayed in a plotting device.
+# For more info, please check the Haplotype menu of the ECOGEMS database.
 
 hapNet <- function(data=NULL, legend.x="topleft", legend.y=NULL, 
                    min.freq=10, max.freq=400, pop.list=1, snpSites = NULL, ...) {
