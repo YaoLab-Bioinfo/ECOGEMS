@@ -16,7 +16,7 @@ library(gridExtra)
 library(ggtree)
 library(grid)
 library(snpStats)
-
+library(htmlwidgets)
 library(shinycssloaders)
 library(shinysky)
 

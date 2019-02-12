@@ -20,6 +20,7 @@ The genotypes of 2058 rice accessions at 8,584,244 SNP sites are stored using Sp
 16. Winston Chang. <a href="https://cran.r-project.org/package=shinythemes" target="_blank">shinythemes</a>: Themes for Shiny. R package version 1.1.1 (2017)  
 17. Clayton D. <a href="http://www.bioconductor.org/packages/release/bioc/html/snpStats.html" target="_blank">snpStats</a>: SnpMatrix and XSnpMatrix classes and methods. R package version 1.28.0 (2015)  
 18. Hadley Wickham. <a href="https://cran.r-project.org/package=plyr" target="_blank">plyr</a>: Tools for Splitting, Applying and Combining Data. R package version 1.8.4 (2016)  
+19. Ramnath Vaidyanathan, Yihui Xie, JJ Allaire, Joe Cheng, Kenton Russell, RStudio. <a href="https://cran.r-project.org/package=htmlwidgets" target="_blank">htmlwidgets</a>: HTML Widgets for R. R package version 1.3 (2018)  
 
 ## Further references  
 This application was created by <a href="https://venyao.github.io/" target="_blank">Wen Yao</a>. Please send bugs and feature requests to Wen Yao (venyao at qq.com).  

@@ -219,6 +219,30 @@ GBrowser <- function(chr="chr07", start=29616705, end=29629223, accession=NULL, 
     yaxis = list(title = "")
   )
   
-  return(list(p1, p3))
+  for (i in 1:length(p3$x$data)) {
+    if (p3$x$data[[i]]$mode == "markers" && p3$x$data[[i]]$name != "Intergenic") {
+      p.url <- gsub(".+<br />", "", p3$x$data[[i]]$text)
+      p.url <- strsplit(p.url, split="<br>")
+      p.url <- lapply(p.url, function(x){
+        return(x[1])
+      })
+      p.url <- unlist(p.url)
+      p.url <- substr(p.url, 1, 10)
+      p.url <- paste0("http://rice.plantbiology.msu.edu/cgi-bin/ORF_infopage.cgi?orf=LOC_Os", p.url)
+      p3$x$data[[i]]$customdata <- p.url
+    }
+  }
+  
+  p4 <- onRender(p3, "
+                function(el, x) {
+                el.on('plotly_click', function(d) {
+                var url = d.points[0].customdata;
+                //url
+                window.open(url);
+                });
+                }
+                ")
+  
+  return(list(p1, p4))
 }
 
