@@ -2,6 +2,7 @@ ECOGEMS
 ========
 
 The genotypes of 2058 rice accessions at 8,584,244 SNP sites are stored using Sparse Matrices in R.  
+For more information, please check our publicationin at <a href="https://doi.org/10.1093/bioinformatics/btz186" target="_blank">Bioinformatics</a>.  
 
 *****
 
