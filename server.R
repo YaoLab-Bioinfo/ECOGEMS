@@ -13,14 +13,18 @@ shinyServer(function(input, output, session) {
         } else {
           js_string <- 'alert("Please input genomic region or gene model in appropriate format!");'
           session$sendCustomMessage(type='jsCode', list(value = js_string))
-          #myPos <- anaReg("chr07:29611303-29669223")
           myPos <- NULL
         }
         
-        snp.info <- snpInfo(chr=myPos$chr, start=myPos$start - input$GBUP, end=myPos$end + input$GBDOWN, 
+		if (!is.null(myPos)) {
+			snp.info <- snpInfo(chr=myPos$chr, start=myPos$start - input$GBUP, end=myPos$end + input$GBDOWN, 
                             accession = input$mychooserB$selected, mutType = input$GB_mut_group)
-        if (nrow(snp.info[[1]][[1]]) < 1) {
-          js_string <- 'alert("No SNPs in specified genomic region!");'
+		} else {
+			snp.info <- NULL
+		}
+        
+        if (is.null(snp.info) || nrow(snp.info[[1]][[1]]) < 1) {
+          js_string <- 'alert("No SNPs are detected in the specified genomic region or the specified genomic region is too large!");'
           session$sendCustomMessage(type='jsCode', list(value = js_string))
         } else {
           GBplot <<- NULL
@@ -102,10 +106,7 @@ shinyServer(function(input, output, session) {
     }
   })
   
-
-  
-  
-  
+    
   # LDheatmap
   observe({
     if (input$submit2>0) {
@@ -121,11 +122,16 @@ shinyServer(function(input, output, session) {
           myPos <- NULL
         }
         
-        snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start - input$ldUp * 1000, 
+		if (!is.null(myPos)) {
+			snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start - input$ldUp * 1000, 
                             end=myPos$end + input$ldDown * 1000, accession = input$mychooserLD$selected,
                             mutType = input$ld_mut_group)[[1]]
-        if (nrow(snp.reg) < 5) {
-          js_string <- 'alert("Too few SNPs in specified genomic region!");'
+		} else {
+			snp.reg <- NULL
+		}
+		
+        if (is.null(snp.reg) || nrow(snp.reg) < 5) {
+          js_string <- 'alert("No SNPs are detected in the specified genomic region or the specified genomic region is too large!");'
           session$sendCustomMessage(type='jsCode', list(value = js_string))
         } else {
           snp.pos <- as.numeric(unlist(strsplit(input$ldpos, split=",")))
@@ -360,10 +366,14 @@ shinyServer(function(input, output, session) {
 	        myPos <- NULL
 	      }
 	      
-	      snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start - hap.up, end=myPos$end + hap.down, mutType=hap.mut.grp)[[1]]
+		  if (!is.null(myPos)) {
+			snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start - hap.up, end=myPos$end + hap.down, mutType=hap.mut.grp)[[1]]
+		  } else {
+			snp.reg <- NULL
+		  }
 	      
-	      if (nrow(snp.reg) < 5) {
-	        js_string <- 'alert("Too few SNPs in specified genomic region!");'
+	      if (is.null(snp.reg) || nrow(snp.reg) < 5) {
+	        js_string <- 'alert("No SNPs are detected in the specified genomic region or the specified genomic region is too large!");'
 	        session$sendCustomMessage(type='jsCode', list(value = js_string))
 	      } else {
 	        if (input$uploadHAP == 1) {
@@ -675,11 +685,15 @@ shinyServer(function(input, output, session) {
 	        }
 	      }
 	      
-	      snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start - div.up, end=myPos$end + div.down,
+		  if (!is.null(myPos)) {
+			snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start - div.up, end=myPos$end + div.down,
 	                          mutType=input$div_mut_group)[[1]]
+		  } else {
+			snp.reg <- NULL
+		  }
 	      
-	      if (nrow(snp.reg) < 10) {
-	        js_string <- 'alert("Too few SNPs in specified genomic region!");'
+	      if (is.null(snp.reg) || nrow(snp.reg) < 10) {
+	        js_string <- 'alert("No SNPs are detected in the specified genomic region or the specified genomic region is too large!");'
 	        session$sendCustomMessage(type='jsCode', list(value = js_string))
 	      } else {
 	        nuc.div.plot <<- NULL
@@ -751,8 +765,7 @@ shinyServer(function(input, output, session) {
 	      phy.up <- input$phyUp * 1000
 	      phy.down <- input$phyDown * 1000
 	      
-#	      withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
-	        myPos <- anaReg(input$regP)
+	      myPos <- anaReg(input$regP)
 	      
 	      if (validReg(myPos)) {
 	      } else {
@@ -774,11 +787,15 @@ shinyServer(function(input, output, session) {
 	        }
 	      }
 	      
-	      snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start - phy.up, end=myPos$end + phy.down,
+		  if (!is.null(myPos)) {
+			snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start - phy.up, end=myPos$end + phy.down,
 	                          accession=phy.acc, mutType=phy.mut.group)[[1]]
+		  } else {
+			snp.reg <- NULL
+	      }
 	      
-	      if (nrow(snp.reg) < 10) {
-	        js_string <- 'alert("Too few SNPs in specified genomic region!");'
+	      if (is.null(snp.reg) || nrow(snp.reg) < 10) {
+	        js_string <- 'alert("No SNPs are detected in the specified genomic region or the specified genomic region is too large!");'
 	        session$sendCustomMessage(type='jsCode', list(value = js_string))
 	      } else {
 	        output$phylo <- renderPlot({
@@ -786,8 +803,6 @@ shinyServer(function(input, output, session) {
 	                  accession=phy.acc, mutType=phy.mut.group, snpSites = phy.snp.site)
 	        }, height = phy.height, width = phy.width)
 	      }
-	        
-#	      })
 	      
 	    })
 	  } else {
@@ -825,8 +840,7 @@ shinyServer(function(input, output, session) {
 	observe({
 	  if (input$submitaf1>0) {
 	    isolate({
-#	      withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
-	        in.snpid <- unlist(strsplit(input$af_snp_site, split="\\n"))
+	      in.snpid <- unlist(strsplit(input$af_snp_site, split="\\n"))
 	      in.snpid <- gsub("^\\s+", "", in.snpid)
 	      in.snpid <- gsub("\\s+$", "", in.snpid)
 	      in.snpid <- in.snpid[in.snpid!=""]
@@ -847,8 +861,6 @@ shinyServer(function(input, output, session) {
 	        )
 	      }, height = af.height, width = af.width)
 	        
-#	      })
-	      
 	    })
 	  } else {
 	    NULL
@@ -866,8 +878,7 @@ shinyServer(function(input, output, session) {
 	  content <- function(file) {
 	    pdf(file, width = input$afWidth/72, height = input$afHeight/72)
 	    
-#	    withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
-	      in.snpid <- unlist(strsplit(input$af_snp_site, split="\\n"))
+	    in.snpid <- unlist(strsplit(input$af_snp_site, split="\\n"))
 	    in.snpid <- gsub("^\\s+", "", in.snpid)
 	    in.snpid <- gsub("\\s+$", "", in.snpid)
 	    in.snpid <- in.snpid[in.snpid!=""]
@@ -881,8 +892,6 @@ shinyServer(function(input, output, session) {
 	      accGroup = af.group,
 	      pieCols = in.af.col
 	    )
-	      
-#	    })
 	    
 	    dev.off()
 	  }, contentType = 'application/pdf')
@@ -898,7 +907,6 @@ shinyServer(function(input, output, session) {
 	  content <- function(file) {
 	    svg(file, width = input$afWidth/72, height = input$afHeight/72)
 	    
-#	    withProgress(message='Calculation in progress...',value = 0, detail = 'This may take a while...', {
 	      in.snpid <- unlist(strsplit(input$af_snp_site, split="\\n"))
 	    in.snpid <- gsub("^\\s+", "", in.snpid)
 	    in.snpid <- gsub("\\s+$", "", in.snpid)
@@ -913,8 +921,6 @@ shinyServer(function(input, output, session) {
 	      accGroup = af.group,
 	      pieCols = in.af.col
 	    )
-	      
-#	    })
 	    
 	    dev.off()
 	  }, contentType = 'image/svg')
