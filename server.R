@@ -103,8 +103,11 @@ shinyServer(function(input, output, session) {
           }
           
           if (is.null(snp.reg) || nrow(snp.reg) < 5) {
-            js_string <- 'alert("No SNPs are detected in the specified genomic region or the specified genomic region is too large!");'
-            session$sendCustomMessage(type='jsCode', list(value = js_string))
+            sendSweetAlert(
+              session = session,
+              title = "Error input!", type = "error",
+              text = "Too few SNPs are detected in the specified genomic region or the specified genomic region is too large!"
+            )
           } else {
             snp.pos <- as.numeric(unlist(strsplit(input$ldpos, split=",")))
             
@@ -315,7 +318,7 @@ shinyServer(function(input, output, session) {
 	          sendSweetAlert(
 	            session = session,
 	            title = "Error input!", type = "error",
-	            text = "No SNPs are detected in the specified genomic region or the specified genomic region is too large!"
+	            text = "Too few SNPs are detected in the specified genomic region or the specified genomic region is too large!"
 	          )
 	        } else {
 	          if (input$uploadHAP == 1) {
