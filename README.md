@@ -8,7 +8,7 @@ For more information, please check our publicationin at <a href="https://doi.org
 
 #	Use ECOGEMS online
 
-ECOGEMS is deployed at <a href="http://ECOGEMS.ncpgr.cn/" target="_blank">http://ECOGEMS.ncpgr.cn/</a> and <a href="http://150.109.59.144:3838/ECOGEMS/" target="_blank">http://150.109.59.144:3838/ECOGEMS/</a> for online use.  
+ECOGEMS is deployed at <a href="http://ECOGEMS.ncpgr.cn/" target="_blank">http://ECOGEMS.ncpgr.cn/</a> and <a href="http://venyao.xyz/ECOGEMS/" target="_blank">http://venyao.xyz/ECOGEMS/</a> for online use.  
 ECOGEMS is idle until you activate it by accessing the URL. So it may take some time when you access this URL for the first time. Once it was activated, ECOGEMS could be used smoothly and easily.  
 
 *****
