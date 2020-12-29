@@ -19,6 +19,7 @@ library(snpStats)
 library(htmlwidgets)
 library(shinycssloaders)
 library(shinysky)
+library(shinyWidgets)
 
 source("fetchSnp.R")
 source("ld.heatmap.R")
