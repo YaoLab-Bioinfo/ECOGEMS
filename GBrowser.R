@@ -97,9 +97,9 @@ GBrowser <- function(chr="chr07", start=29616705, end=29629223, accession=NULL, 
   
   gff.reg$anno <- paste(gff.reg$id, gff.reg$anno, sep=" <br> ")
   
-  gff.reg.mrna.ir <- IRanges(gff.reg.mrna$start, gff.reg.mrna$end)
-  gff.reg.mrna.op <- findOverlaps(gff.reg.mrna.ir, reduce(gff.reg.mrna.ir))
-  gff.reg.mrna$grp <- subjectHits(gff.reg.mrna.op)
+  gff.reg.mrna.ir <- IRanges::IRanges(gff.reg.mrna$start, gff.reg.mrna$end)
+  gff.reg.mrna.op <- IRanges::findOverlaps(gff.reg.mrna.ir, IRanges::reduce(gff.reg.mrna.ir))
+  gff.reg.mrna$grp <- S4Vectors::subjectHits(gff.reg.mrna.op)
   
   gff.reg.mrna.1 <- gff.reg.mrna %>% group_by(grp) %>% mutate(y=row_number())
   

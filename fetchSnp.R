@@ -17,10 +17,10 @@ fetchSnp <- function(chr="chr07", start=29616705, end=29629223, accession=NULL, 
     
     start <- as.numeric(start)
     end <- as.numeric(end)
-    reg.gr <- IRanges(start, end)
+    reg.gr <- IRanges::IRanges(start, end)
     snp.lst.chr <- snp.lst[snp.lst$chr==chr, ]
-    snp.lst.gr <- IRanges(start=snp.lst.chr$start, end=snp.lst.chr$end)
-    snp.fls <- snp.lst.chr$file[unique(queryHits(findOverlaps(snp.lst.gr, reg.gr)))]
+    snp.lst.gr <- IRanges::IRanges(start=snp.lst.chr$start, end=snp.lst.chr$end)
+    snp.fls <- snp.lst.chr$file[unique(S4Vectors::queryHits(IRanges::findOverlaps(snp.lst.gr, reg.gr)))]
     
     snp.fls.lst <- lapply(snp.fls, function(x){
       load(x)

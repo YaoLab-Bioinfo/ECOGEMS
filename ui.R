@@ -62,18 +62,18 @@ shinyUI(
                                ), #/ column 1
                                tags$td(style = "width: 40%; text-align: right",
                                          div(class = "form-group shiny-input-container",
-                                               actionButton("submit1", strong("Submit!",
+                                               shinysky::actionButton("submit1", strong("Submit!",
                                                                               bsButton("q7", label="", icon=icon("question"), style="info", size="small")
                                                             ), width = "90%", styleclass = "success"),
-                                             conditionalPanel(condition="input.submit1 != '0'", busyIndicator(HTML("<div style='color:red;font-size:30px'>Calculation In progress...</div>"), wait = 0)),
+                                             conditionalPanel(condition="input.submit1 != '0'", shinysky::busyIndicator(HTML("<div style='color:red;font-size:30px'>Calculation In progress...</div>"), wait = 0)),
                                              bsPopover("q7", "Whenever the genomic region is updated, please click Submit!",
                                                        trigger = "focus")
                                          )
                                ), #/ column 2
                                tags$td(style = "width: 40%; text-align: right",
                                        div(class = "form-group shiny-input-container",
-                                           actionButton("clearGB", strong("Reset"), styleclass = "warning"),
-                                           actionButton("GBExam", strong("Load example"), styleclass = "info")
+                                           shinysky::actionButton("clearGB", strong("Reset"), styleclass = "warning"),
+                                           shinysky::actionButton("GBExam", strong("Load example"), styleclass = "info")
                                        )
                                )
                              ) #/ tr
@@ -135,7 +135,7 @@ fluidRow(
       downloadButton("downloadsnpInfo.txt", "Download SNPs information"),
       downloadButton("downloadGB.pdf", "Download pdf-file"),
       
-      plotlyOutput("gbrowser", height = '100%', width = '100%'),
+      plotly::plotlyOutput("gbrowser", height = '100%', width = '100%'),
 
       br()
       
@@ -153,12 +153,12 @@ fluidRow(
         bsPopover("q5", "A genomic region can be determined by chromosome positions or gene locus. For example, chr07:29611303-29669223 or LOC_Os11g35500.",
                   trigger = "focus"),
         
-        actionButton("submit2", strong("Submit!",
+        shinysky::actionButton("submit2", strong("Submit!",
                                        bsButton("q8", label="", icon=icon("question"), style="info", size="small")
         ), styleclass = "success"),
-        actionButton("clearLD", strong("Reset"), styleclass = "warning"),
-        actionButton("LDExam", strong("Load example"), styleclass = "info"),
-        conditionalPanel(condition="input.submit2 != '0'", busyIndicator(HTML("<div style='color:red;font-size:30px'>Calculation In progress...</div>"), wait = 0)),
+        shinysky::actionButton("clearLD", strong("Reset"), styleclass = "warning"),
+        shinysky::actionButton("LDExam", strong("Load example"), styleclass = "info"),
+        conditionalPanel(condition="input.submit2 != '0'", shinysky::busyIndicator(HTML("<div style='color:red;font-size:30px'>Calculation In progress...</div>"), wait = 0)),
         bsPopover("q8", "Whenever the genomic region is updated, please click Submit!",
                   trigger = "focus"),
         
@@ -265,12 +265,12 @@ fluidRow(
         bsPopover("q4", "A genomic region can be determined by chromosome positions or gene locus. For example, chr07:29611303-29669223 or LOC_Os11g35500.",
                   trigger = "focus"),
         
-        actionButton("submit3", strong("Submit!",
+        shinysky::actionButton("submit3", strong("Submit!",
                                        bsButton("q9", label="", icon=icon("question"), style="info", size="small")
         ), styleclass = "success"),
-        actionButton("clearHap", strong("Reset"), styleclass = "warning"),
-        actionButton("HapExam", strong("Load example"), styleclass = "info"),
-        conditionalPanel(condition="input.submit3 != '0'", busyIndicator(HTML("<div style='color:red;font-size:30px'>Calculation In progress...</div>"), wait = 0)),
+        shinysky::actionButton("clearHap", strong("Reset"), styleclass = "warning"),
+        shinysky::actionButton("HapExam", strong("Load example"), styleclass = "info"),
+        conditionalPanel(condition="input.submit3 != '0'", shinysky::busyIndicator(HTML("<div style='color:red;font-size:30px'>Calculation In progress...</div>"), wait = 0)),
         bsPopover("q9", "Whenever the genomic region or any option is updated, please click Submit!",
                   trigger = "focus"),
         
@@ -370,7 +370,7 @@ fluidRow(
         
         downloadButton("downloadHapSta.pdf", "Download pdf-file"),
         downloadButton("downloadHapSta.svg", "Download svg-file"),
-        plotlyOutput("hapGeo")
+        plotly::plotlyOutput("hapGeo")
         
       )
     ),
@@ -387,12 +387,12 @@ fluidRow(
         bsPopover("q3", "A genomic region can be determined by chromosome positions or gene locus. For example, chr07:29611303-29669223 or LOC_Os11g35500.",
                   trigger = "focus"),
         
-        actionButton("submit4", strong("Submit!",
+        shinysky::actionButton("submit4", strong("Submit!",
                                        bsButton("q10", label="", icon=icon("question"), style="info", size="small")
         ), styleclass = "success"),
-        actionButton("clearDiv", strong("Reset"), styleclass = "warning"),
-        actionButton("DivExam", strong("Load example"), styleclass = "info"),
-        conditionalPanel(condition="input.submit4 != '0'", busyIndicator(HTML("<div style='color:red;font-size:30px'>Calculation In progress...</div>"), wait = 0)),
+        shinysky::actionButton("clearDiv", strong("Reset"), styleclass = "warning"),
+        shinysky::actionButton("DivExam", strong("Load example"), styleclass = "info"),
+        conditionalPanel(condition="input.submit4 != '0'", shinysky::busyIndicator(HTML("<div style='color:red;font-size:30px'>Calculation In progress...</div>"), wait = 0)),
         bsPopover("q10", "Whenever the genomic region or any option is updated, please click Submit!!",
                   trigger = "focus"),
         
@@ -497,12 +497,12 @@ fluidRow(
         bsPopover("q2", "A genomic region can be determined by chromosome positions or gene locus. For example, chr07:29611303-29669223 or LOC_Os11g35500.",
                   trigger = "focus"),
         
-        actionButton("submit5", strong("Submit!",
+        shinysky::actionButton("submit5", strong("Submit!",
                                        bsButton("q11", label="", icon=icon("question"), style="info", size="small")
         ), styleclass = "success"),
-        actionButton("clearPhy", strong("Reset"), styleclass = "warning"),
-        actionButton("PhyExam", strong("Load example"), styleclass = "info"),
-        conditionalPanel(condition="input.submit5 != '0'", busyIndicator(HTML("<p style='color:red;font-size:30px;'>Calculation In progress...</p>"), wait = 0)),
+        shinysky::actionButton("clearPhy", strong("Reset"), styleclass = "warning"),
+        shinysky::actionButton("PhyExam", strong("Load example"), styleclass = "info"),
+        conditionalPanel(condition="input.submit5 != '0'", shinysky::busyIndicator(HTML("<p style='color:red;font-size:30px;'>Calculation In progress...</p>"), wait = 0)),
         bsPopover("q11", "Whenever the genomic region or any option is updated, please click Submit!",
                   trigger = "focus"),
         
@@ -585,7 +585,7 @@ fluidRow(
         textAreaInput("af_snp_site", h4("SNP sites to calculate allele frequency:",
                                         bsButton("qaf3", label="", icon=icon("question"), style="info", size="small")
                                         ), 
-                      width="250px", resize="both", height="150px", 
+                      width="100%", resize="vertical", height="150px", 
                       placeholder = "One SNP site in one row", 
                       value = ""
                       ),
@@ -608,12 +608,12 @@ fluidRow(
         numericInput("afHeight", "Plot height:", value = 550),
         numericInput("afWidth", "Plot width:", value = 700),
         
-        actionButton("submitaf1", strong("Submit!",
+        shinysky::actionButton("submitaf1", strong("Submit!",
                                        bsButton("qaf1", label="", icon=icon("question"), style="info", size="small")
         ), styleclass = "success"),
-        actionButton("clearAf", strong("Reset"), styleclass = "warning"),
-        actionButton("AfExam", strong("Load example"), styleclass = "info"),
-        conditionalPanel(condition="input.submitaf1 != '0'", busyIndicator(HTML("<p style='color:red;font-size:30px;'>Calculation In progress...</p>"), wait = 0)),
+        shinysky::actionButton("clearAf", strong("Reset"), styleclass = "warning"),
+        shinysky::actionButton("AfExam", strong("Load example"), styleclass = "info"),
+        conditionalPanel(condition="input.submitaf1 != '0'", shinysky::busyIndicator(HTML("<p style='color:red;font-size:30px;'>Calculation In progress...</p>"), wait = 0)),
         bsPopover("qaf1", "Whenever the SNP sites or any option is updated, please click Submit!",
                   trigger = "focus")
       ),
@@ -651,10 +651,10 @@ fluidRow(
       mainPanel(
         downloadButton("downloadAccDis.pdf", "Download pdf-file"),
         downloadButton("downloadAccDis.svg", "Download svg-file"),
-        withSpinner(plotlyOutput("accDis")),
+        shinycssloaders::withSpinner(plotly::plotlyOutput("accDis")),
         
         h4("Information of selected rice accessions"),
-        withSpinner(dataTableOutput("mytable1"))
+        shinycssloaders::withSpinner(dataTableOutput("mytable1"))
         )
       ),
     
@@ -670,12 +670,12 @@ fluidRow(
         bsPopover("q1", "A genomic region can be determined by chromosome positions or gene locus. For example, chr07:29611303-29669223 or LOC_Os11g35500.",
                   trigger = "focus"),
         
-        actionButton("submit6", strong("Submit!",
+        shinysky::actionButton("submit6", strong("Submit!",
                                        bsButton("q12", label="", icon=icon("question"), style="info", size="small")
         ), width = "60%", styleclass = "success"),
-        actionButton("clearBB", strong("Reset"), styleclass = "warning"),
-        actionButton("BBExam", strong("Load example"), styleclass = "info"),
-        conditionalPanel(condition="input.submit6 != '0'", busyIndicator(HTML("<p style='color:red;font-size:30px;'>Calculation In progress...</p>"), wait = 0)),
+        shinysky::actionButton("clearBB", strong("Reset"), styleclass = "warning"),
+        shinysky::actionButton("BBExam", strong("Load example"), styleclass = "info"),
+        conditionalPanel(condition="input.submit6 != '0'", shinysky::busyIndicator(HTML("<p style='color:red;font-size:30px;'>Calculation In progress...</p>"), wait = 0)),
         bsPopover("q12", "Whenever the genomic region or any option is updated, please click Submit!",
                   trigger = "focus"),
         

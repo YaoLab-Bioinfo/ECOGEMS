@@ -16,13 +16,13 @@ hapNet <- function(data=NULL, legend.x="topleft", legend.y=NULL,
   dat.mat <- data
   dat.mat[is.na(dat.mat)] <- "-"
   dat.mat <- t(dat.mat)
-  dat.mat.bin <- as.DNAbin(dat.mat)
+  dat.mat.bin <- ape::as.DNAbin(dat.mat)
   
-  h <- haplotype(dat.mat.bin)
-  h <- sort(h)
-  h.sub <- subset(h, minfreq = min.freq, maxfreq = max.freq)
+  h <- pegas::haplotype(dat.mat.bin)
+  h <- pegas:::sort.haplotype(h)
+  h.sub <- pegas:::subset.haplotype(h, minfreq = min.freq, maxfreq = max.freq)
   dimnames(h.sub)[[1]] <- as.character(as.roman(1:nrow(h.sub)))
-  net <- haploNet(h.sub)
+  net <- pegas::haploNet(h.sub)
   
   if (pop.list == 3) {
 	acc.info$Ecotype[acc.info$Ecotype %in% c("Ind_Int", "IndI", "indica", "IndII")] <- "Ind"
@@ -70,7 +70,7 @@ hapNet <- function(data=NULL, legend.x="topleft", legend.y=NULL,
 	colnames(net.pie.df) <- c("Ind", "Jap", "TeJ", "TrJ", "Aus", "Or-I", "Or-II", "Or-III", "Other")
   }
   
-  plot(net, size=attr(net, "freq"), 
+  pegas:::plot.haploNet(net, size=attr(net, "freq"), 
        cex = 0.8, pie=net.pie.df, legend=FALSE, 
        threshold=0, ...)
 

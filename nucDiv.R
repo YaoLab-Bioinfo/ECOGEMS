@@ -19,7 +19,7 @@ nucDiv <- function(chr="chr07", nuc.start=2800000, nuc.end=2900000, step=10,
   
   dat.mat <- t(data)
   dat.mat[is.na(dat.mat)] <- "-"
-  dat.bin <- as.DNAbin(dat.mat)
+  dat.bin <- ape::as.DNAbin(dat.mat)
   
   div.group <- lapply(unique(c(groups, numerator, denominator)), function(x){
     x.accession <- readLines(paste0("./data/", x, ".acc.txt"))

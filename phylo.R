@@ -11,10 +11,10 @@
 phylo <- function(chr="chr09", start=37800, end=46400, accession=NULL, mutType=NULL, snpSites = NULL) {
   start <- as.numeric(start)
   end <- as.numeric(end)
-  reg.gr <- IRanges(start, end)
+  reg.gr <- IRanges::IRanges(start, end)
   snp.lst.chr <- snp.lst[snp.lst$chr==chr, ]
-  snp.lst.gr <- IRanges(start=snp.lst.chr$start, end=snp.lst.chr$end)
-  snp.fls <- snp.lst.chr$file[unique(queryHits(findOverlaps(snp.lst.gr, reg.gr)))]
+  snp.lst.gr <- IRanges::IRanges(start=snp.lst.chr$start, end=snp.lst.chr$end)
+  snp.fls <- snp.lst.chr$file[unique(S4Vectors::queryHits(IRanges::findOverlaps(snp.lst.gr, reg.gr)))]
   
   snp.data.lst <- lapply(snp.fls, function(x){
     load(x)
@@ -90,12 +90,12 @@ phylo <- function(chr="chr09", start=37800, end=46400, accession=NULL, mutType=N
   
   ### tree
   dist.mat <- as.dist(dist.mat)
-  tre <- nj(dist.mat)
+  tre <- ape::nj(dist.mat)
   
-  p <- ggtree(tre, layout="circular", branch.length="none", size=0.01) + ggtitle("")
-  p <- p + theme_void()
-  p <- gheatmap(p, acc.tree, offset = 1, width=0.1, colnames = FALSE, color=NULL) +
-    scale_fill_manual(breaks=c("Or-I", "Or-II", "Or-III", 
+  p <- ggtree::ggtree(tre, layout="circular", branch.length="none", size=0.01) + ggplot2::ggtitle("")
+  p <- p + ggplot2::theme_void()
+  p <- ggtree::gheatmap(p, acc.tree, offset = 1, width=0.1, colnames = FALSE, color=NULL) +
+    ggplot2::scale_fill_manual(breaks=c("Or-I", "Or-II", "Or-III", 
                                "Indica", "Japonica", "Other"), 
                       values=c("blue", "red", "black", 
                                "purple", "gold", "cyan"))

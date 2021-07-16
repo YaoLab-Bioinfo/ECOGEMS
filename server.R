@@ -18,14 +18,14 @@ shinyServer(function(input, output, session) {
           }
           
           if (is.null(snp.info) || nrow(snp.info[[1]][[1]]) < 1) {
-            sendSweetAlert(
+            shinyWidgets::sendSweetAlert(
               session = session,
               title = "Error input!", type = "error",
               text = "No SNPs are detected in the specified genomic region or the specified genomic region is too large!"
             )
           } else {
             GBplot <<- NULL
-            output$gbrowser <- renderPlotly({
+            output$gbrowser <- plotly::renderPlotly({
               GBplot <<- GBrowser(chr=myPos$chr, start=myPos$start - input$GBUP, 
                                   end=myPos$end + input$GBDOWN,
                                   accession = input$mychooserB$selected,
@@ -57,7 +57,7 @@ shinyServer(function(input, output, session) {
               })
           }
         } else {
-          sendSweetAlert(
+          shinyWidgets::sendSweetAlert(
             session = session,
             title = "Error input!", type = "error",
             text = "Please input genomic region or gene model in appropriate format!"
@@ -103,7 +103,7 @@ shinyServer(function(input, output, session) {
           }
           
           if (is.null(snp.reg) || nrow(snp.reg) < 5) {
-            sendSweetAlert(
+            shinyWidgets::sendSweetAlert(
               session = session,
               title = "Error input!", type = "error",
               text = "Too few SNPs are detected in the specified genomic region or the specified genomic region is too large!"
@@ -147,7 +147,7 @@ shinyServer(function(input, output, session) {
             }, height = ld.height, width = ld.width)
           }
         } else {
-          sendSweetAlert(
+          shinyWidgets::sendSweetAlert(
             session = session,
             title = "Error input!", type = "error",
             text = "Please input genomic region or gene model in appropriate format!"
@@ -315,7 +315,7 @@ shinyServer(function(input, output, session) {
 	        }
 	        
 	        if (is.null(snp.reg) || nrow(snp.reg) < 5) {
-	          sendSweetAlert(
+	          shinyWidgets::sendSweetAlert(
 	            session = session,
 	            title = "Error input!", type = "error",
 	            text = "Too few SNPs are detected in the specified genomic region or the specified genomic region is too large!"
@@ -338,7 +338,7 @@ shinyServer(function(input, output, session) {
 	          }, height = 550, width = 750)
 	        }
 	      } else {
-	        sendSweetAlert(
+	        shinyWidgets::sendSweetAlert(
 	          session = session,
 	          title = "Error input!", type = "error",
 	          text = "Please input genomic region or gene model in appropriate format!"
@@ -484,13 +484,13 @@ shinyServer(function(input, output, session) {
 	                            mutType=input$hap_mut_group)[[1]]
 	        
 	        if (nrow(snp.reg) < 5) {
-	          sendSweetAlert(
+	          shinyWidgets::sendSweetAlert(
 	            session = session,
 	            title = "Error input!", type = "error",
 	            text = "Too few SNPs in specified genomic region!"
 	          )
 	        } else {
-	          output$hapGeo <- renderPlotly({
+	          output$hapGeo <- plotly::renderPlotly({
 	            
 	            
 	            if (input$uploadHAP == 1) {
@@ -509,7 +509,7 @@ shinyServer(function(input, output, session) {
 	          })
 	        }
 	      } else {
-	        sendSweetAlert(
+	        shinyWidgets::sendSweetAlert(
 	          session = session,
 	          title = "Error input!", type = "error",
 	          text = "No SNPs are detected in the specified genomic region or the specified genomic region is too large!"
@@ -663,7 +663,7 @@ shinyServer(function(input, output, session) {
 	          
 	        }
 	      } else {
-	        sendSweetAlert(
+	        shinyWidgets::sendSweetAlert(
 	          session = session,
 	          title = "Error input!", type = "error",
 	          text = "Please input genomic region or gene model in appropriate format!"
@@ -746,7 +746,7 @@ shinyServer(function(input, output, session) {
 	          }, height = phy.height, width = phy.width)
 	        }
 	      } else {
-	        sendSweetAlert(
+	        shinyWidgets::sendSweetAlert(
 	          session = session,
 	          title = "Error input!", type = "error",
 	          text = "Please input genomic region or gene model in appropriate format!"
@@ -797,7 +797,7 @@ shinyServer(function(input, output, session) {
 	output$downloadPhylo.nwk <- downloadHandler(
 	  filename <- function() { paste('phylogenetics.nwk') },
 	  content <- function(file) {
-	    write.tree(treNwk, file)
+	    ape::write.tree(treNwk, file)
 	  }, contentType = 'text/plain')
 	
 	# allele frequency
@@ -932,7 +932,7 @@ shinyServer(function(input, output, session) {
 	                file, sep = "\t", quote=FALSE, row.names = FALSE)
 	  }, contentType = 'text/plain')
 	
-	output$accDis <- renderPlotly({
+	output$accDis <- plotly::renderPlotly({
 	  g <- list(
 	    scope = 'world',
 	    projection = list(type = 'Equirectangular'),
@@ -1120,7 +1120,7 @@ shinyServer(function(input, output, session) {
 	            write.table(gene.info, file, sep="\t", quote=F, row.names=F)
 	          })
 	      } else {
-	        sendSweetAlert(
+	        shinyWidgets::sendSweetAlert(
 	          session = session,
 	          title = "Error input!", type = "error",
 	          text = "Please input genomic region or gene model in appropriate format!"

@@ -7,11 +7,11 @@ hapConten <- function(data=NULL, min.freq=50, max.freq=2000, pop.list=1, snpSite
   dat.mat <- data
   dat.mat[is.na(dat.mat)] <- "-"
   dat.mat <- t(dat.mat)
-  dat.mat.bin <- as.DNAbin(dat.mat)
+  dat.mat.bin <- ape::as.DNAbin(dat.mat)
   
-  h <- haplotype(dat.mat.bin)
-  h <- sort(h)
-  h.sub <- subset(h, minfreq = min.freq, maxfreq = max.freq)
+  h <- pegas::haplotype(dat.mat.bin)
+  h <- pegas:::sort.haplotype(h)
+  h.sub <- pegas:::subset.haplotype(h, minfreq = min.freq, maxfreq = max.freq)
   dimnames(h.sub)[[1]] <- as.character(as.roman(1:nrow(h.sub)))
  
   h.sub.seq <- sapply(1:nrow(h.sub), function(x){

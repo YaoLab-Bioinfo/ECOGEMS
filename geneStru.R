@@ -3,10 +3,10 @@
 geneStru <- function(chr="chr09", start=37800, end=46400){ 
   start <- as.numeric(start)
   end <- as.numeric(end)
-  reg.gr <- IRanges(start, end)
+  reg.gr <- IRanges::IRanges(start, end)
   snp.lst.chr <- snp.lst[snp.lst$chr==chr, ]
-  snp.lst.gr <- IRanges(start=snp.lst.chr$start, end=snp.lst.chr$end)
-  snp.fls <- snp.lst.chr$file[unique(queryHits(findOverlaps(snp.lst.gr, reg.gr)))]
+  snp.lst.gr <- IRanges::IRanges(start=snp.lst.chr$start, end=snp.lst.chr$end)
+  snp.fls <- snp.lst.chr$file[unique(S4Vectors::queryHits(IRanges::findOverlaps(snp.lst.gr, reg.gr)))]
   
   snp.allele.lst <- lapply(snp.fls, function(x){
     load(x)
@@ -29,9 +29,9 @@ geneStru <- function(chr="chr09", start=37800, end=46400){
   
   gff.reg$anno <- paste(gff.reg$id, gff.reg$anno, sep=" <br> ")
   
-  gff.reg.mrna.ir <- IRanges(gff.reg.mrna$start, gff.reg.mrna$end)
-  gff.reg.mrna.op <- findOverlaps(gff.reg.mrna.ir, reduce(gff.reg.mrna.ir))
-  gff.reg.mrna$grp <- subjectHits(gff.reg.mrna.op)
+  gff.reg.mrna.ir <- IRanges::IRanges(gff.reg.mrna$start, gff.reg.mrna$end)
+  gff.reg.mrna.op <- IRanges::findOverlaps(gff.reg.mrna.ir, IRanges::reduce(gff.reg.mrna.ir))
+  gff.reg.mrna$grp <- S4Vectors::subjectHits(gff.reg.mrna.op)
   
   gff.reg.mrna.1 <- gff.reg.mrna %>% group_by(grp) %>% mutate(y=row_number())
   
