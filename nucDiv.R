@@ -29,7 +29,7 @@ nucDiv <- function(chr="chr07", nuc.start=2800000, nuc.end=2900000, step=10,
       dat.i <- dat[, i:min(i+step-1, ncol(dat.bin))]
       
       # if(!is.matrix(dat.i)) {return(NULL)}
-      div <- nuc.div(dat.i, pairwise.deletion = TRUE)
+      div <- pegas::nuc.div(dat.i, pairwise.deletion = TRUE)
       
       return(div)
     })
