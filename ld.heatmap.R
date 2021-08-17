@@ -97,21 +97,21 @@ ld.heatmap <- function(chr="chr09", start=37800, end=46400, snp.pos=c(1),
   dat.snp.mat <- as(dat, "SnpMatrix")
   
   if (gene) {
-    ll <- LDheatmap(dat.snp.mat, snp.code.pos, 
+    ll <- LDheatmap::LDheatmap(dat.snp.mat, snp.code.pos, 
                     flip=TRUE, title=NULL, ...)
     
     p1 <- geneStru(chr=chr, start=start, end=end)
     
     plot.new()
-    llQplot2 <- LDheatmap.addGrob(ll, rectGrob(gp=gpar(col="white")), height=.3)
-    pushViewport(viewport(x=0.483, y=ld.y, width=ld.w, height=.1))
+    llQplot2 <- LDheatmap::LDheatmap.addGrob(ll, grid::rectGrob(gp=grid::gpar(col="white")), height=.3)
+    grid::pushViewport(grid::viewport(x=0.483, y=ld.y, width=ld.w, height=.1))
     
-    grid.draw(ggplotGrob(p1))
+    grid::grid.draw(ggplot2::ggplotGrob(p1))
   } else {
     if (flip) {
-      LDheatmap(dat.snp.mat, snp.code.pos, flip=TRUE, title=NULL, ...)
+      LDheatmap::LDheatmap(dat.snp.mat, snp.code.pos, flip=TRUE, title=NULL, ...)
     } else {
-      LDheatmap(dat.snp.mat, snp.code.pos, flip=FALSE, SNP.name = colnames(dat)[snp.pos], title=NULL, ...)
+      LDheatmap::LDheatmap(dat.snp.mat, snp.code.pos, flip=FALSE, SNP.name = colnames(dat)[snp.pos], title=NULL, ...)
     }
   }
   

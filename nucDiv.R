@@ -51,8 +51,8 @@ nucDiv <- function(chr="chr07", nuc.start=2800000, nuc.end=2900000, step=10,
   div.group.df.1 <- div.group.df[, c("pos", groups)]
   div.group.df.2 <- div.group.df[, c("pos", numerator, denominator)]
   
-  div.group.df.1.long <- gather(div.group.df.1, group, diversity, -pos)
-  div.group.df.2.long <- gather(div.group.df.2, group, diversity, -pos)
+  div.group.df.1.long <- tidyr::gather(div.group.df.1, group, diversity, -pos)
+  div.group.df.2.long <- tidyr::gather(div.group.df.2, group, diversity, -pos)
   
   nuc.chr <- substr(chr, 4, 5)
   nuc.gene.info <- gene.info
@@ -61,28 +61,28 @@ nucDiv <- function(chr="chr07", nuc.start=2800000, nuc.end=2900000, step=10,
                                  nuc.gene.info$start>=as.numeric(nuc.start) &
                                  nuc.gene.info$end<=as.numeric(nuc.end), ]
   
-  p1 <- ggplot(div.group.df.1.long) + geom_line(aes(x=pos, y=diversity, color=group))
-  p1 <- p1 + xlab("") + ylab("Nucleotide diversity")
-  p1 <- p1 + theme_classic() + ylim(-0.14, NA)
-  p1 <- p1 + theme(legend.title = element_blank())
-  p1 <- p1 + theme(legend.position="top")
+  p1 <- ggplot2::ggplot(div.group.df.1.long) + ggplot2::geom_line(ggplot2::aes(x=pos, y=diversity, color=group))
+  p1 <- p1 + ggplot2::xlab("") + ggplot2::ylab("Nucleotide diversity")
+  p1 <- p1 + ggplot2::theme_classic() + ggplot2::ylim(-0.14, NA)
+  p1 <- p1 + ggplot2::theme(legend.title = ggplot2::element_blank())
+  p1 <- p1 + ggplot2::theme(legend.position="top")
   
   if (nrow(nuc.gene.info)>=1) {
-    p1 <- p1 + geom_rect(aes(xmin=start, xmax=end, ymin=-0.05, ymax=-0.07), color="grey40", data=nuc.gene.info)
-    p1 <- p1 + geom_text(aes(x=(start+end)/2, y=-0.12, label=id), angle=50, size=2.5, data=nuc.gene.info)
+    p1 <- p1 + ggplot2::geom_rect(ggplot2::aes(xmin=start, xmax=end, ymin=-0.05, ymax=-0.07), color="grey40", data=nuc.gene.info)
+    p1 <- p1 + ggplot2::geom_text(ggplot2::aes(x=(start+end)/2, y=-0.12, label=id), angle=50, size=2.5, data=nuc.gene.info)
   }
   
-  p1 <- p1 + theme(axis.ticks.x = element_blank(), axis.text.x = element_blank(),
-                   axis.line.x = element_blank())
+  p1 <- p1 + ggplot2::theme(axis.ticks.x = ggplot2::element_blank(), axis.text.x = ggplot2::element_blank(),
+                   axis.line.x = ggplot2::element_blank())
   
   div.group.df.2$value <- div.group.df.2[,numerator]/div.group.df.2[,denominator]
   
-  p2 <- ggplot(div.group.df.2) + geom_line(aes(x=pos, y=value))
-  p2 <- p2 + xlab("genomic position") + ylab(paste0(numerator, "/", denominator))
-  p2 <- p2 + theme_classic()
+  p2 <- ggplot2::ggplot(div.group.df.2) + ggplot2::geom_line(ggplot2::aes(x=pos, y=value))
+  p2 <- p2 + ggplot2::xlab("genomic position") + ggplot2::ylab(paste0(numerator, "/", denominator))
+  p2 <- p2 + ggplot2::theme_classic()
   
-  gp1 <- ggplotGrob(p1)
-  gp2 <- ggplotGrob(p2)
+  gp1 <- ggplot2::ggplotGrob(p1)
+  gp2 <- ggplot2::ggplotGrob(p2)
   maxWidth = grid::unit.pmax(gp1$widths[2:5], gp2$widths[2:5])
   gp1$widths[2:5] <- as.list(maxWidth)
   gp2$widths[2:5] <- as.list(maxWidth)

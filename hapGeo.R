@@ -31,7 +31,7 @@ hapGeo <- function(haplotype=NULL) {
     showcountries = TRUE,
     showsubunits = TRUE,
     landcolor = "white",
-    oceancolor = toRGB("gray90"),
+    oceancolor = plotly::toRGB("gray90"),
     subunitwidth = 1,
     countrywidth = 0.5,
     subunitcolor = "blue",
@@ -39,9 +39,9 @@ hapGeo <- function(haplotype=NULL) {
   )
   
   plotly::plot_geo(dat, lat = ~Latitude, lon = ~Longitude, color = ~hap) %>%
-    add_markers(
+    plotly::add_markers(
       hovertext = ~text
-    ) %>% layout(title = 'Geographic distribution of rice accessions with different haplotypes', geo = g)
+    ) %>% plotly::layout(title = 'Geographic distribution of rice accessions with different haplotypes', geo = g)
   
 }
 

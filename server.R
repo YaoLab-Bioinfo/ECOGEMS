@@ -38,7 +38,7 @@ shinyServer(function(input, output, session) {
               filename <- function() { paste('GBrowser.pdf') },
               content <- function(file) {
                 pdf(file, width = 900/72, height = 300/72)
-                grid.draw(GBplot[[1]])
+                grid::grid.draw(GBplot[[1]])
                 dev.off()
               }, contentType = 'application/pdf')
             
@@ -542,7 +542,7 @@ shinyServer(function(input, output, session) {
 	      }
 	    }
 	    
-	    grid.draw(hapGeoStatic(haplotype = hapConten(data = snp.reg, min.freq=input$hapMin, 
+	    grid::grid.draw(hapGeoStatic(haplotype = hapConten(data = snp.reg, min.freq=input$hapMin, 
 	                                           max.freq=input$hapMax, 
 	                                           pop.list=as.numeric(input$hapPop), snpSites = hap.snp.site)))
 	    
@@ -573,7 +573,7 @@ shinyServer(function(input, output, session) {
 	      }
 	    }
 	    
-	    grid.draw(hapGeoStatic(haplotype = hapConten(data = snp.reg, min.freq=input$hapMin, 
+	    grid::grid.draw(hapGeoStatic(haplotype = hapConten(data = snp.reg, min.freq=input$hapMin, 
 	                                                 max.freq=input$hapMax, 
 	                                                 pop.list=as.numeric(input$hapPop), snpSites = hap.snp.site)))
 	    
@@ -628,7 +628,7 @@ shinyServer(function(input, output, session) {
 	                                    groups = div.group, step = div.step,
 	                                    numerator = div.numerator, denominator = div.denominator, 
 	                                    mutType = div.mut.group, snpSites = div.snp.site)
-	            grid.draw(grid.arrange(nuc.div.plot[[1]], nuc.div.plot[[2]], ncol=1, heights=c(2.3, 1)))
+	            grid::grid.draw(gridExtra::grid.arrange(nuc.div.plot[[1]], nuc.div.plot[[2]], ncol=1, heights=c(2.3, 1)))
 	          }, height = div.height, width = div.width)
 	          
 	          ## Download PDF file of Diversity
@@ -641,7 +641,7 @@ shinyServer(function(input, output, session) {
 	            filename <- function() { paste('diversity.pdf') },
 	            content <- function(file) {
 	              pdf(file, width = input$divWidth/72, height = input$divHeight/72)
-	              grid.draw(grid.arrange(nuc.div.plot[[1]], nuc.div.plot[[2]], ncol=1, heights=c(2.3, 1)))
+	              grid::grid.draw(gridExtra::grid.arrange(nuc.div.plot[[1]], nuc.div.plot[[2]], ncol=1, heights=c(2.3, 1)))
 	              
 	              dev.off()
 	            }, contentType = 'application/pdf')
@@ -656,7 +656,7 @@ shinyServer(function(input, output, session) {
 	            filename <- function() { paste('diversity.svg') },
 	            content <- function(file) {
 	              svg(file, width = input$divWidth/72, height = input$divHeight/72)
-	              grid.draw(grid.arrange(nuc.div.plot[[1]], nuc.div.plot[[2]], ncol=1, heights=c(2.3, 1)))
+	              grid::grid.draw(gridExtra::grid.arrange(nuc.div.plot[[1]], nuc.div.plot[[2]], ncol=1, heights=c(2.3, 1)))
 	              
 	              dev.off()
 	            }, contentType = 'image/svg')
@@ -941,7 +941,7 @@ shinyServer(function(input, output, session) {
 	    showcountries = TRUE,
 	    showsubunits = TRUE,
 	    landcolor = "white",
-	    oceancolor = toRGB("gray90"),
+	    oceancolor = plotly::toRGB("gray90"),
 	    subunitwidth = 1,
 	    countrywidth = 0.5,
 	    subunitcolor = "blue",
@@ -974,11 +974,11 @@ shinyServer(function(input, output, session) {
 	  acc.info.n <- acc.info %>% group_by(Latitude, Longitude) %>% summarise(maptext = paste(text, collapse = "<br>"))
 	  acc.info.nn <- merge(acc.info.n, acc.info, by=c("Latitude", "Longitude"))
 	  
-	  plot_geo(acc.info.nn, lat = ~Latitude, lon = ~Longitude) %>%
-	    add_markers(
+	  plotly::plot_geo(acc.info.nn, lat = ~Latitude, lon = ~Longitude) %>%
+	    plotly::add_markers(
 	      marker=list(size=4, color="red"),
 	      hovertext = ~maptext
-	    ) %>% layout(title = 'Geographic distribution of selected rice accessions', geo = g)
+	    ) %>% plotly::layout(title = 'Geographic distribution of selected rice accessions', geo = g)
 	 
 	})
 	
@@ -1013,10 +1013,10 @@ shinyServer(function(input, output, session) {
 	    acc.info$Name[is.na(acc.info$Name)] <- ""
 	    acc.info <- acc.info[!is.na(acc.info$Ecotype), ]
 	    
-	    mp <- mp + geom_point(aes(x=Longitude, y=Latitude, color=Ecotype.n), size=0.5, data=acc.info) + 
-	      scale_x_continuous("", breaks=NULL) + scale_y_continuous("", breaks=NULL) 
-	    mp <- mp + guides(color=guide_legend(title=NULL))
-	    grid.draw(mp)
+	    mp <- mp + ggplot2::geom_point(ggplot2::aes(x=Longitude, y=Latitude, color=Ecotype.n), size=0.5, data=acc.info) + 
+	      ggplot2::scale_x_continuous("", breaks=NULL) + ggplot2::scale_y_continuous("", breaks=NULL) 
+	    mp <- mp + ggplot2::guides(color=ggplot2::guide_legend(title=NULL))
+	    grid::grid.draw(mp)
 	    
 	    dev.off()
 	      
@@ -1055,10 +1055,10 @@ shinyServer(function(input, output, session) {
 	    acc.info$Name[is.na(acc.info$Name)] <- ""
 	    acc.info <- acc.info[!is.na(acc.info$Ecotype), ]
 	    
-	    mp <- mp + geom_point(aes(x=Longitude, y=Latitude, color=Ecotype.n), size=0.1, data=acc.info) + 
-	      scale_x_continuous("", breaks=NULL) + scale_y_continuous("", breaks=NULL) 
-	    mp <- mp + guides(color=guide_legend(title=NULL))
-	    grid.draw(mp)
+	    mp <- mp + ggplot2::geom_point(ggplot2::aes(x=Longitude, y=Latitude, color=Ecotype.n), size=0.1, data=acc.info) + 
+	      ggplot2::scale_x_continuous("", breaks=NULL) + ggplot2::scale_y_continuous("", breaks=NULL) 
+	    mp <- mp + ggplot2::guides(color=ggplot2::guide_legend(title=NULL))
+	    grid::grid.draw(mp)
 	    
 	    dev.off()
 	      

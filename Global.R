@@ -2,24 +2,26 @@
 options(warn=-1)
 
 # library(IRanges)
- library(plotly)
- library(LDheatmap)
- library(chopsticks)
+# library(plotly)
+# library(LDheatmap)
+# library(chopsticks)
 # library(foreach)
 # library(ape)
 # library(pegas)
- library(plyr)
- library(dplyr)
+# library(plyr)
+library(dplyr)
 # library(ggmap)
- library(tidyr)
-library(gridExtra)
+# library(tidyr)
+# library(gridExtra)
 # library(ggtree)
-library(grid)
+# library(grid)
 library(snpStats)
-library(htmlwidgets)
+# library(htmlwidgets)
 # library(shinycssloaders)
 # library(shinysky)
 # library(shinyWidgets)
+# library(shinythemes)
+library(shinyBS)
 
 source("fetchSnp.R")
 source("ld.heatmap.R")
@@ -52,3 +54,10 @@ chrInfo <- read.table("./data/chrInfo.txt", head=T, as.is=T, sep="\t")
 
 acc.tree <- read.table("./data/acc.tree.txt", 
                        head=T, as.is=T, sep="\t", row.names = 1)
+
+footerTagList <- list(
+  tags$footer(id = "myFooter",
+              shiny::includeHTML("www/footer.html")
+  )
+)
+

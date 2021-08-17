@@ -20,7 +20,7 @@ chooserInput <- function(inputId, leftLabel, rightLabel, leftChoices, rightChoic
     )),
     div(id=inputId, class="chooser",
       div(class="chooser-container chooser-left-container", 
-        tags$select(class="left", size=size, multiple=multiple, leftChoices, style="width:185px;background:gray")
+        tags$select(class="left", size=size, multiple=multiple, leftChoices, style="width:185px;background:gray50")
       ),
       div(class="chooser-container chooser-center-container",
         icon("arrow-circle-o-right", "right-arrow fa-3x"),
@@ -28,7 +28,7 @@ chooserInput <- function(inputId, leftLabel, rightLabel, leftChoices, rightChoic
         icon("arrow-circle-o-left", "left-arrow fa-3x")
       ),
       div(class="chooser-container chooser-right-container",
-        tags$select(class="right", size=size, multiple=multiple, rightChoices, style="width:185px;background:gray")
+        tags$select(class="right", size=size, multiple=multiple, rightChoices, style="width:185px;background:gray50")
       )
     )
   )

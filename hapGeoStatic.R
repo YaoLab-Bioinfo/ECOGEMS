@@ -25,9 +25,9 @@ hapGeoStatic <- function(haplotype=NULL) {
   
   load("./data/worldmap.RData")
   
-  mp <- mp + geom_point(aes(x=Longitude, y=Latitude, color=hap), size=0.5, data=dat) + 
-    scale_x_continuous("", breaks=NULL) + scale_y_continuous("", breaks=NULL) 
-  mp <- mp + guides(color=guide_legend(title=NULL))
+  mp <- mp + ggplot2::geom_point(ggplot2::aes(x=Longitude, y=Latitude, color=hap), size=0.5, data=dat) + 
+    ggplot2::scale_x_continuous("", breaks=NULL) + ggplot2::scale_y_continuous("", breaks=NULL) 
+  mp <- mp + ggplot2::guides(color=ggplot2::guide_legend(title=NULL))
   mp
 }
 

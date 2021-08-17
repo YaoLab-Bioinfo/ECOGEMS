@@ -87,7 +87,7 @@ GBrowser <- function(chr="chr07", start=29616705, end=29629223, accession=NULL, 
     snpeff.reg.3 <- snpeff.reg.3[snpeff.reg.3$tag %in% mutType, , drop=FALSE]
   }
   
-  p1 <- ggplot(data=snpeff.reg.3) + geom_point(aes(x=pos, y=yr, color=tag, text=info, fill=tag), size=0.8, pch=25)
+  p1 <- ggplot2::ggplot(data=snpeff.reg.3) + ggplot2::geom_point(ggplot2::aes(x=pos, y=yr, color=tag, text=info, fill=tag), size=0.8, pch=25)
   
   
   gff$id <- gsub(":.+", "", gff$id)
@@ -128,7 +128,7 @@ GBrowser <- function(chr="chr07", start=29616705, end=29629223, accession=NULL, 
   })
   plot.nm <- do.call(rbind, plot.nm.lst)
   if (!is.null(plot.nm) && nrow(plot.nm)>0) {
-    p1 <- p1 + geom_rect(aes(xmin=start, xmax=end, ymin=ymin, ymax=ymax), 
+    p1 <- p1 + ggplot2::geom_rect(ggplot2::aes(xmin=start, xmax=end, ymin=ymin, ymax=ymax), 
                          color="grey30", fill="grey30", data=plot.nm)
   }
   
@@ -145,7 +145,7 @@ GBrowser <- function(chr="chr07", start=29616705, end=29629223, accession=NULL, 
   })
   plot.mrna <- do.call(rbind, plot.mrna.lst)
   if (!is.null(plot.mrna) && nrow(plot.mrna)>0) {
-    p1 <- p1 + geom_rect(aes(xmin=start, xmax=end, ymin=y+0.118, ymax=y+0.122), 
+    p1 <- p1 + ggplot2::geom_rect(ggplot2::aes(xmin=start, xmax=end, ymin=y+0.118, ymax=y+0.122), 
                          color="grey30", fill="grey30", data=plot.mrna)
   }
   
@@ -191,24 +191,24 @@ GBrowser <- function(chr="chr07", start=29616705, end=29629223, accession=NULL, 
   })
   plot.tail <- do.call(rbind, plot.tail.lst)
   if (!is.null(plot.tail) && nrow(plot.tail)>0) {
-    p1 <- p1 + geom_polygon(aes(x=xx, y=yy, group=pare), color="grey30", fill="grey30", 
+    p1 <- p1 + ggplot2::geom_polygon(ggplot2::aes(x=xx, y=yy, group=pare), color="grey30", fill="grey30", 
                             data=plot.tail)
   }
   
   
-  p1 <- p1 + scale_y_continuous("", breaks=NULL)
-  p1 <- p1 + theme(panel.grid.major=element_blank(),panel.grid.minor=element_blank()) + 
-    theme(panel.background=element_rect(fill="white",colour="white"))
-  p1 <- p1 + xlab("Chromosome position")
-  p1 <- p1 + guides(color=guide_legend(title=NULL))
+  p1 <- p1 + ggplot2::scale_y_continuous("", breaks=NULL)
+  p1 <- p1 + ggplot2::theme(panel.grid.major=ggplot2::element_blank(), panel.grid.minor=ggplot2::element_blank()) + 
+    ggplot2::theme(panel.background=ggplot2::element_rect(fill="white",colour="white"))
+  p1 <- p1 + ggplot2::xlab("Chromosome position")
+  p1 <- p1 + ggplot2::guides(color=ggplot2::guide_legend(title=NULL))
   
-  p1 <- p1 + guides(fill=FALSE)
+  p1 <- p1 + ggplot2::guides(fill=FALSE)
   
-  p3 <- p1 + theme(axis.ticks.y = element_blank(), axis.text.y = element_blank(),
-                   axis.line.y = element_blank())
-  p3 <- ggplotly(p3, tooltip = c("pos", "info"))
+  p3 <- p1 + ggplot2::theme(axis.ticks.y = ggplot2::element_blank(), axis.text.y = ggplot2::element_blank(),
+                   axis.line.y = ggplot2::element_blank())
+  p3 <- plotly::ggplotly(p3, tooltip = c("pos", "info"))
   
-  p3 <- p3 %>% layout(
+  p3 <- p3 %>% plotly::layout(
     title = "",
     xaxis = list(
       rangeselector = list(),
@@ -233,7 +233,7 @@ GBrowser <- function(chr="chr07", start=29616705, end=29629223, accession=NULL, 
     }
   }
   
-  p4 <- onRender(p3, "
+  p4 <- htmlwidgets::onRender(p3, "
                 function(el, x) {
                 el.on('plotly_click', function(d) {
                 var url = d.points[0].customdata;

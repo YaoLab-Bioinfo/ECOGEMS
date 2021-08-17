@@ -47,7 +47,7 @@ geneStru <- function(chr="chr09", start=37800, end=46400){
     return(dat.mrna)
   })
   plot.mrna <- do.call(rbind, plot.mrna.lst)
-  p1 <- ggplot(plot.mrna) + geom_rect(aes(xmin=start, xmax=end, ymin=y+0.118, ymax=y+0.122,
+  p1 <- ggplot2::ggplot(plot.mrna) + ggplot2::geom_rect(ggplot2::aes(xmin=start, xmax=end, ymin=y+0.118, ymax=y+0.122,
                                           text=anno), 
                                       color="grey30", fill="grey30")
   
@@ -69,7 +69,7 @@ geneStru <- function(chr="chr09", start=37800, end=46400){
   })
   plot.nm <- do.call(rbind, plot.nm.lst)
   if (nrow(plot.nm)>0) {
-    p1 <- p1 + geom_rect(aes(xmin=start, xmax=end, ymin=ymin, ymax=ymax, text=anno), 
+    p1 <- p1 + ggplot2::geom_rect(ggplot2::aes(xmin=start, xmax=end, ymin=ymin, ymax=ymax, text=anno), 
                          color="grey30", fill="grey30", data=plot.nm)
   }
   
@@ -111,17 +111,17 @@ geneStru <- function(chr="chr09", start=37800, end=46400){
     return(dat.tail)
   })
   plot.tail <- do.call(rbind, plot.tail.lst)
-  p1 <- p1 + geom_polygon(aes(x=xx, y=yy, group=pare), color="grey30", fill="grey30", 
+  p1 <- p1 + ggplot2::geom_polygon(ggplot2::aes(x=xx, y=yy, group=pare), color="grey30", fill="grey30", 
                           data=plot.tail)
   
   snp.pos.df <- data.frame(x=snp.code.pos, ymin=1.23, ymax=1.25, stringsAsFactors = FALSE)
-  p1 <- p1 + geom_linerange(aes(x=x, ymin=ymin, ymax=ymax), data=snp.pos.df)
-  p1 <- p1 + geom_segment(aes(x=min(snp.code.pos), xend=max(snp.code.pos), y=1.25, yend=1.25))
+  p1 <- p1 + ggplot2::geom_linerange(ggplot2::aes(x=x, ymin=ymin, ymax=ymax), data=snp.pos.df)
+  p1 <- p1 + ggplot2::geom_segment(ggplot2::aes(x=min(snp.code.pos), xend=max(snp.code.pos), y=1.25, yend=1.25))
   
-  p1 <- p1 + scale_y_continuous("", breaks=NULL)
-  p1 <- p1 + theme(panel.grid.major=element_blank(),panel.grid.minor=element_blank()) + 
-    theme(panel.background=element_rect(fill="white",colour="white"))
-  p1 <- p1 + scale_x_continuous("", breaks=NULL)
+  p1 <- p1 + ggplot2::scale_y_continuous("", breaks=NULL)
+  p1 <- p1 + ggplot2::theme(panel.grid.major=ggplot2::element_blank(),panel.grid.minor=ggplot2::element_blank()) + 
+    ggplot2::theme(panel.background=ggplot2::element_rect(fill="white",colour="white"))
+  p1 <- p1 + ggplot2::scale_x_continuous("", breaks=NULL)
   
   return(p1)
 }
