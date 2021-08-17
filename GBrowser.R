@@ -228,7 +228,7 @@ GBrowser <- function(chr="chr07", start=29616705, end=29629223, accession=NULL, 
       })
       p.url <- unlist(p.url)
       p.url <- substr(p.url, 1, 10)
-      p.url <- paste0("http://rice.plantbiology.msu.edu/cgi-bin/ORF_infopage.cgi?orf=LOC_Os", p.url)
+      p.url <- paste0("http://rice.uga.edu/cgi-bin/ORF_infopage.cgi?orf=LOC_Os", p.url)
       p3$x$data[[i]]$customdata <- p.url
     }
   }
