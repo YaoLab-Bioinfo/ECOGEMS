@@ -115,8 +115,5 @@ ld.heatmap <- function(chr="chr09", start=37800, end=46400, snp.pos=c(1),
     }
   }
   
-  LD.res <- LDheatmap::LDheatmap(dat.snp.mat, snp.code.pos, flip=TRUE, title=NULL, ...)
-  LD.r2 <- LD.res$LDmatrix
-  return(LD.r2)
 }
 

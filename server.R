@@ -310,7 +310,9 @@ shinyServer(function(input, output, session) {
 	                 mutType = input$ld_mut_group, accession = input$mychooserLD$selected, 
 	                 snpSites = ld.snp.site)
 	      
-	      write.table(ld.r2.res, file, sep="\t", quote=F, row.names = T, col.names=T)
+	      LD.r2 <- ld.r2.res$LDmatrix
+	      
+	      write.table(LD.r2, file, sep="\t", quote=F, row.names = T, col.names=T)
 	    }
 	    
 	  }, contentType = 'text/plain')
