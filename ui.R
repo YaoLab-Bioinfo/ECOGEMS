@@ -292,6 +292,7 @@ shinyUI(
         mainPanel(
           downloadButton("downloadLD.pdf", "Download pdf-file"),
           downloadButton("downloadLD.svg", "Download svg-file"),
+          downloadButton("downloadLD.txt", "Download TXT-file"),
           plotOutput("ldheatmap", height = '100%', width = '100%')
           
         )

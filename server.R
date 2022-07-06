@@ -279,6 +279,43 @@ shinyServer(function(input, output, session) {
 	    
 	  }, contentType = 'image/svg')
 	
+	## Download TXT file of LDheatmap
+	output$downloadLD.txt <- downloadHandler(
+	  filename <- function() { paste('LDheatmap.txt') },
+	  content <- function(file) {
+	    myPos <- anaReg(input$regL)
+	    
+	    snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start - input$ldUp * 1000, 
+	                        end=myPos$end + input$ldDown * 1000, accession = input$mychooserLD$selected,
+	                        mutType = input$ld_mut_group)[[1]]
+	    if (nrow(snp.reg) < 5) {
+	      js_string <- 'alert("Too few SNPs in specified genomic region!");'
+	      session$sendCustomMessage(type='jsCode', list(value = js_string))
+	    } else {
+	      snp.pos <- as.numeric(unlist(strsplit(input$ldpos, split=",")))
+	      
+	      if (input$uploadLD == 1) {
+	        ld.snp.site <- NULL
+	      } else {
+	        if (!is.null(input$LD.snpsite)) {
+	          ld.snp.site <- readLines(input$LD.snpsite$datapath)
+	        } else {
+	          ld.snp.site <- NULL
+	        }
+	      }
+	      
+	      ld.r2.res <- ld.heatmap(chr=myPos$chr, start=myPos$start - input$ldUp * 1000, end=myPos$end + input$ldDown * 1000, text=FALSE,
+	                 gene=FALSE, flip=c(FALSE, TRUE)[as.numeric(input$flip)+1],
+	                 col=list(grey.colors(20), heat.colors(20))[[as.numeric(input$ldcol)]],
+	                 mutType = input$ld_mut_group, accession = input$mychooserLD$selected, 
+	                 snpSites = ld.snp.site)
+	      
+	      write.table(ld.r2.res, file, sep="\t", quote=F, row.names = T, col.names=T)
+	    }
+	    
+	  }, contentType = 'text/plain')
+
+	
 	# Haplotype
 	observe({
 	  if (input$submit3>0) {
