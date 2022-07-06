@@ -141,7 +141,7 @@ shinyUI(
           column(4,
                  p(tags$div(HTML('<i class="fa fa-play" aria-hidden="true"></i> <font size="4" color="red">Select rice accessions:</font>'),
                       bsButton("qg3", label="", icon=icon("question"), style="info", size="small"))),
-                 bsPopover("qg3", "Only the chosen rice accessions will be used.",
+                 bsPopover("qg3", "Only the chosen rice accessions will be used. Select from the box on the left to the box on the right. By default, all accessions are chosen.",
                            trigger = "focus"),
                  
                  chooserInput("mychooserB", "Available frobs", "Selected frobs", c(),
@@ -266,7 +266,7 @@ shinyUI(
           
           p(tags$div(HTML('<i class="fa fa-play" aria-hidden="true"></i> <font size="4" color="red">Select rice accessions:</font>'),
                bsButton("ql3", label="", icon=icon("question"), style="info", size="small"))),
-          bsPopover("ql3", "Only the chosen rice accessions will be used.",
+          bsPopover("ql3", "Only the chosen rice accessions will be used. Select from the box on the left to the box on the right. By default, all accessions are chosen.",
                     trigger = "focus"),
           
           chooserInput("mychooserLD", "Available frobs", "Selected frobs",
@@ -587,7 +587,7 @@ shinyUI(
           
           p(tags$div(HTML('<i class="fa fa-play" aria-hidden="true"></i> <font size="4" color="red">Select rice accessions:</font>'),
                bsButton("qp3", label="", icon=icon("question"), style="info", size="small"))),
-          bsPopover("qp3", "Only the chosen rice accessions will be used.",
+          bsPopover("qp3", "Only the chosen rice accessions will be used. Select from the box on the left to the box on the right. By default, all accessions are chosen.",
                     trigger = "focus"),
           
           chooserInput("mychooserPhy", "Available frobs", "Selected frobs",
@@ -666,8 +666,11 @@ shinyUI(
         mainPanel(
           fluidRow(
             column(4, uiOutput("downloadAfq01")),
-            column(4, uiOutput("downloadAfq02"))
+            column(4, uiOutput("downloadAfq02")),
+            column(4, uiOutput("downloadAfq03"))
           ),
+          
+          br(),
           
           plotOutput("alleleFreq", height = "550px", width = "700px")
         )
@@ -682,7 +685,7 @@ shinyUI(
           
           p(tags$div(HTML('<i class="fa fa-play" aria-hidden="true"></i> <font size="4" color="red">Select rice accessions:</font>'),
                bsButton("qa1", label="", icon=icon("question"), style="info", size="small"))),
-          bsPopover("qa1", "Only the chosen rice accessions will be used.",
+          bsPopover("qa1", "Only the chosen rice accessions will be used. Select from the box on the left to the box on the right. By default, all accessions are chosen.",
                     trigger = "focus"),
           
           chooserInput("mychooserA", "Available frobs", "Selected frobs",
@@ -728,7 +731,7 @@ shinyUI(
           
           p(tags$div(HTML('<i class="fa fa-play" aria-hidden="true"></i> <font size="4" color="red">Select rice accessions:</font>'),
                bsButton("qdl2", label="", icon=icon("question"), style="info", size="small"))),
-          bsPopover("qdl2", "Only the chosen rice accessions will be used.",
+          bsPopover("qdl2", "Only the chosen rice accessions will be used. Select from the box on the left to the box on the right. By default, all accessions are chosen.",
                     trigger = "focus"),
           
           chooserInput("mychooserD", "Available frobs", "Selected frobs",

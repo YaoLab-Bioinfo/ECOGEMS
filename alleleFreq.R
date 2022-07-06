@@ -86,5 +86,7 @@ alleleFreq <- function(snpSite = c("0602942293", "0138383182", "0329584501", "03
   }
   
   par(op)
+  
+  return(site.allele.freq)
 }
 

@@ -887,7 +887,7 @@ shinyServer(function(input, output, session) {
 	  content <- function(file) {
 	    svg(file, width = input$afWidth/72, height = input$afHeight/72)
 	    
-	      in.snpid <- unlist(strsplit(input$af_snp_site, split="\\n"))
+	    in.snpid <- unlist(strsplit(input$af_snp_site, split="\\n"))
 	    in.snpid <- gsub("^\\s+", "", in.snpid)
 	    in.snpid <- gsub("\\s+$", "", in.snpid)
 	    in.snpid <- in.snpid[in.snpid!=""]
@@ -904,6 +904,35 @@ shinyServer(function(input, output, session) {
 	    
 	    dev.off()
 	  }, contentType = 'image/svg')
+	
+	## Download TXT file of allele frequency
+	output$downloadAfq03 <- renderUI({
+	  req(input$submitaf1)
+	  downloadButton("downloadAlleleFreq.txt", "Download TXT-file")
+	})
+	
+	output$downloadAlleleFreq.txt <- downloadHandler(
+	  filename <- function() { paste('alleleFreq.txt') },
+	  content <- function(file) {
+	    in.snpid <- unlist(strsplit(input$af_snp_site, split="\\n"))
+	    in.snpid <- gsub("^\\s+", "", in.snpid)
+	    in.snpid <- gsub("\\s+$", "", in.snpid)
+	    in.snpid <- in.snpid[in.snpid!=""]
+	    
+	    af.group <- input$af_acc_group
+	    in.af.col <- unlist(strsplit(input$afCol, split=","))
+	    in.af.col <- gsub("^\\s+", "", in.af.col)
+	    in.af.col <- gsub("\\s+$", "", in.af.col)
+	    AF.txt <- alleleFreq(
+	      snpSite = in.snpid,
+	      accGroup = af.group,
+	      pieCols = in.af.col
+	    )
+	    
+	    AF.txt.mat <-do.call(cbind, AF.txt)
+	    colnames(AF.txt.mat) <- paste0(rep(in.snpid, each=2), ":", colnames(AF.txt.mat))
+	    write.table(AF.txt.mat, file, sep = "\t", quote=FALSE, row.names = T, col.names = T)
+	  }, contentType = 'text/plain')
   
 	# accession information
 	output$acc.info.txt <- downloadHandler(
