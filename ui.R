@@ -28,11 +28,11 @@ shinyUI(
       windowTitle = "efficient compression of genotype matrix",
       
       ## About
-      tabPanel("About", includeMarkdown("About.md")),
+      tabPanel(title = HTML("<strong style='font-size:20px'>Home</strong>"), icon = icon("home"), includeMarkdown("About.md")),
       
       # Genome browser
       tabPanel(
-        "Browser",
+        title = HTML("<strong style='font-size:20px'>Browse</strong>"), icon = icon("folder-open"),
         
         tags$head(tags$script(HTML('Shiny.addCustomMessageHandler("jsCode",function(message) {eval(message.value);});')),
                   tags$style("
@@ -185,7 +185,7 @@ shinyUI(
       
       # LDheatmap
       tabPanel(
-        "LDheatmap",
+        title = HTML("<strong style='font-size:20px'>LDheatmap</strong>"), icon = icon("project-diagram"),
         
         sidebarPanel(
           textInput("regL", label = tags$div(HTML('<i class="fa fa-play" aria-hidden="true"></i> <font size="4" color="red">Genomic region:</font>'),
@@ -300,7 +300,7 @@ shinyUI(
       
       # Haplotype network
       tabPanel(
-        "Haplotype",
+        title = HTML("<strong style='font-size:20px'>Haplotype</strong>"),icon = icon("cogs"),
         
         sidebarPanel(
           textInput("regH", label = tags$div(HTML('<i class="fa fa-play" aria-hidden="true"></i> <font size="4" color="red">Genomic region:</font>'),
@@ -423,7 +423,7 @@ shinyUI(
       
       # Nucleotide diversity
       tabPanel(
-        "Diversity",
+        title = HTML("<strong style='font-size:20px'>Diversity</strong>"), icon = icon("chart-area"),
         
         sidebarPanel(
           textInput("regD", label = tags$div(HTML('<i class="fa fa-play" aria-hidden="true"></i> <font size="4" color="red">Genomic region:</font>'),
@@ -533,7 +533,7 @@ shinyUI(
       
       # Phylogenetic tree
       tabPanel(
-        "Phylogenetic",
+        title = HTML("<strong style='font-size:20px'>Phylogenetic</strong>"),icon = icon("bezier-curve"),
         
         sidebarPanel(
           textInput("regP", label = tags$div(HTML('<i class="fa fa-play" aria-hidden="true"></i> <font size="4" color="red">Genomic region:</font>'),
@@ -625,7 +625,7 @@ shinyUI(
       
       # Allele frequency
       tabPanel(
-        "AlleleFreq",
+        title = HTML("<strong style='font-size:20px'>AlleleFreq</strong>"), icon = icon("chart-pie"),
         
         sidebarPanel(
           textAreaInput("af_snp_site", tags$div(HTML('<i class="fa fa-play" aria-hidden="true"></i> <font size="4" color="red">SNP sites to calculate allele frequency:</font>'),
@@ -679,7 +679,7 @@ shinyUI(
       
       # Accession
       tabPanel(
-        "Accession",
+        title = HTML("<strong style='font-size:20px'>Accession</strong>"), icon = icon("list"),
         
         sidebarPanel(
           downloadButton("acc.info.txt", "Download information of all accessions"),
@@ -709,7 +709,7 @@ shinyUI(
       
       # Bulk download of data
       tabPanel(
-        "Download",
+        title = HTML("<strong style='font-size:20px'>Download</strong>"), icon = icon("download"),
         
         sidebarPanel(
           textInput("regBB", label = tags$div(HTML('<i class="fa fa-play" aria-hidden="true"></i> <font size="4" color="red">Genomic region:</font>'),
@@ -772,7 +772,10 @@ shinyUI(
       ),
       
       ## Help
-      tabPanel("Help", includeMarkdown("README.md")),
+      tabPanel(
+               title = HTML("<strong style='font-size:20px'>Help</strong>"), icon = icon("book"),
+               includeMarkdown("README.md")
+      ),
       
       footer = footerTagList
     )
