@@ -353,10 +353,6 @@ shinyServer(function(input, output, session) {
 	          snp.reg <- NULL
 	        }
 	        
-	        NA.index <- which(is.na(snp.reg), arr.ind = T)
-	        NA.index.row <- unique(NA.index[, 1])
-	        snp.reg <- snp.reg[-NA.index.row, ]
-	        
 	        if (is.null(snp.reg) || nrow(snp.reg) < 5) {
 	          shinyWidgets::sendSweetAlert(
 	            session = session,
@@ -427,10 +423,6 @@ shinyServer(function(input, output, session) {
 	    snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start - input$hapUp * 1000, end=myPos$end + input$hapDown * 1000,
 	                        mutType=input$hap_mut_group)[[1]]
 	    
-	    NA.index <- which(is.na(snp.reg), arr.ind = T)
-	    NA.index.row <- unique(NA.index[, 1])
-	    snp.reg <- snp.reg[-NA.index.row, ]
-	    
 	    if (input$uploadHAP == 1) {
 	      hap.snp.site <- NULL
 	    } else {
@@ -469,10 +461,6 @@ shinyServer(function(input, output, session) {
 	    snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start - input$hapUp * 1000, end=myPos$end + input$hapDown * 1000,
 	                        mutType=input$hap_mut_group)[[1]]
 	    
-	    NA.index <- which(is.na(snp.reg), arr.ind = T)
-	    NA.index.row <- unique(NA.index[, 1])
-	    snp.reg <- snp.reg[-NA.index.row, ]
-	    
 	    if (input$uploadHAP == 1) {
 	      hap.snp.site <- NULL
 	    } else {
@@ -502,10 +490,6 @@ shinyServer(function(input, output, session) {
 	      myPos <- anaReg(input$regH)
 	    snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start - input$hapUp * 1000, end=myPos$end + input$hapDown * 1000,
 	                        mutType=input$hap_mut_group)[[1]]
-	    
-	    NA.index <- which(is.na(snp.reg), arr.ind = T)
-	    NA.index.row <- unique(NA.index[, 1])
-	    snp.reg <- snp.reg[-NA.index.row, ]
 	    
 	    if (input$uploadHAP == 1) {
 	      hap.snp.site <- NULL
@@ -537,10 +521,6 @@ shinyServer(function(input, output, session) {
 	      if (validReg(myPos)) {
 	        snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start - input$hapUp * 1000, end=myPos$end + input$hapDown * 1000,
 	                            mutType=input$hap_mut_group)[[1]]
-	        
-	        NA.index <- which(is.na(snp.reg), arr.ind = T)
-	        NA.index.row <- unique(NA.index[, 1])
-	        snp.reg <- snp.reg[-NA.index.row, ]
 	        
 	        if (nrow(snp.reg) < 5) {
 	          shinyWidgets::sendSweetAlert(
@@ -591,10 +571,6 @@ shinyServer(function(input, output, session) {
 	    snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start - input$hapUp * 1000, end=myPos$end + input$hapDown * 1000,
 	                        mutType=input$hap_mut_group)[[1]]
 	    
-	    NA.index <- which(is.na(snp.reg), arr.ind = T)
-	    NA.index.row <- unique(NA.index[, 1])
-	    snp.reg <- snp.reg[-NA.index.row, ]
-	    
 	    if (input$uploadHAP == 1) {
 	      hap.snp.site <- NULL
 	    } else {
@@ -625,10 +601,6 @@ shinyServer(function(input, output, session) {
 	    myPos <- anaReg(input$regH)
 	    snp.reg <- fetchSnp(chr=myPos$chr, start=myPos$start - input$hapUp * 1000, end=myPos$end + input$hapDown * 1000,
 	                        mutType=input$hap_mut_group)[[1]]
-	    
-	    NA.index <- which(is.na(snp.reg), arr.ind = T)
-	    NA.index.row <- unique(NA.index[, 1])
-	    snp.reg <- snp.reg[-NA.index.row, ]
 	    
 	    if (input$uploadHAP == 1) {
 	      hap.snp.site <- NULL
